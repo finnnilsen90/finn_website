@@ -1,0 +1,27 @@
+{
+  "name": "MogoAuto_1",
+  "scripts": {
+  },
+  "env": {
+    "DATABASE_URL": {
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql",
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ]
+}

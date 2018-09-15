@@ -1,0 +1,21 @@
+{
+  "name": "finn_infrastructure",
+  "description": "This is Finn's general node infrastructure for createing modules.",
+  "main": "gulp.js",
+  "authors": [
+    "Finn Nilsen"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/finnnilsen90/Node_Tooling",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components/testcomp-testpage/example/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.3.3"
+  }
+}
