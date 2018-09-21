@@ -1,0 +1,55 @@
+@import '../../../mixins/color.less';
+
+.primary_color {
+    background-color:@primarycolor;
+    margin:200px auto 0 auto;
+    height:200px;
+}
+
+.secondary_color {
+    background-color:@secondarycolor;
+    margin:0 auto 0 auto;
+    height:80px;
+}
+
+.background_color {
+    background-color:@background_color;
+    margin:0 auto 0 auto;
+    height:80px;
+}
+
+.secondary_background_color {
+    background-color:@secondary_background_color;
+    margin:0 auto 0 auto;
+    height:80px;
+}
+
+.offset {
+    background-color:@offset;
+    margin:0 auto 0 auto;
+    height:80px;
+}
+
+@media screen and (min-width: 800px) {
+
+    .color_dimension {
+        width:800px;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px){
+
+    .color_dimension {
+        width:500px;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    .color_dimension {
+        width:200px;
+    }
+
+}

@@ -1,0 +1,40 @@
+.primary_color {
+  background-color: #2998ff;
+  margin: 200px auto 0 auto;
+  height: 200px;
+}
+.secondary_color {
+  background-color: #8fc9ff;
+  margin: 0 auto 0 auto;
+  height: 80px;
+}
+.background_color {
+  background-color: grey;
+  margin: 0 auto 0 auto;
+  height: 80px;
+}
+.secondary_background_color {
+  background-color: #b3b3b3;
+  margin: 0 auto 0 auto;
+  height: 80px;
+}
+.offset {
+  background-color: #2bff72;
+  margin: 0 auto 0 auto;
+  height: 80px;
+}
+@media screen and (min-width: 800px) {
+  .color_dimension {
+    width: 800px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .color_dimension {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .color_dimension {
+    width: 200px;
+  }
+}
