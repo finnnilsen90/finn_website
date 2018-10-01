@@ -1,6 +1,14 @@
+.header {
+  margin-top: 80px;
+  color: grey;
+}
+.header_container {
+  margin: 80px auto 0 auto;
+  color: grey;
+}
 .primary_color {
   background-color: #2998ff;
-  margin: 200px auto 0 auto;
+  margin: 30px auto 0 auto;
   height: 200px;
 }
 .secondary_color {
@@ -24,16 +32,25 @@
   height: 80px;
 }
 @media screen and (min-width: 800px) {
+  .header_container {
+    width: 800px;
+  }
   .color_dimension {
     width: 800px;
   }
 }
-@media screen and (min-width: 500px) and (max-width: 800px) {
+@media screen and (min-width: 500px) and (max-width: 799px) {
+  .header_container {
+    width: 500px;
+  }
   .color_dimension {
     width: 500px;
   }
 }
 @media screen and (max-width: 500px) {
+  .header_container {
+    width: 200px;
+  }
   .color_dimension {
     width: 200px;
   }

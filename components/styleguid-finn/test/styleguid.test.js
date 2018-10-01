@@ -3,11 +3,8 @@ const ReactTestUtils = require('react-dom/test-utils');
 const renderer = require('react-test-renderer')
 
 const Styleguid = require('../styleguid-finn.js');
-const Libcomp = require('../lib/Libcomp/Libcomp.js')
 
 let StyleguidConst = new Styleguid(); 
-
-jest.mock('../lib/Libcomp/Libcomp.js', () => 'Libcomp')
 
 describe('component connection', () => {
 
@@ -19,13 +16,10 @@ describe('component connection', () => {
    
 describe('component content', () => {
 
-it('should match snapshot of test div.', () => {
-     const component = renderer.create(
-        <div className='containter'>
-            <Libcomp />
-        </div>          
-        )
-        let tree = component.toJSON();
+    it('should match snapshot of test div.', () => {
+        const tree = renderer
+            .create(<StyleguidConst/>)
+            .toJSON();
         expect(tree).toMatchSnapshot();
     });
 

@@ -4,6 +4,7 @@ var ReactDom = require('react-dom');
 var css = require('./styleguid-finn.css')
 
 const Color = require('./lib/color-styleguid/color-styleguid.js')
+const Libcomp = require('./lib/libcomp-styleguid/libcomp-styleguid.js')
 
 class Styleguid extends React.Component {
     
@@ -18,8 +19,9 @@ class Styleguid extends React.Component {
     render() {
         
         return (
-            <div className='containter'>
+            <div className={'containter '+'font'}>
                 <Color />
+                <Libcomp />
             </div>
         )
     }

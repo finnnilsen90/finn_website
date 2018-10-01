@@ -2,10 +2,10 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./color-styleguid.css')
 
-var ____Classb=React.Component;for(var ____Classb____Key in ____Classb){if(____Classb.hasOwnProperty(____Classb____Key)){Color[____Classb____Key]=____Classb[____Classb____Key];}}var ____SuperProtoOf____Classb=____Classb===null?null:____Classb.prototype;Color.prototype=Object.create(____SuperProtoOf____Classb);Color.prototype.constructor=Color;Color.__superConstructor__=____Classb;
+var ____Class3=React.Component;for(var ____Class3____Key in ____Class3){if(____Class3.hasOwnProperty(____Class3____Key)){Color[____Class3____Key]=____Class3[____Class3____Key];}}var ____SuperProtoOf____Class3=____Class3===null?null:____Class3.prototype;Color.prototype=Object.create(____SuperProtoOf____Class3);Color.prototype.constructor=Color;Color.__superConstructor__=____Class3;
     
     function Color(props) {"use strict";
-    ____Classb.call(this,props);
+    ____Class3.call(this,props);
     this.state = {
             test: ''
         };
@@ -19,7 +19,10 @@ var ____Classb=React.Component;for(var ____Classb____Key in ____Classb){if(____C
 
         return (
         React.createElement("div", {className: "color-styleguid_Container"}, 
-            React.createElement("h2", null, "Color Pallet"), 
+            React.createElement("h1", null, "Style Guide"), 
+            React.createElement("div", {className: "header_container"}, 
+                React.createElement("h2", {className: "header"}, "Color Pallet")
+            ), 
             React.createElement("div", {className: 'primary_color '+'color_dimension'}), 
             React.createElement("div", {className: 'secondary_color '+'color_dimension'}), 
             React.createElement("div", {className: 'background_color '+'color_dimension'}), 

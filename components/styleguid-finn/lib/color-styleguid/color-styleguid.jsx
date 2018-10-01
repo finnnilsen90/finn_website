@@ -19,7 +19,10 @@ class Color extends React.Component {
 
         return (
         <div className='color-styleguid_Container'>
-            <h2>Color Pallet</h2>
+            <h1>Style Guide</h1>
+            <div className='header_container'>
+                <h2 className='header'>Color Pallet</h2>
+            </div>
             <div className={'primary_color '+'color_dimension'}></div>
             <div className={'secondary_color '+'color_dimension'}></div>
             <div className={'background_color '+'color_dimension'}></div>

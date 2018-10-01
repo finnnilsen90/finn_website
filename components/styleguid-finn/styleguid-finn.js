@@ -4,11 +4,12 @@ var ReactDom = require('react-dom');
 var css = require('./styleguid-finn.css')
 
 const Color = require('./lib/color-styleguid/color-styleguid.js')
+const Libcomp = require('./lib/libcomp-styleguid/libcomp-styleguid.js')
 
-var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____Class1.hasOwnProperty(____Class1____Key)){Styleguid[____Class1____Key]=____Class1[____Class1____Key];}}var ____SuperProtoOf____Class1=____Class1===null?null:____Class1.prototype;Styleguid.prototype=Object.create(____SuperProtoOf____Class1);Styleguid.prototype.constructor=Styleguid;Styleguid.__superConstructor__=____Class1;
+var ____Class4=React.Component;for(var ____Class4____Key in ____Class4){if(____Class4.hasOwnProperty(____Class4____Key)){Styleguid[____Class4____Key]=____Class4[____Class4____Key];}}var ____SuperProtoOf____Class4=____Class4===null?null:____Class4.prototype;Styleguid.prototype=Object.create(____SuperProtoOf____Class4);Styleguid.prototype.constructor=Styleguid;Styleguid.__superConstructor__=____Class4;
     
     function Styleguid(props) {"use strict";
-    ____Class1.call(this,props);
+    ____Class4.call(this,props);
     this.state = {
             test: 'Test'
         };
@@ -18,8 +19,9 @@ var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____C
     Object.defineProperty(Styleguid.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
         
         return (
-            React.createElement("div", {className: "containter"}, 
-                React.createElement(Color, null)
+            React.createElement("div", {className: 'containter '+'font'}, 
+                React.createElement(Color, null), 
+                React.createElement(Libcomp, null)
             )
         )
     }});

@@ -1,8 +1,18 @@
 @import '../../../mixins/color.less';
 
+.header {
+    margin-top:80px;
+    color: @background_color;
+}
+
+.header_container {
+    margin:80px auto 0 auto;
+    color: @background_color;
+}
+
 .primary_color {
     background-color:@primarycolor;
-    margin:200px auto 0 auto;
+    margin:30px auto 0 auto;
     height:200px;
 }
 
@@ -32,13 +42,21 @@
 
 @media screen and (min-width: 800px) {
 
+    .header_container {
+        width:800px;
+    }
+
     .color_dimension {
         width:800px;
     }
 
 }
 
-@media screen and (min-width: 500px) and (max-width: 800px){
+@media screen and (min-width: 500px) and (max-width: 799px){
+
+    .header_container {
+        width:500px;
+    }
 
     .color_dimension {
         width:500px;
@@ -47,6 +65,10 @@
 }
 
 @media screen and (max-width: 500px){
+
+    .header_container {
+        width:200px;
+    }
 
     .color_dimension {
         width:200px;
