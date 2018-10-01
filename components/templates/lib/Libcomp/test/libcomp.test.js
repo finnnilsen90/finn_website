@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactTestUtils = require('react-dom/test-utils');
 const renderer = require('react-test-renderer')
+let { shallow, mount, render } = require('enzyme');
 
 const ChildConst = require('../child.js');
 
@@ -14,16 +15,13 @@ describe('component connection', () => {
 
 })  
     
-describe('component content', () => {
+describe('<ChildConst />', () => {
 
-it('should match snapshot of test div.', () => {
-     const component = renderer.create(
-            <div className='componentContainer'>
-                <div className='test'></div>
-            </div>
-        )
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+    const wrapper = render(<ChildConst />);
+
+    it('renders components', () => {
+        expect(wrapper).toBeTruthy();
     });
+
 
 })

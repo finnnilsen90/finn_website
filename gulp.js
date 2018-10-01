@@ -46,13 +46,16 @@ if (newChild === varName) { console.error('\x1b[41m%s\x1b[0m', 'Your parent comp
 const config = {
         dest: {
             test: './components/' + folder + '/test/', //unit testing files
+            test_file: './components/' + folder + '/test/'+varName+'.test.js', //unit testing files
             testChild: './components/' + folder + '/lib/' + child + '/test/', //unit testing for child component
+            testChild_file: './components/' + folder + '/lib/' + child + '/test/'+newChild_low+'.test.js', //unit testing for child component
             html: './components/' + folder + '/example/', //folder for the html file and the bundled component
             bundle: './components/' + folder + '/example/', //folder where the bundled js file is stored
             dev: './components/' + folder + '/', //components folder
             lib: './components/lib/' + folder + '/', //child components folder
             Makelib: './components/lib/' + child + '/', //library components folder
             MakelibTest: './components/lib/' + child + '/test/', //unit test folder for library components
+            MakelibTest_file: './components/lib/' + child + '/test/'+newChild_low+'.test.js', //unit test folder for library components
             prod: './public/', //public folder used for production
             prodjs: './public/' + folder_type + '/', //public folder used for production javascript
             prodjpg: './public/images/', //public folder used for production images
@@ -212,8 +215,8 @@ function replace(source, destin, base) {
 function makeChild() {
 
     replace('./components/templates/lib/Libcomp/Libcomp.*', config.dest.components, 'yes')
-    replace('./components/templates/lib/Libcomp/test/*.*', config.dest.testChild)
-    replace('./components/templates/lib/Libcomp/test/_snapshots_/', config.dest.testChild)
+    replace('./components/templates/lib/Libcomp/test/libcomp.test.js', config.dest.testChild_file)
+    replace('./components/templates/lib/Libcomp/test/configure.json', config.dest.testChild)
     console.log('---------------------------------------');
     console.log('New child component ' + newChild)
     console.log('Add link to main component(s).');
@@ -224,8 +227,8 @@ function makeChild() {
 function libComp() {
 
     replace('./components/templates/lib/Libcomp/Libcomp.*', config.dest.Makelib, 'yes')
-    replace('./components/templates/lib/Libcomp/test/*.*', config.dest.MakelibTest)
-    replace('./components/templates/lib/Libcomp/test/_snapshots_/', config.dest.MakelibTest)
+    replace('./components/templates/lib/Libcomp/test/libcomp.test.js', config.dest.MakelibTest_file)
+    replace('./components/templates/lib/Libcomp/test/configure.json', config.dest.MakelibTest)
     console.log('---------------------------------------');
     console.log('New global lib component ' + newChild)
     console.log('Add link to main component(s).');
@@ -275,7 +278,8 @@ function makeComponent() {
             
     }
 
-    replace_comp('./components/templates/test/*.js', config.dest.test)
+    replace_comp('./components/templates/test/comp.test.js', config.dest.test_file)
+    replace_comp('./components/templates/test/configure.json', config.dest.test)
     replace_comp('./components/templates/example/*', config.dest.html)
     replace_comp('./components/templates/compName.*', config.dest.dev, 'yes')
 
