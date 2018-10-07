@@ -2,10 +2,10 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./hamburger.css')
 
-var ____Classc=React.Component;for(var ____Classc____Key in ____Classc){if(____Classc.hasOwnProperty(____Classc____Key)){Hamburger[____Classc____Key]=____Classc[____Classc____Key];}}var ____SuperProtoOf____Classc=____Classc===null?null:____Classc.prototype;Hamburger.prototype=Object.create(____SuperProtoOf____Classc);Hamburger.prototype.constructor=Hamburger;Hamburger.__superConstructor__=____Classc;
+var ____Classb=React.Component;for(var ____Classb____Key in ____Classb){if(____Classb.hasOwnProperty(____Classb____Key)){Hamburger[____Classb____Key]=____Classb[____Classb____Key];}}var ____SuperProtoOf____Classb=____Classb===null?null:____Classb.prototype;Hamburger.prototype=Object.create(____SuperProtoOf____Classb);Hamburger.prototype.constructor=Hamburger;Hamburger.__superConstructor__=____Classb;
     
     function Hamburger(props) {"use strict";
-    ____Classc.call(this,props);
+    ____Classb.call(this,props);
 this.state = {
             hover: 0
         };
@@ -32,19 +32,19 @@ this.state = {
     Object.defineProperty(Hamburger.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
         let chng_hr = document.querySelector('.hamburger');
         let hvr_state = this.state.hover;
-        document.querySelector('.hamburger').addEventListener('mouseenter', function() {
+        document.getElementById('hamburger').addEventListener('mouseenter', function() {
             if(hvr_state===0) {
                 this.hover("#2bff72")
             }
         }.bind(this))
-        document.querySelector('.hamburger').addEventListener('mouseleave', function() {
+        document.getElementById('hamburger').addEventListener('mouseleave', function() {
             console.log(hvr_state);
             if(hvr_state===0) {
                 this.hover("grey");
             }
             chng_hr.style.border="3px solid grey"
         }.bind(this))
-        document.querySelector('.hamburger').addEventListener('click', function() {
+        document.getElementById('hamburger').addEventListener('click', function() {
             if(hvr_state===0) {
                 chng_hr.style.border="3px solid #2bff72"
             }
@@ -55,7 +55,7 @@ this.state = {
         return (
         React.createElement("div", {className: "libcomp-styleguid_Container"}, 
             React.createElement("div", {className: "ham_container"}, 
-                React.createElement("div", {className: "hamburger"}, 
+                React.createElement("div", {id: "hamburger"}, 
                     React.createElement("hr", null), 
                     React.createElement("hr", null), 
                     React.createElement("hr", null)

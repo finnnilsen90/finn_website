@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Test /> renders components 1`] = `
+<div
+  class="test_Container"
+>
+  <div
+    class="test"
+  >
+    0
+  </div>
+</div>
+`;
+
+exports[`Test button click should return 1 1`] = `
+<div
+  className="test_Container"
+>
+  <div
+    className="test"
+  >
+    0
+  </div>
+</div>
+`;
+
+exports[`Test button click should return 1 2`] = `
+<div
+  className="test_Container"
+>
+  <div
+    className="test"
+  >
+    0
+  </div>
+</div>
+`;

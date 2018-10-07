@@ -17,14 +17,14 @@ describe('component connection', () => {
 
 describe('<Hamburger />', () => {
 
-    const wrapper = render(<Hamburger />);
+    const wrapper = shallow(<Hamburger />);
 
     it('renders components', () => {
         expect(wrapper).toBeTruthy();
     });
 
     it('renders an `.hamburger`', () => {
-        expect(wrapper.find('.hamburger')).toHaveLength(1);
+        expect(wrapper.find('#hamburger')).toHaveLength(1);
     });
 
 });

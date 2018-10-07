@@ -23,7 +23,7 @@ describe('<VarName />', () => {
     const wrapper = render(<VarName />);
 
     it('renders components', () => {
-        expect(wrapper).toBeTruthy();
+        expect(wrapper).toMatchSnapshot();
     });
 
 

@@ -46,16 +46,16 @@ if (newChild === varName) { console.error('\x1b[41m%s\x1b[0m', 'Your parent comp
 const config = {
         dest: {
             test: './components/' + folder + '/test/', //unit testing files
-            test_file: './components/' + folder + '/test/'+varName+'.test.js', //unit testing files
+            test_file: './components/' + folder + '/test/', //unit testing files
             testChild: './components/' + folder + '/lib/' + child + '/test/', //unit testing for child component
-            testChild_file: './components/' + folder + '/lib/' + child + '/test/'+newChild_low+'.test.js', //unit testing for child component
+            testChild_file: './components/' + folder + '/lib/' + child + '/test/', //unit testing for child component
             html: './components/' + folder + '/example/', //folder for the html file and the bundled component
             bundle: './components/' + folder + '/example/', //folder where the bundled js file is stored
             dev: './components/' + folder + '/', //components folder
             lib: './components/lib/' + folder + '/', //child components folder
             Makelib: './components/lib/' + child + '/', //library components folder
             MakelibTest: './components/lib/' + child + '/test/', //unit test folder for library components
-            MakelibTest_file: './components/lib/' + child + '/test/'+newChild_low+'.test.js', //unit test folder for library components
+            MakelibTest_file: './components/lib/' + child + '/test/', //unit test folder for library components
             prod: './public/', //public folder used for production
             prodjs: './public/' + folder_type + '/', //public folder used for production javascript
             prodjpg: './public/images/', //public folder used for production images
@@ -180,9 +180,9 @@ gulp.task('finish', ['webpack', 'production']);
 //////////////////////// Gulp Functions ////////////////////////
 
 //replace() holds all of the child and lib component protocol for creating a component. 
-function replace(source, destin, base) {
+function replace(source, destin, base, test) {
 
-    if (base === 'yes') {
+    if (base === true) {
         gulp.src(source)
             .pipe($.replace('compName', compName))
             .pipe($.replace('varName', varName)) 
@@ -194,7 +194,7 @@ function replace(source, destin, base) {
             .pipe($.replace('newLib', 'new' + newChild_low))
             .pipe($.replace('child_Container', newChild + '_Container'))
             .pipe($.rename({
-                basename: child
+                basename: test===true?child+'.test':child 
             }))
             .pipe(gulp.dest(destin))
     } else {
@@ -214,8 +214,8 @@ function replace(source, destin, base) {
 
 function makeChild() {
 
-    replace('./components/templates/lib/Libcomp/Libcomp.*', config.dest.components, 'yes')
-    replace('./components/templates/lib/Libcomp/test/libcomp.test.js', config.dest.testChild_file)
+    replace('./components/templates/lib/Libcomp/Libcomp.*', config.dest.components, true)
+    replace('./components/templates/lib/Libcomp/test/libcomp.test.js', config.dest.testChild_file, true, true)
     replace('./components/templates/lib/Libcomp/test/configure.json', config.dest.testChild)
     console.log('---------------------------------------');
     console.log('New child component ' + newChild)
@@ -226,8 +226,8 @@ function makeChild() {
 
 function libComp() {
 
-    replace('./components/templates/lib/Libcomp/Libcomp.*', config.dest.Makelib, 'yes')
-    replace('./components/templates/lib/Libcomp/test/libcomp.test.js', config.dest.MakelibTest_file)
+    replace('./components/templates/lib/Libcomp/Libcomp.*', config.dest.Makelib, true)
+    replace('./components/templates/lib/Libcomp/test/libcomp.test.js', config.dest.MakelibTest_file, true, true)
     replace('./components/templates/lib/Libcomp/test/configure.json', config.dest.MakelibTest)
     console.log('---------------------------------------');
     console.log('New global lib component ' + newChild)
@@ -253,7 +253,7 @@ function makeComponent() {
     console.log('---------------------------------------'); 
 
     function replace_comp(source, dest, base) {
-        if (base === 'yes') {
+        if (base === true) {
             gulp.src(source)
                 .pipe($.replace('compName', compName))
                 .pipe($.replace('varName', varName)) 
@@ -281,7 +281,7 @@ function makeComponent() {
     replace_comp('./components/templates/test/comp.test.js', config.dest.test_file)
     replace_comp('./components/templates/test/configure.json', config.dest.test)
     replace_comp('./components/templates/example/*', config.dest.html)
-    replace_comp('./components/templates/compName.*', config.dest.dev, 'yes')
+    replace_comp('./components/templates/compName.*', config.dest.dev, true)
 
     makeChild();
 };

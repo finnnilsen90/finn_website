@@ -20,7 +20,7 @@ describe('<ChildConst />', () => {
     const wrapper = render(<ChildConst />);
 
     it('renders components', () => {
-        expect(wrapper).toBeTruthy();
+        expect(wrapper).toMatchSnapshot();
     });
 
 

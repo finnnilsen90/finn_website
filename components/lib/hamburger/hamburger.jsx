@@ -32,19 +32,19 @@ this.state = {
     componentDidMount() {
         let chng_hr = document.querySelector('.hamburger');
         let hvr_state = this.state.hover;
-        document.querySelector('.hamburger').addEventListener('mouseenter', ()=> {
+        document.getElementById('hamburger').addEventListener('mouseenter', ()=> {
             if(hvr_state===0) {
                 this.hover("#2bff72")
             }
         })
-        document.querySelector('.hamburger').addEventListener('mouseleave', ()=> {
+        document.getElementById('hamburger').addEventListener('mouseleave', ()=> {
             console.log(hvr_state);
             if(hvr_state===0) {
                 this.hover("grey");
             }
             chng_hr.style.border="3px solid grey"
         })
-        document.querySelector('.hamburger').addEventListener('click', ()=> {
+        document.getElementById('hamburger').addEventListener('click', ()=> {
             if(hvr_state===0) {
                 chng_hr.style.border="3px solid #2bff72"
             }
@@ -55,7 +55,7 @@ this.state = {
         return (
         <div className='libcomp-styleguid_Container'>
             <div className='ham_container'>
-                <div className='hamburger'>
+                <div id='hamburger'>
                     <hr/>
                     <hr/>
                     <hr/>
