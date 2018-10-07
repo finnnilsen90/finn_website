@@ -240,6 +240,7 @@ function libComp() {
 function makeComponent() {
     
     let varName = varArr[0].charAt(0).toUpperCase() + varArr[0].slice(1); 
+    let test_var = varArr[0]
     let newVarName = 'new' + varName;
 
     console.log('---------------------------------------');
@@ -252,7 +253,7 @@ function makeComponent() {
     console.log('Add link to main component(s).');
     console.log('---------------------------------------'); 
 
-    function replace_comp(source, dest, base) {
+    function replace_comp(source, dest, base, test) {
         if (base === true) {
             gulp.src(source)
                 .pipe($.replace('compName', compName))
@@ -262,7 +263,7 @@ function makeComponent() {
                 .pipe($.replace('child', child))
                 .pipe($.replace('ChildConst', newChild))
                 .pipe($.replace('libcomp', newChild_low))
-                .pipe($.rename({basename: compName,}))
+                .pipe($.rename({basename: test===true?test_var+'.test':compName,}))
                 .pipe(gulp.dest(dest));
         } else {
             gulp.src(source)
@@ -278,7 +279,7 @@ function makeComponent() {
             
     }
 
-    replace_comp('./components/templates/test/comp.test.js', config.dest.test_file)
+    replace_comp('./components/templates/test/comp.test.js', config.dest.test_file, true, true)
     replace_comp('./components/templates/test/configure.json', config.dest.test)
     replace_comp('./components/templates/example/*', config.dest.html)
     replace_comp('./components/templates/compName.*', config.dest.dev, true)
