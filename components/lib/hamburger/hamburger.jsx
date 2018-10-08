@@ -24,7 +24,7 @@ this.state = {
         clr_chng[num].style.border="2px solid "+color;
         if (num < 2) {
             this.setState(chng => ({hover:num+1}));
-            setTimeout(()=> {this.ham_enter(color)},100);
+            setTimeout(()=> {this.ham_enter()},100);
         } else {
             this.setState(chng => ({hover:0}));
         }
@@ -48,25 +48,7 @@ this.state = {
     }
      
     componentDidMount() {
-        // let chng_hr = document.querySelector('.hamburger');
-        // let hvr_state = this.state.hover;
-        // document.getElementById('hamburger').addEventListener('mouseenter', ()=> {
-        //     if(hvr_state===0) {
-        //         this.hover("#2bff72")
-        //     }
-        // })
-        // document.getElementById('hamburger').addEventListener('mouseleave', ()=> {
-        //     console.log(hvr_state);
-        //     if(hvr_state===0) {
-        //         this.hover("grey");
-        //     }
-        //     chng_hr.style.border="3px solid grey"
-        // })
-        // document.getElementById('hamburger').addEventListener('click', ()=> {
-        //     if(hvr_state===0) {
-        //         chng_hr.style.border="3px solid #2bff72"
-        //     }
-        // })
+
     }
     render() {
 
