@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Test /> renders components 1`] = `
+<div>
+  <button
+    type="button"
+  >
+    First Button
+  </button>
+  <button
+    type="button"
+  >
+    Second Button
+  </button>
+</div>
+`;

@@ -17,14 +17,26 @@ describe('component connection', () => {
 
 describe('<Hamburger />', () => {
 
-    const wrapper = shallow(<Hamburger />);
+    const wrapper = render(<Hamburger />);
 
     it('renders components', () => {
         expect(wrapper).toBeTruthy();
     });
 
     it('renders an `.hamburger`', () => {
-        expect(wrapper.find('#hamburger')).toHaveLength(1);
+        expect(wrapper.find('.hamburger')).toHaveLength(1);
     });
+
+});
+
+describe('<Hamburger /> state', () => {
+
+    it('should have green lines', () => {
+        const wrapper = shallow(<Hamburger />);
+        const hamburger = wrapper.find('.hamburger');
+
+        hamburger.simulate('onmouseenter');
+        expect(hamburger).toMatchSnapshot();
+    })
 
 });

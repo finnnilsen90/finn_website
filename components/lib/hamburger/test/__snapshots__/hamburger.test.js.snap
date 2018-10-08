@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hamburger /> state should have green lines 1`] = `
+<div
+  className="hamburger"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <hr />
+  <hr />
+  <hr />
+</div>
+`;

@@ -401,35 +401,14 @@ function webpack_build() {
                     sourceMap: true
                 })
             ],
-            module: {
-                rules: [
-                     {
-                        test: /\.(png|jpg|svg)$/, 
-                        use: [{
-                            loader: "file-loader",
-                            options:  {
-                                name: '[hash].[ext]',
-                                publicPath: '/' + fileName + '/example/'
-                                }
-                            }]
-                    },
-                    {
-                        test: /\.css$/,
-                        use: [ 'style-loader', 'css-loader' ]
-                    },
-                    {
-                        test: /\.js$/,
-                        exclude: ['node_modules'],
-                        use: [{
-                            loader: 'babel-loader',
-                            options: {
-                                presets: ['es2015', 'react'],
-                                plugins: ['transform-async-to-generator']
-                            }, 
-                        }]
-                    }
-                ] 
-            }   
+            module:  {
+                loaders: [
+                    {exclude: ['node_modules'], loader: 'babel-loader', test: /\.jsx?$/},
+                    {loader: 'style-loader!css-loader', test: /\.css$/},
+                    {loader: 'url-loader', test: /\.gif$/},
+                    {loader: 'file-loader', test: /\.(ttf|eot|svg)$/},
+                ],
+            },
         }))
         .pipe(gulp.dest(config.dest.bundle));
     }
@@ -478,36 +457,14 @@ function webpack_production() {
                         sourceMap: false
                     })
                 ],
-                module: {
-                    rules: [
-                        {
-                            test: /\.(png|jpg|svg)$/, 
-                            use: [{
-                                loader: "file-loader",
-                                options:  {
-                                    name: '[hash].[ext]',
-                                    publicPath: '/',
-                                    emitFile: false
-                                    }
-                                }]
-                        },
-                        {
-                            test: /\.css$/,
-                            use: [ 'style-loader', 'css-loader' ]
-                        },
-                        {
-                            test: /\.js$/,
-                            exclude: ['node_modules'],
-                            use: [{
-                                loader: 'babel-loader',
-                                options: {
-                                    presets: ['es2015', 'react'],
-                                    plugins: ['transform-async-to-generator']
-                                }, 
-                            }]
-                        }
-                    ] 
-                }   
+                module:  {
+                loaders: [
+                    {exclude: ['node_modules'], loader: 'babel-loader', test: /\.jsx?$/},
+                    {loader: 'style-loader!css-loader', test: /\.css$/},
+                    {loader: 'url-loader', test: /\.gif$/},
+                    {loader: 'file-loader', test: /\.(ttf|eot|svg)$/},
+                    ],
+                },
             }))
             .pipe(gulp.dest(config.dest.prodjs));
     }
