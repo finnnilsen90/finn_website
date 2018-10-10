@@ -1,17 +1,51 @@
-@media screen and (min-width: 800px) {
-   .test {
-        padding:20px;
+@import '../../mixins/color.less';
+
+
+.dropdown {
+    display:none;
+    width:200px;
+    margin:-17px 0 0 -186px;
+    li {
+        font-weight: bold;
+        color:@background_color;
+        display:block;
+        list-style-type: none;
+        text-align:center;
+        @import '../../mixins/font.less';
+        margin:0 20px 0 0;
+        width:100%;
+        padding:8px 20px 8px 20px;
+        cursor: pointer;
+        border:1px solid @background_color;
     }
+    li:hover {
+        background-color:@offset;
+    }
+}
+
+hr {
+    margin: 10px auto 0 auto;
+    width: 30px;
+    border: 2px solid @background_color;
+}
+.hamburger {
+    border: 3px solid @background_color;
+    width: 50px;
+    height: 50px;
+}
+.hamburger:hover {
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 800px) {
+
 }
 
 @media screen and (min-width: 500px) and (max-width: 800px){
-    .test {
-        padding:30px;
-    }
+
 }
 
 @media screen and (max-width: 500px){
-    .test {
-        padding:40px;
-    }
+
 }

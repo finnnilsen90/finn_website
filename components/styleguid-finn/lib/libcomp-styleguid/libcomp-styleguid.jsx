@@ -24,6 +24,7 @@ class Libcomp extends React.Component {
 
         return (
         <div className='libcomp-styleguid_Container'>
+            <h2 className='header_comp'>Library components</h2>
             <div className='hamburger_pos'>
                 <Hamburger />
             </div>

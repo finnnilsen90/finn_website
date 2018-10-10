@@ -4,10 +4,10 @@ const css = require('./libcomp-styleguid.css');
 
 let Hamburger = require('../../../lib/hamburger/hamburger.js');
 
-var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Libcomp[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Libcomp.prototype=Object.create(____SuperProtoOf____Class0);Libcomp.prototype.constructor=Libcomp;Libcomp.__superConstructor__=____Class0;
+var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____Class1.hasOwnProperty(____Class1____Key)){Libcomp[____Class1____Key]=____Class1[____Class1____Key];}}var ____SuperProtoOf____Class1=____Class1===null?null:____Class1.prototype;Libcomp.prototype=Object.create(____SuperProtoOf____Class1);Libcomp.prototype.constructor=Libcomp;Libcomp.__superConstructor__=____Class1;
     
     function Libcomp(props) {"use strict";
-    ____Class0.call(this,props);
+    ____Class1.call(this,props);
     this.state = {
             test: ''
         };
@@ -24,7 +24,10 @@ var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____C
 
         return (
         React.createElement("div", {className: "libcomp-styleguid_Container"}, 
-            React.createElement(Hamburger, {className: "hamburger_pos"})
+            React.createElement("h2", {className: "header_comp"}, "Library components"), 
+            React.createElement("div", {className: "hamburger_pos"}, 
+                React.createElement(Hamburger, null)
+            )
         )
         )
     }});

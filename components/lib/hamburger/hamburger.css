@@ -1,3 +1,26 @@
+.dropdown {
+  display: none;
+  width: 200px;
+  margin: -17px 0 0 -186px;
+}
+.dropdown li {
+  font-weight: bold;
+  color: grey;
+  display: block;
+  list-style-type: none;
+  text-align: center;
+  margin: 0 20px 0 0;
+  width: 100%;
+  padding: 8px 20px 8px 20px;
+  cursor: pointer;
+  border: 1px solid grey;
+}
+.dropdown li .font {
+  font-family: "Arial", Sans-serif;
+}
+.dropdown li:hover {
+  background-color: #2bff72;
+}
 hr {
   margin: 10px auto 0 auto;
   width: 30px;
@@ -10,8 +33,4 @@ hr {
 }
 .hamburger:hover {
   cursor: pointer;
-}
-.dropdown {
-  display: none;
-  border: 2px solid #2bff72;
 }

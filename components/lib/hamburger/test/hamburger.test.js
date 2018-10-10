@@ -37,6 +37,64 @@ describe('<Hamburger /> state', () => {
 
         hamburger.simulate('onmouseenter');
         expect(hamburger).toMatchSnapshot();
+
+        hamburger.simulate('onmouseleave');
+        expect(hamburger).toMatchSnapshot();
+
+        hamburger.simulate('onclick');
+        expect(hamburger).toMatchSnapshot();
+    })
+
+});
+
+
+describe('<Hamburger /> dropdown state', () => {
+
+    it('dropdown should content', () => {
+        const wrapper = shallow(<Hamburger />);
+        const hamburger = wrapper.find('.hamburger');
+        const dropdown = wrapper.find('.dropdown');
+
+        let links = wrapper.state().links;
+        let toggle = wrapper.state().toggle;
+
+        let links_expected = {
+            login: {
+                link: '/login',
+                className: 'link',
+                text: 'Login'
+            },
+            home_page: {
+                link: '/home_page',
+                className: 'link',
+                text: 'Home Page'
+            },
+            resume: {
+                link: '/resume',
+                className: 'link',
+                text: 'Resume'
+            },
+            projects: {
+                link: '/home_page',
+                className: 'link',
+                text: 'Projects'
+            },
+            contact: {
+                link: '/contact',
+                className: 'link',
+                text: 'Contact'
+            }
+        }
+
+        let html =  [<li className="link" href="/login">Login</li>, <li className="link" href="/home_page">Home Page</li>, <li className="link" href="/resume">Resume</li>, <li className="link" href="/home_page"
+>Projects</li>, <li className="link" href="/contact">Contact</li>]
+
+        expect(links).toEqual(links_expected);
+
+        expect(newHamburger.links_compile(links)).toEqual(html);
+
+        hamburger.simulate('onclick');
+        expect(dropdown).toMatchSnapshot();
     })
 
 });
