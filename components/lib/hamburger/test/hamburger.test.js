@@ -31,18 +31,20 @@ describe('<Hamburger />', () => {
 
 describe('<Hamburger /> state', () => {
 
-    it('should have green lines', () => {
+    it('should match state of each action', () => {
         const wrapper = shallow(<Hamburger />);
         const hamburger = wrapper.find('.hamburger');
+        const dropdown = wrapper.find('.dropdown');
+        const container = wrapper.find('.libcomp-hamburger_Container');
 
-        hamburger.simulate('onmouseenter');
-        expect(hamburger).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
 
-        hamburger.simulate('onmouseleave');
-        expect(hamburger).toMatchSnapshot();
+        hamburger.simulate('onmouseover');
+        expect(wrapper).toMatchSnapshot();
 
-        hamburger.simulate('onclick');
-        expect(hamburger).toMatchSnapshot();
+        dropdown.simulate('onmouseover');
+        expect(wrapper).toMatchSnapshot();
+        
     })
 
 });
@@ -50,7 +52,7 @@ describe('<Hamburger /> state', () => {
 
 describe('<Hamburger /> dropdown state', () => {
 
-    it('dropdown should content', () => {
+    it('dropdown should contain', () => {
         const wrapper = shallow(<Hamburger />);
         const hamburger = wrapper.find('.hamburger');
         const dropdown = wrapper.find('.dropdown');
@@ -60,9 +62,9 @@ describe('<Hamburger /> dropdown state', () => {
 
         let links_expected = {
             login: {
-                link: '/login',
+                link: '/logout',
                 className: 'link',
-                text: 'Login'
+                text: 'Logout'
             },
             home_page: {
                 link: '/home_page',
@@ -86,14 +88,19 @@ describe('<Hamburger /> dropdown state', () => {
             }
         }
 
-        let html =  [<li className="link" href="/login">Login</li>, <li className="link" href="/home_page">Home Page</li>, <li className="link" href="/resume">Resume</li>, <li className="link" href="/home_page"
+        let html =  [<li className="link" href="/logout">Logout</li>, <li className="link" href="/home_page">Home Page</li>, <li className="link" href="/resume">Resume</li>, <li className="link" href="/home_page"
 >Projects</li>, <li className="link" href="/contact">Contact</li>]
 
         expect(links).toEqual(links_expected);
 
         expect(newHamburger.links_compile(links)).toEqual(html);
 
-        hamburger.simulate('onclick');
+        expect(dropdown).toMatchSnapshot();
+
+        hamburger.simulate('onmouseenter');
+        expect(dropdown).toMatchSnapshot();
+
+        hamburger.simulate('onmouseleave');
         expect(dropdown).toMatchSnapshot();
     })
 

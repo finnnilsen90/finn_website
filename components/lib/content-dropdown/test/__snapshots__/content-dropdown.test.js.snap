@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Content /> mount should match props 1`] = `
+<div
+  className="content-dropdown_Container"
+>
+  <h3
+    className="title"
+  >
+    test
+  </h3>
+  <div
+    className="arrow arw_test"
+    onClick={[Function]}
+  />
+  <div
+    className="arrow_click arw_click_test"
+    onClick={[Function]}
+  />
+  <hr
+    className="content_hr cont_hr_test"
+  />
+  <div
+    className="content_parent cont_par_test"
+  >
+    <p>
+      test content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Content /> render renders components 1`] = `
+<div
+  class="content-dropdown_Container"
+>
+  <h3
+    class="title"
+  />
+  <div
+    class="arrow arw_undefined"
+  />
+  <div
+    class="arrow_click arw_click_undefined"
+  />
+  <hr
+    class="content_hr cont_hr_undefined"
+  />
+  <div
+    class="content_parent cont_par_undefined"
+  >
+    <p />
+  </div>
+</div>
+`;
+
+exports[`<Content /> shallow should match props 1`] = `
+<div
+  className="content-dropdown_Container"
+>
+  <h3
+    className="title"
+  >
+    test
+  </h3>
+  <div
+    className="arrow arw_test"
+    onClick={[Function]}
+  />
+  <div
+    className="arrow_click arw_click_test"
+    onClick={[Function]}
+  />
+  <hr
+    className="content_hr cont_hr_test"
+  />
+  <div
+    className="content_parent cont_par_test"
+  >
+    <p>
+      test content
+    </p>
+  </div>
+</div>
+`;

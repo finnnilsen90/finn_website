@@ -5,21 +5,21 @@ const jest = require('jest');
 const sinon = require('sinon');
 let { shallow, mount, render } = require('enzyme');
 
-const Styleguid = require('../Styleguid-finn');
+const Libcomp = require('../libcomp-styleguid.js');
 
-let StyleguidConst = new Styleguid(); 
+let newlibcompcomp = new Libcomp();
 
 describe('component connection', () => {
 
     it('should be defined', () => {
-        expect(Styleguid).toBeDefined();
+        expect(Libcomp).toBeDefined();
     })
 
 })  
-   
-describe('<Styleguid />', () => {
+    
+describe('<Libcomp />', () => {
 
-    const wrapper = shallow(<Styleguid />);
+    const wrapper = shallow(<Libcomp />);
 
     it('renders components', () => {
         expect(wrapper).toMatchSnapshot();

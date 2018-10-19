@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders components 1`] = `
+<div
+  class="button-one_Container"
+>
+  <button
+    class="button_style_one"
+  />
+</div>
+`;
+
+exports[`<Button /> should render button name and href 1`] = `
+<div
+  className="button-one_Container"
+>
+  <button
+    className="button_style_one"
+    href="/test"
+  >
+    Button
+  </button>
+</div>
+`;

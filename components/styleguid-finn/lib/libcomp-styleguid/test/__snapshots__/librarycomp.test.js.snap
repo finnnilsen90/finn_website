@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Libcomp /> renders components 1`] = `
+<div
+  className="libcomp-styleguid_Container"
+>
+  <h2
+    className="header_comp"
+  >
+    Library components
+  </h2>
+  <div
+    className="hamburger_pos"
+  >
+    <Hamburger />
+  </div>
+  <div
+    className="button_comp"
+  >
+    <button
+      className="button_style_one"
+    >
+      Button
+    </button>
+    <button
+      className="button_style_two"
+    >
+      Button
+    </button>
+  </div>
+</div>
+`;

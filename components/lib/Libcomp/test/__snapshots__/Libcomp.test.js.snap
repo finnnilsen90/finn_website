@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Libcomp /> renders components 1`] = `
+<div
+  class="Libcomp_Container"
+>
+  <div
+    class="test"
+  />
+</div>
+`;

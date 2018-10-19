@@ -2,10 +2,10 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./color-styleguid.css')
 
-var ____Class3=React.Component;for(var ____Class3____Key in ____Class3){if(____Class3.hasOwnProperty(____Class3____Key)){Color[____Class3____Key]=____Class3[____Class3____Key];}}var ____SuperProtoOf____Class3=____Class3===null?null:____Class3.prototype;Color.prototype=Object.create(____SuperProtoOf____Class3);Color.prototype.constructor=Color;Color.__superConstructor__=____Class3;
+var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____Class1.hasOwnProperty(____Class1____Key)){Color[____Class1____Key]=____Class1[____Class1____Key];}}var ____SuperProtoOf____Class1=____Class1===null?null:____Class1.prototype;Color.prototype=Object.create(____SuperProtoOf____Class1);Color.prototype.constructor=Color;Color.__superConstructor__=____Class1;
     
     function Color(props) {"use strict";
-    ____Class3.call(this,props);
+    ____Class1.call(this,props);
     this.state = {
             test: ''
         };

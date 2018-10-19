@@ -3,8 +3,9 @@ var reactClass = require('create-react-class');
 var ReactDom = require('react-dom');
 var css = require('./styleguid-finn.css')
 
-const Color = require('./lib/color-styleguid/color-styleguid.js')
-const Libcomp = require('./lib/libcomp-styleguid/libcomp-styleguid.js')
+const Color = require('./lib/color-styleguid/color-styleguid.js');
+const Libcomp = require('./lib/libcomp-styleguid/libcomp-styleguid.js');
+const Footer = require('../lib/footer/footer.js');
 
 class Styleguid extends React.Component {
     
@@ -22,6 +23,9 @@ class Styleguid extends React.Component {
             <div className={'containter '+'font'}>
                 <Color />
                 <Libcomp />
+                <div className='footer'>
+                    <Footer />
+                </div>
             </div>
         )
     }

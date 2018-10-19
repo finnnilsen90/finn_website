@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Styleguid /> renders components 1`] = `
+<div
+  className="containter font"
+>
+  <Color />
+  <Libcomp />
+  <div
+    className="footer"
+  >
+    <Footer />
+  </div>
+</div>
+`;

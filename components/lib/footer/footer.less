@@ -1,0 +1,39 @@
+@import '../../mixins/color.less';
+
+.footer_Container {
+    background-color:@secondarycolor;
+    position:absolute;
+    width:100%;
+    height:170px;
+    .link_footer {
+        width:100px;
+        @import '../../mixins/font.less';
+        color:@background_color;
+        display:block;
+        list-style-type: none;
+        padding-top:9px;
+        cursor: pointer;
+    }
+    .link_footer:hover {
+        color:@secondary_background_color;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+   .test {
+        padding:20px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px){
+    .test {
+        padding:30px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .test {
+        padding:40px;
+    }
+}

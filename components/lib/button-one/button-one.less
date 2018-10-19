@@ -1,0 +1,36 @@
+@import '../../mixins/color.less';
+
+.button_style_one {
+    padding:15px 35px 15px 35px;
+    font-size:1.1em;
+    cursor: pointer;
+    border:none;
+    background-color:@primarycolor;
+    color:white;
+    text-decoration: none;
+    @import '../../mixins/font.less';
+    
+}
+
+.button_style_one:hover {
+    background-color:@secondarycolor;
+    color:@primarycolor;
+}
+
+@media screen and (min-width: 800px) {
+   .test {
+        padding:20px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px){
+    .test {
+        padding:30px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .test {
+        padding:40px;
+    }
+}

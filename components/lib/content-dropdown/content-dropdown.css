@@ -1,0 +1,47 @@
+.title {
+  color: #2998ff;
+}
+.content_hr {
+  margin: -15px 0 0 0;
+  width: 100%;
+  border: 2px solid #2998ff;
+}
+.arrow {
+  margin: -30px 5px 0 0;
+  border-left: 3px solid #2998ff;
+  border-bottom: 3px solid #2998ff;
+  transform: rotate(135deg);
+  width: 15px;
+  height: 15px;
+  float: right;
+}
+.arrow_click {
+  display: none;
+  margin: -40px 5px 0 0;
+  border-left: 3px solid #c2e2ff;
+  border-bottom: 3px solid #c2e2ff;
+  transform: rotate(-45deg);
+  width: 15px;
+  height: 15px;
+  float: right;
+}
+.arrow:hover {
+  margin: -40px 5px 0 0;
+  border-left: 3px solid #2bff72;
+  border-bottom: 3px solid #2bff72;
+  cursor: pointer;
+  transform: rotate(-45deg);
+}
+.arrow_click:hover {
+  cursor: pointer;
+}
+.content_parent {
+  color: grey;
+  margin: -15px 0 0 0;
+  display: none;
+  width: 100%;
+  background-color: #c2e2ff;
+}
+.content_parent p {
+  padding: 20px 10px 20px 30px;
+}

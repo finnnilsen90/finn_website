@@ -19,6 +19,7 @@
       "\\.(css|less)$": "<rootDir>/testing/styleMock.js"
     },
     "moduleFileExtensions": [
+      "json",
       "js",
       "jsx"
     ],

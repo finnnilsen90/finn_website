@@ -1,0 +1,16 @@
+.button_style_two {
+  padding: 15px 35px 15px 35px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border: 3px solid grey;
+  background-color: white;
+  color: grey;
+  text-decoration: none;
+}
+.button_style_two .font {
+  font-family: "Arial", Sans-serif;
+}
+.button_style_two:hover {
+  border: 3px solid #2bff72;
+  color: #2bff72;
+}

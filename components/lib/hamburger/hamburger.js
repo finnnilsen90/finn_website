@@ -2,18 +2,18 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./hamburger.css')
 
-var ____ClassC=React.Component;for(var ____ClassC____Key in ____ClassC){if(____ClassC.hasOwnProperty(____ClassC____Key)){Hamburger[____ClassC____Key]=____ClassC[____ClassC____Key];}}var ____SuperProtoOf____ClassC=____ClassC===null?null:____ClassC.prototype;Hamburger.prototype=Object.create(____SuperProtoOf____ClassC);Hamburger.prototype.constructor=Hamburger;Hamburger.__superConstructor__=____ClassC;
+var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____Class6.hasOwnProperty(____Class6____Key)){Hamburger[____Class6____Key]=____Class6[____Class6____Key];}}var ____SuperProtoOf____Class6=____Class6===null?null:____Class6.prototype;Hamburger.prototype=Object.create(____SuperProtoOf____Class6);Hamburger.prototype.constructor=Hamburger;Hamburger.__superConstructor__=____Class6;
     
     function Hamburger(props) {"use strict";
-    ____ClassC.call(this,props);
+    ____Class6.call(this,props);
     this.state = {
             hover: 0,
             toggle: true,
             links: {
                 login: {
-                    link: '/login',
+                    link: '/logout',
                     className: 'link',
-                    text: 'Login'
+                    text: 'Logout'
                 },
                 home_page: {
                     link: '/home_page',
@@ -38,30 +38,11 @@ var ____ClassC=React.Component;for(var ____ClassC____Key in ____ClassC){if(____C
             }
         };
 
-        this.ham_enter = this.ham_enter.bind(this);
-        this.ham_leave = this.ham_leave.bind(this);
         this.ham_click = this.ham_click.bind(this);
 
         this.links_compile = this.links_compile.bind(this);
-        this.toggle = this.toggle.bind(this);
-
 
     }
-
-    Object.defineProperty(Hamburger.prototype,"toggle",{writable:true,configurable:true,value:function() {"use strict";
-        let dropdown = document.querySelector('.dropdown');
-        let state = this.state.toggle;
-
-         this.setState(function(prevState)  {return {
-            toggle: !prevState.toggle
-        };});
-
-        if (state) {
-            dropdown.style.display= 'block';
-        } else {
-            dropdown.style.display= 'none';
-        }
-    }});
 
     Object.defineProperty(Hamburger.prototype,"links_compile",{writable:true,configurable:true,value:function(input) {"use strict";
 
@@ -75,48 +56,33 @@ var ____ClassC=React.Component;for(var ____ClassC____Key in ____ClassC){if(____C
 
     }});
 
-    Object.defineProperty(Hamburger.prototype,"ham_enter",{writable:true,configurable:true,value:function() {"use strict";
-        let color = "#2bff72";
-        let num = this.state.hover;
-        let chng_hr = document.querySelector('.hamburger');
-        let clr_chng = chng_hr.childNodes;
-        clr_chng[num].style.border="2px solid "+color;
-        if (num < 2) {
-            this.setState(function(chng)  {return {hover:num+1};});
-            setTimeout(function() {this.ham_enter()}.bind(this),100);
-        } else {
-            this.setState(function(chng)  {return {hover:0};});
-        }
-    }});
-
-    Object.defineProperty(Hamburger.prototype,"ham_leave",{writable:true,configurable:true,value:function() {"use strict";
-
-        let chng_hr = document.querySelector('.hamburger');
-        let chng_child = document.querySelector('.hamburger').childNodes;
-
-        for (let i=0;i<chng_child.length;i++) {
-            chng_child[i].style.border="2px solid grey";
-        }
-        chng_hr.style.border="3px solid grey";
-
-    }});
-
     Object.defineProperty(Hamburger.prototype,"ham_click",{writable:true,configurable:true,value:function() {"use strict";
-        this.toggle();
-
-        let toggle = this.state.toggle;
         let chng_hr = document.querySelector('.hamburger');
         let chng_child = document.querySelector('.hamburger').childNodes;
+        let dropdown = document.querySelector('.dropdown');
+        let state = this.state.toggle;
+        if (state) {
+            dropdown.style.display= 'block';
 
-        if (toggle) {
             for (let i=0;i<chng_child.length;i++) {
                 chng_child[i].style.border="2px solid #2bff72";
-            }         
+            }
+            
+            this.setState(function(prevState)  {return {
+                toggle: !prevState.toggle
+            };});
         } else {
+            dropdown.style.display= 'none';
+
             for (let i=0;i<chng_child.length;i++) {
                 chng_child[i].style.border="2px solid grey";
             }
+
+            this.setState(function(prevState)  {return {
+                toggle: !prevState.toggle
+            };});
         }
+         
     }});
      
     Object.defineProperty(Hamburger.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
@@ -125,16 +91,16 @@ var ____ClassC=React.Component;for(var ____ClassC____Key in ____ClassC){if(____C
     Object.defineProperty(Hamburger.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
 
         return (
-        React.createElement("div", {className: "libcomp-styleguid_Container"}, 
+        React.createElement("div", {className: "libcomp-hamburger_Container"}, 
             React.createElement("div", {className: "ham_container"}, 
-                React.createElement("div", {className: "hamburger", onMouseEnter: this.ham_enter, onMouseLeave: this.ham_leave, onClick: this.ham_click}, 
+                React.createElement("div", {className: "hamburger", onMouseLeave: this.ham_click, onMouseEnter: this.ham_click}, 
                     React.createElement("hr", null), 
                     React.createElement("hr", null), 
                     React.createElement("hr", null)
                 )
             ), 
-            React.createElement("div", {className: "dropdown", onClick: this.toggle}, 
-                React.createElement("ul", null, 
+            React.createElement("div", {className: "dropdown_container"}, 
+                React.createElement("ul", {className: "dropdown", onMouseLeave: this.ham_click}, 
                     this.links_compile(this.state.links)
                 )
             )

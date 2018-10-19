@@ -11,9 +11,9 @@ class Hamburger extends React.Component {
             toggle: true,
             links: {
                 login: {
-                    link: '/login',
+                    link: '/logout',
                     className: 'link',
-                    text: 'Login'
+                    text: 'Logout'
                 },
                 home_page: {
                     link: '/home_page',
@@ -38,29 +38,10 @@ class Hamburger extends React.Component {
             }
         };
 
-        this.ham_enter = this.ham_enter.bind(this);
-        this.ham_leave = this.ham_leave.bind(this);
         this.ham_click = this.ham_click.bind(this);
 
         this.links_compile = this.links_compile.bind(this);
-        this.toggle = this.toggle.bind(this);
 
-
-    }
-
-    toggle() {
-        let dropdown = document.querySelector('.dropdown');
-        let state = this.state.toggle;
-
-         this.setState(prevState => ({
-            toggle: !prevState.toggle
-        }));
-
-        if (state) {
-            dropdown.style.display= 'block';
-        } else {
-            dropdown.style.display= 'none';
-        }
     }
 
     links_compile(input) {
@@ -75,48 +56,33 @@ class Hamburger extends React.Component {
 
     }
 
-    ham_enter() {
-        let color = "#2bff72";
-        let num = this.state.hover;
-        let chng_hr = document.querySelector('.hamburger');
-        let clr_chng = chng_hr.childNodes;
-        clr_chng[num].style.border="2px solid "+color;
-        if (num < 2) {
-            this.setState(chng => ({hover:num+1}));
-            setTimeout(()=> {this.ham_enter()},100);
-        } else {
-            this.setState(chng => ({hover:0}));
-        }
-    }
-
-    ham_leave() {
-
-        let chng_hr = document.querySelector('.hamburger');
-        let chng_child = document.querySelector('.hamburger').childNodes;
-
-        for (let i=0;i<chng_child.length;i++) {
-            chng_child[i].style.border="2px solid grey";
-        }
-        chng_hr.style.border="3px solid grey";
-
-    }
-
     ham_click() {
-        this.toggle();
-
-        let toggle = this.state.toggle;
         let chng_hr = document.querySelector('.hamburger');
         let chng_child = document.querySelector('.hamburger').childNodes;
+        let dropdown = document.querySelector('.dropdown');
+        let state = this.state.toggle;
+        if (state) {
+            dropdown.style.display= 'block';
 
-        if (toggle) {
             for (let i=0;i<chng_child.length;i++) {
                 chng_child[i].style.border="2px solid #2bff72";
-            }         
+            }
+            
+            this.setState(prevState => ({
+                toggle: !prevState.toggle
+            }));
         } else {
+            dropdown.style.display= 'none';
+
             for (let i=0;i<chng_child.length;i++) {
                 chng_child[i].style.border="2px solid grey";
             }
+
+            this.setState(prevState => ({
+                toggle: !prevState.toggle
+            }));
         }
+         
     }
      
     componentDidMount() {
@@ -125,16 +91,16 @@ class Hamburger extends React.Component {
     render() {
 
         return (
-        <div className='libcomp-styleguid_Container'>
+        <div className='libcomp-hamburger_Container'>
             <div className='ham_container'>
-                <div className='hamburger' onMouseEnter={this.ham_enter} onMouseLeave={this.ham_leave} onClick={this.ham_click}>
+                <div className='hamburger' onMouseLeave={this.ham_click} onMouseEnter={this.ham_click}>
                     <hr/>
                     <hr/>
                     <hr/>
                 </div>
             </div>
-            <div className='dropdown' onClick={this.toggle}>
-                <ul>
+            <div className='dropdown_container'>
+                <ul className='dropdown' onMouseLeave={this.ham_click}>
                     {this.links_compile(this.state.links)}
                 </ul>
             </div>

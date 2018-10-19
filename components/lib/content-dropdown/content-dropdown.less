@@ -1,0 +1,67 @@
+@import '../../mixins/color.less';
+
+.title {
+    color:@primarycolor;
+}
+
+.content_hr {
+    margin:-15px 0 0 0;
+    width:100%;
+    border:2px solid @primarycolor;
+}
+
+.arrow {
+    margin:-30px 5px 0 0;
+    border-left:3px solid @primarycolor;
+    border-bottom:3px solid @primarycolor;
+    transform: rotate(135deg);
+    width:15px;
+    height:15px;
+    float:right;
+}
+
+.arrow_click {
+    display:none;
+    margin:-40px 5px 0 0;
+    border-left:3px solid @secondarycolor;
+    border-bottom:3px solid @secondarycolor;
+    transform: rotate(-45deg);
+    width:15px;
+    height:15px;
+    float:right;
+}
+
+.arrow:hover {
+    margin:-40px 5px 0 0;
+    border-left:3px solid @offset;
+    border-bottom:3px solid @offset;
+    cursor:pointer;
+    transform: rotate(-45deg);
+}
+
+.arrow_click:hover {
+    cursor:pointer;
+}
+
+.content_parent {
+    color:@background_color;
+    margin:-15px 0 0 0;
+    display:none;
+    width:100%;
+    background-color:@secondarycolor;
+    p {
+        padding:20px 10px 20px 30px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px){
+
+}
+
+@media screen and (max-width: 500px){
+
+}

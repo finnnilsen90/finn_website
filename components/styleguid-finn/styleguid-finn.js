@@ -3,13 +3,14 @@ var reactClass = require('create-react-class');
 var ReactDom = require('react-dom');
 var css = require('./styleguid-finn.css')
 
-const Color = require('./lib/color-styleguid/color-styleguid.js')
-const Libcomp = require('./lib/libcomp-styleguid/libcomp-styleguid.js')
+const Color = require('./lib/color-styleguid/color-styleguid.js');
+const Libcomp = require('./lib/libcomp-styleguid/libcomp-styleguid.js');
+const Footer = require('../lib/footer/footer.js');
 
-var ____Class4=React.Component;for(var ____Class4____Key in ____Class4){if(____Class4.hasOwnProperty(____Class4____Key)){Styleguid[____Class4____Key]=____Class4[____Class4____Key];}}var ____SuperProtoOf____Class4=____Class4===null?null:____Class4.prototype;Styleguid.prototype=Object.create(____SuperProtoOf____Class4);Styleguid.prototype.constructor=Styleguid;Styleguid.__superConstructor__=____Class4;
+var ____Classe=React.Component;for(var ____Classe____Key in ____Classe){if(____Classe.hasOwnProperty(____Classe____Key)){Styleguid[____Classe____Key]=____Classe[____Classe____Key];}}var ____SuperProtoOf____Classe=____Classe===null?null:____Classe.prototype;Styleguid.prototype=Object.create(____SuperProtoOf____Classe);Styleguid.prototype.constructor=Styleguid;Styleguid.__superConstructor__=____Classe;
     
     function Styleguid(props) {"use strict";
-    ____Class4.call(this,props);
+    ____Classe.call(this,props);
     this.state = {
             test: 'Test'
         };
@@ -21,7 +22,10 @@ var ____Class4=React.Component;for(var ____Class4____Key in ____Class4){if(____C
         return (
             React.createElement("div", {className: 'containter '+'font'}, 
                 React.createElement(Color, null), 
-                React.createElement(Libcomp, null)
+                React.createElement(Libcomp, null), 
+                React.createElement("div", {className: "footer"}, 
+                    React.createElement(Footer, null)
+                )
             )
         )
     }});
