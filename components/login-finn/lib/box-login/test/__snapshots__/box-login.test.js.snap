@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box /> renders components 1`] = `
+<div
+  class="box-login_Container"
+>
+  <div
+    class="box"
+  >
+    <div
+      class="button-two_Container"
+    >
+      <button
+        class="button_style_two"
+        href="./"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`[object Object] 1`] = `
+<div
+  className="button-two_Container"
+>
+  <button
+    className="button_style_two"
+    href="./"
+  >
+    Login
+  </button>
+</div>
+`;
