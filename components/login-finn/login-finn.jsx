@@ -19,7 +19,7 @@ class Login extends React.Component {
     render() {
         
         return (
-            <div className='containter'>
+            <div className='container'>
                 <img className='background_img' src={Background} />
                     <div className='box_cont'>
                         <Box />
