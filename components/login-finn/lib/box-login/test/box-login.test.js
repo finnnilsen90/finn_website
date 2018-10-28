@@ -4,7 +4,7 @@ const renderer = require('react-test-renderer')
 let { shallow, mount, render } = require('enzyme');
 
 const Box = require('../box-login.js');
-const Button_two = require('../../../../lib/button-two/button-two.js');
+const Button_one = require('../../../../lib/button-one/button-one.js');
 
 let newBox = new Box();
 
@@ -15,7 +15,7 @@ describe('component connection', () => {
     })
 
     it('for button should be defined', () => {
-        expect(Button_two).toBeDefined();
+        expect(Button_one).toBeDefined();
     })
 
 })  
@@ -31,9 +31,24 @@ describe('<Box />', () => {
 })
 
 describe('<Button_two/>', () => {
-    const Button_test = shallow(<Button_two name='Login' href='./'/>)
+    const Button_test = shallow(<Button_one name='Login' href='./' type='submit' value='Login'/>)
 
     it('should render props', () => {
-        expect(Button_test).toMatchSnapshot(wrapper);
+        expect(Button_test).toMatchSnapshot();
+    })
+})
+
+describe('Login functionality', () => {
+
+    const Login = shallow(<Box />, { attachTo: document.body })
+    const input_user = Login.find('.input_user')
+    const input_pass = Login.find('.input_pass')
+
+    it('should submit username', () => {
+        expect(input_user.length).toBe(1);
+    })
+
+    it('should submit pass', () => {
+        expect(input_pass.length).toBe(1);
     })
 })

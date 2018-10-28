@@ -17,6 +17,8 @@ exports[`<Button /> should render button name and href 1`] = `
   <button
     className="button_style_one"
     href="/test"
+    type="submit"
+    value="Login"
   >
     Button
   </button>

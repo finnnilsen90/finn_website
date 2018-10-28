@@ -20,7 +20,7 @@ class Button extends React.Component {
 
         return (
         <div className='button-two_Container'>
-            <button className='button_style_two' href={this.props.href}>{this.props.name}</button>
+            <button className='button_style_two' href={this.props.href} type={this.props.type} value={this.props.value}>{this.props.name}</button>
         </div>
         )
     }

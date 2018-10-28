@@ -3,6 +3,8 @@ const ReactTestUtils = require('react-dom/test-utils');
 const renderer = require('react-test-renderer')
 let { shallow, mount, render } = require('enzyme');
 
+let Background = require("../../../images/santa_cruz2015.jpg");
+
 const Login = require('../login-finn.js');
 const Box = require('../lib/box-login/box-login.js')
 
@@ -14,6 +16,10 @@ describe('component connection', () => {
 
     it('should be defined', () => {
         expect(Login).toBeDefined();
+    })
+
+    it('img should be defined', () => {
+        expect(Background).toBeDefined();
     })
 
 })  

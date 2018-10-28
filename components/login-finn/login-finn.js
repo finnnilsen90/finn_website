@@ -2,13 +2,14 @@ var React = require('react');
 var reactClass = require('create-react-class');
 var ReactDom = require('react-dom');
 var css = require('./login-finn.css')
+let Background = require("../../images/santa_cruz2015.jpg");
 
 const Box = require('./lib/box-login/box-login.js')
 
-var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Login[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Login.prototype=Object.create(____SuperProtoOf____Class0);Login.prototype.constructor=Login;Login.__superConstructor__=____Class0;
+var ____ClassO=React.Component;for(var ____ClassO____Key in ____ClassO){if(____ClassO.hasOwnProperty(____ClassO____Key)){Login[____ClassO____Key]=____ClassO[____ClassO____Key];}}var ____SuperProtoOf____ClassO=____ClassO===null?null:____ClassO.prototype;Login.prototype=Object.create(____SuperProtoOf____ClassO);Login.prototype.constructor=Login;Login.__superConstructor__=____ClassO;
     
     function Login(props) {"use strict";
-    ____Class0.call(this,props);
+    ____ClassO.call(this,props);
     this.state = {
             test: 'Test'
         };
@@ -19,7 +20,11 @@ var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____C
         
         return (
             React.createElement("div", {className: "containter"}, 
-                React.createElement(Box, null)
+                React.createElement("img", {className: "background_img", src: Background}), 
+                    React.createElement("div", {className: "box_cont"}, 
+                        React.createElement(Box, null)
+                    )
+
             )
         )
     }});

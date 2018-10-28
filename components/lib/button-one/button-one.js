@@ -2,10 +2,10 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./button-one.css')
 
-var ____Class2=React.Component;for(var ____Class2____Key in ____Class2){if(____Class2.hasOwnProperty(____Class2____Key)){Button[____Class2____Key]=____Class2[____Class2____Key];}}var ____SuperProtoOf____Class2=____Class2===null?null:____Class2.prototype;Button.prototype=Object.create(____SuperProtoOf____Class2);Button.prototype.constructor=Button;Button.__superConstructor__=____Class2;
+var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____Class1.hasOwnProperty(____Class1____Key)){Button[____Class1____Key]=____Class1[____Class1____Key];}}var ____SuperProtoOf____Class1=____Class1===null?null:____Class1.prototype;Button.prototype=Object.create(____SuperProtoOf____Class1);Button.prototype.constructor=Button;Button.__superConstructor__=____Class1;
     
     function Button(props) {"use strict";
-    ____Class2.call(this,props);
+    ____Class1.call(this,props);
     this.state = {
  
         };
@@ -21,7 +21,7 @@ var ____Class2=React.Component;for(var ____Class2____Key in ____Class2){if(____C
 
         return (
         React.createElement("div", {className: "button-one_Container"}, 
-            React.createElement("button", {className: "button_style_one", href: this.props.href}, this.props.name)
+            React.createElement("button", {className: "button_style_one", href: this.props.href, type: this.props.type, value: this.props.value}, this.props.name)
         )
         )
     }});

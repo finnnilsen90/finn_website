@@ -28,7 +28,7 @@ describe('<Button />', () => {
 
 describe('<Button /> renders', () => {
 
-    const wrapper = shallow(<Button name='button' href='/link'/>);
+    const wrapper = shallow(<Button name='button' href='/link' type='submit' value='Login'/>);
 
     it('button name and href', () => {
         expect(wrapper).toMatchSnapshot();

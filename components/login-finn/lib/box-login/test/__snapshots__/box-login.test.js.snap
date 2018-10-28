@@ -2,32 +2,84 @@
 
 exports[`<Box /> renders components 1`] = `
 <div
-  class="box-login_Container"
+  class="box-login_Container font"
 >
   <div
     class="box"
   >
-    <div
-      class="button-two_Container"
+    <form
+      action="/login"
+      class="box_form"
+      method="post"
     >
-      <button
-        class="button_style_two"
-        href="./"
+      <div
+        class="input_box"
       >
-        Login
-      </button>
-    </div>
+        <label
+          class="username label font"
+        >
+          Username
+        </label>
+        <input
+          class="input_user"
+          name="username"
+          type="text"
+        />
+      </div>
+      <div
+        class="input_box"
+      >
+        <label
+          class="password label font"
+        >
+          Password
+        </label>
+        <input
+          class="input_pass"
+          name="password"
+          type="password"
+        />
+      </div>
+      <div
+        class="button"
+      >
+        <div
+          class="button-one_Container"
+        >
+          <button
+            class="button_style_one"
+            href="./"
+            type="submit"
+            value="Login"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+      <div
+        class="request"
+      >
+        <a
+          class="font"
+          href="/"
+        >
+          Request Login
+        </a>
+      </div>
+    </form>
   </div>
 </div>
 `;
 
-exports[`[object Object] 1`] = `
+exports[`<Button_two/> should render props 1`] = `
 <div
-  className="button-two_Container"
+  className="button-one_Container"
 >
   <button
-    className="button_style_two"
+    className="button_style_one"
     href="./"
+    type="submit"
+    value="Login"
   >
     Login
   </button>

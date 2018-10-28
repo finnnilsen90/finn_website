@@ -2,6 +2,7 @@ var React = require('react');
 var reactClass = require('create-react-class');
 var ReactDom = require('react-dom');
 var css = require('./login-finn.css')
+let Background = require("../../images/santa_cruz2015.jpg");
 
 const Box = require('./lib/box-login/box-login.js')
 
@@ -19,7 +20,11 @@ class Login extends React.Component {
         
         return (
             <div className='containter'>
-                <Box />
+                <img className='background_img' src={Background} />
+                    <div className='box_cont'>
+                        <Box />
+                    </div>
+
             </div>
         )
     }

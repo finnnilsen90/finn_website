@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders button name and href 1`] = `
+<div
+  className="button-two_Container"
+>
+  <button
+    className="button_style_two"
+    href="/link"
+    type="submit"
+    value="Login"
+  >
+    button
+  </button>
+</div>
+`;
+
+exports[`<Button /> renders components 1`] = `
+<div
+  class="button-two_Container"
+>
+  <button
+    class="button_style_two"
+  />
+</div>
+`;
