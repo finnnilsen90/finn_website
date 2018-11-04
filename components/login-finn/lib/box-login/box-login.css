@@ -1,6 +1,14 @@
 .box-login_Container .font {
   font-family: "Arial", Sans-serif;
 }
+.input_css {
+  widows: 160px;
+  height: 20px;
+  font-size: 1.2em;
+}
+.input_pass {
+  margin: 0 0 0 5px;
+}
 .request {
   width: 105px;
   margin: 10px auto 20px auto;
@@ -13,7 +21,7 @@
   color: #2bff72;
 }
 .box {
-  border: 3px solid grey;
+  border: 3px solid white;
   height: 320px;
   background-color: white;
 }
@@ -21,7 +29,7 @@
   margin: 60px 0 0 0;
 }
 .input_box {
-  width: 280px;
+  width: 317px;
   margin: 50px auto 0 auto;
 }
 .input_box label {

@@ -4,10 +4,10 @@ const css = require('./box-login.css')
 
 const Button_one = require('../../../lib/button-one/button-one.js');
 
-var ____ClassN=React.Component;for(var ____ClassN____Key in ____ClassN){if(____ClassN.hasOwnProperty(____ClassN____Key)){Box[____ClassN____Key]=____ClassN[____ClassN____Key];}}var ____SuperProtoOf____ClassN=____ClassN===null?null:____ClassN.prototype;Box.prototype=Object.create(____SuperProtoOf____ClassN);Box.prototype.constructor=Box;Box.__superConstructor__=____ClassN;
+var ____Class2=React.Component;for(var ____Class2____Key in ____Class2){if(____Class2.hasOwnProperty(____Class2____Key)){Box[____Class2____Key]=____Class2[____Class2____Key];}}var ____SuperProtoOf____Class2=____Class2===null?null:____Class2.prototype;Box.prototype=Object.create(____SuperProtoOf____Class2);Box.prototype.constructor=Box;Box.__superConstructor__=____Class2;
     
     function Box(props) {"use strict";
-    ____ClassN.call(this,props);
+    ____Class2.call(this,props);
     this.state = {
             test: ''
         };
@@ -27,11 +27,11 @@ var ____ClassN=React.Component;for(var ____ClassN____Key in ____ClassN){if(____C
                 React.createElement("form", {action: "/login", method: "post", className: "box_form"}, 
                      React.createElement("div", {className: "input_box"}, 
                         React.createElement("label", {className: 'username '+'label'+' font'}, "Username"), 
-                        React.createElement("input", {className: "input_user", type: "text", name: "username"})
+                        React.createElement("input", {className: 'input_user '+'font '+'input_css', type: "text", name: "username"})
                     ), 
                     React.createElement("div", {className: "input_box"}, 
                         React.createElement("label", {className: 'password '+'label'+' font'}, "Password"), 
-                        React.createElement("input", {className: "input_pass", type: "password", name: "password"})
+                        React.createElement("input", {className: 'input_pass '+'font '+'input_css', type: "password", name: "password"})
                     ), 
 
                     React.createElement("div", {className: "button"}, 
