@@ -4,10 +4,10 @@ const css = require('./box-login.css')
 
 const Button_one = require('../../../lib/button-one/button-one.js');
 
-var ____Class2=React.Component;for(var ____Class2____Key in ____Class2){if(____Class2.hasOwnProperty(____Class2____Key)){Box[____Class2____Key]=____Class2[____Class2____Key];}}var ____SuperProtoOf____Class2=____Class2===null?null:____Class2.prototype;Box.prototype=Object.create(____SuperProtoOf____Class2);Box.prototype.constructor=Box;Box.__superConstructor__=____Class2;
+var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Box[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Box.prototype=Object.create(____SuperProtoOf____Class0);Box.prototype.constructor=Box;Box.__superConstructor__=____Class0;
     
     function Box(props) {"use strict";
-    ____Class2.call(this,props);
+    ____Class0.call(this,props);
     this.state = {
             test: ''
         };
