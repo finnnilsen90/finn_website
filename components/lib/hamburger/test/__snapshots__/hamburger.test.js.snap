@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Hamburger /> dropdown state dropdown should contain 1`] = `
+exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 1`] = `
 <ul
   className="dropdown"
   onMouseLeave={[Function]}
@@ -38,7 +38,7 @@ exports[`<Hamburger /> dropdown state dropdown should contain 1`] = `
 </ul>
 `;
 
-exports[`<Hamburger /> dropdown state dropdown should contain 2`] = `
+exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 2`] = `
 <ul
   className="dropdown"
   onMouseLeave={[Function]}
@@ -76,7 +76,7 @@ exports[`<Hamburger /> dropdown state dropdown should contain 2`] = `
 </ul>
 `;
 
-exports[`<Hamburger /> dropdown state dropdown should contain 3`] = `
+exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 3`] = `
 <ul
   className="dropdown"
   onMouseLeave={[Function]}

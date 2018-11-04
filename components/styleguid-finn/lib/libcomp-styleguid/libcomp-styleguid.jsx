@@ -13,13 +13,36 @@ class Libcomp extends React.Component {
     constructor(props) {
     super(props);
     this.state = {
-            test: ''
+            menu: {
+                login: {
+                    link: '/logout',
+                    className: 'link',
+                    text: 'Logout'
+                },
+                home_page: {
+                    link: '/home_page',
+                    className: 'link',
+                    text: 'Home Page'
+                },
+                resume: {
+                    link: '/resume',
+                    className: 'link',
+                    text: 'Resume'
+                },
+                projects: {
+                    link: '/home_page',
+                    className: 'link',
+                    text: 'Projects'
+                },
+                contact: {
+                    link: '/contact',
+                    className: 'link',
+                    text: 'Contact'
+                }
+            } 
         };
 
-
     }
-
-
      
     componentDidMount() {
 
@@ -30,7 +53,7 @@ class Libcomp extends React.Component {
         <div className='libcomp-styleguid_Container'>
             <h2 className='header_comp'>Library components</h2>
             <div className='hamburger_pos'>
-                <Hamburger />
+                <Hamburger menu={this.state.menu}/>
             </div>
             <div className='button_top'>
                 <Button_one name='Button' href='/link' />

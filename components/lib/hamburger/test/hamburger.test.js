@@ -7,6 +7,34 @@ const Hamburger = require('../hamburger.js');
 
 let newHamburger = new Hamburger();
 
+let links_expected = {
+    login: {
+        link: '/logout',
+        className: 'link',
+        text: 'Logout'
+    },
+    home_page: {
+        link: '/home_page',
+        className: 'link',
+        text: 'Home Page'
+    },
+    resume: {
+        link: '/resume',
+        className: 'link',
+        text: 'Resume'
+    },
+    projects: {
+        link: '/home_page',
+        className: 'link',
+        text: 'Projects'
+    },
+    contact: {
+        link: '/contact',
+        className: 'link',
+        text: 'Contact'
+    }
+}
+
 describe('component connection', () => {
 
     it('should be defined', () => {
@@ -17,7 +45,7 @@ describe('component connection', () => {
 
 describe('<Hamburger />', () => {
 
-    const wrapper = render(<Hamburger />);
+    const wrapper = render(<Hamburger menu={links_expected}/>);
 
     it('renders components', () => {
         expect(wrapper).toBeTruthy();
@@ -32,7 +60,7 @@ describe('<Hamburger />', () => {
 describe('<Hamburger /> state', () => {
 
     it('should match state of each action', () => {
-        const wrapper = shallow(<Hamburger />);
+        const wrapper = shallow(<Hamburger menu={links_expected}/>);
         const hamburger = wrapper.find('.hamburger');
         const dropdown = wrapper.find('.dropdown');
         const container = wrapper.find('.libcomp-hamburger_Container');
@@ -52,48 +80,16 @@ describe('<Hamburger /> state', () => {
 
 describe('<Hamburger /> dropdown state', () => {
 
-    it('dropdown should contain', () => {
-        const wrapper = shallow(<Hamburger />);
-        const hamburger = wrapper.find('.hamburger');
-        const dropdown = wrapper.find('.dropdown');
+    const wrapper = shallow(<Hamburger menu={links_expected}/>);
+    const hamburger = wrapper.find('.hamburger');
+    const dropdown = wrapper.find('.dropdown');
 
-        let links = wrapper.state().links;
-        let toggle = wrapper.state().toggle;
+    let toggle = wrapper.state().toggle;
 
-        let links_expected = {
-            login: {
-                link: '/logout',
-                className: 'link',
-                text: 'Logout'
-            },
-            home_page: {
-                link: '/home_page',
-                className: 'link',
-                text: 'Home Page'
-            },
-            resume: {
-                link: '/resume',
-                className: 'link',
-                text: 'Resume'
-            },
-            projects: {
-                link: '/home_page',
-                className: 'link',
-                text: 'Projects'
-            },
-            contact: {
-                link: '/contact',
-                className: 'link',
-                text: 'Contact'
-            }
-        }
-
-        let html =  [<li className="link" href="/logout">Logout</li>, <li className="link" href="/home_page">Home Page</li>, <li className="link" href="/resume">Resume</li>, <li className="link" href="/home_page"
+    let html =  [<li className="link" href="/logout">Logout</li>, <li className="link" href="/home_page">Home Page</li>, <li className="link" href="/resume">Resume</li>, <li className="link" href="/home_page"
 >Projects</li>, <li className="link" href="/contact">Contact</li>]
 
-        expect(links).toEqual(links_expected);
-
-        expect(newHamburger.links_compile(links)).toEqual(html);
+    it('dropdown should snapshot at each state', () => {
 
         expect(dropdown).toMatchSnapshot();
 
@@ -104,4 +100,22 @@ describe('<Hamburger /> dropdown state', () => {
         expect(dropdown).toMatchSnapshot();
     })
 
+    it('html should match this array', ()=> {
+        expect(newHamburger.links_compile(links_expected)).toEqual(html);
+    })
+
 });
+
+
+
+describe('error reporting', () => {
+
+    console.error = jest.fn();
+
+    const wrapper = shallow(<Hamburger />);
+    console.log('mockedError => ', console.error.mock.calls);
+
+    it('should throw an error if no props passed', () => {
+        expect(console.error).toHaveBeenCalledTimes(1);
+    })
+})
