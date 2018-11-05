@@ -1,5 +1,6 @@
 .button_style_one {
-  padding: 15px 35px 15px 35px;
+  width: 135px;
+  height: 57px;
   font-size: 1.1em;
   cursor: pointer;
   border: none;

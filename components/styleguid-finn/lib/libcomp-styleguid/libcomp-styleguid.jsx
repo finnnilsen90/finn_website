@@ -55,13 +55,15 @@ class Libcomp extends React.Component {
             <div className='hamburger_pos'>
                 <Hamburger menu={this.state.menu}/>
             </div>
-            <div className='button_top'>
-                <Button_one name='Button' href='/link' />
-            </div>
 
-            <div className='button_comp'>
-                <Button_two name='Button' href='/link' />
-            </div>
+            <Button_one button_class='button_top' name='Button' href='/link' />
+
+            <Button_one button_class='button_top_small' font_size='.9em' width='100px' name='Button' href='/link' />
+
+            <Button_two button_class='button_comp' name='Button' href='/link' />
+
+            <Button_two button_class='button_two_small' font_size='.9em' width='100px' name='Button' href='/link' />
+
             <div className='content-dropdown'>
                 <Content title='Test Title' content='Testing content' class='test_one'/>
             </div>

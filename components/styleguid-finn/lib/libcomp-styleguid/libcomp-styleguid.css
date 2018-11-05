@@ -11,10 +11,18 @@
   float: right;
 }
 .button_top {
+  float: left;
   margin: 80px 0 0 0;
 }
+.button_top_small {
+  margin: 95px 0 0 15px;
+}
 .button_comp {
-  margin: 30px 0 0 0;
+  float: left;
+  margin: 40px 0 0 0;
+}
+.button_two_small {
+  margin: 53px 0 0 15px;
 }
 .content-dropdown {
   margin: 30px 0 0 0;

@@ -8,10 +8,10 @@ const Button_two = require('../../../lib/button-two/button-two.js');
 const Content = require('../../../lib/content-dropdown/content-dropdown.js');
 const Content_two = require('../../../lib/content-dropdown/content-dropdown.js');
 
-var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Libcomp[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Libcomp.prototype=Object.create(____SuperProtoOf____Class0);Libcomp.prototype.constructor=Libcomp;Libcomp.__superConstructor__=____Class0;
+var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____Class1.hasOwnProperty(____Class1____Key)){Libcomp[____Class1____Key]=____Class1[____Class1____Key];}}var ____SuperProtoOf____Class1=____Class1===null?null:____Class1.prototype;Libcomp.prototype=Object.create(____SuperProtoOf____Class1);Libcomp.prototype.constructor=Libcomp;Libcomp.__superConstructor__=____Class1;
     
     function Libcomp(props) {"use strict";
-    ____Class0.call(this,props);
+    ____Class1.call(this,props);
     this.state = {
             menu: {
                 login: {
@@ -55,13 +55,15 @@ var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____C
             React.createElement("div", {className: "hamburger_pos"}, 
                 React.createElement(Hamburger, {menu: this.state.menu})
             ), 
-            React.createElement("div", {className: "button_top"}, 
-                React.createElement(Button_one, {name: "Button", href: "/link"})
-            ), 
 
-            React.createElement("div", {className: "button_comp"}, 
-                React.createElement(Button_two, {name: "Button", href: "/link"})
-            ), 
+            React.createElement(Button_one, {button_class: "button_top", name: "Button", href: "/link"}), 
+
+            React.createElement(Button_one, {button_class: "button_top_small", font_size: ".9em", width: "100px", name: "Button", href: "/link"}), 
+
+            React.createElement(Button_two, {button_class: "button_comp", name: "Button", href: "/link"}), 
+
+            React.createElement(Button_two, {button_class: "button_two_small", font_size: ".9em", width: "100px", name: "Button", href: "/link"}), 
+
             React.createElement("div", {className: "content-dropdown"}, 
                 React.createElement(Content, {title: "Test Title", content: "Testing content", class: "test_one"})
             ), 

@@ -5,7 +5,7 @@ exports[`<Button /> renders button name and href 1`] = `
   className="button-two_Container"
 >
   <button
-    className="button_style_two"
+    className="button_style_two undefined"
     href="/link"
     type="submit"
     value="Login"
@@ -20,7 +20,7 @@ exports[`<Button /> renders components 1`] = `
   class="button-two_Container"
 >
   <button
-    class="button_style_two"
+    class="button_style_two undefined"
   />
 </div>
 `;
