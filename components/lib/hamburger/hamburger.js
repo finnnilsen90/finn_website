@@ -9,51 +9,52 @@ var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____C
     this.state = {
             hover: 0,
             toggle: true,
-            links: {
-                login: {
-                    link: '/logout',
-                    className: 'link',
-                    text: 'Logout'
-                },
-                home_page: {
-                    link: '/home_page',
-                    className: 'link',
-                    text: 'Home Page'
-                },
-                resume: {
-                    link: '/resume',
-                    className: 'link',
-                    text: 'Resume'
-                },
-                projects: {
-                    link: '/home_page',
-                    className: 'link',
-                    text: 'Projects'
-                },
-                contact: {
-                    link: '/contact',
-                    className: 'link',
-                    text: 'Contact'
-                }
-            }
         };
 
         this.ham_click = this.ham_click.bind(this);
-
         this.links_compile = this.links_compile.bind(this);
 
     }
 
     Object.defineProperty(Hamburger.prototype,"links_compile",{writable:true,configurable:true,value:function(input) {"use strict";
 
-        let value = Object.entries(input)
-        let menu = []
-        for (let i=0;i<value.length;i++) {
-            menu.push(React.createElement("li", {className: value[i][1].className, href: value[i][1].link}, value[i][1].text));
+        if (input!==undefined) {
+            let value = Object.entries(input)
+            let menu = []
+            for (let i=0;i<value.length;i++) {
+                menu.push(React.createElement("li", {className: value[i][1].className, href: value[i][1].link}, value[i][1].text));
+            }
+
+            return menu
+
+        } else {
+
+            let example = {menu: {
+                    button_one: {
+                        link: 'navigation link',
+                        className: 'class of element',
+                        text: 'what goes in the button'
+                    },
+                    button_two: {
+                        link: 'navigation link',
+                        className: 'class of element',
+                        text: 'what goes in the button'
+                    }
+                }
+            }
+
+            console.error('please pass a menu object');
+            console.log('Please use the bellow object framework');
+            console.log(example)
+            console.log('once the object is made please pass it as a prop in the react state.')
+
+            
         }
 
-        return menu
+    }});
 
+    Object.defineProperty(Hamburger.prototype,"return_error",{writable:true,configurable:true,value:function(menu) {"use strict";
+        menu===undefined?console.error('please pass a menu object'):null;
     }});
 
     Object.defineProperty(Hamburger.prototype,"ham_click",{writable:true,configurable:true,value:function() {"use strict";
@@ -101,7 +102,7 @@ var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____C
             ), 
             React.createElement("div", {className: "dropdown_container"}, 
                 React.createElement("ul", {className: "dropdown", onMouseLeave: this.ham_click}, 
-                    this.links_compile(this.state.links)
+                    this.links_compile(this.props.menu)
                 )
             )
         )

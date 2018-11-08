@@ -9,51 +9,52 @@ class Hamburger extends React.Component {
     this.state = {
             hover: 0,
             toggle: true,
-            links: {
-                login: {
-                    link: '/logout',
-                    className: 'link',
-                    text: 'Logout'
-                },
-                home_page: {
-                    link: '/home_page',
-                    className: 'link',
-                    text: 'Home Page'
-                },
-                resume: {
-                    link: '/resume',
-                    className: 'link',
-                    text: 'Resume'
-                },
-                projects: {
-                    link: '/home_page',
-                    className: 'link',
-                    text: 'Projects'
-                },
-                contact: {
-                    link: '/contact',
-                    className: 'link',
-                    text: 'Contact'
-                }
-            }
         };
 
         this.ham_click = this.ham_click.bind(this);
-
         this.links_compile = this.links_compile.bind(this);
 
     }
 
     links_compile(input) {
 
-        let value = Object.entries(input)
-        let menu = []
-        for (let i=0;i<value.length;i++) {
-            menu.push(<li className={value[i][1].className} href={value[i][1].link}>{value[i][1].text}</li>);
+        if (input!==undefined) {
+            let value = Object.entries(input)
+            let menu = []
+            for (let i=0;i<value.length;i++) {
+                menu.push(<li className={value[i][1].className} href={value[i][1].link}>{value[i][1].text}</li>);
+            }
+
+            return menu
+
+        } else {
+
+            let example = {menu: {
+                    button_one: {
+                        link: 'navigation link',
+                        className: 'class of element',
+                        text: 'what goes in the button'
+                    },
+                    button_two: {
+                        link: 'navigation link',
+                        className: 'class of element',
+                        text: 'what goes in the button'
+                    }
+                }
+            }
+
+            console.error('please pass a menu object');
+            console.log('Please use the bellow object framework');
+            console.log(example)
+            console.log('once the object is made please pass it as a prop in the react state.')
+
+            
         }
 
-        return menu
+    }
 
+    return_error(menu) {
+        menu===undefined?console.error('please pass a menu object'):null;
     }
 
     ham_click() {
@@ -101,7 +102,7 @@ class Hamburger extends React.Component {
             </div>
             <div className='dropdown_container'>
                 <ul className='dropdown' onMouseLeave={this.ham_click}>
-                    {this.links_compile(this.state.links)}
+                    {this.links_compile(this.props.menu)}
                 </ul>
             </div>
         </div>

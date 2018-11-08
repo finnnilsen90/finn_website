@@ -27,11 +27,11 @@ class Box extends React.Component {
                 <form action='/login' method='post' className='box_form'>
                      <div className='input_box'>
                         <label className={'username '+'label'+' font'}>Username</label>
-                        <input className='input_user' type='text' name='username'/>
+                        <input className={'input_user '+'font '+'input_css'} type='text' name='username'/>
                     </div>
                     <div className='input_box'>
                         <label className={'password '+'label'+' font'}>Password</label>
-                        <input className='input_pass' type='password' name='password'/>
+                        <input className={'input_pass '+'font '+'input_css'} type='password' name='password'/>
                     </div>
 
                     <div className='button'>

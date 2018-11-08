@@ -1,26 +1,35 @@
 .background_img {
   position: absolute;
-  width: 100%;
-  opacity: 0.4;
-  height: 900px;
+  opacity: 0.8;
 }
 .box_cont {
   position: relative;
   top: 200px;
   margin: 0 auto 0 auto;
-  width: 500px;
 }
 @media screen and (min-width: 800px) {
+  .background_img {
+    height: 900px;
+    width: 100%;
+  }
   .box_cont {
     width: 500px;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 800px) {
+  .background_img {
+    height: 900px;
+    width: 800px;
+  }
   .box_cont {
     width: 500px;
   }
 }
 @media screen and (max-width: 500px) {
+  .background_img {
+    height: 100%;
+    width: 500px;
+  }
   .box_cont {
     width: 350px;
   }
