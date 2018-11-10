@@ -22,7 +22,7 @@ describe('component connection', () => {
     
 describe('<Box />', () => {
 
-    const wrapper = render(<Box />);
+    const wrapper = render(<Box />, { attachTo: document.body });
 
     it('renders components', () => {
         expect(wrapper).toMatchSnapshot();
@@ -31,7 +31,7 @@ describe('<Box />', () => {
 })
 
 describe('<Button_two/>', () => {
-    const Button_test = shallow(<Button_one name='Login' href='./' type='submit' value='Login'/>)
+    const Button_test = shallow(<Button_one name='Login' href='./' type='submit' value='Login'/>, { attachTo: document.body })
 
     it('should render props', () => {
         expect(Button_test).toMatchSnapshot();
@@ -40,7 +40,7 @@ describe('<Button_two/>', () => {
 
 describe('Login functionality', () => {
 
-    const Login = shallow(<Box />, { attachTo: document.body })
+    const Login = render(<Box />, { attachTo: document.body })
     const input_user = Login.find('.input_user')
     const input_pass = Login.find('.input_pass')
 
@@ -52,3 +52,11 @@ describe('Login functionality', () => {
         expect(input_pass.length).toBe(1);
     })
 })
+
+describe('Login error reporting', () => {
+
+    it('should throw error if blank', () => {
+        expect().toBeDefined()
+    })
+
+}

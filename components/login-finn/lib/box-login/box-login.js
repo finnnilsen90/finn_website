@@ -3,26 +3,40 @@ const reactclass = require('create-react-class');
 const css = require('./box-login.css')
 
 const Button_one = require('../../../lib/button-one/button-one.js');
+const Message = require('../../../lib/message/message.js');
 
 var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Box[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Box.prototype=Object.create(____SuperProtoOf____Class0);Box.prototype.constructor=Box;Box.__superConstructor__=____Class0;
     
     function Box(props) {"use strict";
     ____Class0.call(this,props);
     this.state = {
-            test: ''
+            status: null,
+            message: null
         };
-       
+        this.message_status = this.message_status.bind(this)
     }
  
+    Object.defineProperty(Box.prototype,"message_status",{writable:true,configurable:true,value:function(status) {"use strict";
+        let msg_state = status || null;
+        if (msg_state!==null) {
+            
+            return React.createElement(Message, {state: msg_state, class: "message font", message: "This is an error message!"})
+
+        }
+
+    }});
 
     Object.defineProperty(Box.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
-
+        
     }});
 
     Object.defineProperty(Box.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
 
         return (
         React.createElement("div", {className: 'box-login_Container '+'font'}, 
+            React.createElement("div", {className: "msg_container"}, 
+                this.message_status('okay')
+            ), 
             React.createElement("div", {className: "box"}, 
                 React.createElement("form", {action: "/login", method: "post", className: "box_form"}, 
                      React.createElement("div", {className: "input_box"}, 

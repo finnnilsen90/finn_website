@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Message /> renders components 1`] = `
+<div
+  class="message_Container undefined"
+>
+  <div
+    class="msg_box undefined"
+  >
+    <p />
+  </div>
+</div>
+`;
+
+exports[`message state mount components 1`] = `
+<Message
+  class="test_class"
+  message="This is an error message."
+  state="error"
+>
+  <div
+    className="message_Container test_class"
+  >
+    <div
+      className="msg_box error"
+    >
+      <p>
+        This is an error message.
+      </p>
+    </div>
+  </div>
+</Message>
+`;

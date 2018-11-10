@@ -10,8 +10,12 @@
     font-size:1.2em;
 }
 
-.input_pass {
-    margin:0 0 0 5px;
+.msg_container {
+    margin:0 auto 0 auto;
+}
+
+.message {
+    margin:0 0 10px 0;
 }
 
 .request {
@@ -28,7 +32,6 @@
 
 .box {
     border:3px solid white;
-    height:320px;
     background-color:white;
 }
 
@@ -37,7 +40,7 @@
 }
 
 .input_box {
-    width:317px;
+    width:70%;
     margin:50px auto 0 auto;
     label {
         @import '../../../mixins/font.less';
@@ -57,17 +60,42 @@
 @media screen and (min-width: 800px) {
     .box {
         width:500px;
+        height:320px;
+    }
+
+    .msg_container {
+        width:500px;
+    }
+
+    .input_pass {
+        margin:0 0 0 5px;
     }
 }
 
 @media screen and (min-width: 500px) and (max-width: 800px){
     .box {
         width:500px;
+        height:320px;
+    }
+
+    .msg_container {
+        width:500px;
+    }
+
+    .input_pass {
+        margin:0 0 0 5px;
     }
 }
 
 @media screen and (max-width: 500px){
     .box {
+        display:block;
+        margin:0 auto 0 auto;
+        width:350px;
+        height:380px;
+    }
+
+    .msg_container {
         width:350px;
     }
 }

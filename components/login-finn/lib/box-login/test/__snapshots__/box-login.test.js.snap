@@ -5,6 +5,21 @@ exports[`<Box /> renders components 1`] = `
   class="box-login_Container font"
 >
   <div
+    class="msg_container"
+  >
+    <div
+      class="message_Container message font"
+    >
+      <div
+        class="msg_box null"
+      >
+        <p
+          class="p_text"
+        />
+      </div>
+    </div>
+  </div>
+  <div
     class="box"
   >
     <form
@@ -21,7 +36,7 @@ exports[`<Box /> renders components 1`] = `
           Username
         </label>
         <input
-          class="input_user"
+          class="input_user font input_css"
           name="username"
           type="text"
         />
@@ -35,7 +50,7 @@ exports[`<Box /> renders components 1`] = `
           Password
         </label>
         <input
-          class="input_pass"
+          class="input_pass font input_css"
           name="password"
           type="password"
         />
@@ -47,7 +62,7 @@ exports[`<Box /> renders components 1`] = `
           class="button-one_Container"
         >
           <button
-            class="button_style_one"
+            class="button_style_one undefined"
             href="./"
             type="submit"
             value="Login"
@@ -76,7 +91,7 @@ exports[`<Button_two/> should render props 1`] = `
   className="button-one_Container"
 >
   <button
-    className="button_style_one"
+    className="button_style_one undefined"
     href="./"
     type="submit"
     value="Login"
