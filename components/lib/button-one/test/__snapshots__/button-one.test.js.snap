@@ -17,6 +17,7 @@ exports[`<Button /> should render button name and href 1`] = `
   <button
     className="button_style_one undefined"
     href="/test"
+    onClick={1}
     type="submit"
     value="Login"
   >

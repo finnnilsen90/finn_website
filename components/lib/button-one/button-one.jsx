@@ -49,7 +49,7 @@ class Button extends React.Component {
 
         return (
         <div className='button-one_Container'>
-            <button className={'button_style_one '+this.props.button_class} href={this.props.href} type={this.props.type} value={this.props.value}>{this.props.name}</button>
+            <button onClick={this.props.click} className={'button_style_one '+this.props.button_class} href={this.props.href} type={this.props.type} value={this.props.value}>{this.props.name}</button>
         </div>
         )
     }

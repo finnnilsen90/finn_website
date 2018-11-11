@@ -7,15 +7,38 @@ exports[`<Message /> renders components 1`] = `
   <div
     class="msg_box undefined"
   >
-    <p />
+    <div
+      class="p_text"
+    >
+      <p>
+        This is an error message.
+      </p>
+    </div>
   </div>
+</div>
+`;
+
+exports[`error message format should output 2 <p> 1`] = `
+<div
+  className="p_text"
+>
+  <p>
+    Please input a username
+  </p>
+  <p>
+    Please input a password
+  </p>
 </div>
 `;
 
 exports[`message state mount components 1`] = `
 <Message
   class="test_class"
-  message="This is an error message."
+  message={
+    Array [
+      "This is an error message.",
+    ]
+  }
   state="error"
 >
   <div
@@ -24,9 +47,13 @@ exports[`message state mount components 1`] = `
     <div
       className="msg_box error"
     >
-      <p>
-        This is an error message.
-      </p>
+      <div
+        className="p_text"
+      >
+        <p>
+          This is an error message.
+        </p>
+      </div>
     </div>
   </div>
 </Message>

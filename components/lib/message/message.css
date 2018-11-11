@@ -8,9 +8,14 @@
   border: 2px solid red;
 }
 .message_Container .okay {
-  color: #B6BF04;
-  background-color: #f9fdab;
-  border: 2px solid #B6BF04;
+  color: orange;
+  background-color: #ffedcc;
+  border: 2px solid orange;
+}
+.message_Container .good {
+  color: #33cc33;
+  background-color: #d6f5d6;
+  border: 2px solid #33cc33;
 }
 .message_Container .p_text {
   text-align: center;

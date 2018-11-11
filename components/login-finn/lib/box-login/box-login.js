@@ -11,22 +11,60 @@ var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____C
     ____Class0.call(this,props);
     this.state = {
             status: null,
-            message: null
+            err_message: []
         };
         this.message_status = this.message_status.bind(this)
+        this.push_error = this.push_error.bind(this)
     }
  
-    Object.defineProperty(Box.prototype,"message_status",{writable:true,configurable:true,value:function(status) {"use strict";
-        let msg_state = status || null;
-        if (msg_state!==null) {
+    Object.defineProperty(Box.prototype,"message_status",{writable:true,configurable:true,value:function() {"use strict";
+        let err_state = this.state.err_message;
+        if (err_state.length>0) {
             
-            return React.createElement(Message, {state: msg_state, class: "message font", message: "This is an error message!"})
+            return React.createElement(Message, {state: "error", class: "message font", message: err_state})
 
         }
 
     }});
 
+    Object.defineProperty(Box.prototype,"push_error",{writable:true,configurable:true,value:function(e) {"use strict";
+        let username = document.querySelector('.input_user');
+        let password = document.querySelector('.input_pass');
+        let message = document.querySelector('.msg_container');
+        let err_arr = []
+        
+        if (username.value===undefined || username.value==='') {
+            e.preventDefault()
+            err_arr.push('Please input a username')
+            message.style.display = 'block';
+        } 
+
+        if (password.value===undefined || password.value==='') {
+            e.preventDefault()
+            err_arr.push('Please input a password')
+            message.style.display = 'block';
+        } 
+
+        this.setState({err_message: err_arr})
+
+    }});
+
     Object.defineProperty(Box.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
+
+        let button = document.querySelector('.submit_log');
+        let message = document.querySelector('.msg_container');
+
+        button.addEventListener('click',function(e)  {
+            let err_state = this.state.err_message;
+
+            if (err_state.length>0) {
+                this.setState({err_message: []})
+                message.style.display = 'none';
+            } 
+            
+            this.push_error(e)
+
+        }.bind(this), false)
         
     }});
 
@@ -35,7 +73,7 @@ var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____C
         return (
         React.createElement("div", {className: 'box-login_Container '+'font'}, 
             React.createElement("div", {className: "msg_container"}, 
-                this.message_status('okay')
+                this.message_status()
             ), 
             React.createElement("div", {className: "box"}, 
                 React.createElement("form", {action: "/login", method: "post", className: "box_form"}, 
@@ -49,7 +87,7 @@ var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____C
                     ), 
 
                     React.createElement("div", {className: "button"}, 
-                        React.createElement(Button_one, {name: "Login", href: "./", type: "submit", value: "Login"})
+                        React.createElement(Button_one, {name: "Login", href: "./", button_class: "submit_log", type: "submit", value: "Login"})
                     ), 
                     React.createElement("div", {className: "request"}, 
                         React.createElement("a", {href: "/", className: "font"}, "Request Login")

@@ -11,22 +11,60 @@ class Box extends React.Component {
     super(props);
     this.state = {
             status: null,
-            message: null
+            err_message: []
         };
         this.message_status = this.message_status.bind(this)
+        this.push_error = this.push_error.bind(this)
     }
  
-    message_status(status) {
-        let msg_state = status || null;
-        if (msg_state!==null) {
+    message_status() {
+        let err_state = this.state.err_message;
+        if (err_state.length>0) {
             
-            return <Message state={msg_state} class='message font' message='This is an error message!'/>
+            return <Message state='error' class='message font' message={err_state}/>
 
         }
 
     }
 
+    push_error(e) {
+        let username = document.querySelector('.input_user');
+        let password = document.querySelector('.input_pass');
+        let message = document.querySelector('.msg_container');
+        let err_arr = []
+        
+        if (username.value===undefined || username.value==='') {
+            e.preventDefault()
+            err_arr.push('Please input a username')
+            message.style.display = 'block';
+        } 
+
+        if (password.value===undefined || password.value==='') {
+            e.preventDefault()
+            err_arr.push('Please input a password')
+            message.style.display = 'block';
+        } 
+
+        this.setState({err_message: err_arr})
+
+    }
+
     componentDidMount() {
+
+        let button = document.querySelector('.submit_log');
+        let message = document.querySelector('.msg_container');
+
+        button.addEventListener('click',(e) => {
+            let err_state = this.state.err_message;
+
+            if (err_state.length>0) {
+                this.setState({err_message: []})
+                message.style.display = 'none';
+            } 
+            
+            this.push_error(e)
+
+        }, false)
         
     }
 
@@ -35,7 +73,7 @@ class Box extends React.Component {
         return (
         <div className={'box-login_Container '+'font'}>
             <div className='msg_container'>
-                {this.message_status('okay')}
+                {this.message_status()}
             </div>
             <div className='box'>
                 <form action='/login' method='post' className='box_form'>
@@ -49,7 +87,7 @@ class Box extends React.Component {
                     </div>
 
                     <div className='button'>
-                        <Button_one name='Login' href='./' type='submit' value='Login'/>
+                        <Button_one name='Login' href='./' button_class='submit_log' type='submit' value='Login'/>
                     </div>
                     <div className='request'>
                         <a href='/' className='font'>Request Login</a>

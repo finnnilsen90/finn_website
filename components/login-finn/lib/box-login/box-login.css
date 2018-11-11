@@ -8,6 +8,7 @@
 }
 .msg_container {
   margin: 0 auto 0 auto;
+  display: 'none';
 }
 .message {
   margin: 0 0 10px 0;

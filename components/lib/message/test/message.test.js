@@ -16,8 +16,8 @@ describe('component connection', () => {
 })  
     
 describe('<Message />', () => {
-
-    const wrapper = render(<Message />);
+    let msg = ['This is an error message.']
+    const wrapper = render(<Message message={msg}/>);
 
     it('renders components', () => {
         expect(wrapper).toMatchSnapshot();
@@ -27,7 +27,7 @@ describe('<Message />', () => {
 })
 
 describe('message state', () => {
-    let msg = 'This is an error message.'
+    let msg = ['This is an error message.']
     const wrapper = mount(<Message state='error' class='test_class' message={msg}/>, { attachTo: document.body });
 
     
@@ -50,5 +50,17 @@ describe('message state', () => {
 
     it('should find class', () => {
         expect(wrapper.find('.test_class')).toHaveLength(1)
+    })
+})
+
+describe('error message format', () => {
+    let msg = ["Please input a username", "Please input a password"];
+    const wrapper = mount(<Message state='error' class='test_class' message={msg}/>, { attachTo: document.body });
+    let output = `<p>Please input a username</p>
+                  <p>Please input a username</p>`
+
+    it('should output 2 <p>', () => {
+        expect(wrapper.find('.p_text')).toMatchSnapshot()
+
     })
 })
