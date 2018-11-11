@@ -1,0 +1,15 @@
+@media screen and (min-width: 800px) {
+  .test {
+    background-color: #b3b3b3;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .test {
+    background-color: #cdcdcd;
+  }
+}
+@media screen and (max-width: 500px) {
+  .test {
+    background-color: #e6e6e6;
+  }
+}

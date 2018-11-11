@@ -12,7 +12,7 @@ var bcrypt = require('bcrypt');
 
 
 // create a sequelize instance with our local postgres database information.
-var sequelize = new Sequelize('postgres://dseodrqbcsbgpj:efda57f9ed1c8c415d845a79d3738b2022482b624df8280390852a03e2593faa@ec2-54-243-213-188.compute-1.amazonaws.com:5432/dahj04ucobqc89', {  
+var sequelize = new Sequelize('postgres://tdfumtyhtntczc:1567ed49ae33258de2da6c07ce7495fa3d2865954af526c32c85ef01abbe4365@ec2-54-204-14-96.compute-1.amazonaws.com:5432/d7uobjeo0oi232', {  
     "dialect": "postgres",
     "ssl": true,
     "dialectOptions": {
@@ -22,8 +22,25 @@ var sequelize = new Sequelize('postgres://dseodrqbcsbgpj:efda57f9ed1c8c415d845a7
     }    
 });
 
+var new_id = sequelize.max('ID').then(max => {})
+
 // setup User model and its fields.
 var User = sequelize.define('users', {
+    ID: {
+        type: Sequelize.STRING,
+        unique: true,
+        allowNull: false
+    },
+    first_name: {
+        type: Sequelize.STRING,
+        unique: true,
+        allowNull: false
+    },
+    last_name: {
+        type: Sequelize.STRING,
+        unique: true,
+        allowNull: false
+    },
     username: {
         type: Sequelize.STRING,
         unique: true,
@@ -36,6 +53,11 @@ var User = sequelize.define('users', {
     },
     password: {
         type: Sequelize.STRING,
+        allowNull: false
+    },
+    user_type: {
+        type: Sequelize.STRING,
+        unique: true,
         allowNull: false
     }
 }); 

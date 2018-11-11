@@ -2,10 +2,10 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./message.css')
 
-var ____Class3=React.Component;for(var ____Class3____Key in ____Class3){if(____Class3.hasOwnProperty(____Class3____Key)){Message[____Class3____Key]=____Class3[____Class3____Key];}}var ____SuperProtoOf____Class3=____Class3===null?null:____Class3.prototype;Message.prototype=Object.create(____SuperProtoOf____Class3);Message.prototype.constructor=Message;Message.__superConstructor__=____Class3;
+var ____Class4=React.Component;for(var ____Class4____Key in ____Class4){if(____Class4.hasOwnProperty(____Class4____Key)){Message[____Class4____Key]=____Class4[____Class4____Key];}}var ____SuperProtoOf____Class4=____Class4===null?null:____Class4.prototype;Message.prototype=Object.create(____SuperProtoOf____Class4);Message.prototype.constructor=Message;Message.__superConstructor__=____Class4;
     
     function Message(props) {"use strict";
-    ____Class3.call(this,props);
+    ____Class4.call(this,props);
     this.state = {
 
         };
