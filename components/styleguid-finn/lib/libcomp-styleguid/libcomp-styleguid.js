@@ -2,44 +2,20 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./libcomp-styleguid.css');
 
+const menu = require('../../../../data_files/base_menu.json');
+
 const Hamburger = require('../../../lib/hamburger/hamburger.js');
 const Button_one = require('../../../lib/button-one/button-one.js');
 const Button_two = require('../../../lib/button-two/button-two.js');
 const Content = require('../../../lib/content-dropdown/content-dropdown.js');
 const Content_two = require('../../../lib/content-dropdown/content-dropdown.js');
 
-var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____Class1.hasOwnProperty(____Class1____Key)){Libcomp[____Class1____Key]=____Class1[____Class1____Key];}}var ____SuperProtoOf____Class1=____Class1===null?null:____Class1.prototype;Libcomp.prototype=Object.create(____SuperProtoOf____Class1);Libcomp.prototype.constructor=Libcomp;Libcomp.__superConstructor__=____Class1;
+var ____Class7=React.Component;for(var ____Class7____Key in ____Class7){if(____Class7.hasOwnProperty(____Class7____Key)){Libcomp[____Class7____Key]=____Class7[____Class7____Key];}}var ____SuperProtoOf____Class7=____Class7===null?null:____Class7.prototype;Libcomp.prototype=Object.create(____SuperProtoOf____Class7);Libcomp.prototype.constructor=Libcomp;Libcomp.__superConstructor__=____Class7;
     
     function Libcomp(props) {"use strict";
-    ____Class1.call(this,props);
+    ____Class7.call(this,props);
     this.state = {
-            menu: {
-                login: {
-                    link: '/logout',
-                    className: 'link',
-                    text: 'Logout'
-                },
-                home_page: {
-                    link: '/home_page',
-                    className: 'link',
-                    text: 'Home Page'
-                },
-                resume: {
-                    link: '/resume',
-                    className: 'link',
-                    text: 'Resume'
-                },
-                projects: {
-                    link: '/home_page',
-                    className: 'link',
-                    text: 'Projects'
-                },
-                contact: {
-                    link: '/contact',
-                    className: 'link',
-                    text: 'Contact'
-                }
-            } 
+            json_menu: menu
         };
 
     }
@@ -53,7 +29,7 @@ var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____C
         React.createElement("div", {className: "libcomp-styleguid_Container"}, 
             React.createElement("h2", {className: "header_comp"}, "Library components"), 
             React.createElement("div", {className: "hamburger_pos"}, 
-                React.createElement(Hamburger, {menu: this.state.menu})
+                React.createElement(Hamburger, {menu: this.state.json_menu})
             ), 
 
             React.createElement(Button_one, {button_class: "button_top", name: "Button", href: "/link"}), 

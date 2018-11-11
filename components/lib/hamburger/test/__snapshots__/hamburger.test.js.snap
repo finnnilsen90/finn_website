@@ -290,3 +290,62 @@ exports[`<Hamburger /> state should match state of each action 3`] = `
   </div>
 </div>
 `;
+
+exports[`setting default menu should render default 1`] = `
+<div
+  className="libcomp-hamburger_Container"
+>
+  <div
+    className="ham_container"
+  >
+    <div
+      className="hamburger"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <hr />
+      <hr />
+      <hr />
+    </div>
+  </div>
+  <div
+    className="dropdown_container"
+  >
+    <ul
+      className="dropdown"
+      onMouseLeave={[Function]}
+    >
+      <li
+        className="link"
+        href="/logout"
+      >
+        Logout
+      </li>
+      <li
+        className="link"
+        href="/home_page"
+      >
+        Home Page
+      </li>
+      <li
+        className="link"
+        href="/resume"
+      >
+        Resume
+      </li>
+      <li
+        className="link"
+        href="/home_page"
+      >
+        Projects
+      </li>
+      <li
+        className="link"
+        href="/contact"
+      >
+        Contact
+      </li>
+    </ul>
+  </div>
+</div>
+`;

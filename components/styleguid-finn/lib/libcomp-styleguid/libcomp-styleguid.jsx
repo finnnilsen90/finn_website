@@ -2,6 +2,8 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./libcomp-styleguid.css');
 
+const menu = require('../../../../data_files/base_menu.json');
+
 const Hamburger = require('../../../lib/hamburger/hamburger.js');
 const Button_one = require('../../../lib/button-one/button-one.js');
 const Button_two = require('../../../lib/button-two/button-two.js');
@@ -13,33 +15,7 @@ class Libcomp extends React.Component {
     constructor(props) {
     super(props);
     this.state = {
-            menu: {
-                login: {
-                    link: '/logout',
-                    className: 'link',
-                    text: 'Logout'
-                },
-                home_page: {
-                    link: '/home_page',
-                    className: 'link',
-                    text: 'Home Page'
-                },
-                resume: {
-                    link: '/resume',
-                    className: 'link',
-                    text: 'Resume'
-                },
-                projects: {
-                    link: '/home_page',
-                    className: 'link',
-                    text: 'Projects'
-                },
-                contact: {
-                    link: '/contact',
-                    className: 'link',
-                    text: 'Contact'
-                }
-            } 
+            json_menu: menu
         };
 
     }
@@ -53,7 +29,7 @@ class Libcomp extends React.Component {
         <div className='libcomp-styleguid_Container'>
             <h2 className='header_comp'>Library components</h2>
             <div className='hamburger_pos'>
-                <Hamburger menu={this.state.menu}/>
+                <Hamburger menu={this.state.json_menu}/>
             </div>
 
             <Button_one button_class='button_top' name='Button' href='/link' />

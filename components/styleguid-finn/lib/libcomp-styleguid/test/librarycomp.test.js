@@ -26,3 +26,13 @@ describe('<Libcomp />', () => {
     });
 
 })
+
+describe('JSON input', () => {
+    const wrapper = mount(<Libcomp />);
+    const json = wrapper.state().json_menu;
+    const def = wrapper.state().menu;
+
+    it('should take in JSON file', () => {
+        expect(json).toEqual(def)
+    })
+})

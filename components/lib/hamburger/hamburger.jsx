@@ -9,6 +9,32 @@ class Hamburger extends React.Component {
     this.state = {
             hover: 0,
             toggle: true,
+            default:  { login: {
+                            link: '/logout',
+                            className: 'link',
+                            text: 'Logout'
+                            },
+                            home_page: {
+                                link: '/home_page',
+                                className: 'link',
+                                text: 'Home Page'
+                            },
+                            resume: {
+                                link: '/resume',
+                                className: 'link',
+                                text: 'Resume'
+                            },
+                            projects: {
+                                link: '/home_page',
+                                className: 'link',
+                                text: 'Projects'
+                            },
+                            contact: {
+                                link: '/contact',
+                                className: 'link',
+                                text: 'Contact'
+                        }
+                }
         };
 
         this.ham_click = this.ham_click.bind(this);
@@ -17,9 +43,9 @@ class Hamburger extends React.Component {
     }
 
     links_compile(input) {
-
-        if (input!==undefined) {
-            let value = Object.entries(input)
+        let new_input = input || this.state.default;
+        if (typeof(new_input)==='object') {
+            let value = Object.entries(new_input);
             let menu = []
             for (let i=0;i<value.length;i++) {
                 menu.push(<li className={value[i][1].className} href={value[i][1].link}>{value[i][1].text}</li>);
@@ -53,8 +79,9 @@ class Hamburger extends React.Component {
 
     }
 
-    return_error(menu) {
-        menu===undefined?console.error('please pass a menu object'):null;
+    return_error(input) {
+    
+        menu!==Object?console.error('please pass a menu object'):null;
     }
 
     ham_click() {

@@ -12,21 +12,79 @@ exports[`<Libcomp /> renders components 1`] = `
   <div
     className="hamburger_pos"
   >
-    <Hamburger />
+    <Hamburger
+      menu={
+        Object {
+          "contact": Object {
+            "className": "link",
+            "link": "/contact",
+            "text": "Contact",
+          },
+          "home_page": Object {
+            "className": "link",
+            "link": "/home_page",
+            "text": "Home Page",
+          },
+          "login": Object {
+            "className": "link",
+            "link": "/logout",
+            "text": "Logout",
+          },
+          "projects": Object {
+            "className": "link",
+            "link": "/home_page",
+            "text": "Projects",
+          },
+          "resume": Object {
+            "className": "link",
+            "link": "/resume",
+            "text": "Resume",
+          },
+        }
+      }
+    />
+  </div>
+  <Button
+    button_class="button_top"
+    href="/link"
+    name="Button"
+  />
+  <Button
+    button_class="button_top_small"
+    font_size=".9em"
+    href="/link"
+    name="Button"
+    width="100px"
+  />
+  <Button
+    button_class="button_comp"
+    href="/link"
+    name="Button"
+  />
+  <Button
+    button_class="button_two_small"
+    font_size=".9em"
+    href="/link"
+    name="Button"
+    width="100px"
+  />
+  <div
+    className="content-dropdown"
+  >
+    <Content
+      class="test_one"
+      content="Testing content"
+      title="Test Title"
+    />
   </div>
   <div
-    className="button_comp"
+    className="content-dropdown"
   >
-    <button
-      className="button_style_one"
-    >
-      Button
-    </button>
-    <button
-      className="button_style_two"
-    >
-      Button
-    </button>
+    <Content
+      class="test_two"
+      content="Testing content 2"
+      title="Test Title 2"
+    />
   </div>
 </div>
 `;

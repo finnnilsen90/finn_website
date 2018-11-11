@@ -112,10 +112,18 @@ describe('error reporting', () => {
 
     console.error = jest.fn();
 
-    const wrapper = shallow(<Hamburger />);
+    const wrapper = shallow(<Hamburger menu='this doesnt work'/>);
     console.log('mockedError => ', console.error.mock.calls);
 
     it('should throw an error if no props passed', () => {
         expect(console.error).toHaveBeenCalledTimes(1);
+    })
+})
+
+describe('setting default menu', () => {
+    const wrapper = shallow(<Hamburger />);
+
+    it('should render default', () => {
+        expect(wrapper).toMatchSnapshot()
     })
 })
