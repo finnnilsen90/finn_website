@@ -532,9 +532,13 @@ function create_user() {
     console.log('---------------------')
 
     User.create({
-        username: username_var,
+        ID:1000,
+        first_name: "Finn",
+        last_name: "Nilsen",
+        username: email_var,
         email: email_var,
-        password: password_var
+        password: password_var,
+        user_type: "admin"
     })
 
 };

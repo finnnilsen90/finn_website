@@ -22,8 +22,6 @@ var sequelize = new Sequelize('postgres://tdfumtyhtntczc:1567ed49ae33258de2da6c0
     }    
 });
 
-var new_id = sequelize.max('ID').then(max => {})
-
 // setup User model and its fields.
 var User = sequelize.define('users', {
     ID: {
