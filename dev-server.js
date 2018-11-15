@@ -79,8 +79,9 @@ app.route('/login')
                 res.json('wrong password');
             } else {
                 req.session.user = user.dataValues;
-                res.redirect('/about');
+                res.redirect('/submit');
                 console.log('user authenticated');
+                console.log('user type => ',user.dataValues)
             }
         });
         
@@ -109,6 +110,29 @@ app.route('/create')
         })
 
     });
+
+app.get('/submit', (req, res) => {
+    console.log('session => ', req.session.user)
+    if (req.session.user && req.cookies.auto_sid) {
+        res.sendFile(__dirname + '/components/submit-finn/example/index.html');
+    } else {
+        console.log('error')
+        res.redirect('/login');
+    }
+});
+
+app.get('/logout', function (req, res, next) {
+    console.log('logout')
+    console.log(req.session.user)
+    console.log(req.cookies.auto_sid)
+    if (req.session.user && req.cookies.auto_sid) {
+        res.clearCookie('auto_sid');
+        res.redirect('/login');
+    } else {
+        console.log('cookie problem')
+        res.redirect('/login');
+    }  
+});
 
 
 // route for handling 404 requests(unavailable routes
