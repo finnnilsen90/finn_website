@@ -12,7 +12,9 @@ const stringify = require('stringify');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'components/login-finn/example')))
+// app.use(express.static(path.join(__dirname, 'components')));
+app.use(express.static(path.join(__dirname, 'components/login-finn/example')));
+app.use('/submit', express.static(path.join(__dirname, 'components/submit-finn/example')))
 
 let port = process.env.PORT || 3000;
 
@@ -31,7 +33,7 @@ app.use(cookieParser());
 // initialize express-session to allow us track the logged-in user across sessions.
 app.use(session({
     key: 'auto_sid',
-    secret: 'somerandonstuffstwo',
+    secret: 'finnssecret',
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -50,7 +52,7 @@ app.use((req, res, next) => {
 let sessionChecker = (req, res, next) => {
     if (req.session.user && req.cookies.auto_sid) {
         console.log('session live')
-        res.redirect('/about');
+        res.redirect('/submit');
     } else {
         console.log('session checked')
         next();
@@ -61,31 +63,47 @@ app.get('/', sessionChecker, (req, res) => {
     res.redirect('/login');
 });
 
+let login_err = [];
+
 // route for user Login
 app.route('/login')
     .get(sessionChecker, (req, res) => {
+
         res.sendFile(path.join(__dirname,'/components/login-finn/example/index.html'));
+        
     })
     .post((req, res, next) => {
         let username = req.body.username,
             password = req.body.password;
 
-        User.findOne({ where: { username: username } }).then(function (user) {
-            if (!user) {
-                console.log('wrong username');
-                res.json('wrong username');
-            } else if (!user.validPassword(password)) {
-                console.log('wrong password');
-                res.json('wrong password');
-            } else {
-                req.session.user = user.dataValues;
-                res.redirect('/submit');
-                console.log('user authenticated');
-                console.log('user type => ',user.dataValues)
-            }
-        });
-        
-    });
+        if (username==='') {
+            res.redirect('/login?valid=blank_username');
+            next()
+        } else if (password==='') {
+            res.redirect('/login?valid=blank_password');
+            next()
+        } else {
+
+            User.findOne({ where: { username: username } }).then(function (user) {
+                if (!user) {
+                    console.log('wrong username');
+                    res.redirect('/login?valid=wrong_username');
+                    next()
+                } else if (!user.validPassword(password)) {
+                    console.log('wrong password');
+                    res.redirect('/login?valid=wrong_password');
+                    next()
+                } else {
+                    req.session.user = user.dataValues;
+                    res.redirect('/submit');
+                    console.log('user authenticated');
+                    console.log('user type => ',user.dataValues.user_type)
+                }
+            });
+        }
+    })
+
+
 
 app.route('/create')
     .get(sessionChecker, (req, res) => {
@@ -122,15 +140,14 @@ app.get('/submit', (req, res) => {
 });
 
 app.get('/logout', function (req, res, next) {
-    console.log('logout')
     console.log(req.session.user)
-    console.log(req.cookies.auto_sid)
     if (req.session.user && req.cookies.auto_sid) {
+        console.log('cookie cleared')
         res.clearCookie('auto_sid');
         res.redirect('/login');
     } else {
         console.log('cookie problem')
-        res.redirect('/login');
+        res.redirect('Error');
     }  
 });
 

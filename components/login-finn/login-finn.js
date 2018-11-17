@@ -6,10 +6,10 @@ let Background = require("../../images/santa_cruz2015.jpg");
 
 const Box = require('./lib/box-login/box-login.js')
 
-var ____ClassR=React.Component;for(var ____ClassR____Key in ____ClassR){if(____ClassR.hasOwnProperty(____ClassR____Key)){Login[____ClassR____Key]=____ClassR[____ClassR____Key];}}var ____SuperProtoOf____ClassR=____ClassR===null?null:____ClassR.prototype;Login.prototype=Object.create(____SuperProtoOf____ClassR);Login.prototype.constructor=Login;Login.__superConstructor__=____ClassR;
+var ____Classn=React.Component;for(var ____Classn____Key in ____Classn){if(____Classn.hasOwnProperty(____Classn____Key)){Login[____Classn____Key]=____Classn[____Classn____Key];}}var ____SuperProtoOf____Classn=____Classn===null?null:____Classn.prototype;Login.prototype=Object.create(____SuperProtoOf____Classn);Login.prototype.constructor=Login;Login.__superConstructor__=____Classn;
     
     function Login(props) {"use strict";
-    ____ClassR.call(this,props);
+    ____Classn.call(this,props);
     this.state = {
             test: 'Test'
         };
