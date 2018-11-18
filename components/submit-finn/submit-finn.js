@@ -6,10 +6,10 @@ var css = require('./submit-finn.css')
 const Form = require('./lib/form-submit/form-submit.js');
 const Hamburger = require('../lib/hamburger/hamburger.js')
 
-var ____Class3=React.Component;for(var ____Class3____Key in ____Class3){if(____Class3.hasOwnProperty(____Class3____Key)){Submit[____Class3____Key]=____Class3[____Class3____Key];}}var ____SuperProtoOf____Class3=____Class3===null?null:____Class3.prototype;Submit.prototype=Object.create(____SuperProtoOf____Class3);Submit.prototype.constructor=Submit;Submit.__superConstructor__=____Class3;
+var ____Class5=React.Component;for(var ____Class5____Key in ____Class5){if(____Class5.hasOwnProperty(____Class5____Key)){Submit[____Class5____Key]=____Class5[____Class5____Key];}}var ____SuperProtoOf____Class5=____Class5===null?null:____Class5.prototype;Submit.prototype=Object.create(____SuperProtoOf____Class5);Submit.prototype.constructor=Submit;Submit.__superConstructor__=____Class5;
     
     function Submit(props) {"use strict";
-    ____Class3.call(this,props);
+    ____Class5.call(this,props);
     this.state = {
             fetch: null
         };
