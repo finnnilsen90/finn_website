@@ -10,11 +10,13 @@ const path = require('path');
 const { exec } = require('child_process');
 const stringify = require('stringify');
 
+let hamburger = require('./data_files/base_menu.json')
+
 const app = express();
 
 // app.use(express.static(path.join(__dirname, 'components')));
 app.use(express.static(path.join(__dirname, 'components/login-finn/example')));
-app.use('/submit', express.static(path.join(__dirname, 'components/submit-finn/example')))
+app.use('/submit',express.static(path.join(__dirname, 'components/submit-finn/example')));
 
 let port = process.env.PORT || 3000;
 
@@ -68,9 +70,7 @@ let login_err = [];
 // route for user Login
 app.route('/login')
     .get(sessionChecker, (req, res) => {
-
         res.sendFile(path.join(__dirname,'/components/login-finn/example/index.html'));
-        
     })
     .post((req, res, next) => {
         let username = req.body.username,
@@ -130,17 +130,23 @@ app.route('/create')
     });
 
 app.get('/submit', (req, res) => {
-    console.log('session => ', req.session.user)
-    if (req.session.user && req.cookies.auto_sid) {
-        res.sendFile(__dirname + '/components/submit-finn/example/index.html');
-    } else {
-        console.log('error')
-        res.redirect('/login');
-    }
-});
+        console.log('session => ', req.session.user)
+        if (req.session.user && req.cookies.auto_sid) {
+            console.log('session started at submit')
+            res.sendFile(__dirname + '/components/submit-finn/example/index.html');
+        } else {
+            console.log('error')
+            res.redirect('/login');
+        }
+    })
+
+app.get('/login_menu', (req,res,next) => {
+    console.log(hamburger.logedin)
+    res.json(hamburger.logedin);
+})
 
 app.get('/logout', function (req, res, next) {
-    console.log(req.session.user)
+    console.log('session user => ',req.session.user)
     if (req.session.user && req.cookies.auto_sid) {
         console.log('cookie cleared')
         res.clearCookie('auto_sid');

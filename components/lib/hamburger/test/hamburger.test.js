@@ -100,8 +100,17 @@ describe('<Hamburger /> dropdown state', () => {
         expect(dropdown).toMatchSnapshot();
     })
 
-    it('html should match this array', ()=> {
-        expect(newHamburger.links_compile(links_expected)).toEqual(html);
+    it('html should match this array', done => {
+        
+        function callback() {
+            const new_wrapper = mount(<Hamburger/>, { attachTo: document.body });
+            console.log(new_wrapper.instance().links_compile(links_expected));
+            expect(new_wrapper.instance().links_compile(links_expected)).toEqual(html);
+            done()
+        }
+
+        setTimeout(() => {callback()}, 3000);
+       
     })
 
 });

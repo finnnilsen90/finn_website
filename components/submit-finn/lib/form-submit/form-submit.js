@@ -2,48 +2,25 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./form-submit.css')
 
-var ____Classd=React.Component;for(var ____Classd____Key in ____Classd){if(____Classd.hasOwnProperty(____Classd____Key)){Form[____Classd____Key]=____Classd[____Classd____Key];}}var ____SuperProtoOf____Classd=____Classd===null?null:____Classd.prototype;Form.prototype=Object.create(____SuperProtoOf____Classd);Form.prototype.constructor=Form;Form.__superConstructor__=____Classd;
+var ____Class4=React.Component;for(var ____Class4____Key in ____Class4){if(____Class4.hasOwnProperty(____Class4____Key)){Form[____Class4____Key]=____Class4[____Class4____Key];}}var ____SuperProtoOf____Class4=____Class4===null?null:____Class4.prototype;Form.prototype=Object.create(____SuperProtoOf____Class4);Form.prototype.constructor=Form;Form.__superConstructor__=____Class4;
     
     function Form(props) {"use strict";
-    ____Classd.call(this,props);
+    ____Class4.call(this,props);
     this.state = {
             test: ''
         };
-
-         this.screenSize = this.screenSize.bind(this);
        
     }
-     Object.defineProperty(Form.prototype,"screenSize",{writable:true,configurable:true,value:function() {"use strict";
-        let screenWidth = window.innerWidth
-        function respond() {
-            if (screenWidth > 800) {
-                return 'desktop';
-            }
-            if (screenWidth <= 800 && 500 < screenWidth) {
-                return 'desktop small';
-            }
-            if (screenWidth <= 500){
-                return 'mobile';
-            }
-            else {
-                return 'screen size error';
-            }
-        }
-
-        this.setState(function(chng)  {return {
-            test: respond()
-        };});
-    }});; 
+    
 
     Object.defineProperty(Form.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
-        this.screenSize(),
-        window.addEventListener('resize', function()  {return this.screenSize();}.bind(this))
+
     }});
     Object.defineProperty(Form.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
 
         return (
-        React.createElement("div", {className: "form-submit_Container"}, 
-            React.createElement("div", {className: "test"}, this.state.test)
+        React.createElement("div", {className: "form-submit_Container"}
+        
         )
         )
     }});

@@ -2,10 +2,10 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./hamburger.css')
 
-var ____Classc=React.Component;for(var ____Classc____Key in ____Classc){if(____Classc.hasOwnProperty(____Classc____Key)){Hamburger[____Classc____Key]=____Classc[____Classc____Key];}}var ____SuperProtoOf____Classc=____Classc===null?null:____Classc.prototype;Hamburger.prototype=Object.create(____SuperProtoOf____Classc);Hamburger.prototype.constructor=Hamburger;Hamburger.__superConstructor__=____Classc;
+var ____Class5=React.Component;for(var ____Class5____Key in ____Class5){if(____Class5.hasOwnProperty(____Class5____Key)){Hamburger[____Class5____Key]=____Class5[____Class5____Key];}}var ____SuperProtoOf____Class5=____Class5===null?null:____Class5.prototype;Hamburger.prototype=Object.create(____SuperProtoOf____Class5);Hamburger.prototype.constructor=Hamburger;Hamburger.__superConstructor__=____Class5;
     
     function Hamburger(props) {"use strict";
-    ____Classc.call(this,props);
+    ____Class5.call(this,props);
     this.state = {
             hover: 0,
             toggle: true,
@@ -43,12 +43,14 @@ var ____Classc=React.Component;for(var ____Classc____Key in ____Classc){if(____C
     }
 
     Object.defineProperty(Hamburger.prototype,"links_compile",{writable:true,configurable:true,value:function(input) {"use strict";
+
+        console.log('input json => ',input)
         let new_input = input || this.state.default;
         if (typeof(new_input)==='object') {
             let value = Object.entries(new_input);
             let menu = []
             for (let i=0;i<value.length;i++) {
-                menu.push(React.createElement("li", {className: value[i][1].className, href: value[i][1].link}, value[i][1].text));
+                menu.push(React.createElement("li", {className: value[i][1].className}, React.createElement("a", {href: value[i][1].link}, value[i][1].text)));
             }
 
             return menu
@@ -119,7 +121,7 @@ var ____Classc=React.Component;for(var ____Classc____Key in ____Classc){if(____C
     Object.defineProperty(Hamburger.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
 
         return (
-        React.createElement("div", {className: "libcomp-hamburger_Container"}, 
+        React.createElement("div", {className: 'libcomp-hamburger_Container '+'font'}, 
             React.createElement("div", {className: "ham_container"}, 
                 React.createElement("div", {className: "hamburger", onMouseLeave: this.ham_click, onMouseEnter: this.ham_click}, 
                     React.createElement("hr", null), 

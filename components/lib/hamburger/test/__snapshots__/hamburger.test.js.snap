@@ -4,119 +4,26 @@ exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 1`]
 <ul
   className="dropdown"
   onMouseLeave={[Function]}
->
-  <li
-    className="link"
-    href="/logout"
-  >
-    Logout
-  </li>
-  <li
-    className="link"
-    href="/home_page"
-  >
-    Home Page
-  </li>
-  <li
-    className="link"
-    href="/resume"
-  >
-    Resume
-  </li>
-  <li
-    className="link"
-    href="/home_page"
-  >
-    Projects
-  </li>
-  <li
-    className="link"
-    href="/contact"
-  >
-    Contact
-  </li>
-</ul>
+/>
 `;
 
 exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 2`] = `
 <ul
   className="dropdown"
   onMouseLeave={[Function]}
->
-  <li
-    className="link"
-    href="/logout"
-  >
-    Logout
-  </li>
-  <li
-    className="link"
-    href="/home_page"
-  >
-    Home Page
-  </li>
-  <li
-    className="link"
-    href="/resume"
-  >
-    Resume
-  </li>
-  <li
-    className="link"
-    href="/home_page"
-  >
-    Projects
-  </li>
-  <li
-    className="link"
-    href="/contact"
-  >
-    Contact
-  </li>
-</ul>
+/>
 `;
 
 exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 3`] = `
 <ul
   className="dropdown"
   onMouseLeave={[Function]}
->
-  <li
-    className="link"
-    href="/logout"
-  >
-    Logout
-  </li>
-  <li
-    className="link"
-    href="/home_page"
-  >
-    Home Page
-  </li>
-  <li
-    className="link"
-    href="/resume"
-  >
-    Resume
-  </li>
-  <li
-    className="link"
-    href="/home_page"
-  >
-    Projects
-  </li>
-  <li
-    className="link"
-    href="/contact"
-  >
-    Contact
-  </li>
-</ul>
+/>
 `;
 
 exports[`<Hamburger /> state should match state of each action 1`] = `
 <div
-  className="libcomp-hamburger_Container"
+  className="libcomp-hamburger_Container font"
 >
   <div
     className="ham_container"
@@ -137,45 +44,14 @@ exports[`<Hamburger /> state should match state of each action 1`] = `
     <ul
       className="dropdown"
       onMouseLeave={[Function]}
-    >
-      <li
-        className="link"
-        href="/logout"
-      >
-        Logout
-      </li>
-      <li
-        className="link"
-        href="/home_page"
-      >
-        Home Page
-      </li>
-      <li
-        className="link"
-        href="/resume"
-      >
-        Resume
-      </li>
-      <li
-        className="link"
-        href="/home_page"
-      >
-        Projects
-      </li>
-      <li
-        className="link"
-        href="/contact"
-      >
-        Contact
-      </li>
-    </ul>
+    />
   </div>
 </div>
 `;
 
 exports[`<Hamburger /> state should match state of each action 2`] = `
 <div
-  className="libcomp-hamburger_Container"
+  className="libcomp-hamburger_Container font"
 >
   <div
     className="ham_container"
@@ -196,45 +72,14 @@ exports[`<Hamburger /> state should match state of each action 2`] = `
     <ul
       className="dropdown"
       onMouseLeave={[Function]}
-    >
-      <li
-        className="link"
-        href="/logout"
-      >
-        Logout
-      </li>
-      <li
-        className="link"
-        href="/home_page"
-      >
-        Home Page
-      </li>
-      <li
-        className="link"
-        href="/resume"
-      >
-        Resume
-      </li>
-      <li
-        className="link"
-        href="/home_page"
-      >
-        Projects
-      </li>
-      <li
-        className="link"
-        href="/contact"
-      >
-        Contact
-      </li>
-    </ul>
+    />
   </div>
 </div>
 `;
 
 exports[`<Hamburger /> state should match state of each action 3`] = `
 <div
-  className="libcomp-hamburger_Container"
+  className="libcomp-hamburger_Container font"
 >
   <div
     className="ham_container"
@@ -255,45 +100,14 @@ exports[`<Hamburger /> state should match state of each action 3`] = `
     <ul
       className="dropdown"
       onMouseLeave={[Function]}
-    >
-      <li
-        className="link"
-        href="/logout"
-      >
-        Logout
-      </li>
-      <li
-        className="link"
-        href="/home_page"
-      >
-        Home Page
-      </li>
-      <li
-        className="link"
-        href="/resume"
-      >
-        Resume
-      </li>
-      <li
-        className="link"
-        href="/home_page"
-      >
-        Projects
-      </li>
-      <li
-        className="link"
-        href="/contact"
-      >
-        Contact
-      </li>
-    </ul>
+    />
   </div>
 </div>
 `;
 
 exports[`setting default menu should render default 1`] = `
 <div
-  className="libcomp-hamburger_Container"
+  className="libcomp-hamburger_Container font"
 >
   <div
     className="ham_container"
@@ -314,38 +128,7 @@ exports[`setting default menu should render default 1`] = `
     <ul
       className="dropdown"
       onMouseLeave={[Function]}
-    >
-      <li
-        className="link"
-        href="/logout"
-      >
-        Logout
-      </li>
-      <li
-        className="link"
-        href="/home_page"
-      >
-        Home Page
-      </li>
-      <li
-        className="link"
-        href="/resume"
-      >
-        Resume
-      </li>
-      <li
-        className="link"
-        href="/home_page"
-      >
-        Projects
-      </li>
-      <li
-        className="link"
-        href="/contact"
-      >
-        Contact
-      </li>
-    </ul>
+    />
   </div>
 </div>
 `;
