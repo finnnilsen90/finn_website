@@ -23,7 +23,6 @@ class Submit extends React.Component {
         fetch(action)
             .then((response) => response.json())
             .then((responseJson) => {
-                console.log(responseJson)
                 this.setState({fetch: responseJson})
             }) 
 

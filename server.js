@@ -141,7 +141,7 @@ app.get('/submit', (req, res) => {
         }
     })
 
-app.get('/submit/login_menu', (req,res,next) => {
+app.get('/login_menu', (req,res,next) => {
     res.json(hamburger.logedin);
 })
 

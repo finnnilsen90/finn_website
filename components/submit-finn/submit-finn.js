@@ -6,10 +6,10 @@ var css = require('./submit-finn.css')
 const Form = require('./lib/form-submit/form-submit.js');
 const Hamburger = require('../lib/hamburger/hamburger.js')
 
-var ____Class5=React.Component;for(var ____Class5____Key in ____Class5){if(____Class5.hasOwnProperty(____Class5____Key)){Submit[____Class5____Key]=____Class5[____Class5____Key];}}var ____SuperProtoOf____Class5=____Class5===null?null:____Class5.prototype;Submit.prototype=Object.create(____SuperProtoOf____Class5);Submit.prototype.constructor=Submit;Submit.__superConstructor__=____Class5;
+var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____Class8.hasOwnProperty(____Class8____Key)){Submit[____Class8____Key]=____Class8[____Class8____Key];}}var ____SuperProtoOf____Class8=____Class8===null?null:____Class8.prototype;Submit.prototype=Object.create(____SuperProtoOf____Class8);Submit.prototype.constructor=Submit;Submit.__superConstructor__=____Class8;
     
     function Submit(props) {"use strict";
-    ____Class5.call(this,props);
+    ____Class8.call(this,props);
     this.state = {
             fetch: null
         };
@@ -23,7 +23,6 @@ var ____Class5=React.Component;for(var ____Class5____Key in ____Class5){if(____C
         fetch(action)
             .then(function(response)  {return response.json();})
             .then(function(responseJson)  {
-                console.log(responseJson)
                 this.setState({fetch: responseJson})
             }.bind(this)) 
 
