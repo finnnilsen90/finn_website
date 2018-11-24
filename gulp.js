@@ -504,17 +504,17 @@ function webpack_production() {
 
 function node() {
     
-        $.nodemon ({
-            script: 'server.js'
-            , ext: 'js html'
-            , env: { 'NODE_ENV': env }
-        })
-    }
+    $.nodemon ({
+        script: 'server.js'
+        , ext: 'js html'
+        , env: { 'NODE_ENV': env }
+    })
+}
 
 function node_dev() {
 
     $.nodemon ({
-        script: 'dev-server.js'
+        script: 'dev-server/dev-server.js'
         , ext: 'js html'
         , env: { 'NODE_ENV': env }
     })
