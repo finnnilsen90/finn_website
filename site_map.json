@@ -1,0 +1,11 @@
+{
+  "general": {
+    "login-finn": "login-finn"
+  },
+  "app": {
+    "submit-finn": "submit-finn"
+  },
+  "admin": {
+    "create-finn": "create-finn"
+  }
+}

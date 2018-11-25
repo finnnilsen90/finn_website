@@ -1,11 +1,3 @@
-//Gulp file for automated tooling project.
-//Version 1.0
-//Based on Node_Tooling branch.
-//Version 1.4 
-
-//Possibly need to change file structure.
-
-
 let gulp = require('gulp'),
     optimist = require('optimist'),
     DefinePlugin = require('webpack').DefinePlugin,
@@ -17,6 +9,9 @@ let gulp = require('gulp'),
     $ = require('gulp-load-plugins')();
 
 const webpack = require('webpack-stream');
+const editJsonFile = require('edit-json-file');
+
+let site_map = require('./site_map.json');
 
 //Command line variable naming
 let compName = optimist.argv.comp || 'compName'; //Component name 
@@ -30,8 +25,6 @@ let email_var = optimist.argv.email //State email to put in the database
 let password_var = optimist.argv.password //State password to put in the database
 let platform = optimist.argv.plat //State platform bulk build is meant for
 let bulk = optimist.argv.bulk //State bulk build yes for true
-
-// let folder_login = env === 'production' ? 'login' : folder; 
 
 let varArr = compName.split('-').slice(0) //arrar for class name of component
 let childArr = child.split('-').slice(0) //array for class name for child component
@@ -174,10 +167,18 @@ gulp.task('server', node)
 gulp.task('create_user', create_user)
 gulp.task('create_password', create_password)
 
+gulp.task('test_function', add_to_map)
+
 
 gulp.task('finish', ['webpack', 'production']);
 
 //////////////////////// Gulp Functions ////////////////////////
+
+function add_to_map() {
+    let file = editJsonFile(`${__dirname}/site_map.json`);
+    file.set(folder_type + '.' + compName, compName);
+    file.save();
+}
 
 //replace() holds all of the child and lib component protocol for creating a component. 
 function replace(source, destin, base, test) {
@@ -249,6 +250,7 @@ function makeComponent() {
     console.log('---------------------------------------');
     console.log('---------------------------------------');
     console.log('component => ' + compName)
+    console.log('folder type => ' + folder_type)
     console.log('component class/variable => ' + varName)
     console.log('Add link to main component(s).');
     console.log('---------------------------------------'); 
@@ -283,7 +285,7 @@ function makeComponent() {
     replace_comp('./components/templates/test/configure.json', config.dest.test)
     replace_comp('./components/templates/example/*', config.dest.html)
     replace_comp('./components/templates/compName.*', config.dest.dev, true)
-
+    add_to_map()
     makeChild();
 };
 
@@ -361,7 +363,6 @@ function libLess() {
     console.log('---------------------')
 }
 
-//NEED TO npm install uglifyjs-webpack-plugin --save-dev IN ORDER TO STOP ES6 SYNTAX ERROR... POSSIBLY?
 function production(comp) {
 
     let fileName = comp || compName;
@@ -470,24 +471,24 @@ function webpack_production() {
     }
 
 
-    if (bulk==='yes' && folder_type==='app') {
-        let folderName = fs.readdirSync(__dirname + '/components/');
+    if (bulk==='yes') {
+        let folderName = Object.entries(site_map.app);
+        if (folder_type==='admin') {
+            folderName = Object.entries(site_map.admin);
+        } else if (folder_type==='general') {
+            folderName = Object.entries(site_map.general);
+        } 
+            
         console.log('\x1b[41m%s\x1b[0m', 'invoking bulk production build')
 
         for (let x = 0;x < folderName.length; x++) {
 
-            let run_comp = folderName[x];
-            let re = new RegExp(platform);
-
-            if (re.test(run_comp)) {
-                console.log('completed comp => ' + run_comp)
-                webpack_config(run_comp)
-                production(run_comp)
-            }
+            let run_comp = folderName[x][1];
+ 
+            console.log('completed comp => ' + run_comp)
+            webpack_config(run_comp)
+            production(run_comp)
         }
-    }
-    else if (bulk==='yes' && folder_type==='login') {
-        console.log('Cannot do bulk builds on login files.')
     }
     else
     {
