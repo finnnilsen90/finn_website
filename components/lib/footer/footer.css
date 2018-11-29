@@ -1,6 +1,10 @@
+.font {
+  font-family: "Arial", Sans-serif;
+}
 .footer_Container {
   background-color: #c2e2ff;
   position: absolute;
+  bottom: 0;
   width: 100%;
   height: 170px;
 }
@@ -12,8 +16,9 @@
   padding-top: 9px;
   cursor: pointer;
 }
-.footer_Container .link_footer .font {
-  font-family: "Arial", Sans-serif;
+.footer_Container .link_footer a {
+  text-decoration: none;
+  color: grey;
 }
 .footer_Container .link_footer:hover {
   color: #b3b3b3;

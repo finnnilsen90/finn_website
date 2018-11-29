@@ -4,7 +4,8 @@ var ReactDom = require('react-dom');
 var css = require('./submit-finn.css')
 
 const Form = require('./lib/form-submit/form-submit.js');
-const Hamburger = require('../lib/hamburger/hamburger.js')
+const Hamburger = require('../lib/hamburger/hamburger.js');
+const Footer = require('../lib/footer/footer.js');
 
 class Submit extends React.Component {
     
@@ -44,6 +45,8 @@ class Submit extends React.Component {
                 <Hamburger menu={this.state.fetch}/>
             
                 <Form />
+
+                <Footer menu={this.state.fetch}/>
             </div>
         )
     }

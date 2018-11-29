@@ -4,6 +4,7 @@ const renderer = require('react-test-renderer')
 let { shallow, mount, render } = require('enzyme');
 
 const Footer = require('../footer.js');
+const json = require('../../../../data_files/base_menu.json')
 
 let newFooter = new Footer();
 
@@ -17,7 +18,7 @@ describe('component connection', () => {
     
 describe('<Footer />', () => {
 
-    const wrapper = render(<Footer />);
+    const wrapper = mount(<Footer menu={json}/>);
 
     it('renders components', () => {
         expect(wrapper).toMatchSnapshot();
@@ -31,9 +32,9 @@ describe('menu buttons from hamburger', () => {
 
     let links = {
                 login: {
-                    link: '/logout',
+                    link: '/login',
                     className: 'link_footer',
-                    text: 'Logout'
+                    text: 'Login man'
                 },
                 home_page: {
                     link: '/home_page',
@@ -61,4 +62,3 @@ describe('menu buttons from hamburger', () => {
         expect(links).toEqual(wrapper.state().links)
     })
 })
-

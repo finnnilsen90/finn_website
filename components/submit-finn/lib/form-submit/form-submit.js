@@ -2,10 +2,10 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./form-submit.css')
 
-var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____Class6.hasOwnProperty(____Class6____Key)){Form[____Class6____Key]=____Class6[____Class6____Key];}}var ____SuperProtoOf____Class6=____Class6===null?null:____Class6.prototype;Form.prototype=Object.create(____SuperProtoOf____Class6);Form.prototype.constructor=Form;Form.__superConstructor__=____Class6;
+var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Form[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Form.prototype=Object.create(____SuperProtoOf____Class0);Form.prototype.constructor=Form;Form.__superConstructor__=____Class0;
     
     function Form(props) {"use strict";
-    ____Class6.call(this,props);
+    ____Class0.call(this,props);
     this.state = {
             test: ''
         };
@@ -20,6 +20,8 @@ var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____C
 
         return (
         React.createElement("div", {className: "form-submit_Container"}
+
+            
         
         )
         )
