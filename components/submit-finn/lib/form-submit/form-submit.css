@@ -1,5 +1,7 @@
 .form-submit_Container {
-  margin: 120px auto 0 auto;
+  position: relative;
+  top: 120px;
+  margin: 0 auto 0 auto;
   border: 1px solid #b3b3b3;
   height: 600px;
 }

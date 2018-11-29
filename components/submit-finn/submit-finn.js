@@ -7,10 +7,10 @@ const Form = require('./lib/form-submit/form-submit.js');
 const Hamburger = require('../lib/hamburger/hamburger.js');
 const Footer = require('../lib/footer/footer.js');
 
-var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____Class1.hasOwnProperty(____Class1____Key)){Submit[____Class1____Key]=____Class1[____Class1____Key];}}var ____SuperProtoOf____Class1=____Class1===null?null:____Class1.prototype;Submit.prototype=Object.create(____SuperProtoOf____Class1);Submit.prototype.constructor=Submit;Submit.__superConstructor__=____Class1;
+var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____Class6.hasOwnProperty(____Class6____Key)){Submit[____Class6____Key]=____Class6[____Class6____Key];}}var ____SuperProtoOf____Class6=____Class6===null?null:____Class6.prototype;Submit.prototype=Object.create(____SuperProtoOf____Class6);Submit.prototype.constructor=Submit;Submit.__superConstructor__=____Class6;
     
     function Submit(props) {"use strict";
-    ____Class1.call(this,props);
+    ____Class6.call(this,props);
     this.state = {
             fetch: null
         };
@@ -40,13 +40,14 @@ var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____C
     Object.defineProperty(Submit.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
         
         return (
-            React.createElement("div", {className: "containter"}, 
+            React.createElement("div", {className: "container"}, 
             
                 React.createElement(Hamburger, {menu: this.state.fetch}), 
-            
+
                 React.createElement(Form, null), 
 
                 React.createElement(Footer, {menu: this.state.fetch})
+
             )
         )
     }});
