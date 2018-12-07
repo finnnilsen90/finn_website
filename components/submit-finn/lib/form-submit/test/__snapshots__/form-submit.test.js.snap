@@ -2,6 +2,57 @@
 
 exports[`<Form /> renders components 1`] = `
 <div
-  class="form-submit_Container"
-/>
+  class="form-submit_Container font"
+>
+  <form
+    action="/submit"
+    class="form"
+  >
+    <div
+      class="input_box"
+    >
+      <label
+        class="label f_label"
+      >
+        First Name
+      </label>
+      <input
+        class="input"
+        name="first_name"
+        type="text"
+      />
+      <br />
+    </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label l_label"
+      >
+        Last Name
+      </label>
+      <input
+        class="input"
+        name="last_name"
+        type="text"
+      />
+      <br />
+    </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label company_label"
+      >
+        Company
+      </label>
+      <input
+        class="input"
+        name="company"
+        type="text"
+      />
+      <br />
+    </div>
+  </form>
+</div>
 `;

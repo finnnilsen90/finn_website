@@ -1,20 +1,23 @@
 const React = require('react');
 const reactclass = require('create-react-class');
-const css = require('./form-submit.css')
+const css = require('./form-submit.css');
+const datepicker = require('js-datepicker');
 
 class Form extends React.Component {
     
     constructor(props) {
     super(props);
     this.state = {
-            test: ''
+            picker: ''
         };
        
     }
-    
+    componentWillMount() {
+        
+    }
 
     componentDidMount() {
-
+        const picker = datepicker('.date_select');
     }
     render() {
 
@@ -29,6 +32,13 @@ class Form extends React.Component {
                 </div>
                 <div className='input_box'>
                     <label className={'label '+'company_label'}>Company</label><input className='input' type='text' name='company'/><br/>
+                </div>
+                <div className='input_box'>
+                    <label className={'label '+'proj_desc'}>Project Description</label><br/>
+                    <textarea className='text_input'></textarea>
+                </div>
+                <div className='input_box'>
+                    <label className={'label'}>Select Date</label><input className={'input '+'date_select'} type='text' name='date'/>
                 </div>
             </form>
         </div>
