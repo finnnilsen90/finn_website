@@ -1,7 +1,9 @@
 const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./form-submit.css');
-const datepicker = require('js-datepicker');
+// const datepicker = require('js-datepicker');
+
+const Button_one = require('../../../lib/button-one/button-one.js');
 
 class Form extends React.Component {
     
@@ -17,7 +19,7 @@ class Form extends React.Component {
     }
 
     componentDidMount() {
-        const picker = datepicker('.date_select');
+
     }
     render() {
 
@@ -38,7 +40,14 @@ class Form extends React.Component {
                     <textarea className='text_input'></textarea>
                 </div>
                 <div className='input_box'>
-                    <label className={'label'}>Select Date</label><input className={'input '+'date_select'} type='text' name='date'/>
+                    <label className={'label '+'d_label'}>Select Date</label><input className={'input '+'date_select'} type='date' name='date'/>
+                </div>
+                <div className='input_box'>
+                    <label className={'label '+'budget_label'}>Budget</label><input className='input' type='text' name='budget'/><br/>
+                </div>
+
+                <div className='button'>
+                    <Button_one name='Submit' button_class='submit_log' type='submit' value='Submit'/>
                 </div>
             </form>
         </div>

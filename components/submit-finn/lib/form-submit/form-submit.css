@@ -26,8 +26,14 @@
 .form .l_label {
   margin: 0 20px 0 0;
 }
+.form .d_label {
+  margin: 0 20px 0 0;
+}
 .form .company_label {
   margin: 0 30px 0 0;
+}
+.form .budget_label {
+  margin: 0 55px 0 0;
 }
 .form .text_input {
   font-size: 1em;
@@ -39,6 +45,10 @@
   font-size: 1.1em;
   border: 2px solid #c2e2ff;
   height: 30px;
+}
+.form .submit_log {
+  display: block;
+  margin: 50px auto 0 auto;
 }
 @media screen and (min-width: 801px) {
   .form-submit_Container {

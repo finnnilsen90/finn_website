@@ -1,12 +1,14 @@
 const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./form-submit.css');
-const datepicker = require('js-datepicker');
+// const datepicker = require('js-datepicker');
 
-var ____ClassA=React.Component;for(var ____ClassA____Key in ____ClassA){if(____ClassA.hasOwnProperty(____ClassA____Key)){Form[____ClassA____Key]=____ClassA[____ClassA____Key];}}var ____SuperProtoOf____ClassA=____ClassA===null?null:____ClassA.prototype;Form.prototype=Object.create(____SuperProtoOf____ClassA);Form.prototype.constructor=Form;Form.__superConstructor__=____ClassA;
+const Button_one = require('../../../lib/button-one/button-one.js');
+
+var ____Class7=React.Component;for(var ____Class7____Key in ____Class7){if(____Class7.hasOwnProperty(____Class7____Key)){Form[____Class7____Key]=____Class7[____Class7____Key];}}var ____SuperProtoOf____Class7=____Class7===null?null:____Class7.prototype;Form.prototype=Object.create(____SuperProtoOf____Class7);Form.prototype.constructor=Form;Form.__superConstructor__=____Class7;
     
     function Form(props) {"use strict";
-    ____ClassA.call(this,props);
+    ____Class7.call(this,props);
     this.state = {
             picker: ''
         };
@@ -17,7 +19,7 @@ var ____ClassA=React.Component;for(var ____ClassA____Key in ____ClassA){if(____C
     }});
 
     Object.defineProperty(Form.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
-        const picker = datepicker('.date_select');
+
     }});
     Object.defineProperty(Form.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
 
@@ -38,7 +40,14 @@ var ____ClassA=React.Component;for(var ____ClassA____Key in ____ClassA){if(____C
                     React.createElement("textarea", {className: "text_input"})
                 ), 
                 React.createElement("div", {className: "input_box"}, 
-                    React.createElement("label", {className: 'label'}, "Select Date"), React.createElement("input", {className: 'input '+'date_select', type: "text", name: "date"})
+                    React.createElement("label", {className: 'label '+'d_label'}, "Select Date"), React.createElement("input", {className: 'input '+'date_select', type: "date", name: "date"})
+                ), 
+                React.createElement("div", {className: "input_box"}, 
+                    React.createElement("label", {className: 'label '+'budget_label'}, "Budget"), React.createElement("input", {className: "input", type: "text", name: "budget"}), React.createElement("br", null)
+                ), 
+
+                React.createElement("div", {className: "button"}, 
+                    React.createElement(Button_one, {name: "Submit", button_class: "submit_log", type: "submit", value: "Submit"})
                 )
             )
         )
