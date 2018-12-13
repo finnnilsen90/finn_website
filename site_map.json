@@ -3,7 +3,8 @@
     "login-finn": "login-finn"
   },
   "app": {
-    "submit-finn": "submit-finn"
+    "submit-finn": "submit-finn",
+    "create_usr-finn": "create_usr-finn"
   },
   "admin": {
     "create-finn": "create-finn"

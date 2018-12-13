@@ -34,7 +34,11 @@ module.exports = function(app,sessionChecker,User) {
                         next()
                     } else {
                         req.session.user = user.dataValues;
-                        res.redirect('/submit');
+                        if(req.session.user.user_type==='admin') {
+                            res.redirect('/create_usr');
+                        } else {
+                            res.redirect('/form');
+                        }
                         console.log('user authenticated');
                         console.log('user type => ',user.dataValues.user_type)
                     }
@@ -68,11 +72,22 @@ module.exports = function(app,sessionChecker,User) {
 
         });
 
-    app.get('/submit', (req, res) => {
+    app.get('/form', (req, res) => {
             console.log('session => ', req.session.user)
             if (req.session.user && req.cookies.auto_sid) {
                 console.log('session started at submit')
                 res.sendFile(__dirname + '../components/submit-finn/example/index.html');
+            } else {
+                console.log('error')
+                res.redirect('/login');
+            }
+        })
+
+        app.get('/create_usr', (req, res) => {
+            console.log('session => ', req.session.user)
+            if (req.session.user && req.cookies.auto_sid) {
+                console.log('session started at submit')
+                res.sendFile(__dirname + '../components/create_usr-finn/example/index.html');
             } else {
                 console.log('error')
                 res.redirect('/login');
@@ -92,8 +107,11 @@ module.exports = function(app,sessionChecker,User) {
         })
 
     app.get('/login_menu', (req,res,next) => {
-        console.log(hamburger.logedin)
-        res.json(hamburger.logedin);
+        if(req.session.user.user_type==='admin') {
+            res.json(hamburger.admin);
+        } else {
+            res.json(hamburger.logedin);
+        }
     })
 
     app.get('/logout', function (req, res, next) {

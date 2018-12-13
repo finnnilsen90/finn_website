@@ -93,7 +93,8 @@ module.exports = function login(app,sessionChecker,User) {
         })
 
     app.get('/login_menu', (req,res,next) => {
-        console.log(hamburger.logedin)
+        
+        console.log(req.session.user)
         res.json(hamburger.logedin);
     })
 

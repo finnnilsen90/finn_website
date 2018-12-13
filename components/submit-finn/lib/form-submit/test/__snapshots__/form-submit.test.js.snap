@@ -53,6 +53,63 @@ exports[`<Form /> renders components 1`] = `
       />
       <br />
     </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label proj_desc"
+      >
+        Project Description
+      </label>
+      <br />
+      <textarea
+        class="text_input"
+      />
+    </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label d_label"
+      >
+        Select Date
+      </label>
+      <input
+        class="input date_select"
+        name="date"
+        type="date"
+      />
+    </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label budget_label"
+      >
+        Budget
+      </label>
+      <input
+        class="input"
+        name="budget"
+        type="text"
+      />
+      <br />
+    </div>
+    <div
+      class="button"
+    >
+      <div
+        class="button-one_Container"
+      >
+        <button
+          class="button_style_one submit_log"
+          type="submit"
+          value="Submit"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
   </form>
 </div>
 `;

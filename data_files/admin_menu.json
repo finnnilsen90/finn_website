@@ -20,33 +20,6 @@
             "className": "link",
             "text": "Projects"
         },
-        "contact": {
-            "link": "/contact",
-            "className": "link",
-            "text": "Contact"
-        }
-    },
-    "admin": {
-        "logout": {
-            "link": "/logout",
-            "className": "link",
-            "text": "Logout"
-        },
-        "home_page": {
-            "link": "/home_page",
-            "className": "link",
-            "text": "Home Page"
-        },
-        "resume": {
-            "link": "/resume",
-            "className": "link",
-            "text": "Resume"
-        },
-        "projects": {
-            "link": "/home_page",
-            "className": "link",
-            "text": "Projects"
-        },
         "create_login": {
             "link": "/create_login",
             "className": "create_login",
