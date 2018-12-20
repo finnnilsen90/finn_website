@@ -26,8 +26,9 @@ app.use(bodyParser.json());
 // initialize cookie-parser to allow us access the cookies stored in the browser. 
 app.use(cookieParser());
 
-const directories = require('./dev-directories.js')(app);
+// const directories = require('./dev-directories.js')(app);
 const sessionChecker = require('./session_checker.js');
+app.use(express.static(path.join(__dirname, '../components')));
 
 app.use(session({
     key: 'auto_sid',

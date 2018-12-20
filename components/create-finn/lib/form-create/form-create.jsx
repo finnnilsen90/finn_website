@@ -2,6 +2,8 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./form-create.css')
 
+const Button_one = require('../../../lib/button-one/button-one.js');
+
 class Form extends React.Component {
     
     constructor(props) {
@@ -9,41 +11,26 @@ class Form extends React.Component {
     this.state = {
             test: ''
         };
-
-         this.screenSize = this.screenSize.bind(this);
        
     }
-     screenSize() {
-        let screenWidth = window.innerWidth
-        function respond() {
-            if (screenWidth > 800) {
-                return 'desktop';
-            }
-            if (screenWidth <= 800 && 500 < screenWidth) {
-                return 'desktop small';
-            }
-            if (screenWidth <= 500){
-                return 'mobile';
-            }
-            else {
-                return 'screen size error';
-            }
-        }
-
-        this.setState(chng => ({
-            test: respond()
-        }));
-    }; 
+     
 
     componentDidMount() {
-        this.screenSize(),
-        window.addEventListener('resize', () => this.screenSize())
+
     }
+
     render() {
 
         return (
-        <div className='form-create_Container'>
-            <div className='test'>{this.state.test}</div>
+        <div className={'form-create_Container '+'font'}>
+            <form className='form' action='/create'>
+
+
+                <div className='button'>
+                    <Button_one name='Submit' button_class='submit_log' type='submit' value='Submit'/>
+                </div>
+
+            </form>
         </div>
         )
     }

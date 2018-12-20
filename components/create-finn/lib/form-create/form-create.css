@@ -1,15 +1,42 @@
-@media screen and (min-width: 800px) {
-  .test {
-    padding: 20px;
+.font {
+  font-family: "Arial", Sans-serif;
+}
+.form-create_Container {
+  box-shadow: 3px 0 4px #b3b3b3, -3px 0 4px #b3b3b3;
+  position: relative;
+  top: 120px;
+  margin: 0 auto 0 auto;
+  border: 1px solid #b3b3b3;
+  height: 600px;
+  color: grey;
+}
+.form {
+  width: 80%;
+  margin: 60px auto 0 auto;
+}
+.form .submit_log {
+  display: block;
+  margin: 50px auto 0 auto;
+}
+@media screen and (min-width: 801px) {
+  .form-create_Container {
+    width: 700px;
+  }
+  .text_input {
+    width: 500px;
+  }
+  .input {
+    width: 390px;
   }
 }
-@media screen and (min-width: 500px) and (max-width: 800px) {
-  .test {
-    padding: 30px;
+@media screen and (max-width: 800px) {
+  .form-create_Container {
+    width: 350px;
   }
-}
-@media screen and (max-width: 500px) {
-  .test {
-    padding: 40px;
+  .text_input {
+    width: 290px;
+  }
+  .input {
+    width: 290px;
   }
 }
