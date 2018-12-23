@@ -7,7 +7,6 @@
   top: 120px;
   margin: 0 auto 0 auto;
   border: 1px solid #b3b3b3;
-  height: 600px;
   color: grey;
 }
 .form {
@@ -53,6 +52,7 @@
 @media screen and (min-width: 801px) {
   .form-submit_Container {
     width: 700px;
+    height: 600px;
   }
   .text_input {
     width: 500px;
@@ -64,6 +64,7 @@
 @media screen and (max-width: 800px) {
   .form-submit_Container {
     width: 350px;
+    height: 720px;
   }
   .text_input {
     width: 290px;

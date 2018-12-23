@@ -4,10 +4,10 @@ const css = require('./form-create.css')
 
 const Button_one = require('../../../lib/button-one/button-one.js');
 
-var ____Class3=React.Component;for(var ____Class3____Key in ____Class3){if(____Class3.hasOwnProperty(____Class3____Key)){Form[____Class3____Key]=____Class3[____Class3____Key];}}var ____SuperProtoOf____Class3=____Class3===null?null:____Class3.prototype;Form.prototype=Object.create(____SuperProtoOf____Class3);Form.prototype.constructor=Form;Form.__superConstructor__=____Class3;
+var ____Classd=React.Component;for(var ____Classd____Key in ____Classd){if(____Classd.hasOwnProperty(____Classd____Key)){Form[____Classd____Key]=____Classd[____Classd____Key];}}var ____SuperProtoOf____Classd=____Classd===null?null:____Classd.prototype;Form.prototype=Object.create(____SuperProtoOf____Classd);Form.prototype.constructor=Form;Form.__superConstructor__=____Classd;
     
     function Form(props) {"use strict";
-    ____Class3.call(this,props);
+    ____Classd.call(this,props);
     this.state = {
             test: ''
         };
@@ -24,7 +24,21 @@ var ____Class3=React.Component;for(var ____Class3____Key in ____Class3){if(____C
         return (
         React.createElement("div", {className: 'form-create_Container '+'font'}, 
             React.createElement("form", {className: "form", action: "/create"}, 
-
+            React.createElement("div", {className: "input_box"}, 
+                    React.createElement("label", {className: 'label '+'f_label'}, "First Name"), React.createElement("input", {className: "input", type: "text", name: "first_name"}), React.createElement("br", null)
+                ), 
+                React.createElement("div", {className: "input_box"}, 
+                    React.createElement("label", {className: 'label '+'l_label'}, "Last Name"), React.createElement("input", {className: "input", type: "text", name: "last_name"}), React.createElement("br", null)
+                ), 
+                React.createElement("div", {className: "input_box"}, 
+                    React.createElement("label", {className: 'label '+'e_label'}, "Email"), React.createElement("input", {className: "input", type: "text", name: "email"}), React.createElement("br", null)
+                ), 
+                React.createElement("div", {className: "input_box"}, 
+                    React.createElement("label", {className: 'label '+'p_label'}, "Password"), React.createElement("input", {className: "input", type: "password", name: "password"})
+                ), 
+                React.createElement("div", {className: "input_box"}, 
+                    React.createElement("label", {className: 'label '+'t_label'}, "Admin"), React.createElement("input", {className: "check", type: "checkbox", name: "admin", value: "admin"})
+                ), 
 
                 React.createElement("div", {className: "button"}, 
                     React.createElement(Button_one, {name: "Submit", button_class: "submit_log", type: "submit", value: "Submit"})

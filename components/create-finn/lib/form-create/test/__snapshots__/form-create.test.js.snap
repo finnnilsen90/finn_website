@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> renders components 1`] = `
+<div
+  class="form-create_Container font"
+>
+  <form
+    action="/create"
+    class="form"
+  >
+    <div
+      class="button"
+    >
+      <div
+        class="button-one_Container"
+      >
+        <button
+          class="button_style_one submit_log"
+          type="submit"
+          value="Submit"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;

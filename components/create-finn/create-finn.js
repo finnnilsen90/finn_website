@@ -8,10 +8,10 @@ const Hamburger = require('../lib/hamburger/hamburger.js');
 const Footer = require('../lib/footer/footer.js');
 
 
-var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____Class6.hasOwnProperty(____Class6____Key)){Create[____Class6____Key]=____Class6[____Class6____Key];}}var ____SuperProtoOf____Class6=____Class6===null?null:____Class6.prototype;Create.prototype=Object.create(____SuperProtoOf____Class6);Create.prototype.constructor=Create;Create.__superConstructor__=____Class6;
+var ____Classb=React.Component;for(var ____Classb____Key in ____Classb){if(____Classb.hasOwnProperty(____Classb____Key)){Create[____Classb____Key]=____Classb[____Classb____Key];}}var ____SuperProtoOf____Classb=____Classb===null?null:____Classb.prototype;Create.prototype=Object.create(____SuperProtoOf____Classb);Create.prototype.constructor=Create;Create.__superConstructor__=____Classb;
     
     function Create(props) {"use strict";
-    ____Class6.call(this,props);
+    ____Classb.call(this,props);
     this.state = {
             fetch: null
         };
@@ -23,24 +23,40 @@ var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____C
     Object.defineProperty(Create.prototype,"get_hamburger",{writable:true,configurable:true,value:function(action) {"use strict";
 
         fetch(action)
-            .then(function(response)  {return response.json();})
+            .then(function(response)  {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Something went wrong');
+                }
+            })
             .then(function(responseJson)  {
                 this.setState({fetch: responseJson})
-            }.bind(this)) 
+            }.bind(this))
+            .catch(function(error)  {
+                console.log('menu server error => ',error);
+            }) 
+    }});
+
+    Object.defineProperty(Create.prototype,"componentWillMount",{writable:true,configurable:true,value:function() {"use strict";
+        this.get_hamburger('/login_menu')
+    }});
+
+    Object.defineProperty(Create.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
 
     }});
     
     Object.defineProperty(Create.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
         
         return (
-            React.createElement("div", {className: "containter"}, 
+            React.createElement("div", {className: "container"}, 
 
                 React.createElement(Hamburger, {menu: this.state.fetch}), 
 
                 React.createElement(Form, null), 
 
                 React.createElement(Footer, {menu: this.state.fetch})
-                
+
             )
         )
     }});

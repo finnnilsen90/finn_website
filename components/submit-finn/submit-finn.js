@@ -7,10 +7,10 @@ const Form = require('./lib/form-submit/form-submit.js');
 const Hamburger = require('../lib/hamburger/hamburger.js');
 const Footer = require('../lib/footer/footer.js');
 
-var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____Class6.hasOwnProperty(____Class6____Key)){Submit[____Class6____Key]=____Class6[____Class6____Key];}}var ____SuperProtoOf____Class6=____Class6===null?null:____Class6.prototype;Submit.prototype=Object.create(____SuperProtoOf____Class6);Submit.prototype.constructor=Submit;Submit.__superConstructor__=____Class6;
+var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Submit[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Submit.prototype=Object.create(____SuperProtoOf____Class0);Submit.prototype.constructor=Submit;Submit.__superConstructor__=____Class0;
     
     function Submit(props) {"use strict";
-    ____Class6.call(this,props);
+    ____Class0.call(this,props);
     this.state = {
             fetch: null
         };
@@ -22,11 +22,19 @@ var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____C
     Object.defineProperty(Submit.prototype,"get_hamburger",{writable:true,configurable:true,value:function(action) {"use strict";
 
         fetch(action)
-            .then(function(response)  {return response.json();})
+            .then(function(response)  {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Something went wrong');
+                }
+            })
             .then(function(responseJson)  {
                 this.setState({fetch: responseJson})
-            }.bind(this)) 
-
+            }.bind(this))
+            .catch(function(error)  {
+                console.log('menu server error => ',error);
+            }) 
     }});
 
     Object.defineProperty(Submit.prototype,"componentWillMount",{writable:true,configurable:true,value:function() {"use strict";

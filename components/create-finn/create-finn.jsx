@@ -23,24 +23,40 @@ class Create extends React.Component {
     get_hamburger(action) {
 
         fetch(action)
-            .then((response) => response.json())
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Something went wrong');
+                }
+            })
             .then((responseJson) => {
                 this.setState({fetch: responseJson})
+            })
+            .catch((error) => {
+                console.log('menu server error => ',error);
             }) 
+    }
+
+    componentWillMount() {
+        this.get_hamburger('/login_menu')
+    }
+
+    componentDidMount() {
 
     }
     
     render() {
         
         return (
-            <div className='containter'>
+            <div className='container'>
 
                 <Hamburger menu={this.state.fetch}/>
 
                 <Form />
 
                 <Footer menu={this.state.fetch}/>
-                
+
             </div>
         )
     }

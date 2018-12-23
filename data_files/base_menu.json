@@ -49,8 +49,13 @@
         },
         "create_login": {
             "link": "/create_login",
-            "className": "create_login",
+            "className": "create",
             "text": "Create Login"
+        },
+        "form_submit": {
+            "link": "/form",
+            "className": "form_submit",
+            "text": "Form"
         },
         "contact": {
             "link": "/contact",

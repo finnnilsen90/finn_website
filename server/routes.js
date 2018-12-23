@@ -35,7 +35,7 @@ module.exports = function(app,sessionChecker,User) {
                     } else {
                         req.session.user = user.dataValues;
                         if(req.session.user.user_type==='admin') {
-                            res.redirect('/create_usr');
+                            res.redirect('/create');
                         } else {
                             res.redirect('/form');
                         }
@@ -49,8 +49,12 @@ module.exports = function(app,sessionChecker,User) {
 
 
     app.route('/create')
-        .get(sessionChecker, (req, res) => {
-            res.sendFile(path.join(__dirname,'../public/create-finn.html'));
+        .get((req, res) => {
+            if(req.session.user && req.cookies.auto_sid && req.session.user.user_type==='admin') {
+                res.sendFile(path.join(__dirname,'../public/create-finn.html'));
+            } else {
+                res.redirect('/login');
+            }
         })
         .post((req, res, next) => {
             let first_name = req.body.first_name,
@@ -73,27 +77,14 @@ module.exports = function(app,sessionChecker,User) {
         });
 
     app.get('/form', (req, res) => {
-            console.log('session => ', req.session.user)
             if (req.session.user && req.cookies.auto_sid) {
                 console.log('session started at submit')
-                res.sendFile(__dirname + '../public/submit-finn.html');
+                res.sendFile(path.join(__dirname,'../public/submit-finn.html'));
             } else {
                 console.log('error')
                 res.redirect('/login');
             }
         })
-
-        app.get('/create_usr', (req, res) => {
-            console.log('session => ', req.session.user)
-            if (req.session.user && req.cookies.auto_sid) {
-                console.log('session started at submit')
-                res.sendFile(__dirname + '../public/create_usr-finn.html');
-            } else {
-                console.log('error')
-                res.redirect('/login');
-            }
-        })
-
 
     app.get('/styleguide', (req, res) => {
             console.log('session => ', req.session.user)
