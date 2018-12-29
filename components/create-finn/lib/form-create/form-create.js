@@ -4,10 +4,10 @@ const css = require('./form-create.css')
 
 const Button_one = require('../../../lib/button-one/button-one.js');
 
-var ____Classd=React.Component;for(var ____Classd____Key in ____Classd){if(____Classd.hasOwnProperty(____Classd____Key)){Form[____Classd____Key]=____Classd[____Classd____Key];}}var ____SuperProtoOf____Classd=____Classd===null?null:____Classd.prototype;Form.prototype=Object.create(____SuperProtoOf____Classd);Form.prototype.constructor=Form;Form.__superConstructor__=____Classd;
+var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____Class1.hasOwnProperty(____Class1____Key)){Form[____Class1____Key]=____Class1[____Class1____Key];}}var ____SuperProtoOf____Class1=____Class1===null?null:____Class1.prototype;Form.prototype=Object.create(____SuperProtoOf____Class1);Form.prototype.constructor=Form;Form.__superConstructor__=____Class1;
     
     function Form(props) {"use strict";
-    ____Classd.call(this,props);
+    ____Class1.call(this,props);
     this.state = {
             test: ''
         };
@@ -23,7 +23,7 @@ var ____Classd=React.Component;for(var ____Classd____Key in ____Classd){if(____C
 
         return (
         React.createElement("div", {className: 'form-create_Container '+'font'}, 
-            React.createElement("form", {className: "form", action: "/create"}, 
+            React.createElement("form", {className: "form", action: "/create_login", method: "post"}, 
             React.createElement("div", {className: "input_box"}, 
                     React.createElement("label", {className: 'label '+'f_label'}, "First Name"), React.createElement("input", {className: "input", type: "text", name: "first_name"}), React.createElement("br", null)
                 ), 

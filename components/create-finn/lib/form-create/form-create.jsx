@@ -23,7 +23,7 @@ class Form extends React.Component {
 
         return (
         <div className={'form-create_Container '+'font'}>
-            <form className='form' action='/create'>
+            <form className='form' action='/create_login' method='post'>
             <div className='input_box'>
                     <label className={'label '+'f_label'}>First Name</label><input className='input' type='text' name='first_name'/><br/>
                 </div>

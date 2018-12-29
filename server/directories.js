@@ -7,5 +7,5 @@ module.exports = function(app) {
     app.use(express.static(path.join(__dirname, '../public')));
     app.use(express.static(path.join(__dirname, '../public/general')));
     app.use('/form',express.static(path.join(__dirname, '../public/app')));
-    app.use('/create',express.static(path.join(__dirname, '../public/admin')));
+    app.use('/create_login',express.static(path.join(__dirname, '../public/admin')));
 }

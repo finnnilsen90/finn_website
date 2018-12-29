@@ -1,4 +1,5 @@
 const path = require('path');
+let Sequelize = require('sequelize');
 let hamburger = require('../data_files/base_menu.json')
 
 module.exports = function(app,sessionChecker,User) {
@@ -35,7 +36,7 @@ module.exports = function(app,sessionChecker,User) {
                     } else {
                         req.session.user = user.dataValues;
                         if(req.session.user.user_type==='admin') {
-                            res.redirect('/create');
+                            res.redirect('/create_login');
                         } else {
                             res.redirect('/form');
                         }
@@ -48,8 +49,12 @@ module.exports = function(app,sessionChecker,User) {
 
 
 
-    app.route('/create')
+    app.route('/create_login')
         .get((req, res) => {
+            User.max('ID').then(max => {
+                console.log('return => ',max)
+                this.max_v = max;
+            })
             if(req.session.user && req.cookies.auto_sid && req.session.user.user_type==='admin') {
                 res.sendFile(path.join(__dirname,'../public/create-finn.html'));
             } else {
@@ -59,20 +64,35 @@ module.exports = function(app,sessionChecker,User) {
         .post((req, res, next) => {
             let first_name = req.body.first_name,
                 last_name = req.body.last_name,
-                username = req.body.username,
+                username = req.body.email,
                 email = username,
                 password = req.body.password,
-                user_type= req.body.user_type;
+                user_type= req.body.admin===undefined?'user':req.body.admin;
+                console.log('first name => ',first_name);
+                console.log('last name => ',last_name);
+                console.log('username => ',username);
+                console.log('email => ',email);
+                console.log('password => ',password);
+                console.log('user type => ',user_type);
+                console.log('ID => ',this.max_v + 1);
             
             User.create({
-                ID: User.sequelize.max('ID').then(max => {}) + 1, 
+                ID: this.max_v + 1, 
                 first_name: first_name,
                 last_name: last_name,
                 username: username,
                 email: username,
-                password: password_var,
+                password: password,
                 user_type: user_type
             })
+            .then(user => {
+                req.session.user = user.dataValues;
+                res.redirect('/logout');
+            })
+            .catch(error => {
+                console.log('error => ',error)
+                res.redirect('/create_login');
+            });
 
         });
 

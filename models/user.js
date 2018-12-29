@@ -25,18 +25,18 @@ var sequelize = new Sequelize('postgres://tdfumtyhtntczc:1567ed49ae33258de2da6c0
 // setup User model and its fields.
 var User = sequelize.define('users', {
     ID: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         unique: true,
         allowNull: false
     },
     first_name: {
         type: Sequelize.STRING,
-        unique: true,
+        unique: false,
         allowNull: false
     },
     last_name: {
         type: Sequelize.STRING,
-        unique: true,
+        unique: false,
         allowNull: false
     },
     username: {
@@ -55,8 +55,8 @@ var User = sequelize.define('users', {
     },
     user_type: {
         type: Sequelize.STRING,
-        unique: true,
-        allowNull: false
+        unique: false,
+        allowNull: true
     }
 }); 
 

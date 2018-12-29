@@ -9,6 +9,80 @@ exports[`<Form /> renders components 1`] = `
     class="form"
   >
     <div
+      class="input_box"
+    >
+      <label
+        class="label f_label"
+      >
+        First Name
+      </label>
+      <input
+        class="input"
+        name="first_name"
+        type="text"
+      />
+      <br />
+    </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label l_label"
+      >
+        Last Name
+      </label>
+      <input
+        class="input"
+        name="last_name"
+        type="text"
+      />
+      <br />
+    </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label e_label"
+      >
+        Email
+      </label>
+      <input
+        class="input"
+        name="email"
+        type="text"
+      />
+      <br />
+    </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label p_label"
+      >
+        Password
+      </label>
+      <input
+        class="input"
+        name="password"
+        type="password"
+      />
+    </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label t_label"
+      >
+        Admin
+      </label>
+      <input
+        class="check"
+        name="admin"
+        type="checkbox"
+        value="admin"
+      />
+    </div>
+    <div
       class="button"
     >
       <div
