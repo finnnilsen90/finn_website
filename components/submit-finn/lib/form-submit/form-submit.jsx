@@ -25,22 +25,20 @@ class Form extends React.Component {
 
         return (
         <div className={'form-submit_Container '+'font'}>
+            <h1 className='header'>Submit Project</h1>
             <form className='form' action='/submit'>
                 <div className='input_box'>
-                    <label className={'label '+'f_label'}>First Name</label><input className='input' type='text' name='first_name'/><br/>
+                    <label className={'label '+'p_label'}>Project Name</label><input className='input' type='text' name='first_name'/><br/>
                 </div>
                 <div className='input_box'>
-                    <label className={'label '+'l_label'}>Last Name</label><input className='input' type='text' name='last_name'/><br/>
-                </div>
-                <div className='input_box'>
-                    <label className={'label '+'company_label'}>Company</label><input className='input' type='text' name='company'/><br/>
+                    <label className={'label '+'company_label'}>Company</label><input className='input' type='text' name='last_name'/><br/>
                 </div>
                 <div className='input_box'>
                     <label className={'label '+'proj_desc'}>Project Description</label><br/>
                     <textarea className='text_input'></textarea>
                 </div>
                 <div className='input_box'>
-                    <label className={'label '+'d_label'}>Select Date</label><input className={'input '+'date_select'} type='date' name='date'/>
+                    <label className={'label '+'d_label'}>Completion Date</label><input className={'input '+'date_select'} type='date' name='date'/>
                 </div>
                 <div className='input_box'>
                     <label className={'label '+'budget_label'}>Budget</label><input className='input' type='text' name='budget'/><br/>
