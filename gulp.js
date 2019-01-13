@@ -103,6 +103,11 @@ gulp.task('task-list', function() {
     console.log('');
     console.log('production => Takes all files in the example file and minifies them.');
     console.log('');
+    console.log('');
+    console.log('bulk builds => goes through all of the components and builds them.');
+    console.log('set --bulk variable to yes');
+    console.log('set --plat variable to whatever platform you are building so it doesnt build other files.');
+    console.log('');
     console.log('\x1b[41m%s\x1b[0m','YOU NEED TO USE THE FOLLOWING NAMEING CONVETNION FOR CREATING COMPONENTS!!!');
     console.log('');
     console.log('component => component-website');

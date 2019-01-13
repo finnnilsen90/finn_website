@@ -23,6 +23,14 @@
 .footer_Container .link_footer:hover {
   color: #b3b3b3;
 }
+.nav {
+  float: left;
+}
+.nav_two {
+  float: left;
+  display: none;
+  margin: 0 0 0 20px;
+}
 @media screen and (min-width: 800px) {
   .test {
     padding: 20px;

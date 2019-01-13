@@ -4,6 +4,43 @@ exports[`<Footer /> renders components 1`] = `
 <Footer
   menu={
     Object {
+      "admin": Object {
+        "contact": Object {
+          "className": "link",
+          "link": "/contact",
+          "text": "Contact",
+        },
+        "create_login": Object {
+          "className": "create",
+          "link": "/create_login",
+          "text": "Create Login",
+        },
+        "form_submit": Object {
+          "className": "form_submit",
+          "link": "/form",
+          "text": "Form",
+        },
+        "home_page": Object {
+          "className": "link",
+          "link": "/home_page",
+          "text": "Home Page",
+        },
+        "logout": Object {
+          "className": "link",
+          "link": "/logout",
+          "text": "Logout",
+        },
+        "projects": Object {
+          "className": "link",
+          "link": "/home_page",
+          "text": "Projects",
+        },
+        "resume": Object {
+          "className": "link",
+          "link": "/resume",
+          "text": "Resume",
+        },
+      },
       "logedin": Object {
         "contact": Object {
           "className": "link",
@@ -35,14 +72,28 @@ exports[`<Footer /> renders components 1`] = `
   }
 >
   <div
-    className="footer_Container"
+    className="footer_Container font"
   >
     <div
       className="nav"
     >
       <ul>
-        <li />
+        <li
+          className="undefined link_footer"
+        >
+          <a />
+        </li>
+        <li
+          className="undefined link_footer"
+        >
+          <a />
+        </li>
       </ul>
+    </div>
+    <div
+      className="nav nav_two"
+    >
+      <ul />
     </div>
   </div>
 </Footer>
