@@ -21,18 +21,16 @@ class Submit extends React.Component {
     }
 
     chng_dimension() {
+
         let body = document.body,
             html = document.documentElement;
 
         let height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-   
-        console.log('screen width => ',screen.height)
-        // let elem_height = screen.height;
-        let cont_element = document.querySelector('.container');
+                    html.clientHeight, html.scrollHeight, html.offsetHeight );
 
+        let cont_element = document.querySelector('.container');
         cont_element.style.height = String(height) + 'px';
-        
+            
     }
 
     get_hamburger(action) {
@@ -58,11 +56,9 @@ class Submit extends React.Component {
     }
 
     componentDidMount() {
-
-        // if (window.innerWidth > 501) {
+        if (window.innerHeight > 750) {
             this.chng_dimension()
-        // }
-      
+        }
     }
     
     render() {

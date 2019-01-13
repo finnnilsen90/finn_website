@@ -5,15 +5,17 @@ const css = require('./form-submit.css');
 
 const Button_one = require('../../../lib/button-one/button-one.js');
 
-var ____ClassG=React.Component;for(var ____ClassG____Key in ____ClassG){if(____ClassG.hasOwnProperty(____ClassG____Key)){Form[____ClassG____Key]=____ClassG[____ClassG____Key];}}var ____SuperProtoOf____ClassG=____ClassG===null?null:____ClassG.prototype;Form.prototype=Object.create(____SuperProtoOf____ClassG);Form.prototype.constructor=Form;Form.__superConstructor__=____ClassG;
+var ____Class7=React.Component;for(var ____Class7____Key in ____Class7){if(____Class7.hasOwnProperty(____Class7____Key)){Form[____Class7____Key]=____Class7[____Class7____Key];}}var ____SuperProtoOf____Class7=____Class7===null?null:____Class7.prototype;Form.prototype=Object.create(____SuperProtoOf____Class7);Form.prototype.constructor=Form;Form.__superConstructor__=____Class7;
     
     function Form(props) {"use strict";
-    ____ClassG.call(this,props);
+    ____Class7.call(this,props);
     this.state = {
             picker: ''
         };
        
     }
+
+    
     Object.defineProperty(Form.prototype,"componentWillMount",{writable:true,configurable:true,value:function() {"use strict";
         
     }});

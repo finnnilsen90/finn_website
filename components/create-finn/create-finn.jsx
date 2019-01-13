@@ -16,8 +16,22 @@ class Create extends React.Component {
             fetch: null
         };
 
+        this.chng_dimension = this.chng_dimension.bind(this);
         this.get_hamburger = this.get_hamburger.bind(this);
     
+    }
+
+    chng_dimension() {
+        let body = document.body,
+            html = document.documentElement;
+
+        let height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+   
+        let cont_element = document.querySelector('.container');
+
+        cont_element.style.height = String(height) + 'px';
+        
     }
 
     get_hamburger(action) {
@@ -39,11 +53,14 @@ class Create extends React.Component {
     }
 
     componentWillMount() {
+    
         this.get_hamburger('/login_menu')
     }
 
     componentDidMount() {
-
+        if (window.innerHeight > 750) {
+            this.chng_dimension()
+        }
     }
     
     render() {

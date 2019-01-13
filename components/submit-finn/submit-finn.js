@@ -7,10 +7,10 @@ const Form = require('./lib/form-submit/form-submit.js');
 const Hamburger = require('../lib/hamburger/hamburger.js');
 const Footer = require('../lib/footer/footer.js');
 
-var ____ClassF=React.Component;for(var ____ClassF____Key in ____ClassF){if(____ClassF.hasOwnProperty(____ClassF____Key)){Submit[____ClassF____Key]=____ClassF[____ClassF____Key];}}var ____SuperProtoOf____ClassF=____ClassF===null?null:____ClassF.prototype;Submit.prototype=Object.create(____SuperProtoOf____ClassF);Submit.prototype.constructor=Submit;Submit.__superConstructor__=____ClassF;
+var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____Class8.hasOwnProperty(____Class8____Key)){Submit[____Class8____Key]=____Class8[____Class8____Key];}}var ____SuperProtoOf____Class8=____Class8===null?null:____Class8.prototype;Submit.prototype=Object.create(____SuperProtoOf____Class8);Submit.prototype.constructor=Submit;Submit.__superConstructor__=____Class8;
     
     function Submit(props) {"use strict";
-    ____ClassF.call(this,props);
+    ____Class8.call(this,props);
     this.state = {
             fetch: null
         };
@@ -21,18 +21,16 @@ var ____ClassF=React.Component;for(var ____ClassF____Key in ____ClassF){if(____C
     }
 
     Object.defineProperty(Submit.prototype,"chng_dimension",{writable:true,configurable:true,value:function() {"use strict";
+
         let body = document.body,
             html = document.documentElement;
 
         let height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-   
-        console.log('screen width => ',screen.height)
-        // let elem_height = screen.height;
-        let cont_element = document.querySelector('.container');
+                    html.clientHeight, html.scrollHeight, html.offsetHeight );
 
+        let cont_element = document.querySelector('.container');
         cont_element.style.height = String(height) + 'px';
-        
+            
     }});
 
     Object.defineProperty(Submit.prototype,"get_hamburger",{writable:true,configurable:true,value:function(action) {"use strict";
@@ -58,11 +56,9 @@ var ____ClassF=React.Component;for(var ____ClassF____Key in ____ClassF){if(____C
     }});
 
     Object.defineProperty(Submit.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
-
-        // if (window.innerWidth > 501) {
+        if (window.innerHeight > 750) {
             this.chng_dimension()
-        // }
-      
+        }
     }});
     
     Object.defineProperty(Submit.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
