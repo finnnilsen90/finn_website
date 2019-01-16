@@ -23,16 +23,25 @@ describe('<Form />', () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-
 })
 
-// describe('date picker', () => {
+describe('Form component after submit', () => {
+    
 
-//     const wrapper = render(<Form />);
+    it('should store success message', () => {
+        const wrapper = mount(<Form />, { attachTo: document.body });
+        wrapper.state().msg_status = 'success';
+        wrapper.instance().form_submit();
+        console.log('wrapper state => ',wrapper.state().msg_status)
+        expect(wrapper.state().msg[0]).toEqual('Your order form has been successfully submitted!')
+    })
 
-//     it('should ', () => {
-//         expect(wrapper).toMatchSnapshot();
-//     });
+    it('should store error message', () => {
+        const wrapper = mount(<Form />, { attachTo: document.body });
+        wrapper.state().msg_status = 'error';
+        wrapper.instance().form_submit();
+        console.log('wrapper state => ',wrapper.state().msg_status)
+        expect(wrapper.state().msg[0]).toEqual('There was an error with your submission.')
+    })
 
-
-// })
+})

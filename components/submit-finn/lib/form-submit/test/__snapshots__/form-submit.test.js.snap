@@ -4,36 +4,30 @@ exports[`<Form /> renders components 1`] = `
 <div
   class="form-submit_Container font"
 >
+  <div
+    class="msg_container"
+  />
+  <h1
+    class="header"
+  >
+    Submit Project
+  </h1>
   <form
-    action="/submit"
+    action="/form"
     class="form"
+    method="post"
   >
     <div
       class="input_box"
     >
       <label
-        class="label f_label"
+        class="label p_label"
       >
-        First Name
+        Project Name
       </label>
       <input
         class="input"
-        name="first_name"
-        type="text"
-      />
-      <br />
-    </div>
-    <div
-      class="input_box"
-    >
-      <label
-        class="label l_label"
-      >
-        Last Name
-      </label>
-      <input
-        class="input"
-        name="last_name"
+        name="project_name"
         type="text"
       />
       <br />
@@ -64,6 +58,8 @@ exports[`<Form /> renders components 1`] = `
       <br />
       <textarea
         class="text_input"
+        name="project_description"
+        type="text"
       />
     </div>
     <div
@@ -72,7 +68,7 @@ exports[`<Form /> renders components 1`] = `
       <label
         class="label d_label"
       >
-        Select Date
+        Completion Date
       </label>
       <input
         class="input date_select"
