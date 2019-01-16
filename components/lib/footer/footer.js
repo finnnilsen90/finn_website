@@ -2,10 +2,10 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./footer.css');
 
-var ____Classj=React.Component;for(var ____Classj____Key in ____Classj){if(____Classj.hasOwnProperty(____Classj____Key)){Footer[____Classj____Key]=____Classj[____Classj____Key];}}var ____SuperProtoOf____Classj=____Classj===null?null:____Classj.prototype;Footer.prototype=Object.create(____SuperProtoOf____Classj);Footer.prototype.constructor=Footer;Footer.__superConstructor__=____Classj;
+var ____ClassD=React.Component;for(var ____ClassD____Key in ____ClassD){if(____ClassD.hasOwnProperty(____ClassD____Key)){Footer[____ClassD____Key]=____ClassD[____ClassD____Key];}}var ____SuperProtoOf____ClassD=____ClassD===null?null:____ClassD.prototype;Footer.prototype=Object.create(____SuperProtoOf____ClassD);Footer.prototype.constructor=Footer;Footer.__superConstructor__=____ClassD;
     
     function Footer(props) {"use strict";
-    ____Classj.call(this,props);
+    ____ClassD.call(this,props);
     this.state = {
             links_invoked: '',
             test: '',
@@ -13,7 +13,7 @@ var ____Classj=React.Component;for(var ____Classj____Key in ____Classj){if(____C
                 login: {
                     link: '/login',
                     className: 'link_footer',
-                    text: 'Login test'
+                    text: 'Login'
                 },
                 home_page: {
                     link: '/home_page',
@@ -56,7 +56,6 @@ var ____Classj=React.Component;for(var ____Classj____Key in ____Classj){if(____C
     }});
 
     Object.defineProperty(Footer.prototype,"links_compile",{writable:true,configurable:true,value:function(input) {"use strict";
-
         let value = Object.entries(input)
         let menu = []
         let len = value.length>5?5:value.length;
@@ -80,10 +79,12 @@ var ____Classj=React.Component;for(var ____Classj____Key in ____Classj){if(____C
     }});
 
     Object.defineProperty(Footer.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
-        let nav_two = document.querySelector('.nav_two');
-        if (Object.entries(this.chng_state()).length>5) {
-            nav_two.style.display = 'block';
-        }
+        console.log('object length => ',this.chng_state())
+        // if (Object.entries(this.chng_state()).length>5) {
+            
+        //     let nav_two = document.querySelector('.nav_two');
+        //     nav_two.style.display = 'block';
+        // }
     }});
     Object.defineProperty(Footer.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
 

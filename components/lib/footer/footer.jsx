@@ -13,7 +13,7 @@ class Footer extends React.Component {
                 login: {
                     link: '/login',
                     className: 'link_footer',
-                    text: 'Login test'
+                    text: 'Login'
                 },
                 home_page: {
                     link: '/home_page',
@@ -56,7 +56,6 @@ class Footer extends React.Component {
     }
 
     links_compile(input) {
-
         let value = Object.entries(input)
         let menu = []
         let len = value.length>5?5:value.length;
@@ -80,10 +79,12 @@ class Footer extends React.Component {
     }
 
     componentDidMount() {
-        let nav_two = document.querySelector('.nav_two');
-        if (Object.entries(this.chng_state()).length>5) {
-            nav_two.style.display = 'block';
-        }
+        console.log('object length => ',this.chng_state())
+        // if (Object.entries(this.chng_state()).length>5) {
+            
+        //     let nav_two = document.querySelector('.nav_two');
+        //     nav_two.style.display = 'block';
+        // }
     }
     render() {
 
