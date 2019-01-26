@@ -4,6 +4,43 @@ exports[`<Footer /> renders components 1`] = `
 <Footer
   menu={
     Object {
+      "admin": Object {
+        "contact": Object {
+          "className": "link",
+          "link": "/contact",
+          "text": "Contact",
+        },
+        "create_login": Object {
+          "className": "create",
+          "link": "/create_login",
+          "text": "Create Login",
+        },
+        "form_submit": Object {
+          "className": "form_submit",
+          "link": "/form",
+          "text": "Form",
+        },
+        "home_page": Object {
+          "className": "link",
+          "link": "/home_page",
+          "text": "Home Page",
+        },
+        "logout": Object {
+          "className": "link",
+          "link": "/logout",
+          "text": "Logout",
+        },
+        "projects": Object {
+          "className": "link",
+          "link": "/home_page",
+          "text": "Projects",
+        },
+        "resume": Object {
+          "className": "link",
+          "link": "/resume",
+          "text": "Resume",
+        },
+      },
       "logedin": Object {
         "contact": Object {
           "className": "link",
@@ -35,13 +72,137 @@ exports[`<Footer /> renders components 1`] = `
   }
 >
   <div
-    className="footer_Container"
+    className="footer_Container font"
   >
     <div
       className="nav"
     >
       <ul>
-        <li />
+        <li
+          className="undefined link_footer"
+        >
+          <a />
+        </li>
+        <li
+          className="undefined link_footer"
+        >
+          <a />
+        </li>
+      </ul>
+    </div>
+    <div
+      className="nav nav_two"
+    >
+      <ul />
+    </div>
+  </div>
+</Footer>
+`;
+
+exports[`column two should render nav_two class 1`] = `
+<Footer
+  menu={
+    Object {
+      "contact": Object {
+        "className": "link_footer",
+        "link": "/contact",
+        "text": "Contact",
+      },
+      "home_page": Object {
+        "className": "link_footer",
+        "link": "/home_page",
+        "text": "Home Page",
+      },
+      "login": Object {
+        "className": "link_footer",
+        "link": "/login",
+        "text": "Login",
+      },
+      "projects": Object {
+        "className": "link_footer",
+        "link": "/home_page",
+        "text": "Projects",
+      },
+      "resume": Object {
+        "className": "link_footer",
+        "link": "/resume",
+        "text": "Resume",
+      },
+      "test": Object {
+        "className": "link_footer",
+        "link": "/login",
+        "text": "Test",
+      },
+    }
+  }
+>
+  <div
+    className="footer_Container font"
+  >
+    <div
+      className="nav"
+    >
+      <ul>
+        <li
+          className="link_footer link_footer"
+        >
+          <a
+            href="/login"
+          >
+            Login
+          </a>
+        </li>
+        <li
+          className="link_footer link_footer"
+        >
+          <a
+            href="/home_page"
+          >
+            Home Page
+          </a>
+        </li>
+        <li
+          className="link_footer link_footer"
+        >
+          <a
+            href="/resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li
+          className="link_footer link_footer"
+        >
+          <a
+            href="/home_page"
+          >
+            Projects
+          </a>
+        </li>
+        <li
+          className="link_footer link_footer"
+        >
+          <a
+            href="/contact"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="nav nav_two"
+    >
+      <ul>
+        <li
+          className="link_footer link_footer"
+        >
+          <a
+            href="/login"
+          >
+            Test
+          </a>
+        </li>
       </ul>
     </div>
   </div>

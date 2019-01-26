@@ -2,7 +2,7 @@ const path = require('path');
 let Sequelize = require('sequelize');
 let hamburger = require('../data_files/base_menu.json')
 
-module.exports = function(app,sessionChecker,User) {
+module.exports = function(app,sessionChecker,User,Project) {
     app.get('/', sessionChecker, (req, res) => {
         res.redirect('/login');
     });
@@ -41,6 +41,7 @@ module.exports = function(app,sessionChecker,User) {
                             res.redirect('/form');
                         }
                         console.log('user authenticated');
+                        console.log('user id => ',user.dataValues.id)
                         console.log('user type => ',user.dataValues.user_type)
                     }
                 });
@@ -96,14 +97,46 @@ module.exports = function(app,sessionChecker,User) {
 
         });
 
-    app.get('/form', (req, res) => {
+    app.route('/form')
+        .get((req, res) => {
             if (req.session.user && req.cookies.auto_sid) {
                 console.log('session started at submit')
                 res.sendFile(path.join(__dirname,'../public/submit-finn.html'));
             } else {
                 console.log('error')
                 res.redirect('/login');
-            }
+            }   
+        })
+        .post((req,res,next) => {
+            let proj = req.body.project_name,
+                company = req.body.company,
+                proj_desc = req.body.project_description,
+                date = req.body.date,
+                budget = req.body.budget;
+                console.log('ID => ',req.session.user.id);
+                console.log('project name => ',proj);
+                console.log('company name => ',company);
+                console.log('description => ',proj_desc);
+                console.log('date => ',date);
+                console.log('budget => ',budget);
+
+            Project.create({
+                user_id: req.session.user.id,
+                project_name: proj,
+                company: company,
+                description: proj_desc,
+                date: date,
+                budget: budget
+            })
+            .then(user => {
+                res.redirect('/form?valid=success');
+            })
+            .catch(error => {
+                console.log('error => ',error)
+                res.redirect('/form?=error');
+            });
+
+
         })
 
     app.get('/styleguide', (req, res) => {

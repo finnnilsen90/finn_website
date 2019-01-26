@@ -8,7 +8,7 @@ const Form = require('../lib/form-submit/form-submit.js')
 
 let SubmitConst = new Submit(); 
 
-jest.mock('../lib/form-submit/form-submit.js', () => 'Form')
+// jest.mock('../lib/form-submit/form-submit.js', () => 'Form')
 
 describe('component connection', () => {
 
@@ -28,3 +28,4 @@ describe('<Submit />', () => {
 
 
 })
+

@@ -8,17 +8,31 @@ const Hamburger = require('../lib/hamburger/hamburger.js');
 const Footer = require('../lib/footer/footer.js');
 
 
-var ____Classb=React.Component;for(var ____Classb____Key in ____Classb){if(____Classb.hasOwnProperty(____Classb____Key)){Create[____Classb____Key]=____Classb[____Classb____Key];}}var ____SuperProtoOf____Classb=____Classb===null?null:____Classb.prototype;Create.prototype=Object.create(____SuperProtoOf____Classb);Create.prototype.constructor=Create;Create.__superConstructor__=____Classb;
+var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Create[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Create.prototype=Object.create(____SuperProtoOf____Class0);Create.prototype.constructor=Create;Create.__superConstructor__=____Class0;
     
     function Create(props) {"use strict";
-    ____Classb.call(this,props);
+    ____Class0.call(this,props);
     this.state = {
             fetch: null
         };
 
+        this.chng_dimension = this.chng_dimension.bind(this);
         this.get_hamburger = this.get_hamburger.bind(this);
     
     }
+
+    Object.defineProperty(Create.prototype,"chng_dimension",{writable:true,configurable:true,value:function() {"use strict";
+        let body = document.body,
+            html = document.documentElement;
+
+        let height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+   
+        let cont_element = document.querySelector('.container');
+
+        cont_element.style.height = String(height) + 'px';
+        
+    }});
 
     Object.defineProperty(Create.prototype,"get_hamburger",{writable:true,configurable:true,value:function(action) {"use strict";
 
@@ -39,11 +53,14 @@ var ____Classb=React.Component;for(var ____Classb____Key in ____Classb){if(____C
     }});
 
     Object.defineProperty(Create.prototype,"componentWillMount",{writable:true,configurable:true,value:function() {"use strict";
+    
         this.get_hamburger('/login_menu')
     }});
 
     Object.defineProperty(Create.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
-
+        if (window.innerHeight > 750) {
+            this.chng_dimension()
+        }
     }});
     
     Object.defineProperty(Create.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";

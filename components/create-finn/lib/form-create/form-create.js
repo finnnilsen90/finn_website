@@ -23,6 +23,7 @@ var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____C
 
         return (
         React.createElement("div", {className: 'form-create_Container '+'font'}, 
+            React.createElement("h1", {className: "header"}, "Create User"), 
             React.createElement("form", {className: "form", action: "/create_login", method: "post"}, 
             React.createElement("div", {className: "input_box"}, 
                     React.createElement("label", {className: 'label '+'f_label'}, "First Name"), React.createElement("input", {className: "input", type: "text", name: "first_name"}), React.createElement("br", null)

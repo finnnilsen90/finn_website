@@ -7,17 +7,31 @@ const Form = require('./lib/form-submit/form-submit.js');
 const Hamburger = require('../lib/hamburger/hamburger.js');
 const Footer = require('../lib/footer/footer.js');
 
-var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Submit[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Submit.prototype=Object.create(____SuperProtoOf____Class0);Submit.prototype.constructor=Submit;Submit.__superConstructor__=____Class0;
+var ____Class3=React.Component;for(var ____Class3____Key in ____Class3){if(____Class3.hasOwnProperty(____Class3____Key)){Submit[____Class3____Key]=____Class3[____Class3____Key];}}var ____SuperProtoOf____Class3=____Class3===null?null:____Class3.prototype;Submit.prototype=Object.create(____SuperProtoOf____Class3);Submit.prototype.constructor=Submit;Submit.__superConstructor__=____Class3;
     
     function Submit(props) {"use strict";
-    ____Class0.call(this,props);
+    ____Class3.call(this,props);
     this.state = {
             fetch: null
         };
 
+        this.chng_dimension = this.chng_dimension.bind(this);
         this.get_hamburger = this.get_hamburger.bind(this);
     
     }
+
+    Object.defineProperty(Submit.prototype,"chng_dimension",{writable:true,configurable:true,value:function() {"use strict";
+
+        let body = document.body,
+            html = document.documentElement;
+
+        let height = Math.max( body.scrollHeight, body.offsetHeight, 
+                    html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+        let cont_element = document.querySelector('.container');
+        cont_element.style.height = String(height) + 'px';
+            
+    }});
 
     Object.defineProperty(Submit.prototype,"get_hamburger",{writable:true,configurable:true,value:function(action) {"use strict";
 
@@ -42,7 +56,9 @@ var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____C
     }});
 
     Object.defineProperty(Submit.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
-
+        if (window.innerHeight > 750) {
+            this.chng_dimension()
+        }
     }});
     
     Object.defineProperty(Submit.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
