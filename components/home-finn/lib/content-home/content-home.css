@@ -1,0 +1,11 @@
+.profile {
+  float: left;
+  margin: 200px 0 0 100px;
+  width: 400px;
+  border: 2px solid grey;
+}
+.slider-home_Container {
+  position: relative;
+  top: 300px;
+  left: 100px;
+}

@@ -2,17 +2,17 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./hamburger.css')
 
-var ____Class5=React.Component;for(var ____Class5____Key in ____Class5){if(____Class5.hasOwnProperty(____Class5____Key)){Hamburger[____Class5____Key]=____Class5[____Class5____Key];}}var ____SuperProtoOf____Class5=____Class5===null?null:____Class5.prototype;Hamburger.prototype=Object.create(____SuperProtoOf____Class5);Hamburger.prototype.constructor=Hamburger;Hamburger.__superConstructor__=____Class5;
+var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____Class1.hasOwnProperty(____Class1____Key)){Hamburger[____Class1____Key]=____Class1[____Class1____Key];}}var ____SuperProtoOf____Class1=____Class1===null?null:____Class1.prototype;Hamburger.prototype=Object.create(____SuperProtoOf____Class1);Hamburger.prototype.constructor=Hamburger;Hamburger.__superConstructor__=____Class1;
     
     function Hamburger(props) {"use strict";
-    ____Class5.call(this,props);
+    ____Class1.call(this,props);
     this.state = {
             hover: 0,
             toggle: true,
             default:  { login: {
-                            link: '/logout',
+                            link: '/login',
                             className: 'link',
-                            text: 'Logout'
+                            text: 'Login'
                             },
                             home_page: {
                                 link: '/home_page',
@@ -44,7 +44,6 @@ var ____Class5=React.Component;for(var ____Class5____Key in ____Class5){if(____C
 
     Object.defineProperty(Hamburger.prototype,"links_compile",{writable:true,configurable:true,value:function(input) {"use strict";
 
-        console.log('input json => ',input)
         let new_input = input || this.state.default;
         if (typeof(new_input)==='object') {
             let value = Object.entries(new_input);

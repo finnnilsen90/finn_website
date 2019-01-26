@@ -10,9 +10,9 @@ class Hamburger extends React.Component {
             hover: 0,
             toggle: true,
             default:  { login: {
-                            link: '/logout',
+                            link: '/login',
                             className: 'link',
-                            text: 'Logout'
+                            text: 'Login'
                             },
                             home_page: {
                                 link: '/home_page',
@@ -44,7 +44,6 @@ class Hamburger extends React.Component {
 
     links_compile(input) {
 
-        console.log('input json => ',input)
         let new_input = input || this.state.default;
         if (typeof(new_input)==='object') {
             let value = Object.entries(new_input);

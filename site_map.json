@@ -4,7 +4,8 @@
   },
   "app": {
     "submit-finn": "submit-finn",
-    "create_usr-finn": "create_usr-finn"
+    "create_usr-finn": "create_usr-finn",
+    "home-finn": "home-finn"
   },
   "admin": {
     "create-finn": "create-finn"

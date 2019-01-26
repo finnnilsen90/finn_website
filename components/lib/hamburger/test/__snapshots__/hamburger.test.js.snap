@@ -4,21 +4,159 @@ exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 1`]
 <ul
   className="dropdown"
   onMouseLeave={[Function]}
-/>
+>
+  <li
+    className="link"
+  >
+    <a
+      href="/login"
+    >
+      Login
+    </a>
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      href="/home_page"
+    >
+      Home Page
+    </a>
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      href="/resume"
+    >
+      Resume
+    </a>
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      href="/home_page"
+    >
+      Projects
+    </a>
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      href="/contact"
+    >
+      Contact
+    </a>
+  </li>
+</ul>
 `;
 
 exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 2`] = `
 <ul
   className="dropdown"
   onMouseLeave={[Function]}
-/>
+>
+  <li
+    className="link"
+  >
+    <a
+      href="/login"
+    >
+      Login
+    </a>
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      href="/home_page"
+    >
+      Home Page
+    </a>
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      href="/resume"
+    >
+      Resume
+    </a>
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      href="/home_page"
+    >
+      Projects
+    </a>
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      href="/contact"
+    >
+      Contact
+    </a>
+  </li>
+</ul>
 `;
 
 exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 3`] = `
 <ul
   className="dropdown"
   onMouseLeave={[Function]}
-/>
+>
+  <li
+    className="link"
+  >
+    <a
+      href="/login"
+    >
+      Login
+    </a>
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      href="/home_page"
+    >
+      Home Page
+    </a>
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      href="/resume"
+    >
+      Resume
+    </a>
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      href="/home_page"
+    >
+      Projects
+    </a>
+  </li>
+  <li
+    className="link"
+  >
+    <a
+      href="/contact"
+    >
+      Contact
+    </a>
+  </li>
+</ul>
 `;
 
 exports[`<Hamburger /> state should match state of each action 1`] = `
@@ -44,7 +182,53 @@ exports[`<Hamburger /> state should match state of each action 1`] = `
     <ul
       className="dropdown"
       onMouseLeave={[Function]}
-    />
+    >
+      <li
+        className="link"
+      >
+        <a
+          href="/login"
+        >
+          Login
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/home_page"
+        >
+          Home Page
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/resume"
+        >
+          Resume
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/home_page"
+        >
+          Projects
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/contact"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
 `;
@@ -72,7 +256,53 @@ exports[`<Hamburger /> state should match state of each action 2`] = `
     <ul
       className="dropdown"
       onMouseLeave={[Function]}
-    />
+    >
+      <li
+        className="link"
+      >
+        <a
+          href="/login"
+        >
+          Login
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/home_page"
+        >
+          Home Page
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/resume"
+        >
+          Resume
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/home_page"
+        >
+          Projects
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/contact"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
 `;
@@ -100,7 +330,53 @@ exports[`<Hamburger /> state should match state of each action 3`] = `
     <ul
       className="dropdown"
       onMouseLeave={[Function]}
-    />
+    >
+      <li
+        className="link"
+      >
+        <a
+          href="/login"
+        >
+          Login
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/home_page"
+        >
+          Home Page
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/resume"
+        >
+          Resume
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/home_page"
+        >
+          Projects
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/contact"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
 `;
@@ -128,7 +404,53 @@ exports[`setting default menu should render default 1`] = `
     <ul
       className="dropdown"
       onMouseLeave={[Function]}
-    />
+    >
+      <li
+        className="link"
+      >
+        <a
+          href="/login"
+        >
+          Login
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/home_page"
+        >
+          Home Page
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/resume"
+        >
+          Resume
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/home_page"
+        >
+          Projects
+        </a>
+      </li>
+      <li
+        className="link"
+      >
+        <a
+          href="/contact"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
 `;
