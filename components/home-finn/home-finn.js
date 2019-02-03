@@ -6,10 +6,10 @@ var css = require('./home-finn.css')
 const Hamburger = require('../lib/hamburger/hamburger.js')
 const Content = require('./lib/content-home/content-home.js')
 
-var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____Class1.hasOwnProperty(____Class1____Key)){Home[____Class1____Key]=____Class1[____Class1____Key];}}var ____SuperProtoOf____Class1=____Class1===null?null:____Class1.prototype;Home.prototype=Object.create(____SuperProtoOf____Class1);Home.prototype.constructor=Home;Home.__superConstructor__=____Class1;
+var ____Classr=React.Component;for(var ____Classr____Key in ____Classr){if(____Classr.hasOwnProperty(____Classr____Key)){Home[____Classr____Key]=____Classr[____Classr____Key];}}var ____SuperProtoOf____Classr=____Classr===null?null:____Classr.prototype;Home.prototype=Object.create(____SuperProtoOf____Classr);Home.prototype.constructor=Home;Home.__superConstructor__=____Classr;
     
     function Home(props) {"use strict";
-    ____Class1.call(this,props);
+    ____Classr.call(this,props);
     this.state = {
             test: 'Test'
         };
