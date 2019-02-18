@@ -1,11 +1,26 @@
 .profile {
   float: left;
-  margin: 200px 0 0 100px;
-  width: 400px;
   border: 2px solid grey;
 }
-.slider-home_Container {
+.content-home_Container {
   position: relative;
-  top: 300px;
-  left: 100px;
+  top: 200px;
+  margin: 0 auto 0 auto;
+}
+@media screen and (min-width: 900px) {
+  .profile {
+    width: 400px;
+  }
+  .content-home_Container {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 899px) {
+  .profile {
+    width: 90%;
+    margin: 0 auto 0 auto;
+  }
+  .content-home_Container {
+    width: 90%;
+  }
 }
