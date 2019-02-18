@@ -3,38 +3,58 @@
 exports[`<Slider /> renders components 1`] = `
 <Slider>
   <div
-    className="slider-home_Container"
+    className="slider-home_Container font"
   >
     <div
-      className="div1 slider_func"
+      className="outer"
     >
       <div
-        className="slide1 slide_cont"
+        className="slide1 slide"
       >
-        <h2>
-          Content One
-        </h2>
-        <div
-          className="slider_class"
+        <a
+          href="/resume"
         >
-          lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-        </div>
+          <h2>
+            Resume
+          </h2>
+          <div
+            className="slider_class"
+          >
+            Click to see my resmue!
+          </div>
+        </a>
       </div>
-    </div>
-    <div
-      className="div2 slider_func closed"
-    >
       <div
-        className="slide1 slide_cont"
+        className="slide2 slide"
       >
-        <h2>
-          Content One
-        </h2>
-        <div
-          className="slider_class"
+        <a
+          href="/project"
         >
-          lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-        </div>
+          <h2>
+            Projects
+          </h2>
+          <div
+            className="slider_class"
+          >
+            Checkout some of the projects I have been apart of.
+          </div>
+        </a>
+      </div>
+      <div
+        className="slide3 slide"
+      >
+        <a
+          href="/contact"
+        >
+          <h2>
+            Contact
+          </h2>
+          <div
+            className="slider_class"
+          >
+            If you would like to contact me click now.
+          </div>
+        </a>
       </div>
     </div>
   </div>
