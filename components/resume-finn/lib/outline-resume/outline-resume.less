@@ -1,0 +1,40 @@
+@import '../../../mixins/color.less';
+@import '../../../mixins/font.less';
+
+.header {
+    margin:-50px 0 0 0;
+}
+
+.outline-resume_Container {
+    box-shadow: 3px 0 4px @secondary_background_color,-3px 0 4px @secondary_background_color;
+    position: relative;
+    top:170px;
+    margin:0 auto 0 auto;
+    border:1px solid @secondary_background_color;
+    color:@background_color;
+}
+
+
+@media screen and (min-width: 801px) {
+    .outline-resume_Container {
+        width:700px;
+        height:520px;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    .outline-resume_Container {
+        width:350px;
+        height:600px;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px){
+
+}
+
+@media screen and (max-width: 500px){
+
+}

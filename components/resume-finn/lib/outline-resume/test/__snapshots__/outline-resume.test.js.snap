@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Outline /> renders components 1`] = `
+<div
+  class="outline-resume_Container"
+>
+  <div
+    class="test"
+  />
+</div>
+`;

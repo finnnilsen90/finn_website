@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Resume /> renders components 1`] = `
+<div
+  class="containter"
+>
+  <outline />
+</div>
+`;
