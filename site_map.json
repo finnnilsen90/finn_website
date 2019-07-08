@@ -6,7 +6,8 @@
     "submit-finn": "submit-finn",
     "create_usr-finn": "create-finn",
     "home-finn": "home-finn",
-    "resume-finn": "resume-finn"
+    "resume-finn": "resume-finn",
+    "test-finn": "test-finn"
   },
   "admin": {
     "create-finn": "create-finn"

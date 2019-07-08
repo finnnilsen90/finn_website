@@ -14,7 +14,7 @@ const editJsonFile = require('edit-json-file');
 let site_map = require('./site_map.json');
 
 //Command line variable naming
-let compName = optimist.argv.comp || 'compName'; //Component name 
+let compName = optimist.argv.comp || 'templates'; //Component name 
 let child = optimist.argv.child || 'Libcomp'; //child component name to put into lib folder of component 
 let folder = optimist.argv.test || compName; //folder name used to test and develop template files
 let env = optimist.argv.env || 'development' //Defines the environment.
@@ -191,9 +191,10 @@ function replace(source, destin, base, test) {
     if (base === true) {
         gulp.src(source)
             .pipe($.replace('compName', compName))
+            .pipe($.replace('templates', compName))
             .pipe($.replace('varName', varName)) 
             .pipe($.replace('VarName', varName)) 
-            .pipe($.replace('child', child))
+            .pipe($.replace('Libcomp', child))
             .pipe($.replace('ChildConst', newChild))
             .pipe($.replace('newChildConst', 'new' + newChild))
             .pipe($.replace('libcomp', newChild_low))
@@ -206,9 +207,10 @@ function replace(source, destin, base, test) {
     } else {
         gulp.src(source)
             .pipe($.replace('compName', compName))
+            .pipe($.replace('templates', compName))
             .pipe($.replace('varName', varName)) 
             .pipe($.replace('VarName', varName)) 
-            .pipe($.replace('child', child))
+            .pipe($.replace('Libcomp', child))
             .pipe($.replace('ChildConst', newChild))
             .pipe($.replace('newChildConst', 'new' + newChild))
             .pipe($.replace('libcomp', newChild_low))
@@ -221,7 +223,7 @@ function replace(source, destin, base, test) {
 function makeChild() {
 
     replace('./components/templates/lib/Libcomp/Libcomp.*', config.dest.components, true)
-    replace('./components/templates/lib/Libcomp/test/libcomp.test.js', config.dest.testChild_file, true, true)
+    replace('./components/templates/lib/Libcomp/test/libcomp-child.test.js', config.dest.testChild_file, true, true)
     replace('./components/templates/lib/Libcomp/test/configure.json', config.dest.testChild)
     console.log('---------------------------------------');
     console.log('New child component ' + newChild)
@@ -233,7 +235,7 @@ function makeChild() {
 function libComp() {
 
     replace('./components/templates/lib/Libcomp/Libcomp.*', config.dest.Makelib, true)
-    replace('./components/templates/lib/Libcomp/test/libcomp.test.js', config.dest.MakelibTest_file, true, true)
+    replace('./components/templates/lib/Libcomp/test/libcomp-child.test.js', config.dest.MakelibTest_file, true, true)
     replace('./components/templates/lib/Libcomp/test/configure.json', config.dest.MakelibTest)
     console.log('---------------------------------------');
     console.log('New global lib component ' + newChild)
@@ -264,10 +266,11 @@ function makeComponent() {
         if (base === true) {
             gulp.src(source)
                 .pipe($.replace('compName', compName))
+                .pipe($.replace('templates', compName))
                 .pipe($.replace('varName', varName)) 
                 .pipe($.replace('VarName', varName))
                 .pipe($.replace('varNameConst', 'new' + varName))
-                .pipe($.replace('child', child))
+                .pipe($.replace('Libcomp', child))
                 .pipe($.replace('ChildConst', newChild))
                 .pipe($.replace('libcomp', newChild_low))
                 .pipe($.rename({basename: test===true?test_var+'.test':compName,}))
@@ -275,10 +278,11 @@ function makeComponent() {
         } else {
             gulp.src(source)
                 .pipe($.replace('compName', compName))
+                .pipe($.replace('templates', compName))
                 .pipe($.replace('varName', varName))
                 .pipe($.replace('VarName', varName)) 
                 .pipe($.replace('varNameConst', 'new' + varName))
-                .pipe($.replace('child', child))
+                .pipe($.replace('Libcomp', child))
                 .pipe($.replace('ChildConst', newChild))
                 .pipe($.replace('libcomp', newChild_low))
                 .pipe(gulp.dest(dest));
@@ -286,10 +290,10 @@ function makeComponent() {
             
     }
 
-    replace_comp('./components/templates/test/comp.test.js', config.dest.test_file, true, true)
+    replace_comp('./components/templates/test/templates-comp.test.js', config.dest.test_file, true, true)
     replace_comp('./components/templates/test/configure.json', config.dest.test)
     replace_comp('./components/templates/example/*', config.dest.html)
-    replace_comp('./components/templates/compName.*', config.dest.dev, true)
+    replace_comp('./components/templates/templates.*', config.dest.dev, true)
     add_to_map()
     makeChild();
 };
@@ -390,7 +394,7 @@ function webpack_build() {
 
     function webpack_config(comp) { 
 
-        let fileName = comp || compName;
+        let fileName = comp || 'templates';
 
         console.log('---------------------')
         console.log('comp => ',fileName)

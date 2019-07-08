@@ -135,6 +135,7 @@
     "requirejs": "^2.3.3",
     "sequelize": "^4.28.6",
     "stringify": "^5.1.0",
-    "style": "0.0.3"
+    "style": "0.0.3",
+    "whatwg-fetch": "^3.0.0"
   }
 }

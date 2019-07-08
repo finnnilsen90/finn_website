@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VarName /> renders components 1`] = `
+<div
+  class="containter"
+>
+  <div
+    class="libcomp-hamburger_Container font"
+  >
+    <div
+      class="ham_container"
+    >
+      <div
+        class="hamburger"
+      >
+        <hr />
+        <hr />
+        <hr />
+      </div>
+    </div>
+    <div
+      class="dropdown_container"
+    >
+      <ul
+        class="dropdown"
+      >
+        <li
+          class="link"
+        >
+          <a
+            href="/login"
+          >
+            Login
+          </a>
+        </li>
+        <li
+          class="link"
+        >
+          <a
+            href="/home_page"
+          >
+            Home Page
+          </a>
+        </li>
+        <li
+          class="link"
+        >
+          <a
+            href="/resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li
+          class="link"
+        >
+          <a
+            href="/home_page"
+          >
+            Projects
+          </a>
+        </li>
+        <li
+          class="link"
+        >
+          <a
+            href="/contact"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="Libcomp_Container"
+  />
+  <div
+    class="footer_Container font"
+  >
+    <div
+      class="nav"
+    >
+      <ul>
+        <li
+          class="link_footer link_footer"
+        >
+          <a
+            href="/login"
+          >
+            Login
+          </a>
+        </li>
+        <li
+          class="link_footer link_footer"
+        >
+          <a
+            href="/home_page"
+          >
+            Home Page
+          </a>
+        </li>
+        <li
+          class="link_footer link_footer"
+        >
+          <a
+            href="/resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li
+          class="link_footer link_footer"
+        >
+          <a
+            href="/home_page"
+          >
+            Projects
+          </a>
+        </li>
+        <li
+          class="link_footer link_footer"
+        >
+          <a
+            href="/contact"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="nav nav_two"
+    >
+      <ul />
+    </div>
+  </div>
+</div>
+`;

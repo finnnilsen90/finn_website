@@ -2,10 +2,12 @@
 
 exports[`<Outline /> renders components 1`] = `
 <div
-  class="outline-resume_Container"
+  class="outline-resume_Container font"
 >
-  <div
-    class="test"
-  />
+  <h1
+    class="header"
+  >
+    Resume
+  </h1>
 </div>
 `;
