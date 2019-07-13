@@ -6,15 +6,30 @@ configure({ adapter: new Adapter() });
 const { JSDOM } = require('jsdom');
 
 const file_structure = require('../site_map.json')
-console.log(file_structure);
+// console.log(Object.keys(file_structure));
 
-function comp_html() {
-  let class_val = 'compName'
-  
-  return '<!doctype html><html><body><div class='+class_val+'></div></body></html>'
+function comp_html(file) {
+  let final_arr = []
+  let app_arr = Object.keys(file_structure.app);
+  let admin_arr = Object.keys(file_structure.admin);
+  let general_arr = Object.keys(file_structure.general);
+  for (var i=0;i<admin_arr.length;i++) {
+    app_arr.push(admin_arr[i])
+  }
+  for (var i=0;i<general_arr.length;i++) {
+    app_arr.push(general_arr[i])
+  }
+  app_arr.push('compName')
+  let final_string = '';
+
+  for (var i=0;i<app_arr.length;i++) {
+    final_string+=app_arr[i]+' ';
+  }
+
+  return '<!doctype html><html><body><div class="'+final_string+'"></div></body></html>'
 }
 
-const jsdom = new JSDOM(comp_html());
+const jsdom = new JSDOM(comp_html(file_structure));
 
 const exposedProperties = ['window', 'navigator', 'document'];
 

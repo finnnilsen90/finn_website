@@ -66,15 +66,9 @@ class Resume extends React.Component {
         
         return (
             <div className='container'>
-<<<<<<< HEAD
-                <Hamburger /> 
-                <Outline />
-                <Footer />
-=======
                 <Hamburger menu={this.state.fetch}/>
                 <Outline />
                 <Footer menu={this.state.fetch}/>
->>>>>>> 7f05f87c3bb08861a8fb8d12b51e48b9230a18e6
             </div>
         )
     }

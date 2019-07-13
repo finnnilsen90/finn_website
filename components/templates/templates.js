@@ -7,10 +7,10 @@ const ChildConst = require('./lib/Libcomp/Libcomp.js');
 const Hamburger = require('../lib/hamburger/hamburger.js');
 const Footer = require('../lib/footer/footer.js');
 
-var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____Class8.hasOwnProperty(____Class8____Key)){VarName[____Class8____Key]=____Class8[____Class8____Key];}}var ____SuperProtoOf____Class8=____Class8===null?null:____Class8.prototype;VarName.prototype=Object.create(____SuperProtoOf____Class8);VarName.prototype.constructor=VarName;VarName.__superConstructor__=____Class8;
+var ____Class9=React.Component;for(var ____Class9____Key in ____Class9){if(____Class9.hasOwnProperty(____Class9____Key)){VarName[____Class9____Key]=____Class9[____Class9____Key];}}var ____SuperProtoOf____Class9=____Class9===null?null:____Class9.prototype;VarName.prototype=Object.create(____SuperProtoOf____Class9);VarName.prototype.constructor=VarName;VarName.__superConstructor__=____Class9;
     
     function VarName(props) {"use strict";
-    ____Class8.call(this,props);
+    ____Class9.call(this,props);
     this.state = {
             fetch: null
         };
@@ -76,5 +76,5 @@ var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____C
 
 module.exports = VarName;
 
-ReactDom.render(React.createElement(VarName, null), document.querySelector('.compName') || document.createElement('div'));
+ReactDom.render(React.createElement(VarName, null), document.querySelector('.templates') || document.createElement('div'));
 

@@ -2,7 +2,7 @@
 
 exports[`<VarName /> renders components 1`] = `
 <div
-  class="containter"
+  class="container"
 >
   <div
     class="libcomp-hamburger_Container font"

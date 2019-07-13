@@ -76,5 +76,5 @@ class VarName extends React.Component {
 
 module.exports = VarName;
 
-ReactDom.render(<VarName />, document.querySelector('.compName') || document.createElement('div'));
+ReactDom.render(<VarName />, document.querySelector('.templates') || document.createElement('div'));
 

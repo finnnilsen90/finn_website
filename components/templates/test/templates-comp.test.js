@@ -27,15 +27,14 @@ describe('<VarName />', () => {
 });
 
 describe('<VarName /> baseline parts', () => {
+    const wrapper = mount(<VarName />, { attachTo: document.body });
 
     it('state fetch is defined', () => {
-        const wrapper = mount(<VarName />, { attachTo: document.body });
         expect(wrapper.state().fetch).toBeDefined()
     })
 
     it('state fetch is null', () => {
-        const wrapper = mount(<VarName />, { attachTo: document.body });
-        expect(wrapper.state().fetch).toBe(null)
+        expect(wrapper.state().fetch).toEqual(null)
     })
 
 });
