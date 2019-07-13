@@ -7,10 +7,10 @@ const ChildConst = require('./lib/Libcomp/Libcomp.js');
 const Hamburger = require('../lib/hamburger/hamburger.js');
 const Footer = require('../lib/footer/footer.js');
 
-var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____Class6.hasOwnProperty(____Class6____Key)){VarName[____Class6____Key]=____Class6[____Class6____Key];}}var ____SuperProtoOf____Class6=____Class6===null?null:____Class6.prototype;VarName.prototype=Object.create(____SuperProtoOf____Class6);VarName.prototype.constructor=VarName;VarName.__superConstructor__=____Class6;
+var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____Class8.hasOwnProperty(____Class8____Key)){VarName[____Class8____Key]=____Class8[____Class8____Key];}}var ____SuperProtoOf____Class8=____Class8===null?null:____Class8.prototype;VarName.prototype=Object.create(____SuperProtoOf____Class8);VarName.prototype.constructor=VarName;VarName.__superConstructor__=____Class8;
     
     function VarName(props) {"use strict";
-    ____Class6.call(this,props);
+    ____Class8.call(this,props);
     this.state = {
             fetch: null
         };
@@ -64,7 +64,7 @@ var ____Class6=React.Component;for(var ____Class6____Key in ____Class6){if(____C
     Object.defineProperty(VarName.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
         
         return (
-            React.createElement("div", {className: "containter"}, 
+            React.createElement("div", {className: "container"}, 
                 React.createElement(Hamburger, {menu: this.state.fetch}), 
                 React.createElement(ChildConst, null), 
                 React.createElement(Footer, {menu: this.state.fetch})

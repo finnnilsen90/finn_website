@@ -109,7 +109,8 @@
     "watchify": "^3.9.0",
     "webpack": "^3.11.0",
     "webpack-common-shake": "^1.5.3",
-    "webpack-stream": "^4.0.3"
+    "webpack-stream": "^4.0.3",
+    "whatwg-fetch": "^2.0.4"
   },
   "dependencies": {
     "acorn": "^5.4.1",
@@ -133,7 +134,6 @@
     "requirejs": "^2.3.3",
     "sequelize": "^4.28.6",
     "stringify": "^5.1.0",
-    "style": "0.0.3",
-    "whatwg-fetch": "^3.0.0"
+    "style": "0.0.3"
   }
 }

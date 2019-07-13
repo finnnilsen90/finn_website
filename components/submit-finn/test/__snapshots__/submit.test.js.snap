@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Submit /> renders components 1`] = `
+<div
+  class="container"
+>
+  <div
+    class="libcomp-hamburger_Container font"
+  >
+    <div
+      class="ham_container"
+    >
+      <div
+        class="hamburger"
+      >
+        <hr />
+        <hr />
+        <hr />
+      </div>
+    </div>
+    <div
+      class="dropdown_container"
+    >
+      <ul
+        class="dropdown"
+      >
+        <li
+          class="link"
+        >
+          <a
+            href="/login"
+          >
+            Login
+          </a>
+        </li>
+        <li
+          class="link"
+        >
+          <a
+            href="/home_page"
+          >
+            Home Page
+          </a>
+        </li>
+        <li
+          class="link"
+        >
+          <a
+            href="/resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li
+          class="link"
+        >
+          <a
+            href="/home_page"
+          >
+            Projects
+          </a>
+        </li>
+        <li
+          class="link"
+        >
+          <a
+            href="/contact"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="form-submit_Container font"
+  >
+    <div
+      class="msg_container"
+    />
+    <h1
+      class="header"
+    >
+      Submit Project
+    </h1>
+    <form
+      action="/form"
+      class="form"
+      method="post"
+    >
+      <div
+        class="input_box"
+      >
+        <label
+          class="label p_label"
+        >
+          Project Name
+        </label>
+        <input
+          class="input"
+          name="project_name"
+          type="text"
+        />
+        <br />
+      </div>
+      <div
+        class="input_box"
+      >
+        <label
+          class="label company_label"
+        >
+          Company
+        </label>
+        <input
+          class="input"
+          name="company"
+          type="text"
+        />
+        <br />
+      </div>
+      <div
+        class="input_box"
+      >
+        <label
+          class="label proj_desc"
+        >
+          Project Description
+        </label>
+        <br />
+        <textarea
+          class="text_input"
+          name="project_description"
+          type="text"
+        />
+      </div>
+      <div
+        class="input_box"
+      >
+        <label
+          class="label d_label"
+        >
+          Completion Date
+        </label>
+        <input
+          class="input date_select"
+          name="date"
+          type="date"
+        />
+      </div>
+      <div
+        class="input_box"
+      >
+        <label
+          class="label budget_label"
+        >
+          Budget
+        </label>
+        <input
+          class="input"
+          name="budget"
+          type="text"
+        />
+        <br />
+      </div>
+      <div
+        class="button"
+      >
+        <div
+          class="button-one_Container"
+        >
+          <button
+            class="button_style_one submit_log"
+            type="submit"
+            value="Submit"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div
+    class="footer_Container font"
+  >
+    <div
+      class="nav"
+    >
+      <ul>
+        <li
+          class="link_footer link_footer"
+        >
+          <a
+            href="/login"
+          >
+            Login
+          </a>
+        </li>
+        <li
+          class="link_footer link_footer"
+        >
+          <a
+            href="/home_page"
+          >
+            Home Page
+          </a>
+        </li>
+        <li
+          class="link_footer link_footer"
+        >
+          <a
+            href="/resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li
+          class="link_footer link_footer"
+        >
+          <a
+            href="/home_page"
+          >
+            Projects
+          </a>
+        </li>
+        <li
+          class="link_footer link_footer"
+        >
+          <a
+            href="/contact"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="nav nav_two"
+    >
+      <ul />
+    </div>
+  </div>
+</div>
+`;

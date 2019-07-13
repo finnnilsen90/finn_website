@@ -64,7 +64,7 @@ class VarName extends React.Component {
     render() {
         
         return (
-            <div className='containter'>
+            <div className='container'>
                 <Hamburger menu={this.state.fetch}/>
                 <ChildConst />
                 <Footer menu={this.state.fetch}/>

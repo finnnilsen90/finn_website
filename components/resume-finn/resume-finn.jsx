@@ -3,13 +3,8 @@ var reactClass = require('create-react-class');
 var ReactDom = require('react-dom');
 var css = require('./resume-finn.css')
 
-<<<<<<< HEAD
 const Hamburger = require('../lib/hamburger/hamburger.js');
 const Outline = require('./lib/outline-resume/outline-resume.js');
-=======
-const Outline = require('./lib/outline-resume/outline-resume.js')
-const Hamburger = require('../lib/hamburger/hamburger.js');
->>>>>>> 7f05f87c3bb08861a8fb8d12b51e48b9230a18e6
 const Footer = require('../lib/footer/footer.js');
 
 class Resume extends React.Component {
@@ -17,11 +12,6 @@ class Resume extends React.Component {
     constructor(props) {
     super(props);
     this.state = {
-<<<<<<< HEAD
-            test: 'Test'
-        };
-    
-=======
             fetch: null
         };
 
@@ -70,7 +60,6 @@ class Resume extends React.Component {
         if (window.innerHeight > 750) {
             this.chng_dimension()
         }
->>>>>>> 7f05f87c3bb08861a8fb8d12b51e48b9230a18e6
     }
     
     render() {
