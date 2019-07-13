@@ -9,19 +9,22 @@ class Outline extends React.Component {
     this.state = {
             test: ''
         };
+
+       
        
     }
-
+    
 
     componentDidMount() {
-
+        
     }
     render() {
 
         return (
         <div className={'outline-resume_Container '+'font'}>
+
             <h1 className='header'>Resume</h1>
-            <h3>Mogo Interactive</h3>
+           
         </div>
         )
     }
