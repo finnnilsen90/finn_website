@@ -1,12 +1,12 @@
 {
   "general": {
-    "login-finn": "login-finn"
+    "login-finn": "login-finn",
+    "home-finn": "home-finn",
+    "resume-finn": "resume-finn"
   },
   "app": {
     "submit-finn": "submit-finn",
-    "create_usr-finn": "create-finn",
-    "home-finn": "home-finn",
-    "resume-finn": "resume-finn"
+    "create_usr-finn": "create-finn"
   },
   "admin": {
     "create-finn": "create-finn"
