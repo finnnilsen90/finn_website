@@ -57,9 +57,10 @@ class Resume extends React.Component {
     }
 
     componentDidMount() {
-        if (window.innerHeight > 750) {
-            this.chng_dimension()
-        }
+
+        // console.log('height func invoked')
+        // this.chng_dimension()
+
     }
     
     render() {

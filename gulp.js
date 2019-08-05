@@ -440,7 +440,7 @@ function webpack_build() {
     else
     {
         console.log('invoking development build')
-        webpack_config()
+        webpack_config(compName)
     }
     
 }

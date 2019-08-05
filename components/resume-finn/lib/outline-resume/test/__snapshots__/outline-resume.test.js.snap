@@ -9,5 +9,225 @@ exports[`<Outline /> renders components 1`] = `
   >
     Resume
   </h1>
+  <div
+    class="work"
+  >
+    <h2
+      class="mogo sub_header"
+    >
+      Mogo Interactive
+    </h2>
+    <div
+      class="dropdown"
+    >
+      <div
+        class="content-dropdown_Container"
+      >
+        <h3
+          class="title"
+        >
+          Associate Director, Media Activation and Technology
+        </h3>
+        <div
+          class="arrow arw_senior"
+        />
+        <div
+          class="arrow_click arw_click_senior"
+        />
+        <hr
+          class="content_hr cont_hr_senior"
+        />
+        <div
+          class="content_parent cont_par_senior"
+        >
+          <p />
+          <div>
+            <h4
+              class="drop_text"
+            >
+              Job Description
+            </h4>
+            <p
+              class="drop_text"
+            >
+              As a Technical Supervisor I was a member of the technical team and was responsible for the technical growth of Mogo employees and oversaw many tier 1 accounts on the back end.
+            </p>
+            <ul
+              class="drop_text"
+            >
+              <li>
+                Technical Product Managment
+              </li>
+              <li>
+                Managed a team of 4
+              </li>
+              <li>
+                Campaign managment for tier 1 and enterprize clients
+              </li>
+            </ul>
+          </div>
+          <p />
+        </div>
+      </div>
+      <div
+        class="content-dropdown_Container"
+      >
+        <h3
+          class="title"
+        >
+          Technical Supervisor
+        </h3>
+        <div
+          class="arrow arw_tech_sup"
+        />
+        <div
+          class="arrow_click arw_click_tech_sup"
+        />
+        <hr
+          class="content_hr cont_hr_tech_sup"
+        />
+        <div
+          class="content_parent cont_par_tech_sup"
+        >
+          <p />
+          <div>
+            <h4
+              class="drop_text"
+            >
+              Job Description
+            </h4>
+            <p
+              class="drop_text"
+            >
+              As a Technical Supervisor I was a member of the technical team and was responsible for the technical growth of Mogo employees and oversaw many tier 1 accounts on the back end.
+            </p>
+            <ul
+              class="drop_text"
+            >
+              <li>
+                Assisted with the DMP
+              </li>
+              <li>
+                Project Managment of our brand new automation platform Hub
+              </li>
+              <li>
+                Campaign managment for tier 1 clients
+              </li>
+            </ul>
+          </div>
+          <p />
+        </div>
+      </div>
+      <div
+        class="content-dropdown_Container"
+      >
+        <h3
+          class="title"
+        >
+          Senior Account Strategist
+        </h3>
+        <div
+          class="arrow arw_senior"
+        />
+        <div
+          class="arrow_click arw_click_senior"
+        />
+        <hr
+          class="content_hr cont_hr_senior"
+        />
+        <div
+          class="content_parent cont_par_senior"
+        >
+          <p />
+          <div>
+            <h4
+              class="drop_text"
+            >
+              Job Description
+            </h4>
+            <p
+              class="drop_text"
+            >
+              As a Senior Account Strategist I had some elivated responsibilities on top of normal Account Strategist areas of focus.
+            </p>
+            <ul
+              class="drop_text"
+            >
+              <li>
+                Outline digital strategy
+              </li>
+              <li>
+                Process managment
+              </li>
+              <li>
+                Tier 1 client campaigns
+              </li>
+              <li>
+                Project managment
+              </li>
+            </ul>
+          </div>
+          <p />
+        </div>
+      </div>
+      <div
+        class="content-dropdown_Container"
+      >
+        <h3
+          class="title"
+        >
+          Account Strategist
+        </h3>
+        <div
+          class="arrow arw_as"
+        />
+        <div
+          class="arrow_click arw_click_as"
+        />
+        <hr
+          class="content_hr cont_hr_as"
+        />
+        <div
+          class="content_parent cont_par_as"
+        >
+          <p />
+          <div>
+            <h4
+              class="drop_text"
+            >
+              Job Description
+            </h4>
+            <p
+              class="drop_text"
+            >
+              Account Strategist's are in charge of analyzing, building, and optimizing digital campaigns.
+            </p>
+            <ul
+              class="drop_text"
+            >
+              <li>
+                Outline digital strategy
+              </li>
+              <li>
+                A/B Testing
+              </li>
+              <li>
+                Perform campaign analysis
+              </li>
+              <li>
+                Implement tag tracking
+              </li>
+            </ul>
+          </div>
+          <p />
+        </div>
+      </div>
+    </div>
+    <h2
+      class="justanswer sub_header"
+    >
+      JustAnswer.com
+    </h2>
+  </div>
 </div>
 `;

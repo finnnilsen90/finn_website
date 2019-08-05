@@ -1,9 +1,6 @@
 .font {
   font-family: "Arial", Sans-serif;
 }
-.header {
-  margin: -50px 0 0 0;
-}
 .outline-resume_Container {
   box-shadow: 3px 0 4px #b3b3b3, -3px 0 4px #b3b3b3;
   position: relative;
@@ -12,15 +9,40 @@
   border: 1px solid #b3b3b3;
   color: grey;
 }
+.drop_text {
+  margin: -3px 0 0 0;
+}
+.work {
+  margin: 100px 0 0 0;
+}
+.sub_header {
+  margin: 0 0 20px 30px;
+}
+.dropdown {
+  display: block;
+  margin: 5px auto 20px auto;
+  width: 90%;
+}
+.header {
+  margin: -50px 0 0 0;
+}
 @media screen and (min-width: 801px) {
   .outline-resume_Container {
     width: 700px;
-    height: 520px;
+  }
+  .dropdown {
+    display: block;
+    margin: 5px auto 20px auto;
+    width: 90%;
   }
 }
 @media screen and (max-width: 800px) {
   .outline-resume_Container {
     width: 350px;
-    height: 600px;
+  }
+  .dropdown {
+    display: block;
+    margin: 5px auto 20px 40px;
+    width: 80%;
   }
 }
