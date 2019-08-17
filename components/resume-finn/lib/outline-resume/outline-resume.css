@@ -1,6 +1,9 @@
 .font {
   font-family: "Arial", Sans-serif;
 }
+.summary {
+  margin: 50px auto 0 auto;
+}
 .outline-resume_Container {
   box-shadow: 3px 0 4px #b3b3b3, -3px 0 4px #b3b3b3;
   position: relative;
@@ -13,7 +16,7 @@
   margin: -3px 0 0 0;
 }
 .work {
-  margin: 100px 0 0 0;
+  margin: 20px 0 0 0;
 }
 .sub_header {
   margin: 0 0 20px 30px;
@@ -35,6 +38,9 @@
     margin: 5px auto 20px auto;
     width: 90%;
   }
+  .summary {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 800px) {
   .outline-resume_Container {
@@ -43,6 +49,9 @@
   .dropdown {
     display: block;
     margin: 5px auto 20px 40px;
+    width: 80%;
+  }
+  .summary {
     width: 80%;
   }
 }

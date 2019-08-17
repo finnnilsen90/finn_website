@@ -79,10 +79,15 @@ class Outline extends React.Component {
 
             <h1 className='header'>Resume</h1>
 
+            <p className='summary'>With over 5 years of experience I have been involved in major software projects, digital marketing campaigns, and have manged technical teams.
+                As a professional my objective is to continue my understanding of tech through continuous education and upleveling. As well use my foundational understanding
+                of business strategy to grow any business I work with.
+            </p>
+
             <div className='work'>
                 <h2 className={'mogo '+'sub_header'}>Mogo Interactive</h2>
                     <div className='dropdown'>
-                        <Dropdown title={'Associate Director, Media Activation and Technology'} class={'senior'} content={this.content_func(this.state.dropdown.assoc_dir)}/>
+                        <Dropdown title={'Associate Director, Media Activation and Technology'} class={'assoc_dir'} content={this.content_func(this.state.dropdown.assoc_dir)}/>
                         <Dropdown title={'Technical Supervisor'} class={'tech_sup'} content={this.content_func(this.state.dropdown.tech_sup)}/>
                         <Dropdown title={'Senior Account Strategist'} class={'senior'} content={this.content_func(this.state.dropdown.senior_account_strat)}/>
                         <Dropdown title={'Account Strategist'} class={'as'} content={this.content_func(this.state.dropdown.account_strat)}/>
@@ -92,8 +97,14 @@ class Outline extends React.Component {
                         <Dropdown title={'ChatScript Developer'} class={'chat'} content={this.content_func(this.state.dropdown.tech_sup)}/>
                         <Dropdown title={'Marketing Coordinator'} class={'mark_cor'} content={this.content_func(this.state.dropdown.senior_account_strat)}/>
                         <Dropdown title={'Social Media Associate'} class={'social_assoc'} content={this.content_func(this.state.dropdown.account_strat)}/>
-                        <Dropdown title={'Social Media Intern'} class={'social_assoc'} content={this.content_func(this.state.dropdown.account_strat)}/>
+                        <Dropdown title={'Social Media Intern'} class={'social_intern'} content={this.content_func(this.state.dropdown.account_strat)}/>
                     </div>
+            </div>
+            <div className='summary'>
+                <h3>Skills</h3>
+                <p>
+                    Python, Jupyter, MySQL React, Node.JS, DV360, Camapgin Manager, The Trade Desk, Google Analytics, Google Tag Manager
+                </p>
             </div>
            
         </div>

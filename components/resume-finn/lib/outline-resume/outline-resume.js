@@ -4,10 +4,10 @@ const css = require('./outline-resume.css')
 
 const Dropdown = require('../../../lib/content-dropdown/content-dropdown.js');
 
-var ____Classy=React.Component;for(var ____Classy____Key in ____Classy){if(____Classy.hasOwnProperty(____Classy____Key)){Outline[____Classy____Key]=____Classy[____Classy____Key];}}var ____SuperProtoOf____Classy=____Classy===null?null:____Classy.prototype;Outline.prototype=Object.create(____SuperProtoOf____Classy);Outline.prototype.constructor=Outline;Outline.__superConstructor__=____Classy;
+var ____Classr=React.Component;for(var ____Classr____Key in ____Classr){if(____Classr.hasOwnProperty(____Classr____Key)){Outline[____Classr____Key]=____Classr[____Classr____Key];}}var ____SuperProtoOf____Classr=____Classr===null?null:____Classr.prototype;Outline.prototype=Object.create(____SuperProtoOf____Classr);Outline.prototype.constructor=Outline;Outline.__superConstructor__=____Classr;
     
     function Outline(props) {"use strict";
-    ____Classy.call(this,props);
+    ____Classr.call(this,props);
     this.state = {
             dropdown: {
                 assoc_dir: {
@@ -79,10 +79,15 @@ var ____Classy=React.Component;for(var ____Classy____Key in ____Classy){if(____C
 
             React.createElement("h1", {className: "header"}, "Resume"), 
 
+            React.createElement("p", {className: "summary"}, "With over 5 years of experience I have been involved in major software projects, digital marketing campaigns, and have manged technical teams." + ' ' +
+                "As a professional my objective is to continue my understanding of tech through continuous education and upleveling. As well use my foundational understanding" + ' ' +
+                "of business strategy to grow any business I work with."
+            ), 
+
             React.createElement("div", {className: "work"}, 
                 React.createElement("h2", {className: 'mogo '+'sub_header'}, "Mogo Interactive"), 
                     React.createElement("div", {className: "dropdown"}, 
-                        React.createElement(Dropdown, {title: 'Associate Director, Media Activation and Technology', class: 'senior', content: this.content_func(this.state.dropdown.assoc_dir)}), 
+                        React.createElement(Dropdown, {title: 'Associate Director, Media Activation and Technology', class: 'assoc_dir', content: this.content_func(this.state.dropdown.assoc_dir)}), 
                         React.createElement(Dropdown, {title: 'Technical Supervisor', class: 'tech_sup', content: this.content_func(this.state.dropdown.tech_sup)}), 
                         React.createElement(Dropdown, {title: 'Senior Account Strategist', class: 'senior', content: this.content_func(this.state.dropdown.senior_account_strat)}), 
                         React.createElement(Dropdown, {title: 'Account Strategist', class: 'as', content: this.content_func(this.state.dropdown.account_strat)})
@@ -92,8 +97,14 @@ var ____Classy=React.Component;for(var ____Classy____Key in ____Classy){if(____C
                         React.createElement(Dropdown, {title: 'ChatScript Developer', class: 'chat', content: this.content_func(this.state.dropdown.tech_sup)}), 
                         React.createElement(Dropdown, {title: 'Marketing Coordinator', class: 'mark_cor', content: this.content_func(this.state.dropdown.senior_account_strat)}), 
                         React.createElement(Dropdown, {title: 'Social Media Associate', class: 'social_assoc', content: this.content_func(this.state.dropdown.account_strat)}), 
-                        React.createElement(Dropdown, {title: 'Social Media Intern', class: 'social_assoc', content: this.content_func(this.state.dropdown.account_strat)})
+                        React.createElement(Dropdown, {title: 'Social Media Intern', class: 'social_intern', content: this.content_func(this.state.dropdown.account_strat)})
                     )
+            ), 
+            React.createElement("div", {className: "summary"}, 
+                React.createElement("h3", null, "Skills"), 
+                React.createElement("p", null, 
+                    "Python, Jupyter, MySQL React, Node.JS, DV360, Camapgin Manager, The Trade Desk, Google Analytics, Google Tag Manager"
+                )
             )
            
         )

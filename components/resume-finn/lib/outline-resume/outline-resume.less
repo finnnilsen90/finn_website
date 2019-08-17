@@ -1,6 +1,10 @@
 @import '../../../mixins/color.less';
 @import '../../../mixins/font.less';
 
+.summary {
+    margin:50px auto 0 auto;
+}
+
 .outline-resume_Container {
     box-shadow: 3px 0 4px @secondary_background_color,-3px 0 4px @secondary_background_color;
     position: relative;
@@ -15,7 +19,7 @@
 }
 
 .work {
-    margin:100px 0 0 0;
+    margin:20px 0 0 0;
 }
 
 .sub_header {
@@ -41,6 +45,9 @@
         margin:5px auto 20px auto;
         width:90%;
     }
+    .summary {
+        width:90%;
+    }
 }
 
 @media screen and (max-width: 800px){
@@ -50,6 +57,9 @@
     .dropdown {
         display:block;
         margin:5px auto 20px 40px;
+        width:80%;
+    }
+    .summary {
         width:80%;
     }
 }

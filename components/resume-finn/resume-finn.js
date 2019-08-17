@@ -7,32 +7,18 @@ const Hamburger = require('../lib/hamburger/hamburger.js');
 const Outline = require('./lib/outline-resume/outline-resume.js');
 const Footer = require('../lib/footer/footer.js');
 
-var ____ClassD=React.Component;for(var ____ClassD____Key in ____ClassD){if(____ClassD.hasOwnProperty(____ClassD____Key)){Resume[____ClassD____Key]=____ClassD[____ClassD____Key];}}var ____SuperProtoOf____ClassD=____ClassD===null?null:____ClassD.prototype;Resume.prototype=Object.create(____SuperProtoOf____ClassD);Resume.prototype.constructor=Resume;Resume.__superConstructor__=____ClassD;
+var ____Classj=React.Component;for(var ____Classj____Key in ____Classj){if(____Classj.hasOwnProperty(____Classj____Key)){Resume[____Classj____Key]=____Classj[____Classj____Key];}}var ____SuperProtoOf____Classj=____Classj===null?null:____Classj.prototype;Resume.prototype=Object.create(____SuperProtoOf____Classj);Resume.prototype.constructor=Resume;Resume.__superConstructor__=____Classj;
     
     function Resume(props) {"use strict";
-    ____ClassD.call(this,props);
+    ____Classj.call(this,props);
     this.state = {
-            fetch: null
+            fetch: null,
+            window_height: window.innerHeight
         };
 
-        this.chng_dimension = this.chng_dimension.bind(this);
         this.get_hamburger = this.get_hamburger.bind(this);
     
     }
-
-    
-    Object.defineProperty(Resume.prototype,"chng_dimension",{writable:true,configurable:true,value:function() {"use strict";
-
-        let body = document.body,
-            html = document.documentElement;
-
-        let height = Math.max( body.scrollHeight, body.offsetHeight, 
-                    html.clientHeight, html.scrollHeight, html.offsetHeight );
-
-        let cont_element = document.querySelector('.container');
-        cont_element.style.height = String(height) + 'px';
-            
-    }});
 
     Object.defineProperty(Resume.prototype,"get_hamburger",{writable:true,configurable:true,value:function(action) {"use strict";
 
@@ -54,13 +40,6 @@ var ____ClassD=React.Component;for(var ____ClassD____Key in ____ClassD){if(____C
 
     Object.defineProperty(Resume.prototype,"componentWillMount",{writable:true,configurable:true,value:function() {"use strict";
         this.get_hamburger('/login_menu')
-    }});
-
-    Object.defineProperty(Resume.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
-
-        // console.log('height func invoked')
-        // this.chng_dimension()
-
     }});
     
     Object.defineProperty(Resume.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
