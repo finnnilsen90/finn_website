@@ -12,6 +12,9 @@
   border: 1px solid #b3b3b3;
   color: grey;
 }
+.drop_text {
+  margin: -3px 0 0 0;
+}
 .header {
   margin: -50px 0 0 0;
 }

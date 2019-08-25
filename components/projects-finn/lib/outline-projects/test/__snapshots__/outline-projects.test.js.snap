@@ -58,7 +58,31 @@ exports[`<Outline /> renders components 1`] = `
           <div
             class="input"
           >
-            Test
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Roll Description
+              </h4>
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -90,7 +114,29 @@ exports[`<Outline /> renders components 1`] = `
           <div
             class="input"
           >
-            Test
+            <div>
+              <h4
+                class="drop_text"
+              />
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -136,7 +182,31 @@ exports[`<Outline /> renders components 1`] = `
           <div
             class="input"
           >
-            Test
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Roll Description
+              </h4>
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -168,7 +238,29 @@ exports[`<Outline /> renders components 1`] = `
           <div
             class="input"
           >
-            Test
+            <div>
+              <h4
+                class="drop_text"
+              />
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -214,7 +306,31 @@ exports[`<Outline /> renders components 1`] = `
           <div
             class="input"
           >
-            Test
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Roll Description
+              </h4>
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -246,7 +362,29 @@ exports[`<Outline /> renders components 1`] = `
           <div
             class="input"
           >
-            Test
+            <div>
+              <h4
+                class="drop_text"
+              />
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -292,7 +430,31 @@ exports[`<Outline /> renders components 1`] = `
           <div
             class="input"
           >
-            Test
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Roll Description
+              </h4>
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -324,7 +486,29 @@ exports[`<Outline /> renders components 1`] = `
           <div
             class="input"
           >
-            Test
+            <div>
+              <h4
+                class="drop_text"
+              />
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

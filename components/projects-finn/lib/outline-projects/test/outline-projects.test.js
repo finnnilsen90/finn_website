@@ -29,3 +29,17 @@ describe('<Outline />', () => {
 
 
 })
+
+describe('Dropdown content function', () => {
+
+    const wrapper = mount(<Outline />);
+    const content = wrapper.state().dropdown.test;
+    const cont_function = wrapper.instance().content_func(content, test=true);
+    const expected_output = '<div><h4 className=\"drop_text\">Job Description</h4><p className=\"drop_text\">As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.</p><ul className=\"drop_text\">[object Object],[object Object],[object Object]</ul></div>';
+
+    it('outputs content in proper format.', () => {
+        expect(expected_output).toMatch(cont_function);
+    });
+
+
+})
