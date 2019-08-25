@@ -7,7 +7,9 @@
   "app": {
     "submit-finn": "submit-finn",
     "create_usr-finn": "create-finn",
-    "projects-finn": "projects-finn"
+    "projects-finn": "projects-finn",
+    "contact-finn": "contact-finn",
+    "test-finn": "test-finn"
   },
   "admin": {
     "create-finn": "create-finn"

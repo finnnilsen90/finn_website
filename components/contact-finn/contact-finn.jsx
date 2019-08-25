@@ -1,13 +1,13 @@
 var React = require('react');
 var reactClass = require('create-react-class');
 var ReactDom = require('react-dom');
-var css = require('./templates.css')
+var css = require('./contact-finn.css')
 
-const ChildConst = require('./lib/Libcomp/Libcomp.js');
+const Form = require('./lib/form-contact/form-contact.js');
 const Hamburger = require('../lib/hamburger/hamburger.js');
 const Footer = require('../lib/footer/footer.js');
 
-class VarName extends React.Component {
+class Contact extends React.Component {
     
     constructor(props) {
     super(props);
@@ -51,7 +51,7 @@ class VarName extends React.Component {
         return (
             <div className='container'>
                 <Hamburger menu={this.state.fetch}/>
-                <ChildConst />
+                <Form />
                 <Footer menu={this.state.fetch}/>
             </div>
         )
@@ -59,7 +59,7 @@ class VarName extends React.Component {
 
 };
 
-module.exports = VarName;
+module.exports = Contact;
 
-ReactDom.render(<VarName />, document.querySelector('.templates') || document.createElement('div'));
+ReactDom.render(<Contact />, document.querySelector('.contact-finn') || document.createElement('div'));
 
