@@ -3,7 +3,7 @@ const ReactTestUtils = require('react-dom/test-utils');
 const renderer = require('react-test-renderer')
 let { shallow, mount, render } = require('enzyme');
 
-const ChildConst = require('../child.js');
+const ChildConst = require('../Libcomp.js');
 
 let newChildConst = new ChildConst();
 

@@ -273,7 +273,7 @@ function makeComponent() {
                 .pipe($.replace('Libcomp', child))
                 .pipe($.replace('ChildConst', newChild))
                 .pipe($.replace('libcomp', newChild_low))
-                .pipe($.rename({basename: test===true?test_var+'.test':compName,}))
+                .pipe($.rename({basename: test===true?compName+'.test':compName,}))
                 .pipe(gulp.dest(dest));
         } else {
             gulp.src(source)
@@ -440,7 +440,7 @@ function webpack_build() {
     else
     {
         console.log('invoking development build')
-        webpack_config()
+        webpack_config(compName)
     }
     
 }
