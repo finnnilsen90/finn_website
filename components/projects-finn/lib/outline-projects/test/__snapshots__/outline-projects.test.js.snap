@@ -1,0 +1,518 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Outline /> renders components 1`] = `
+<div
+  class="outline-projects_Container font"
+>
+  <h1
+    class="header"
+  >
+    Projects
+  </h1>
+  <p
+    class="summary"
+  >
+    Throughout my proffesional career I have been involved with a number of projects. Below summarizes some of the key projects I have been apart of.
+  </p>
+  <div
+    class="projects"
+  >
+    <h2
+      class="sub_header"
+    >
+      Hub by Mogo
+    </h2>
+    <p
+      class="proj_summary"
+    >
+      Hub is Mogo's automated platform to traffic creative from clients for digital marketing campaings. As well as allow clients to build and pay for their campaigns through a self service portal.
+    </p>
+    <div
+      class="dropdown"
+    >
+      <div
+        class="content-dropdown_Container"
+      >
+        <h3
+          class="title title_roll_hub"
+        >
+          Roll: Project Manager
+        </h3>
+        <h3
+          class="title_click title_click_roll_hub"
+        >
+          Roll: Project Manager
+        </h3>
+        <div
+          class="arrow arw_roll_hub"
+        />
+        <div
+          class="arrow_click arw_click_roll_hub"
+        />
+        <hr
+          class="content_hr cont_hr_roll_hub"
+        />
+        <div
+          class="content_parent cont_par_roll_hub"
+        >
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Roll Description
+              </h4>
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="content-dropdown_Container"
+      >
+        <h3
+          class="title title_proj_overview_hub"
+        >
+          Project Overview
+        </h3>
+        <h3
+          class="title_click title_click_proj_overview_hub"
+        >
+          Project Overview
+        </h3>
+        <div
+          class="arrow arw_proj_overview_hub"
+        />
+        <div
+          class="arrow_click arw_click_proj_overview_hub"
+        />
+        <hr
+          class="content_hr cont_hr_proj_overview_hub"
+        />
+        <div
+          class="content_parent cont_par_proj_overview_hub"
+        >
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              />
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2
+      class="sub_header"
+    >
+      Mogo's Salesforce DMP
+    </h2>
+    <p
+      class="proj_summary"
+    >
+      Hub is Mogo's automated platform to traffic creative from clients for digital marketing campaings. As well as allow clients to build and pay for their campaigns through a self service portal.
+    </p>
+    <div
+      class="dropdown"
+    >
+      <div
+        class="content-dropdown_Container"
+      >
+        <h3
+          class="title title_tech_sup"
+        >
+          Roll: Technical Supervisor
+        </h3>
+        <h3
+          class="title_click title_click_tech_sup"
+        >
+          Roll: Technical Supervisor
+        </h3>
+        <div
+          class="arrow arw_tech_sup"
+        />
+        <div
+          class="arrow_click arw_click_tech_sup"
+        />
+        <hr
+          class="content_hr cont_hr_tech_sup"
+        />
+        <div
+          class="content_parent cont_par_tech_sup"
+        >
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Roll Description
+              </h4>
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="content-dropdown_Container"
+      >
+        <h3
+          class="title title_proj_overview_dmp"
+        >
+          Project Overview
+        </h3>
+        <h3
+          class="title_click title_click_proj_overview_dmp"
+        >
+          Project Overview
+        </h3>
+        <div
+          class="arrow arw_proj_overview_dmp"
+        />
+        <div
+          class="arrow_click arw_click_proj_overview_dmp"
+        />
+        <hr
+          class="content_hr cont_hr_proj_overview_dmp"
+        />
+        <div
+          class="content_parent cont_par_proj_overview_dmp"
+        >
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              />
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2
+      class="sub_header"
+    >
+      JustAnswer's Chatbot Pearl
+    </h2>
+    <p
+      class="proj_summary"
+    >
+      Hub is Mogo's automated platform to traffic creative from clients for digital marketing campaings. As well as allow clients to build and pay for their campaigns through a self service portal.
+    </p>
+    <div
+      class="dropdown"
+    >
+      <div
+        class="content-dropdown_Container"
+      >
+        <h3
+          class="title title_roll_dev"
+        >
+          Roll: developer
+        </h3>
+        <h3
+          class="title_click title_click_roll_dev"
+        >
+          Roll: developer
+        </h3>
+        <div
+          class="arrow arw_roll_dev"
+        />
+        <div
+          class="arrow_click arw_click_roll_dev"
+        />
+        <hr
+          class="content_hr cont_hr_roll_dev"
+        />
+        <div
+          class="content_parent cont_par_roll_dev"
+        >
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Roll Description
+              </h4>
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="content-dropdown_Container"
+      >
+        <h3
+          class="title title_proj_overview_pearl"
+        >
+          Project Overview
+        </h3>
+        <h3
+          class="title_click title_click_proj_overview_pearl"
+        >
+          Project Overview
+        </h3>
+        <div
+          class="arrow arw_proj_overview_pearl"
+        />
+        <div
+          class="arrow_click arw_click_proj_overview_pearl"
+        />
+        <hr
+          class="content_hr cont_hr_proj_overview_pearl"
+        />
+        <div
+          class="content_parent cont_par_proj_overview_pearl"
+        >
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              />
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2
+      class="sub_header"
+    >
+      Red Bull Youth America's Cup
+    </h2>
+    <p
+      class="proj_summary"
+    >
+      Hub is Mogo's automated platform to traffic creative from clients for digital marketing campaings. As well as allow clients to build and pay for their campaigns through a self service portal.
+    </p>
+    <div
+      class="dropdown"
+    >
+      <div
+        class="content-dropdown_Container"
+      >
+        <h3
+          class="title title_roll_team_manager"
+        >
+          Roll: Team Manager
+        </h3>
+        <h3
+          class="title_click title_click_roll_team_manager"
+        >
+          Roll: Team Manager
+        </h3>
+        <div
+          class="arrow arw_roll_team_manager"
+        />
+        <div
+          class="arrow_click arw_click_roll_team_manager"
+        />
+        <hr
+          class="content_hr cont_hr_roll_team_manager"
+        />
+        <div
+          class="content_parent cont_par_roll_team_manager"
+        >
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Roll Description
+              </h4>
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="content-dropdown_Container"
+      >
+        <h3
+          class="title title_proj_overview_redbull"
+        >
+          Project Overview
+        </h3>
+        <h3
+          class="title_click title_click_proj_overview_redbull"
+        >
+          Project Overview
+        </h3>
+        <div
+          class="arrow arw_proj_overview_redbull"
+        />
+        <div
+          class="arrow_click arw_click_proj_overview_redbull"
+        />
+        <hr
+          class="content_hr cont_hr_proj_overview_redbull"
+        />
+        <div
+          class="content_parent cont_par_proj_overview_redbull"
+        >
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              />
+              <p
+                class="drop_text"
+              >
+                As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Technical Product Managment
+                </li>
+                <li>
+                  Managed a team of 4
+                </li>
+                <li>
+                  Campaign managment for tier 1 and enterprize clients
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

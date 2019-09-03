@@ -1,6 +1,10 @@
 @import '../../../mixins/color.less';
 @import '../../../mixins/font.less';
 
+.summary {
+    margin:50px auto 0 auto;
+}
+
 .outline-resume_Container {
     box-shadow: 3px 0 4px @secondary_background_color,-3px 0 4px @secondary_background_color;
     position: relative;
@@ -10,6 +14,24 @@
     color:@background_color;
 }
 
+.drop_text {
+    margin:-3px 0 0 0;
+}
+
+.work {
+    margin:20px 0 0 0;
+}
+
+.sub_header {
+    margin:0 0 20px 30px;
+}
+
+.dropdown {
+    display:block;
+    margin:5px auto 20px auto;
+    width:90%;
+}
+
 .header {
     margin:-50px 0 0 0;
 }
@@ -17,14 +39,28 @@
 @media screen and (min-width: 801px) {
     .outline-resume_Container {
         width:700px;
-        height:520px;
+    }
+    .dropdown {
+        display:block;
+        margin:5px auto 20px auto;
+        width:90%;
+    }
+    .summary {
+        width:90%;
     }
 }
 
 @media screen and (max-width: 800px){
     .outline-resume_Container {
         width:350px;
-        height:600px;
+    }
+    .dropdown {
+        display:block;
+        margin:5px auto 20px 40px;
+        width:80%;
+    }
+    .summary {
+        width:80%;
     }
 }
 

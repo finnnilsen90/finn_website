@@ -1,0 +1,27 @@
+.font {
+  font-family: "Arial", Sans-serif;
+}
+.Libcomp_Container {
+  box-shadow: 3px 0 4px #b3b3b3, -3px 0 4px #b3b3b3;
+  position: relative;
+  top: 170px;
+  margin: 0 auto 0 auto;
+  border: 1px solid #b3b3b3;
+  color: grey;
+}
+.header {
+  margin: -50px 0 0 0;
+}
+.test_content {
+  margin: 20px;
+}
+@media screen and (min-width: 801px) {
+  .Libcomp_Container {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .Libcomp_Container {
+    width: 350px;
+  }
+}

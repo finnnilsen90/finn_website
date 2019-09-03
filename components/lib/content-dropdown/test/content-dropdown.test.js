@@ -39,7 +39,7 @@ describe('<Content /> shallow', () => {
 describe('<Content /> mount', () => {
 
     const wrapper = shallow(<Content title='test' class='test' content='test content' />, { attachTo: document.body });
-    const arrow = wrapper.find('.arrow');
+    const container_drop = wrapper.find('.content-dropdown_Container');
     
     it('should match props', () => {
         expect(wrapper).toMatchSnapshot();
@@ -47,7 +47,7 @@ describe('<Content /> mount', () => {
 
     it('state should be false on load then true on click', () => {
         expect(wrapper.state().arrow).toEqual(false);
-        arrow.simulate('click');
+        container_drop.simulate('click');
         expect(wrapper.state().arrow).toEqual(true);
     })
 
