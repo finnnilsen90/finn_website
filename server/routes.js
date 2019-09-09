@@ -1,12 +1,9 @@
 const path = require('path');
 let Sequelize = require('sequelize');
 let hamburger = require('../data_files/base_menu.json');
-
 let site_map = require('../site_map.json');
-
 let dev = site_map.environment_dev;
-let login = dev? '../components/login-finn/example/index.html':'../public/login-finn.html';
-console.log('Check => '+login+' is '+dev);
+console.log('dev => '+dev);
 
 module.exports = function(app,sessionChecker,User,Project) {
     app.get('/', sessionChecker, (req, res) => {
@@ -16,7 +13,7 @@ module.exports = function(app,sessionChecker,User,Project) {
     // route for user Login
     app.route('/login')
         .get(sessionChecker, (req, res) => {
-            res.sendFile(path.join(__dirname,login));
+            res.sendFile(path.join(__dirname,dev? '../components/login-finn/example/index.html':'../public/login-finn.html'));
         })
         .post((req, res, next) => {
             let username = req.body.username,
@@ -63,7 +60,7 @@ module.exports = function(app,sessionChecker,User,Project) {
                 this.max_v = max;
             })
             if(req.session.user && req.cookies.auto_sid && req.session.user.user_type==='admin') {
-                res.sendFile(path.join(__dirname,'../public/create-finn.html'));
+                res.sendFile(path.join(__dirname,dev? '../components/create-finn/example/index.html':'../public/create-finn.html'));
             } else {
                 res.redirect('/login');
             }
@@ -107,7 +104,7 @@ module.exports = function(app,sessionChecker,User,Project) {
         .get((req, res) => {
             if (req.session.user && req.cookies.auto_sid) {
                 console.log('session started at submit')
-                res.sendFile(path.join(__dirname,'../public/submit-finn.html'));
+                res.sendFile(path.join(__dirname,dev? '../components/submit-finn/example/index.html':'../public/submit-finn.html'));
             } else {
                 console.log('error')
                 res.redirect('/login');
@@ -149,11 +146,15 @@ module.exports = function(app,sessionChecker,User,Project) {
             console.log('session => ', req.session.user)
             if (req.session.user && req.cookies.auto_sid) {
                 console.log('session started at submit')
-                res.sendFile(__dirname + '../public/styleguid-finn.html');
+                res.sendFile(path.join(__dirname, dev? '../components/styleguide-finn/example/index.html':'../public/styleguide-finn.html'));
             } else {
                 console.log('error')
                 res.redirect('/login');
             }
+        })
+
+        app.get('/home', (req, res) => {
+            res.sendFile(path.join(__dirname, dev? '../components/home-finn/example/index.html':'../public/home-finn.html'));
         })
 
     app.get('/login_menu', (req,res,next) => {
