@@ -1,4 +1,5 @@
 {
+  "environment_prod": true,
   "general": {
     "login-finn": "login-finn",
     "home-finn": "home-finn",
@@ -11,5 +12,6 @@
   },
   "admin": {
     "create-finn": "create-finn"
-  }
+  },
+  "environment_dev": false
 }
