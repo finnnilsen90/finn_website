@@ -72,6 +72,11 @@ module.exports = function(app,sessionChecker,User) {
 
         });
 
+    app.get('/contact', (req, res) => {
+        console.log('Accessed contact page!')
+        res.sendFile(__dirname + '../components/contact-finn/example/index.html');
+    })
+
     app.get('/form', (req, res) => {
             console.log('session => ', req.session.user)
             if (req.session.user && req.cookies.auto_sid) {
@@ -83,16 +88,16 @@ module.exports = function(app,sessionChecker,User) {
             }
         })
 
-        app.get('/create_usr', (req, res) => {
-            console.log('session => ', req.session.user)
-            if (req.session.user && req.cookies.auto_sid) {
-                console.log('session started at submit')
-                res.sendFile(__dirname + '../components/create_usr-finn/example/index.html');
-            } else {
-                console.log('error')
-                res.redirect('/login');
-            }
-        })
+    app.get('/create_usr', (req, res) => {
+        console.log('session => ', req.session.user)
+        if (req.session.user && req.cookies.auto_sid) {
+            console.log('session started at submit')
+            res.sendFile(__dirname + '../components/create_usr-finn/example/index.html');
+        } else {
+            console.log('error')
+            res.redirect('/login');
+        }
+    })
 
 
     app.get('/styleguide', (req, res) => {
@@ -113,6 +118,7 @@ module.exports = function(app,sessionChecker,User) {
             res.json(hamburger.logedin);
         }
     })
+    
 
     app.get('/logout', function (req, res, next) {
         console.log('session user => ',req.session.user)

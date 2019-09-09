@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> renders components 1`] = `
+<div
+  class="form-contact_Container font"
+>
+  <h1
+    class="header"
+  >
+    Contact
+  </h1>
+  <form
+    action="mailto:fnilsen1051@gmail.com"
+    class="form"
+    method="post"
+  >
+    <div
+      class="input_box"
+    >
+      <label
+        class="label e_label"
+      >
+        Email
+      </label>
+      <input
+        class="input"
+        name="email"
+        type="text"
+      />
+      <br />
+    </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label s_label"
+      >
+        Subject
+      </label>
+      <input
+        class="input"
+        name="subject"
+        type="text"
+      />
+      <br />
+    </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label message"
+      >
+        Message
+      </label>
+      <br />
+      <textarea
+        class="text_input"
+        name="message"
+        type="text"
+      />
+    </div>
+    <div
+      class="button"
+    >
+      <div
+        class="button-one_Container"
+      >
+        <button
+          class="button_style_one submit_msg"
+          type="submit"
+          value="Submit"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;

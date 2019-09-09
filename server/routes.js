@@ -1,6 +1,12 @@
 const path = require('path');
 let Sequelize = require('sequelize');
-let hamburger = require('../data_files/base_menu.json')
+let hamburger = require('../data_files/base_menu.json');
+
+let site_map = require('../site_map.json');
+
+let dev = site_map.environment_dev;
+let login = dev? '../components/login-finn/example/index.html':'../public/login-finn.html';
+console.log('Check => '+login+' is '+dev);
 
 module.exports = function(app,sessionChecker,User,Project) {
     app.get('/', sessionChecker, (req, res) => {
@@ -10,7 +16,7 @@ module.exports = function(app,sessionChecker,User,Project) {
     // route for user Login
     app.route('/login')
         .get(sessionChecker, (req, res) => {
-            res.sendFile(path.join(__dirname,'../public/login-finn.html'));
+            res.sendFile(path.join(__dirname,login));
         })
         .post((req, res, next) => {
             let username = req.body.username,
