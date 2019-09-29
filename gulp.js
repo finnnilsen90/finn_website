@@ -273,7 +273,7 @@ function makeComponent() {
                 .pipe($.replace('Libcomp', child))
                 .pipe($.replace('ChildConst', newChild))
                 .pipe($.replace('libcomp', newChild_low))
-                .pipe($.rename({basename: test===true?test_var+'.test':compName,}))
+                .pipe($.rename({basename: test===true?compName+'.test':compName,}))
                 .pipe(gulp.dest(dest));
         } else {
             gulp.src(source)
@@ -512,8 +512,20 @@ function webpack_production() {
     
 }
 
+function environment_dev(state) {
+    let file = editJsonFile(`${__dirname}/site_map.json`);
+    if (state) {
+        file.set('environment_dev', true);
+        file.save();
+    } else {
+        file.set('environment_dev', false);
+        file.save();
+    } 
+}
+
 function node() {
     
+    environment_dev(false);
     $.nodemon ({
         script: 'server.js'
         , ext: 'js html'
@@ -523,11 +535,13 @@ function node() {
 
 function node_dev() {
 
+    environment_dev(true);
     $.nodemon ({
-        script: 'dev-server/dev-server.js'
+        script: 'server.js'
         , ext: 'js html'
         , env: { 'NODE_ENV': env }
     })
+    setTimeout(() => {environment_dev(false)}, 3000)
 };
 
 function create_user() {

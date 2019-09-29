@@ -1,4 +1,5 @@
 {
+  "environment_dev": false,
   "general": {
     "login-finn": "login-finn",
     "home-finn": "home-finn",

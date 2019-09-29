@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 // initialize cookie-parser to allow us access the cookies stored in the browser. 
 app.use(cookieParser());
 
-// const directories = require('./dev-directories.js')(app);
+const directories = require('./dev-directories.js')(app);
 const sessionChecker = require('./session_checker.js');
 app.use(express.static(path.join(__dirname, '../components')));
 
@@ -39,6 +39,8 @@ app.use(session({
         expires: 600000
     }
 }));
+
+const routes = require('./dev-routes.js')(app,sessionChecker);
 
 app.use((req, res, next) => {
     if (req.cookies.auto_sid && !req.session.user) {

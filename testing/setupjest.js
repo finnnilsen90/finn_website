@@ -20,6 +20,7 @@ function comp_html(file) {
     app_arr.push(general_arr[i])
   }
   app_arr.push('compName')
+  app_arr.push('templates')
   let final_string = '';
 
   for (var i=0;i<app_arr.length;i++) {

@@ -27,7 +27,7 @@ describe('<VarName />', () => {
 });
 
 describe('<VarName /> baseline parts', () => {
-    const wrapper = mount(<VarName />, { attachTo: document.body });
+    const wrapper = mount(<VarName />);
 
     it('state fetch is defined', () => {
         expect(wrapper.state().fetch).toBeDefined()
@@ -38,13 +38,3 @@ describe('<VarName /> baseline parts', () => {
     })
 
 });
-
-// describe('<VarName /> functions', () => {
-
-//     const wrapper = mount(<VarName />);
-
-//     it('state fetch is defined', () => {
-//         expect(wrapper.state().fetch).toBeDefined()
-//     })
-    
-// });
