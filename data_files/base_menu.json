@@ -6,7 +6,7 @@
             "text": "Logout"
         },
         "home_page": {
-            "link": "/home_page",
+            "link": "/home",
             "className": "link",
             "text": "Home Page"
         },
@@ -16,7 +16,7 @@
             "text": "Resume"
         },
         "projects": {
-            "link": "/home_page",
+            "link": "/projects",
             "className": "link",
             "text": "Projects"
         },

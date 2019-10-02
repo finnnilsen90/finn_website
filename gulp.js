@@ -181,7 +181,8 @@ gulp.task('finish', ['webpack', 'production']);
 
 function add_to_map() {
     let file = editJsonFile(`${__dirname}/site_map.json`);
-    file.set(folder_type + '.' + compName, compName);
+    let comp_id = compName.replace('-','_')
+    file.set(folder_type + '.' + comp_id, compName);
     file.save();
 }
 

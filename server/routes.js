@@ -4,19 +4,34 @@ let hamburger = require('../data_files/base_menu.json');
 
 let site_map = require('../site_map.json');
 
-let dev = site_map.environment_dev;
-let login = dev? '../components/login-finn/example/index.html':'../public/login-finn.html';
-console.log('Check => '+login+' is '+dev);
+console.log('PAGE => ',site_map.general.login_finn)
+
+function route_select(server_bool,page) {
+    let result = server_bool? '../components/'+page+'/example/index.html':'../../public/'+page+'.html';
+    return result
+};
 
 module.exports = function(app,sessionChecker,User,Project) {
     app.get('/', sessionChecker, (req, res) => {
-        res.redirect('/login');
+        res.redirect('/home');
+    });
+
+    app.get('/home', (req, res) => {
+        res.sendFile(path.resolve(__dirname + route_select(site_map.environment_dev,site_map.general.home_finn)));
+    });
+
+    app.get('/resume', (req, res) => {
+        res.sendFile(path.resolve(__dirname + route_select(site_map.environment_dev,site_map.general.resume_finn)));
+    });
+
+    app.get('/project', (req, res) => {
+        res.sendFile(path.resolve(__dirname + route_select(site_map.environment_dev,site_map.general.projects_finn)));
     });
 
     // route for user Login
     app.route('/login')
         .get(sessionChecker, (req, res) => {
-            res.sendFile(path.join(__dirname,login));
+            res.sendFile(path.resolve(__dirname + route_select(site_map.environment_dev,site_map.general.login_finn)));
         })
         .post((req, res, next) => {
             let username = req.body.username,
@@ -63,7 +78,7 @@ module.exports = function(app,sessionChecker,User,Project) {
                 this.max_v = max;
             })
             if(req.session.user && req.cookies.auto_sid && req.session.user.user_type==='admin') {
-                res.sendFile(path.join(__dirname,'../public/create-finn.html'));
+                res.sendFile(path.join(__dirname,route_select(site_map.environment_dev,site_map.admin.create_finn)));
             } else {
                 res.redirect('/login');
             }
@@ -107,7 +122,7 @@ module.exports = function(app,sessionChecker,User,Project) {
         .get((req, res) => {
             if (req.session.user && req.cookies.auto_sid) {
                 console.log('session started at submit')
-                res.sendFile(path.join(__dirname,'../public/submit-finn.html'));
+                res.sendFile(path.join(__dirname,route_select(site_map.environment_dev,site_map.general.submit_finn)));
             } else {
                 console.log('error')
                 res.redirect('/login');

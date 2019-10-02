@@ -124,6 +124,8 @@
     "glob": "^7.1.2",
     "googleapis": "^26.0.1",
     "js-datepicker": "^4.0.6",
+    "lodash": "^4.17.15",
+    "mixin-deep": "^2.0.1",
     "morgan": "^1.9.0",
     "ms": "^2.1.1",
     "pg": "^7.4.0",
@@ -132,7 +134,8 @@
     "react-dom": "^16.1.1",
     "react-event-listener": "^0.5.1",
     "requirejs": "^2.3.3",
-    "sequelize": "^4.28.6",
+    "sequelize": "^5.8.11",
+    "set-value": "^3.0.1",
     "stringify": "^5.1.0",
     "style": "0.0.3"
   }

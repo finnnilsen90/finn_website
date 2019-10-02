@@ -15,7 +15,7 @@ class Hamburger extends React.Component {
                             text: 'Login'
                             },
                             home_page: {
-                                link: '/home_page',
+                                link: '/home',
                                 className: 'link',
                                 text: 'Home Page'
                             },
@@ -25,7 +25,7 @@ class Hamburger extends React.Component {
                                 text: 'Resume'
                             },
                             projects: {
-                                link: '/home_page',
+                                link: '/project',
                                 className: 'link',
                                 text: 'Projects'
                             },

@@ -1,16 +1,16 @@
 {
   "environment_dev": false,
   "general": {
-    "login-finn": "login-finn",
-    "home-finn": "home-finn",
-    "resume-finn": "resume-finn",
-    "projects-finn": "projects-finn",
-    "contact-finn": "contact-finn"
+    "login_finn": "login-finn",
+    "home_finn": "home-finn",
+    "resume_finn": "resume-finn",
+    "projects_finn": "projects-finn",
+    "contact_finn": "contact-finn"
   },
   "app": {
-    "submit-finn": "submit-finn"
+    "submit_finn": "submit-finn"
   },
   "admin": {
-    "create-finn": "create-finn"
+    "create_finn": "create-finn"
   }
 }

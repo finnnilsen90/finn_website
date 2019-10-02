@@ -60,7 +60,7 @@ var User = sequelize.define('users', {
     }
 }); 
 
-User.hook('beforeCreate', (user) => {
+User.beforeCreate((user) => {
     const salt = bcrypt.genSaltSync();
     user.password = bcrypt.hashSync(user.password, salt);
 });
