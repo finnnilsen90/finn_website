@@ -10,24 +10,16 @@ module.exports = function(app) {
         app.use(express.static(path.join(__dirname, '../components')));
         app.use('/login',express.static(path.join(__dirname, '../components/login-finn/example')));
         app.use('/home',express.static(path.join(__dirname, '../components/home-finn/example')));
-<<<<<<< HEAD
         app.use('/resume',express.static(path.join(__dirname, '../components/resume-finn/example')));
-=======
->>>>>>> fd9e2118d7ecf72f987aa4fc04a295e2e2341609
         app.use('/form',express.static(path.join(__dirname, '../components/form-finn/example')));
         app.use('/create_login',express.static(path.join(__dirname, '../components/create-finn/example')));
     } else {
         console.log('dir => ',__dirname.slice(0,-7))
         app.use(express.static(path.join(__dirname, '../public')));
-<<<<<<< HEAD
         app.use('/login',express.static(path.join(__dirname, '../public/general')));
         app.use('/home',express.static(path.join(__dirname, '../public/general')));
         app.use('/resume',express.static(path.join(__dirname, '../public/general')));
         app.use('/projects',express.static(path.join(__dirname, '../public/general')));
-=======
-        app.use(express.static(path.join(__dirname, '../public/general')));
-        app.use('/login',express.static(path.join(__dirname, '../public/general')));
->>>>>>> fd9e2118d7ecf72f987aa4fc04a295e2e2341609
         app.use('/form',express.static(path.join(__dirname, '../public/app')));
         app.use('/create_login',express.static(path.join(__dirname, '../public/admin')));
     }
