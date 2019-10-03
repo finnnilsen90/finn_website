@@ -171,15 +171,20 @@ module.exports = function(app,sessionChecker,User,Project) {
             }
         })
 
-        app.get('/home', (req, res) => {
-            res.sendFile(path.join(__dirname, dev? '../components/home-finn/example/index.html':'../public/home-finn.html'));
-        })
 
     app.get('/login_menu', (req,res,next) => {
-        if(req.session.user.user_type==='admin') {
-            res.json(hamburger.admin);
-        } else {
-            res.json(hamburger.logedin);
+        try {
+
+            if (req.session.user===undefined) {
+                res.json(hamburger.not_login);
+            } else if(req.session.user.user_type==='admin') {
+                res.json(hamburger.admin);
+            } else {
+                res.json(hamburger.logedin);
+            }
+
+        } catch(e) {
+            console.log('No login data, sending default');
         }
     })
 

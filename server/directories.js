@@ -11,6 +11,7 @@ module.exports = function(app) {
         app.use('/login',express.static(path.join(__dirname, '../components/login-finn/example')));
         app.use('/home',express.static(path.join(__dirname, '../components/home-finn/example')));
         app.use('/resume',express.static(path.join(__dirname, '../components/resume-finn/example')));
+        app.use('/project',express.static(path.join(__dirname, '../components/projects-finn/example')));
         app.use('/form',express.static(path.join(__dirname, '../components/form-finn/example')));
         app.use('/create_login',express.static(path.join(__dirname, '../components/create-finn/example')));
     } else {
@@ -19,7 +20,7 @@ module.exports = function(app) {
         app.use('/login',express.static(path.join(__dirname, '../public/general')));
         app.use('/home',express.static(path.join(__dirname, '../public/general')));
         app.use('/resume',express.static(path.join(__dirname, '../public/general')));
-        app.use('/projects',express.static(path.join(__dirname, '../public/general')));
+        app.use('/project',express.static(path.join(__dirname, '../public/general')));
         app.use('/form',express.static(path.join(__dirname, '../public/app')));
         app.use('/create_login',express.static(path.join(__dirname, '../public/admin')));
     }
