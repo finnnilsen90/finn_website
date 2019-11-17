@@ -103,6 +103,9 @@ gulp.task('task-list', function() {
     console.log('');
     console.log('production => Takes all files in the example file and minifies them.');
     console.log('');
+    console.log('server => Starts the production server.');
+    console.log('');
+    console.log('dev_server => Starts the dev server.');
     console.log('');
     console.log('bulk builds => goes through all of the components and builds them.');
     console.log('set --bulk variable to yes');

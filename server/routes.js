@@ -1,6 +1,8 @@
 const path = require('path');
 let Sequelize = require('sequelize');
 let hamburger = require('../data_files/base_menu.json');
+const fs = require('fs');
+const sendmail = require('sendmail')();
 
 let site_map = require('../site_map.json');
 
@@ -27,6 +29,31 @@ module.exports = function(app,sessionChecker,User,Project) {
     app.get('/project', (req, res) => {
         res.sendFile(path.resolve(__dirname + route_select(site_map.environment_dev,site_map.general.projects_finn)));
     });
+
+    app.get('/contact', (req, res) => {
+        res.sendFile(path.resolve(__dirname + route_select(site_map.environment_dev,site_map.general.contact_finn)));
+    });
+
+    app.route('/email')
+        .post((req, res, next) => {
+            let email = req.body.email,
+                subject = req.body.subject,
+                message = req.body.message
+            sendmail({
+                from: email,
+                to: 'fnilsen1051@gmail.com',
+                subject: subject,
+                html: message
+            }, function(err, reply) {
+                if (err) {
+                    res.redirect('/contact?valid=false');
+                    next()
+                } else {
+                    res.redirect('/contact?valid=true');
+                    next()
+                }
+            })
+        })
 
     // route for user Login
     app.route('/login')

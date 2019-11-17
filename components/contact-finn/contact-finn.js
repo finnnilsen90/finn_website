@@ -7,10 +7,10 @@ const Form = require('./lib/form-contact/form-contact.js');
 const Hamburger = require('../lib/hamburger/hamburger.js');
 const Footer = require('../lib/footer/footer.js');
 
-var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Contact[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Contact.prototype=Object.create(____SuperProtoOf____Class0);Contact.prototype.constructor=Contact;Contact.__superConstructor__=____Class0;
+var ____Class7=React.Component;for(var ____Class7____Key in ____Class7){if(____Class7.hasOwnProperty(____Class7____Key)){Contact[____Class7____Key]=____Class7[____Class7____Key];}}var ____SuperProtoOf____Class7=____Class7===null?null:____Class7.prototype;Contact.prototype=Object.create(____SuperProtoOf____Class7);Contact.prototype.constructor=Contact;Contact.__superConstructor__=____Class7;
     
     function Contact(props) {"use strict";
-    ____Class0.call(this,props);
+    ____Class7.call(this,props);
     this.state = {
             fetch: null
         };

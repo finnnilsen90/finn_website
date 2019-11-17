@@ -9,8 +9,23 @@ exports[`<Form /> renders components 1`] = `
   >
     Contact
   </h1>
+  <div
+    class="msg_comp"
+  >
+    <div
+      class="message_Container msg"
+    >
+      <div
+        class="msg_box "
+      >
+        <div
+          class="p_text"
+        />
+      </div>
+    </div>
+  </div>
   <form
-    action="mailto:fnilsen1051@gmail.com"
+    action="/email"
     class="form"
     method="post"
   >
@@ -75,5 +90,45 @@ exports[`<Form /> renders components 1`] = `
       </div>
     </div>
   </form>
+</div>
+`;
+
+exports[`Email response Error message handeling should exist 1`] = `
+<div
+  className="msg_comp"
+>
+  <Message
+    class="msg"
+    message={Array []}
+    state=""
+  >
+    <div
+      className="message_Container msg"
+    >
+      <div
+        className="msg_box "
+      >
+        <div
+          className="p_text"
+        />
+      </div>
+    </div>
+  </Message>
+</div>
+`;
+
+exports[`Email response Should throw error if failure 1`] = `
+<div
+  className="msg_comp"
+>
+  <Message
+    class="msg"
+    message={
+      Array [
+        "error sending",
+      ]
+    }
+    state="red"
+  />
 </div>
 `;
