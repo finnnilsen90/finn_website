@@ -18,7 +18,7 @@ let compName = optimist.argv.comp || 'templates'; //Component name
 let child = optimist.argv.child || 'Libcomp'; //child component name to put into lib folder of component 
 let folder = optimist.argv.test || compName; //folder name used to test and develop template files
 let env = optimist.argv.env || 'development' //Defines the environment.
-let folder_type = optimist.argv.loc || 'app'
+let folder_type = optimist.argv.loc || 'general'
 let plugin_bool = optimist.argv.build || false; //Tells whether or not the webpack build is production of develpment
 let username_var = optimist.argv.user //State user to put in the database
 let email_var = optimist.argv.email //State email to put in the database
@@ -399,6 +399,7 @@ function webpack_build() {
     function webpack_config(comp) { 
 
         let fileName = comp || 'templates';
+        let destination = bulk === 'yes' ? './components/' + comp + '/example/' : config.dest.prodjs;
 
         console.log('---------------------')
         console.log('comp => ',fileName)
@@ -424,7 +425,7 @@ function webpack_build() {
                 ],
             },
         }))
-        .pipe(gulp.dest(config.dest.bundle));
+        .pipe(gulp.dest(destination));
     }
 
     if (bulk==='yes') {
@@ -434,9 +435,10 @@ function webpack_build() {
         for (let x = 0;x < folderName.length; x++) {
 
             let run_comp = folderName[x];
-            let re = new RegExp(platform);
+            let lib = new RegExp('lib');
+            let mixin = new RegExp('mixins');
 
-            if (re.test(run_comp)) {
+            if (lib.test(run_comp) !== true && mixin.test(run_comp) !== true) {
                 webpack_config(run_comp)
             }
         }
@@ -480,16 +482,16 @@ function webpack_production() {
                     ],
                 },
             }))
-            .pipe(gulp.dest(config.dest.prodjs));
+            .pipe(gulp.dest(config.dest.bundle));
     }
 
 
     if (bulk==='yes') {
-        let folderName = Object.entries(site_map.app);
+        let folderName = Object.entries(site_map.general);
         if (folder_type==='admin') {
             folderName = Object.entries(site_map.admin);
-        } else if (folder_type==='general') {
-            folderName = Object.entries(site_map.general);
+        } else if (folder_type==='app') {
+            folderName = Object.entries(site_map.app);
         } 
             
         console.log('\x1b[41m%s\x1b[0m', 'invoking bulk production build')
@@ -533,7 +535,7 @@ function node() {
     $.nodemon ({
         script: 'server.js'
         , ext: 'js html'
-        , env: { 'NODE_ENV': env }
+        , env: { 'NODE_ENV': 'production' }
     })
 }
 
@@ -543,7 +545,7 @@ function node_dev() {
     $.nodemon ({
         script: 'server.js'
         , ext: 'js html'
-        , env: { 'NODE_ENV': env }
+        , env: { 'NODE_ENV': 'development' }
     })
     setTimeout(() => {environment_dev(false)}, 3000)
 };

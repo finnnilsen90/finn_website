@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const morgan = require('morgan');
-const User = require('./models/user');
-const Project = require('./models/project');
+// const User = require('./models/user'); // Intended for gated flow. No longer part of launch sprint.
+// const Project = require('./models/project'); // Intended for gated flow. No longer part of launch sprint.
 
 const fs = require('fs');
 const path = require('path');
@@ -47,7 +47,7 @@ app.use((req, res, next) => {
     next();
 })
 
-const routes = require('./server/routes.js')(app,sessionChecker,User,Project);
+const routes = require('./server/routes.js')(app);
 
 // route for handling 404 requests(unavailable routes
 app.use(function (req, res, next) {
