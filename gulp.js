@@ -456,6 +456,7 @@ function webpack_production() {
     function webpack_config(comp) {
 
         let fileName = comp || compName;
+        let destination = bulk === 'yes' ? './public/' + folder_type + '/' : config.dest.prodjs;
 
         return gulp.src('./components/' + fileName + '/' + fileName + '.js')
             .pipe(webpack({
@@ -482,7 +483,7 @@ function webpack_production() {
                     ],
                 },
             }))
-            .pipe(gulp.dest(config.dest.bundle));
+            .pipe(gulp.dest(destination));
     }
 
 
