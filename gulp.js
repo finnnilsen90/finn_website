@@ -145,40 +145,40 @@ gulp.task('test', function() {
 })
 
 //create component.
-gulp.task('makeComponent', makeComponent);
+gulp.task('makeComponent', gulp.series(makeComponent));
 
-gulp.task('makeChild', makeChild)
+gulp.task('makeChild', gulp.series(makeChild));
 
-gulp.task('makeLib', libComp)
+gulp.task('makeLib', gulp.series(libComp));
 //Send development files to production folder as a watch task.
-gulp.task('watchJSX', watchJSX)
+gulp.task('watchJSX', gulp.series(watchJSX));
 
-gulp.task('watchLess', watchLess)
+gulp.task('watchLess', gulp.series(watchLess));
 
-gulp.task('libJSX', libJSX)
+gulp.task('libJSX', gulp.series(libJSX));
 
-gulp.task('libLess', libLess)
+gulp.task('libLess', gulp.series(libLess));
 
 gulp.task('webpack', webpack_build)
 
-gulp.task('webpack_production', webpack_production)
+gulp.task('webpack_production', gulp.series(webpack_production));
 
 //production
-gulp.task('production', production)
+gulp.task('production', gulp.series(production));
 
 //Server
-gulp.task('dev_server', node_dev)
+gulp.task('dev_server', gulp.series(node_dev));
 
-gulp.task('server', node)
+gulp.task('server', gulp.series(node));
 
 //Database
-gulp.task('create_user', create_user)
-gulp.task('create_password', create_password)
+gulp.task('create_user', gulp.series(create_user));
+gulp.task('create_password', gulp.series(create_password));
 
-gulp.task('test_function', add_to_map)
+gulp.task('test_function', gulp.series(add_to_map));
 
 
-gulp.task('finish', ['webpack', 'production']);
+gulp.task('finish', gulp.series(['webpack', 'production']));
 
 //////////////////////// Gulp Functions ////////////////////////
 

@@ -6,21 +6,45 @@ var css = require('./home-finn.css')
 const Hamburger = require('../lib/hamburger/hamburger.js')
 const Content = require('./lib/content-home/content-home.js')
 
-var ____Classk=React.Component;for(var ____Classk____Key in ____Classk){if(____Classk.hasOwnProperty(____Classk____Key)){Home[____Classk____Key]=____Classk[____Classk____Key];}}var ____SuperProtoOf____Classk=____Classk===null?null:____Classk.prototype;Home.prototype=Object.create(____SuperProtoOf____Classk);Home.prototype.constructor=Home;Home.__superConstructor__=____Classk;
+var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____Class8.hasOwnProperty(____Class8____Key)){Home[____Class8____Key]=____Class8[____Class8____Key];}}var ____SuperProtoOf____Class8=____Class8===null?null:____Class8.prototype;Home.prototype=Object.create(____SuperProtoOf____Class8);Home.prototype.constructor=Home;Home.__superConstructor__=____Class8;
     
     function Home(props) {"use strict";
-    ____Classk.call(this,props);
+    ____Class8.call(this,props);
     this.state = {
-            test: 'Test'
+            fetch: null
         };
+
+        this.get_hamburger = this.get_hamburger.bind(this);
     
     }
+
+    Object.defineProperty(Home.prototype,"get_hamburger",{writable:true,configurable:true,value:function(action) {"use strict";
+
+        fetch(action)
+            .then(function(response)  {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Something went wrong');
+                }
+            })
+            .then(function(responseJson)  {
+                this.setState({fetch: responseJson})
+            }.bind(this))
+            .catch(function(error)  {
+                console.log('menu server error => ',error);
+            }) 
+    }});
+
+    Object.defineProperty(Home.prototype,"componentWillMount",{writable:true,configurable:true,value:function() {"use strict";
+        this.get_hamburger('/login_menu')
+    }});
     
     Object.defineProperty(Home.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
         
         return (
             React.createElement("div", {className: "containter"}, 
-                React.createElement(Hamburger, null), 
+                React.createElement(Hamburger, {menu: this.state.fetch}), 
                 React.createElement(Content, null)
             )
         )

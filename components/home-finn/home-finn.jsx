@@ -11,16 +11,40 @@ class Home extends React.Component {
     constructor(props) {
     super(props);
     this.state = {
-            test: 'Test'
+            fetch: null
         };
+
+        this.get_hamburger = this.get_hamburger.bind(this);
     
+    }
+
+    get_hamburger(action) {
+
+        fetch(action)
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Something went wrong');
+                }
+            })
+            .then((responseJson) => {
+                this.setState({fetch: responseJson})
+            })
+            .catch((error) => {
+                console.log('menu server error => ',error);
+            }) 
+    }
+
+    componentWillMount() {
+        this.get_hamburger('/login_menu')
     }
     
     render() {
         
         return (
             <div className='containter'>
-                <Hamburger />
+                <Hamburger menu={this.state.fetch}/>
                 <Content />
             </div>
         )

@@ -1,10 +1,5 @@
 {
     "not_login": {
-        "login":{
-            "link": "/login",
-            "className": "link",
-            "text": "Login"
-        },
         "home_page": {
             "link": "/home",
             "className": "link",
