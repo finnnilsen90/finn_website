@@ -125,10 +125,10 @@ exports[`Email response Should throw error if failure 1`] = `
     class="msg"
     message={
       Array [
-        "error sending",
+        "Error Sending",
       ]
     }
-    state="red"
+    state="error"
   />
 </div>
 `;

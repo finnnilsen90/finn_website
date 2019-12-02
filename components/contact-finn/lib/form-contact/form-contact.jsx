@@ -12,16 +12,18 @@ class Form extends React.Component {
     this.state = {
             msg_sent: false,
             msg_state: '',
-            msg: []
+            msg: [],
+            param: (new URL(document.location)).searchParams.get('valid')
         };
        this.message = this.message.bind(this);
     }
 
     message(result) {
+        result = result === 'false'? false : true;
         let msg = document.querySelector('.msg_comp');
+        
         let msg_state = result ? 'Success!':'Error Sending'
 
-        
         this.setState(() => ({
             msg_sent: true,
         }));
@@ -33,17 +35,16 @@ class Form extends React.Component {
         }));
 
         msg.style.display = 'block';
+        return result
     }
      
 
     componentDidMount() {
-        let url = window.location.href;
-        let searchParams1 = (new URL(document.location)).searchParams.get('valid');
+        let searchParams1 = this.state.param;
         console.log('query string present => ',searchParams1);
         if (searchParams1) {
-            console.log('response => ',searchParams1);
             this.message(searchParams1);
-        };
+        }
             
     }
     render() {
