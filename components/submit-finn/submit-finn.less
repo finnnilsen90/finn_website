@@ -1,0 +1,26 @@
+@grey: grey;
+
+.container {
+	position: relative;
+	height:950px;
+}
+
+@media screen and (min-width: 800px) {
+	.test {
+		background-color: lighten(@grey, 20%);
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+	.test {
+		background-color: lighten(@grey, 30%);
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+	.test {
+		background-color: lighten(@grey, 40%);
+	}
+
+}

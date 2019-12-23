@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> renders components 1`] = `
+<div
+  class="containter"
+>
+  <img
+    class="background_img"
+    src="test-file-stub"
+  />
+  <div
+    class="box_cont"
+  >
+    <box />
+  </div>
+</div>
+`;
