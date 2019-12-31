@@ -28,24 +28,24 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 const directories = require('./server/directories.js')(app);
-const sessionChecker = require('./server/session_checker.js');
+// const sessionChecker = require('./server/session_checker.js');
 
-app.use(session({
-    key: 'auto_sid',
-    secret: 'finnssecret',
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        expires: 600000
-    }
-}));
+// app.use(session({
+//     key: 'auto_sid',
+//     secret: 'finnssecret',
+//     resave: false,
+//     saveUninitialized: false,
+//     cookie: {
+//         expires: 600000
+//     }
+// }));
 
-app.use((req, res, next) => {
-    if (req.cookies.auto_sid && !req.session.user) {
-        res.clearCookie('auto_sid');        
-    }
-    next();
-})
+// app.use((req, res, next) => {
+//     if (req.cookies.auto_sid && !req.session.user) {
+//         res.clearCookie('auto_sid');        
+//     }
+//     next();
+// })
 
 const routes = require('./server/routes.js')(app);
 

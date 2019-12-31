@@ -4,6 +4,7 @@ let site_map = require('../site_map.json');
 let dev = site_map.environment_dev;
 
 module.exports = function(app) {
+    console.log('DIRECTORIES DEV BOOL => ',site_map.environment_dev);
 
     if (dev) {
         console.log('dev dir => ',__dirname.slice(0,-7))

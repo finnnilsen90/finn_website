@@ -530,7 +530,7 @@ function environment_dev(state) {
     } 
 }
 
-function node() {
+function node(done) {
     
     environment_dev(false);
     $.nodemon ({
@@ -538,9 +538,10 @@ function node() {
         , ext: 'js html'
         , env: { 'NODE_ENV': 'production' }
     })
+    done();
 }
 
-function node_dev() {
+function node_dev(done) {
 
     environment_dev(true);
     $.nodemon ({
@@ -548,7 +549,8 @@ function node_dev() {
         , ext: 'js html'
         , env: { 'NODE_ENV': 'development' }
     })
-    setTimeout(() => {environment_dev(false)}, 3000)
+    setTimeout(() => {environment_dev(false)}, 3000);
+    done();
 };
 
 function create_user() {

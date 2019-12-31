@@ -6,14 +6,13 @@ const sendmail = require('sendmail')();
 
 let site_map = require('../site_map.json');
 
-console.log('PAGE => ',site_map.general.login_finn)
-
 function route_select(server_bool,page) {
     let result = server_bool? '../components/'+page+'/example/index.html':'../../public/'+page+'.html';
     return result
 };
 
 module.exports = function(app,) {
+    console.log('ROUTE DEV BOOL => ',site_map.environment_dev);
     app.get('/', (req, res) => {
         res.redirect('/home');
     });
@@ -187,16 +186,16 @@ module.exports = function(app,) {
 
     //     })
 
-    app.get('/styleguide', (req, res) => {
-            console.log('session => ', req.session.user)
-            if (req.session.user && req.cookies.auto_sid) {
-                console.log('session started at submit')
-                res.sendFile(path.join(__dirname, dev? '../components/styleguide-finn/example/index.html':'../public/styleguide-finn.html'));
-            } else {
-                console.log('error')
-                res.redirect('/login');
-            }
-        })
+    // app.get('/styleguide', (req, res) => {
+    //         console.log('session => ', req.session.user)
+    //         if (req.session.user && req.cookies.auto_sid) {
+    //             console.log('session started at submit')
+    //             res.sendFile(path.join(__dirname, dev? '../components/styleguide-finn/example/index.html':'../public/styleguide-finn.html'));
+    //         } else {
+    //             console.log('error')
+    //             res.redirect('/login');
+    //         }
+    //     })
 
 
     app.get('/login_menu', (req,res,next) => {
@@ -212,6 +211,7 @@ module.exports = function(app,) {
 
         } catch(e) {
             console.log('No login data, sending default');
+            res.json(hamburger.not_login);
         }
     })
 

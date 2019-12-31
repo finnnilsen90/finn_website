@@ -12,7 +12,7 @@ exports[`<Outline /> renders components 1`] = `
   <p
     class="summary"
   >
-    With over 5 years of experience I have been involved in major software projects, digital marketing campaigns, and have manged technical teams. As a professional my objective is to continue my understanding of tech through continuous education and upleveling. As well use my foundational understanding of business strategy to grow any business I work with.
+    With over 5 years of experience I have been involved in major software projects, digital marketing campaigns, and have managed technical teams. As a professional, my objective is to continue my understanding of tech through continuous education and upleveling. As well as  use my foundational understanding of business strategy to grow any business I work with.
   </p>
   <div
     class="work"
@@ -29,7 +29,12 @@ exports[`<Outline /> renders components 1`] = `
         class="content-dropdown_Container"
       >
         <h3
-          class="title"
+          class="title title_assoc_dir"
+        >
+          Associate Director, Media Activation and Technology
+        </h3>
+        <h3
+          class="title_click title_click_assoc_dir"
         >
           Associate Director, Media Activation and Technology
         </h3>
@@ -45,40 +50,53 @@ exports[`<Outline /> renders components 1`] = `
         <div
           class="content_parent cont_par_assoc_dir"
         >
-          <p />
-          <div>
-            <h4
-              class="drop_text"
-            >
-              Job Description
-            </h4>
-            <p
-              class="drop_text"
-            >
-              As an Associate Director I was in charge of the technical product offering Mogo. Managing software projects and different packaged offerings for our clients. I also managed a team of 4 account managers on the media acctivation side.
-            </p>
-            <ul
-              class="drop_text"
-            >
-              <li>
-                Technical Product Managment
-              </li>
-              <li>
-                Managed a team of 4
-              </li>
-              <li>
-                Campaign managment for tier 1 and enterprize clients
-              </li>
-            </ul>
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Job Description
+              </h4>
+              <p
+                class="drop_text"
+              >
+                Lead a team of media activation managers and supervisors to achieve team goals and retain clients.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Manage top tier clients digital marketing campaigns. Clients such as SF Ballet and Alibaba.
+                </li>
+                <li>
+                  Create advanced automated reporting dashboards.
+                </li>
+                <li>
+                  Project Manage software projects.
+                </li>
+                <li>
+                  Host webinars.
+                </li>
+                <li>
+                  Implement advanced tracking.
+                </li>
+              </ul>
+            </div>
           </div>
-          <p />
         </div>
       </div>
       <div
         class="content-dropdown_Container"
       >
         <h3
-          class="title"
+          class="title title_tech_sup"
+        >
+          Technical Supervisor
+        </h3>
+        <h3
+          class="title_click title_click_tech_sup"
         >
           Technical Supervisor
         </h3>
@@ -94,40 +112,47 @@ exports[`<Outline /> renders components 1`] = `
         <div
           class="content_parent cont_par_tech_sup"
         >
-          <p />
-          <div>
-            <h4
-              class="drop_text"
-            >
-              Job Description
-            </h4>
-            <p
-              class="drop_text"
-            >
-              As a Technical Supervisor I was a member of the technical team and was responsible for the technical growth of Mogo employees and oversaw many tier 1 accounts on the back end.
-            </p>
-            <ul
-              class="drop_text"
-            >
-              <li>
-                Assisted with the DMP
-              </li>
-              <li>
-                Project Managment of our brand new automation platform Hub
-              </li>
-              <li>
-                Campaign managment for tier 1 clients
-              </li>
-            </ul>
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Job Description
+              </h4>
+              <p
+                class="drop_text"
+              >
+                Supervise a team of account strategists to ensure they are at a certain level of technical proficiency. At the same work on top client accounts on the back end to achieve client goals.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Manage top tier clients digital marketing campaigns.
+                </li>
+                <li>
+                  Project manage major projects.
+                </li>
+                <li>
+                  Implement advanced tracking.
+                </li>
+              </ul>
+            </div>
           </div>
-          <p />
         </div>
       </div>
       <div
         class="content-dropdown_Container"
       >
         <h3
-          class="title"
+          class="title title_senior"
+        >
+          Senior Account Strategist
+        </h3>
+        <h3
+          class="title_click title_click_senior"
         >
           Senior Account Strategist
         </h3>
@@ -143,88 +168,35 @@ exports[`<Outline /> renders components 1`] = `
         <div
           class="content_parent cont_par_senior"
         >
-          <p />
-          <div>
-            <h4
-              class="drop_text"
-            >
-              Job Description
-            </h4>
-            <p
-              class="drop_text"
-            >
-              As a Senior Account Strategist I had some elivated responsibilities on top of normal Account Strategist areas of focus.
-            </p>
-            <ul
-              class="drop_text"
-            >
-              <li>
-                Outline digital strategy
-              </li>
-              <li>
-                Process managment
-              </li>
-              <li>
-                Tier 1 client campaigns
-              </li>
-              <li>
-                Project managment
-              </li>
-            </ul>
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Job Description
+              </h4>
+              <p
+                class="drop_text"
+              >
+                Manage client’s digital marketing campaigns and oversee internal process.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Manage digital marketing campaigns.
+                </li>
+                <li>
+                  Implement and manage tracking.
+                </li>
+                <li>
+                  Conduct in depth analysis.
+                </li>
+              </ul>
+            </div>
           </div>
-          <p />
-        </div>
-      </div>
-      <div
-        class="content-dropdown_Container"
-      >
-        <h3
-          class="title"
-        >
-          Account Strategist
-        </h3>
-        <div
-          class="arrow arw_as"
-        />
-        <div
-          class="arrow_click arw_click_as"
-        />
-        <hr
-          class="content_hr cont_hr_as"
-        />
-        <div
-          class="content_parent cont_par_as"
-        >
-          <p />
-          <div>
-            <h4
-              class="drop_text"
-            >
-              Job Description
-            </h4>
-            <p
-              class="drop_text"
-            >
-              Account Strategist's are in charge of analyzing, building, and optimizing digital campaigns.
-            </p>
-            <ul
-              class="drop_text"
-            >
-              <li>
-                Outline digital strategy
-              </li>
-              <li>
-                A/B Testing
-              </li>
-              <li>
-                Perform campaign analysis
-              </li>
-              <li>
-                Implement tag tracking
-              </li>
-            </ul>
-          </div>
-          <p />
         </div>
       </div>
     </div>
@@ -240,7 +212,12 @@ exports[`<Outline /> renders components 1`] = `
         class="content-dropdown_Container"
       >
         <h3
-          class="title"
+          class="title title_chat"
+        >
+          ChatScript Developer
+        </h3>
+        <h3
+          class="title_click title_click_chat"
         >
           ChatScript Developer
         </h3>
@@ -256,40 +233,53 @@ exports[`<Outline /> renders components 1`] = `
         <div
           class="content_parent cont_par_chat"
         >
-          <p />
-          <div>
-            <h4
-              class="drop_text"
-            >
-              Job Description
-            </h4>
-            <p
-              class="drop_text"
-            >
-              As a Technical Supervisor I was a member of the technical team and was responsible for the technical growth of Mogo employees and oversaw many tier 1 accounts on the back end.
-            </p>
-            <ul
-              class="drop_text"
-            >
-              <li>
-                Assisted with the DMP
-              </li>
-              <li>
-                Project Managment of our brand new automation platform Hub
-              </li>
-              <li>
-                Campaign managment for tier 1 clients
-              </li>
-            </ul>
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              >
+                ChatScript Developer
+              </h4>
+              <p
+                class="drop_text"
+              >
+                My role on the chatbot team has been to develop code for the Pearl chatbot, and help outline the overall customer interaction with Pearl by working with copywriters.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Develop ChatScript for Pearl (ChatScript is the coding language used to dictate how Pearl linguistically interacts with customers).
+                </li>
+                <li>
+                  Manually train machine learning algorithms that dictate how Pearl interacts with customers.
+                </li>
+                <li>
+                  Produce analytics reports on how our chat bot is interacting with customers.
+                </li>
+                <li>
+                  Organize the QA process for Pearl and work with automated QA software for Pearl.
+                </li>
+                <li>
+                  Organize and coordinate the development process for Pearl, starting from copy and moving all the way to QA to produce a winning test.
+                </li>
+              </ul>
+            </div>
           </div>
-          <p />
         </div>
       </div>
       <div
         class="content-dropdown_Container"
       >
         <h3
-          class="title"
+          class="title title_mark_cor"
+        >
+          Marketing Coordinator
+        </h3>
+        <h3
+          class="title_click title_click_mark_cor"
         >
           Marketing Coordinator
         </h3>
@@ -305,43 +295,59 @@ exports[`<Outline /> renders components 1`] = `
         <div
           class="content_parent cont_par_mark_cor"
         >
-          <p />
-          <div>
-            <h4
-              class="drop_text"
-            >
-              Job Description
-            </h4>
-            <p
-              class="drop_text"
-            >
-              As a Senior Account Strategist I had some elivated responsibilities on top of normal Account Strategist areas of focus.
-            </p>
-            <ul
-              class="drop_text"
-            >
-              <li>
-                Outline digital strategy
-              </li>
-              <li>
-                Process managment
-              </li>
-              <li>
-                Tier 1 client campaigns
-              </li>
-              <li>
-                Project managment
-              </li>
-            </ul>
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Marketing Coordinator
+              </h4>
+              <p
+                class="drop_text"
+              >
+                JustAnswer has been A/B testing various parts of the site to perfect the product and drive GSS, after years of doing so with lean methodology JustAnswer is looking to start marketing. My role has been to facilitate that effort by talking to various teams, organizing initiatives, and doing other various activities such as data analysis.
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Develop ChatScript for Pearl (ChatScript is the coding language used to dictate how Pearl linguistically interacts with customers).
+                </li>
+                <li>
+                  Assist in data analysis.
+                </li>
+                <li>
+                  Assist in organizing A/B testing.
+                </li>
+                <li>
+                  Organize and run SEO reputation management.
+                </li>
+                <li>
+                  Develop open graph for various web pages.
+                </li>
+                <li>
+                  Manage social media.
+                </li>
+                <li>
+                  Communicate with UX and Engineering.
+                </li>
+              </ul>
+            </div>
           </div>
-          <p />
         </div>
       </div>
       <div
         class="content-dropdown_Container"
       >
         <h3
-          class="title"
+          class="title title_social_assoc"
+        >
+          Social Media Associate
+        </h3>
+        <h3
+          class="title_click title_click_social_assoc"
         >
           Social Media Associate
         </h3>
@@ -357,88 +363,38 @@ exports[`<Outline /> renders components 1`] = `
         <div
           class="content_parent cont_par_social_assoc"
         >
-          <p />
-          <div>
-            <h4
-              class="drop_text"
-            >
-              Job Description
-            </h4>
-            <p
-              class="drop_text"
-            >
-              Account Strategist's are in charge of analyzing, building, and optimizing digital campaigns.
-            </p>
-            <ul
-              class="drop_text"
-            >
-              <li>
-                Outline digital strategy
-              </li>
-              <li>
-                A/B Testing
-              </li>
-              <li>
-                Perform campaign analysis
-              </li>
-              <li>
-                Implement tag tracking
-              </li>
-            </ul>
+          <div
+            class="input"
+          >
+            <div>
+              <h4
+                class="drop_text"
+              >
+                Social Media Associate
+              </h4>
+              <p
+                class="drop_text"
+              >
+                With this position I was mainly involved in running various campaigns, organizing content creation, and performing data analysis. 
+              </p>
+              <ul
+                class="drop_text"
+              >
+                <li>
+                  Ran Facebook ads to achieve an optimal ROAS.
+                </li>
+                <li>
+                  Managed social channels.
+                </li>
+                <li>
+                  Managed boosting of Facebook content.
+                </li>
+                <li>
+                  Data analysis of traffic and engagement.
+                </li>
+              </ul>
+            </div>
           </div>
-          <p />
-        </div>
-      </div>
-      <div
-        class="content-dropdown_Container"
-      >
-        <h3
-          class="title"
-        >
-          Social Media Intern
-        </h3>
-        <div
-          class="arrow arw_social_intern"
-        />
-        <div
-          class="arrow_click arw_click_social_intern"
-        />
-        <hr
-          class="content_hr cont_hr_social_intern"
-        />
-        <div
-          class="content_parent cont_par_social_intern"
-        >
-          <p />
-          <div>
-            <h4
-              class="drop_text"
-            >
-              Job Description
-            </h4>
-            <p
-              class="drop_text"
-            >
-              Account Strategist's are in charge of analyzing, building, and optimizing digital campaigns.
-            </p>
-            <ul
-              class="drop_text"
-            >
-              <li>
-                Outline digital strategy
-              </li>
-              <li>
-                A/B Testing
-              </li>
-              <li>
-                Perform campaign analysis
-              </li>
-              <li>
-                Implement tag tracking
-              </li>
-            </ul>
-          </div>
-          <p />
         </div>
       </div>
     </div>
