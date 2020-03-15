@@ -79,7 +79,7 @@ describe('Login functionality', () => {
 
     it('should display msg_container class', ()=> {
         const wrapper = mount(<Box />, { attachTo: document.body });
-        wrapper.instance().push_error(click);
+        wrapper.instance().server_login(click);
         const msg_container = wrapper.find('.msg_container');
         expect(msg_container).toHaveLength(1);
     })
@@ -97,36 +97,75 @@ describe('Login functionality', () => {
 //     })
 // })
 
-describe('Login error reporting missing username', () => {
+describe('Login authentification', () => {
 
-    it('should throw error if username input is blank', () => {
-        const wrapper = mount(<Box />, { attachTo: document.body });
-        wrapper.instance().push_error(click);
-        expect(wrapper.state().err_message.length).toBeGreaterThan(0)
-    })
+    let user = 'test@gmail.com',
+        pass = 'test;'
 
-    it('no username message should be', () => {
-        const wrapper = mount(<Box />, { attachTo: document.body });
-        wrapper.instance().push_error(click);
-        expect(wrapper.state().err_message[0]).toEqual("Please input a username")
-    })
-
-})
-
-describe('Login error reporting missing password', () => {
-
-    const wrapper = mount(<Box />, { attachTo: document.body });
 
     it('should throw error if password input is blank', () => {
         const wrapper = mount(<Box />, { attachTo: document.body });
-        wrapper.instance().push_error(click);
+        wrapper.state().auth_status = 'blank_password';
+        wrapper.instance().server_login();
         expect(wrapper.state().err_message.length).toBeGreaterThan(0)
     })
 
     it('no username message should be', () => {
         const wrapper = mount(<Box />, { attachTo: document.body });
-        wrapper.instance().push_error(click);
-        expect(wrapper.state().err_message[1]).toEqual("Please input a password")
+        wrapper.state().auth_status = 'blank_password';
+        wrapper.instance().server_login();
+        expect(wrapper.state().err_message[0]).toEqual("Please input a password")
+    })
+
+    it('should throw error if username input is blank', () => {
+        const wrapper = mount(<Box />, { attachTo: document.body });
+        wrapper.state().auth_status = 'blank_username';
+        wrapper.instance().server_login();
+        expect(wrapper.state().err_message.length).toBeGreaterThan(0)
+    })
+
+    it('no username message should be', () => {
+        const wrapper = mount(<Box />, { attachTo: document.body });
+        wrapper.state().auth_status = 'blank_username';
+        wrapper.instance().server_login();
+        expect(wrapper.state().err_message[0]).toEqual("Please input a username")
+    })
+
+    // it('should throw error if invalid username and password', done => {
+    //     const wrapper = mount(<Box />, { attachTo: document.body });
+    //     wrapper.state().auth_status = 'wrong_username';
+    //     wrapper.instance().server_login(click,user,pass);
+    //     function callback_one() {
+    //         let call_data = wrapper.state().err_message.length;
+    //         expect(call_data).toEqual(1);
+    //         done()
+    //     } 
+
+    //     wrapper.state().auth_status = 'wrong_password';
+    //     function callback_two() {
+    //         let call_data = wrapper.state().err_message.length;
+    //         expect(call_data).toEqual(1);
+    //         done()
+    //     } 
+    //     setTimeout(() => {
+    //         callback_one()
+    //         callback_two()
+    //     },3000)
+        
+    // })
+
+    it('should throw error if invalid username', () => {
+        const wrapper = mount(<Box />, { attachTo: document.body });
+        wrapper.state().auth_status = 'wrong_username';
+        wrapper.instance().server_login(user,pass);
+        expect(wrapper.state().err_message.length).toEqual(1);
+    })
+
+    it('should throw error if invalid password', () => {
+        const wrapper = mount(<Box />, { attachTo: document.body });
+        wrapper.state().auth_status = 'wrong_password';
+        wrapper.instance().server_login(user,pass);
+        expect(wrapper.state().err_message.length).toEqual(1);
     })
 
 })

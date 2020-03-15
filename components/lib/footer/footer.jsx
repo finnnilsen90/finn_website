@@ -7,12 +7,13 @@ class Footer extends React.Component {
     constructor(props) {
     super(props);
     this.state = {
+            links_invoked: '',
             test: '',
             links:  {
                 login: {
-                    link: '/logout',
+                    link: '/login',
                     className: 'link_footer',
-                    text: 'Logout'
+                    text: 'Login'
                 },
                 home_page: {
                     link: '/home_page',
@@ -38,15 +39,39 @@ class Footer extends React.Component {
         };
 
         this.links_compile = this.links_compile.bind(this);
+        this.links_comp_two = this.links_comp_two.bind(this);
+        this.chng_state = this.chng_state.bind(this);
        
     } 
 
-    links_compile(input) {
+    chng_state() {
+        let prop = this.props.menu;
 
+        if (prop) {
+            return prop;
+        } else {
+            return this.state.links;
+        }
+
+    }
+
+    links_compile(input) {
         let value = Object.entries(input)
         let menu = []
-        for (let i=0;i<value.length;i++) {
-            menu.push(<li className={value[i][1].className} href={value[i][1].link}>{value[i][1].text}</li>);
+        let len = value.length>5?5:value.length;
+        for (let i=0;i<len;i++) {
+            menu.push(<li className={value[i][1].className+' link_footer'}><a href={value[i][1].link}>{value[i][1].text}</a></li>);
+        }
+
+        return menu
+
+    }
+
+    links_comp_two(input) {
+        let value = Object.entries(input);
+        let menu = []
+        for (let i=5;i<value.length;i++) {
+            menu.push(<li className={value[i][1].className+' link_footer'}><a href={value[i][1].link}>{value[i][1].text}</a></li>);
         }
 
         return menu
@@ -54,15 +79,25 @@ class Footer extends React.Component {
     }
 
     componentDidMount() {
-
+        console.log('object length => ',this.chng_state())
+        // if (Object.entries(this.chng_state()).length>5) {
+            
+        //     let nav_two = document.querySelector('.nav_two');
+        //     nav_two.style.display = 'block';
+        // }
     }
     render() {
 
         return (
-        <div className='footer_Container'>
+        <div className={'footer_Container'+' font'}>
             <div className='nav'>
                 <ul>
-                    {this.links_compile(this.state.links)}
+                    {this.links_compile(this.chng_state())}
+                </ul>
+            </div>
+            <div className={'nav'+' nav_two'}>
+                <ul>
+                    {this.links_comp_two(this.chng_state())}
                 </ul>
             </div>
         </div>

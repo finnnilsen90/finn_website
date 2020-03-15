@@ -10,12 +10,12 @@ class Hamburger extends React.Component {
             hover: 0,
             toggle: true,
             default:  { login: {
-                            link: '/logout',
+                            link: '/login',
                             className: 'link',
-                            text: 'Logout'
+                            text: 'Login'
                             },
                             home_page: {
-                                link: '/home_page',
+                                link: '/home',
                                 className: 'link',
                                 text: 'Home Page'
                             },
@@ -25,7 +25,7 @@ class Hamburger extends React.Component {
                                 text: 'Resume'
                             },
                             projects: {
-                                link: '/home_page',
+                                link: '/project',
                                 className: 'link',
                                 text: 'Projects'
                             },
@@ -43,12 +43,13 @@ class Hamburger extends React.Component {
     }
 
     links_compile(input) {
+
         let new_input = input || this.state.default;
         if (typeof(new_input)==='object') {
             let value = Object.entries(new_input);
             let menu = []
             for (let i=0;i<value.length;i++) {
-                menu.push(<li className={value[i][1].className} href={value[i][1].link}>{value[i][1].text}</li>);
+                menu.push(<li className={value[i][1].className} ><a href={value[i][1].link}>{value[i][1].text}</a></li>);
             }
 
             return menu
@@ -119,7 +120,7 @@ class Hamburger extends React.Component {
     render() {
 
         return (
-        <div className='libcomp-hamburger_Container'>
+        <div className={'libcomp-hamburger_Container '+'font'}>
             <div className='ham_container'>
                 <div className='hamburger' onMouseLeave={this.ham_click} onMouseEnter={this.ham_click}>
                     <hr/>

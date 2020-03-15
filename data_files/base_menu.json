@@ -1,27 +1,89 @@
 {
-    "login": {
-        "link": "/logout",
-        "className": "link",
-        "text": "Login"
+    "not_login": {
+        "home_page": {
+            "link": "/home",
+            "className": "link",
+            "text": "Home Page"
+        },
+        "resume": {
+            "link": "/resume",
+            "className": "link",
+            "text": "Resume"
+        },
+        "projects": {
+            "link": "/project",
+            "className": "link",
+            "text": "Projects"
+        },
+        "contact": {
+            "link": "/contact",
+            "className": "link",
+            "text": "Contact"
+        }
     },
-    "home_page": {
-        "link": "/home_page",
-        "className": "link",
-        "text": "Home Page"
+    "logedin": {
+        "logout": {
+            "link": "/logout",
+            "className": "link",
+            "text": "Logout"
+        },
+        "home_page": {
+            "link": "/home",
+            "className": "link",
+            "text": "Home Page"
+        },
+        "resume": {
+            "link": "/resume",
+            "className": "link",
+            "text": "Resume"
+        },
+        "projects": {
+            "link": "/projects",
+            "className": "link",
+            "text": "Projects"
+        },
+        "contact": {
+            "link": "/contact",
+            "className": "link",
+            "text": "Contact"
+        }
     },
-    "resume": {
-        "link": "/resume",
-        "className": "link",
-        "text": "Resume"
-    },
-    "projects": {
-        "link": "/home_page",
-        "className": "link",
-        "text": "Projects"
-    },
-    "contact": {
-        "link": "/contact",
-        "className": "link",
-        "text": "Contact"
+    "admin": {
+        "logout": {
+            "link": "/logout",
+            "className": "link",
+            "text": "Logout"
+        },
+        "home_page": {
+            "link": "/home_page",
+            "className": "link",
+            "text": "Home Page"
+        },
+        "resume": {
+            "link": "/resume",
+            "className": "link",
+            "text": "Resume"
+        },
+        "projects": {
+            "link": "/home_page",
+            "className": "link",
+            "text": "Projects"
+        },
+        "create_login": {
+            "link": "/create_login",
+            "className": "create",
+            "text": "Create Login"
+        },
+        "form_submit": {
+            "link": "/form",
+            "className": "form_submit",
+            "text": "Form"
+        },
+        "contact": {
+            "link": "/contact",
+            "className": "link",
+            "text": "Contact"
+        }
     }
+    
 }

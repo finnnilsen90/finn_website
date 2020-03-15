@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Slider /> renders components 1`] = `
+<Slider>
+  <div
+    className="slider-home_Container font"
+  >
+    <div
+      className="outer"
+    >
+      <div
+        className="slide1 slide"
+      >
+        <a
+          href="/resume"
+        >
+          <h2>
+            Resume
+          </h2>
+          <div
+            className="slider_class"
+          >
+            Click to see my resmue!
+          </div>
+        </a>
+      </div>
+      <div
+        className="slide2 slide"
+      >
+        <a
+          href="/project"
+        >
+          <h2>
+            Projects
+          </h2>
+          <div
+            className="slider_class"
+          >
+            Checkout some of the projects I have been apart of.
+          </div>
+        </a>
+      </div>
+      <div
+        className="slide3 slide"
+      >
+        <a
+          href="/contact"
+        >
+          <h2>
+            Contact
+          </h2>
+          <div
+            className="slider_class"
+          >
+            If you would like to contact me click now.
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</Slider>
+`;

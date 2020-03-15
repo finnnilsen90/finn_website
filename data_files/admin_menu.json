@@ -1,0 +1,35 @@
+{
+    "logedin": {
+        "logout": {
+            "link": "/logout",
+            "className": "link",
+            "text": "Logout"
+        },
+        "home_page": {
+            "link": "/home",
+            "className": "link",
+            "text": "Home Page"
+        },
+        "resume": {
+            "link": "/resume",
+            "className": "link",
+            "text": "Resume"
+        },
+        "projects": {
+            "link": "/project",
+            "className": "link",
+            "text": "Projects"
+        },
+        "create_login": {
+            "link": "/create_login",
+            "className": "create_login",
+            "text": "Create Login"
+        },
+        "contact": {
+            "link": "/contact",
+            "className": "link",
+            "text": "Contact"
+        }
+    }
+    
+}

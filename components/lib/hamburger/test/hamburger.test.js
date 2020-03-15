@@ -9,9 +9,9 @@ let newHamburger = new Hamburger();
 
 let links_expected = {
     login: {
-        link: '/logout',
+        link: '/login',
         className: 'link',
-        text: 'Logout'
+        text: 'Login'
     },
     home_page: {
         link: '/home_page',
@@ -86,8 +86,7 @@ describe('<Hamburger /> dropdown state', () => {
 
     let toggle = wrapper.state().toggle;
 
-    let html =  [<li className="link" href="/logout">Logout</li>, <li className="link" href="/home_page">Home Page</li>, <li className="link" href="/resume">Resume</li>, <li className="link" href="/home_page"
->Projects</li>, <li className="link" href="/contact">Contact</li>]
+    let html =  [<li className="link"><a href="/login">Login</a></li>, <li className="link"><a href="/home_page">Home Page</a></li>, <li className="link"><a href="/resume">Resume</a></li>, <li className="link"><a href="/home_page">Projects</a></li>, <li className="link"><a href="/contact">Contact</a></li>]
 
     it('dropdown should snapshot at each state', () => {
 
@@ -100,8 +99,16 @@ describe('<Hamburger /> dropdown state', () => {
         expect(dropdown).toMatchSnapshot();
     })
 
-    it('html should match this array', ()=> {
-        expect(newHamburger.links_compile(links_expected)).toEqual(html);
+    it('html should match this array', done => {
+        
+        function callback() {
+            const new_wrapper = mount(<Hamburger/>, { attachTo: document.body });
+            expect(new_wrapper.instance().links_compile(links_expected)).toEqual(html);
+            done()
+        }
+
+        setTimeout(() => {callback()}, 3000);
+       
     })
 
 });
@@ -116,7 +123,7 @@ describe('error reporting', () => {
     console.log('mockedError => ', console.error.mock.calls);
 
     it('should throw an error if no props passed', () => {
-        expect(console.error).toHaveBeenCalledTimes(1);
+        expect(console.error).toHaveBeenCalled();
     })
 })
 

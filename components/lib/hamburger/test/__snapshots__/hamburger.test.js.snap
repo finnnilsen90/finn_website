@@ -7,33 +7,48 @@ exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 1`]
 >
   <li
     className="link"
-    href="/logout"
   >
-    Logout
+    <a
+      href="/login"
+    >
+      Login
+    </a>
   </li>
   <li
     className="link"
-    href="/home_page"
   >
-    Home Page
+    <a
+      href="/home_page"
+    >
+      Home Page
+    </a>
   </li>
   <li
     className="link"
-    href="/resume"
   >
-    Resume
+    <a
+      href="/resume"
+    >
+      Resume
+    </a>
   </li>
   <li
     className="link"
-    href="/home_page"
   >
-    Projects
+    <a
+      href="/home_page"
+    >
+      Projects
+    </a>
   </li>
   <li
     className="link"
-    href="/contact"
   >
-    Contact
+    <a
+      href="/contact"
+    >
+      Contact
+    </a>
   </li>
 </ul>
 `;
@@ -45,33 +60,48 @@ exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 2`]
 >
   <li
     className="link"
-    href="/logout"
   >
-    Logout
+    <a
+      href="/login"
+    >
+      Login
+    </a>
   </li>
   <li
     className="link"
-    href="/home_page"
   >
-    Home Page
+    <a
+      href="/home_page"
+    >
+      Home Page
+    </a>
   </li>
   <li
     className="link"
-    href="/resume"
   >
-    Resume
+    <a
+      href="/resume"
+    >
+      Resume
+    </a>
   </li>
   <li
     className="link"
-    href="/home_page"
   >
-    Projects
+    <a
+      href="/home_page"
+    >
+      Projects
+    </a>
   </li>
   <li
     className="link"
-    href="/contact"
   >
-    Contact
+    <a
+      href="/contact"
+    >
+      Contact
+    </a>
   </li>
 </ul>
 `;
@@ -83,40 +113,55 @@ exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 3`]
 >
   <li
     className="link"
-    href="/logout"
   >
-    Logout
+    <a
+      href="/login"
+    >
+      Login
+    </a>
   </li>
   <li
     className="link"
-    href="/home_page"
   >
-    Home Page
+    <a
+      href="/home_page"
+    >
+      Home Page
+    </a>
   </li>
   <li
     className="link"
-    href="/resume"
   >
-    Resume
+    <a
+      href="/resume"
+    >
+      Resume
+    </a>
   </li>
   <li
     className="link"
-    href="/home_page"
   >
-    Projects
+    <a
+      href="/home_page"
+    >
+      Projects
+    </a>
   </li>
   <li
     className="link"
-    href="/contact"
   >
-    Contact
+    <a
+      href="/contact"
+    >
+      Contact
+    </a>
   </li>
 </ul>
 `;
 
 exports[`<Hamburger /> state should match state of each action 1`] = `
 <div
-  className="libcomp-hamburger_Container"
+  className="libcomp-hamburger_Container font"
 >
   <div
     className="ham_container"
@@ -140,33 +185,48 @@ exports[`<Hamburger /> state should match state of each action 1`] = `
     >
       <li
         className="link"
-        href="/logout"
       >
-        Logout
+        <a
+          href="/login"
+        >
+          Login
+        </a>
       </li>
       <li
         className="link"
-        href="/home_page"
       >
-        Home Page
+        <a
+          href="/home_page"
+        >
+          Home Page
+        </a>
       </li>
       <li
         className="link"
-        href="/resume"
       >
-        Resume
+        <a
+          href="/resume"
+        >
+          Resume
+        </a>
       </li>
       <li
         className="link"
-        href="/home_page"
       >
-        Projects
+        <a
+          href="/home_page"
+        >
+          Projects
+        </a>
       </li>
       <li
         className="link"
-        href="/contact"
       >
-        Contact
+        <a
+          href="/contact"
+        >
+          Contact
+        </a>
       </li>
     </ul>
   </div>
@@ -175,7 +235,7 @@ exports[`<Hamburger /> state should match state of each action 1`] = `
 
 exports[`<Hamburger /> state should match state of each action 2`] = `
 <div
-  className="libcomp-hamburger_Container"
+  className="libcomp-hamburger_Container font"
 >
   <div
     className="ham_container"
@@ -199,33 +259,48 @@ exports[`<Hamburger /> state should match state of each action 2`] = `
     >
       <li
         className="link"
-        href="/logout"
       >
-        Logout
+        <a
+          href="/login"
+        >
+          Login
+        </a>
       </li>
       <li
         className="link"
-        href="/home_page"
       >
-        Home Page
+        <a
+          href="/home_page"
+        >
+          Home Page
+        </a>
       </li>
       <li
         className="link"
-        href="/resume"
       >
-        Resume
+        <a
+          href="/resume"
+        >
+          Resume
+        </a>
       </li>
       <li
         className="link"
-        href="/home_page"
       >
-        Projects
+        <a
+          href="/home_page"
+        >
+          Projects
+        </a>
       </li>
       <li
         className="link"
-        href="/contact"
       >
-        Contact
+        <a
+          href="/contact"
+        >
+          Contact
+        </a>
       </li>
     </ul>
   </div>
@@ -234,7 +309,7 @@ exports[`<Hamburger /> state should match state of each action 2`] = `
 
 exports[`<Hamburger /> state should match state of each action 3`] = `
 <div
-  className="libcomp-hamburger_Container"
+  className="libcomp-hamburger_Container font"
 >
   <div
     className="ham_container"
@@ -258,33 +333,48 @@ exports[`<Hamburger /> state should match state of each action 3`] = `
     >
       <li
         className="link"
-        href="/logout"
       >
-        Logout
+        <a
+          href="/login"
+        >
+          Login
+        </a>
       </li>
       <li
         className="link"
-        href="/home_page"
       >
-        Home Page
+        <a
+          href="/home_page"
+        >
+          Home Page
+        </a>
       </li>
       <li
         className="link"
-        href="/resume"
       >
-        Resume
+        <a
+          href="/resume"
+        >
+          Resume
+        </a>
       </li>
       <li
         className="link"
-        href="/home_page"
       >
-        Projects
+        <a
+          href="/home_page"
+        >
+          Projects
+        </a>
       </li>
       <li
         className="link"
-        href="/contact"
       >
-        Contact
+        <a
+          href="/contact"
+        >
+          Contact
+        </a>
       </li>
     </ul>
   </div>
@@ -293,7 +383,7 @@ exports[`<Hamburger /> state should match state of each action 3`] = `
 
 exports[`setting default menu should render default 1`] = `
 <div
-  className="libcomp-hamburger_Container"
+  className="libcomp-hamburger_Container font"
 >
   <div
     className="ham_container"
@@ -317,33 +407,48 @@ exports[`setting default menu should render default 1`] = `
     >
       <li
         className="link"
-        href="/logout"
       >
-        Logout
+        <a
+          href="/login"
+        >
+          Login
+        </a>
       </li>
       <li
         className="link"
-        href="/home_page"
       >
-        Home Page
+        <a
+          href="/home_page"
+        >
+          Home Page
+        </a>
       </li>
       <li
         className="link"
-        href="/resume"
       >
-        Resume
+        <a
+          href="/resume"
+        >
+          Resume
+        </a>
       </li>
       <li
         className="link"
-        href="/home_page"
       >
-        Projects
+        <a
+          href="/home_page"
+        >
+          Projects
+        </a>
       </li>
       <li
         className="link"
-        href="/contact"
       >
-        Contact
+        <a
+          href="/contact"
+        >
+          Contact
+        </a>
       </li>
     </ul>
   </div>

@@ -1,8 +1,11 @@
 @import '../../mixins/color.less';
+@import '../../mixins/font.less';
 
 .footer_Container {
     background-color:@secondarycolor;
-    position:absolute;
+    overflow: hidden;
+    position: relative;
+    bottom:-280px;
     width:100%;
     height:170px;
     .link_footer {
@@ -13,27 +16,29 @@
         list-style-type: none;
         padding-top:9px;
         cursor: pointer;
+        a {
+            text-decoration:none;
+            color:@background_color;
+        }
     }
     .link_footer:hover {
         color:@secondary_background_color;
     }
 }
 
+.nav {
+    float:left;
+}
 
-@media screen and (min-width: 800px) {
-   .test {
-        padding:20px;
-    }
+.nav_two {
+    float:left;
+    margin:-4px 0 0 20px;
 }
 
 @media screen and (min-width: 500px) and (max-width: 800px){
-    .test {
-        padding:30px;
-    }
+
 }
 
 @media screen and (max-width: 500px){
-    .test {
-        padding:40px;
-    }
+
 }

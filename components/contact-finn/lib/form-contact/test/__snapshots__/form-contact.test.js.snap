@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> renders components 1`] = `
+<div
+  class="form-contact_Container font"
+>
+  <h1
+    class="header"
+  >
+    Contact
+  </h1>
+  <div
+    class="msg_comp"
+  >
+    <div
+      class="message_Container msg"
+    >
+      <div
+        class="msg_box "
+      >
+        <div
+          class="p_text"
+        />
+      </div>
+    </div>
+  </div>
+  <form
+    action="/email"
+    class="form"
+    method="post"
+  >
+    <div
+      class="input_box"
+    >
+      <label
+        class="label e_label"
+      >
+        Email
+      </label>
+      <input
+        class="input"
+        name="email"
+        type="text"
+      />
+      <br />
+    </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label s_label"
+      >
+        Subject
+      </label>
+      <input
+        class="input"
+        name="subject"
+        type="text"
+      />
+      <br />
+    </div>
+    <div
+      class="input_box"
+    >
+      <label
+        class="label message"
+      >
+        Message
+      </label>
+      <br />
+      <textarea
+        class="text_input"
+        name="message"
+        type="text"
+      />
+    </div>
+    <div
+      class="button"
+    >
+      <div
+        class="button-one_Container"
+      >
+        <button
+          class="button_style_one submit_msg"
+          type="submit"
+          value="Submit"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Email response Error message handeling should exist 1`] = `
+<div
+  className="msg_comp"
+>
+  <Message
+    class="msg"
+    message={Array []}
+    state=""
+  >
+    <div
+      className="message_Container msg"
+    >
+      <div
+        className="msg_box "
+      >
+        <div
+          className="p_text"
+        />
+      </div>
+    </div>
+  </Message>
+</div>
+`;
+
+exports[`Email response Should throw error if failure 1`] = `
+<div
+  className="msg_comp"
+>
+  <Message
+    class="msg"
+    message={
+      Array [
+        "Error Sending",
+      ]
+    }
+    state="error"
+  />
+</div>
+`;
