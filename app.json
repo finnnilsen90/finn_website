@@ -1,5 +1,5 @@
 {
-  "name": "MogoAuto_1",
+  "name": "finn_website",
   "scripts": {
   },
   "env": {
@@ -12,16 +12,9 @@
       "quantity": 1
     }
   },
-  "addons": [
-    "heroku-postgresql",
-    "heroku-postgresql"
-  ],
   "buildpacks": [
     {
       "url": "heroku/nodejs"
-    },
-    {
-      "url": "heroku/python"
     }
   ]
 }
