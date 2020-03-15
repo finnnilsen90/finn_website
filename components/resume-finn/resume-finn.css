@@ -1,0 +1,8 @@
+.container {
+  position: relative;
+}
+@media screen and (max-height: 750px) {
+  .container {
+    height: 950px;
+  }
+}

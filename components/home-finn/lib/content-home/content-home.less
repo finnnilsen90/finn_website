@@ -1,0 +1,37 @@
+@import '../../../mixins/color.less';
+
+.profile {
+    float:left;
+    border:2px solid @background_color;
+}
+
+.content-home_Container {
+    position: relative;
+    top:200px;
+    margin:0 auto 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+    .profile {
+        width:400px;
+    }
+    .content-home_Container {
+        width:900px;
+    }
+
+}
+
+@media screen and (max-width: 899px){
+    .profile {
+        width:90%;
+        margin:0 auto 0 auto;
+    }
+    .content-home_Container {
+        width:90%;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px){
+
+}

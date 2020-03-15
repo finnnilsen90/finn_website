@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> renders components 1`] = `
+<div
+  class="containter"
+>
+  <div
+    class="libcomp-hamburger_Container font"
+  >
+    <div
+      class="ham_container"
+    >
+      <div
+        class="hamburger"
+      >
+        <hr />
+        <hr />
+        <hr />
+      </div>
+    </div>
+    <div
+      class="dropdown_container"
+    >
+      <ul
+        class="dropdown"
+      >
+        <li
+          class="link"
+        >
+          <a
+            href="/login"
+          >
+            Login
+          </a>
+        </li>
+        <li
+          class="link"
+        >
+          <a
+            href="/home"
+          >
+            Home Page
+          </a>
+        </li>
+        <li
+          class="link"
+        >
+          <a
+            href="/resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li
+          class="link"
+        >
+          <a
+            href="/project"
+          >
+            Projects
+          </a>
+        </li>
+        <li
+          class="link"
+        >
+          <a
+            href="/contact"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="content-home_Container"
+  >
+    <img
+      class="profile"
+      src="test-file-stub"
+    />
+    <div
+      class="slider-home_Container font"
+    >
+      <div
+        class="outer"
+      >
+        <div
+          class="slide1 slide"
+        >
+          <a
+            href="/resume"
+          >
+            <h2>
+              Resume
+            </h2>
+            <div
+              class="slider_class"
+            >
+              Click to see my resmue!
+            </div>
+          </a>
+        </div>
+        <div
+          class="slide2 slide"
+        >
+          <a
+            href="/project"
+          >
+            <h2>
+              Projects
+            </h2>
+            <div
+              class="slider_class"
+            >
+              Checkout some of the projects I have been apart of.
+            </div>
+          </a>
+        </div>
+        <div
+          class="slide3 slide"
+        >
+          <a
+            href="/contact"
+          >
+            <h2>
+              Contact
+            </h2>
+            <div
+              class="slider_class"
+            >
+              If you would like to contact me click now.
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Get hamburger menu should return the json menu 1`] = `
+Object {
+  "admin": Object {
+    "contact": Object {
+      "className": "link",
+      "link": "/contact",
+      "text": "Contact",
+    },
+    "create_login": Object {
+      "className": "create",
+      "link": "/create_login",
+      "text": "Create Login",
+    },
+    "form_submit": Object {
+      "className": "form_submit",
+      "link": "/form",
+      "text": "Form",
+    },
+    "home_page": Object {
+      "className": "link",
+      "link": "/home_page",
+      "text": "Home Page",
+    },
+    "logout": Object {
+      "className": "link",
+      "link": "/logout",
+      "text": "Logout",
+    },
+    "projects": Object {
+      "className": "link",
+      "link": "/home_page",
+      "text": "Projects",
+    },
+    "resume": Object {
+      "className": "link",
+      "link": "/resume",
+      "text": "Resume",
+    },
+  },
+  "logedin": Object {
+    "contact": Object {
+      "className": "link",
+      "link": "/contact",
+      "text": "Contact",
+    },
+    "home_page": Object {
+      "className": "link",
+      "link": "/home",
+      "text": "Home Page",
+    },
+    "logout": Object {
+      "className": "link",
+      "link": "/logout",
+      "text": "Logout",
+    },
+    "projects": Object {
+      "className": "link",
+      "link": "/projects",
+      "text": "Projects",
+    },
+    "resume": Object {
+      "className": "link",
+      "link": "/resume",
+      "text": "Resume",
+    },
+  },
+  "not_login": Object {
+    "contact": Object {
+      "className": "link",
+      "link": "/contact",
+      "text": "Contact",
+    },
+    "home_page": Object {
+      "className": "link",
+      "link": "/home",
+      "text": "Home Page",
+    },
+    "projects": Object {
+      "className": "link",
+      "link": "/project",
+      "text": "Projects",
+    },
+    "resume": Object {
+      "className": "link",
+      "link": "/resume",
+      "text": "Resume",
+    },
+  },
+}
+`;

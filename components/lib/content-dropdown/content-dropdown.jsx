@@ -8,6 +8,8 @@ class Content extends React.Component {
     super(props);
     this.state = {
             arrow: false,
+            title: null,
+            title_click: null,
             arw: null,
             arw_click: null,
             cont_par: null,
@@ -23,6 +25,8 @@ class Content extends React.Component {
         let rand = this.props.class
         
         this.setState(() => ({
+            title: 'title_'+rand,
+            title_click: 'title_click_'+rand,
             arw: 'arw_'+rand,
             arw_click: 'arw_click_'+rand,
             cont_par: 'cont_par_'+rand,
@@ -40,13 +44,17 @@ class Content extends React.Component {
         let state = this.state.arrow;
 
         if (state) {
+            document.querySelector('.'+this.state.title).style.display = 'block';
             document.querySelector('.'+this.state.arw).style.display = 'block';
             document.querySelector('.'+this.state.cont_hr).style.display = 'block';
+            document.querySelector('.'+this.state.title_click).style.display = 'none';
             document.querySelector('.'+this.state.cont_par).style.display = 'none';
             document.querySelector('.'+this.state.arw_click).style.display = 'none';
         } else {
+            document.querySelector('.'+this.state.title).style.display = 'none';
             document.querySelector('.'+this.state.arw).style.display = 'none';
             document.querySelector('.'+this.state.cont_hr).style.display = 'none';
+            document.querySelector('.'+this.state.title_click).style.display = 'block';
             document.querySelector('.'+this.state.cont_par).style.display = 'block';
             document.querySelector('.'+this.state.arw_click).style.display = 'block';
         }
@@ -63,13 +71,14 @@ class Content extends React.Component {
     render() {
 
         return (
-        <div className='content-dropdown_Container'>
-            <h3 className='title'>{this.props.title}</h3>
-            <div className={'arrow '+this.state.arw} onClick={this.arrow_state}></div>
-            <div className={'arrow_click '+this.state.arw_click} onClick={this.arrow_state}></div>
+        <div className='content-dropdown_Container' onClick={this.arrow_state}>
+            <h3 className={'title '+this.state.title}>{this.props.title}</h3>
+            <h3 className={'title_click '+this.state.title_click}>{this.props.title}</h3>
+            <div className={'arrow '+this.state.arw} ></div>
+            <div className={'arrow_click '+this.state.arw_click} ></div>
             <hr className={'content_hr '+this.state.cont_hr} />
             <div className={'content_parent '+this.state.cont_par}>
-                <p>{this.props.content}</p>
+                <div className='input'>{this.props.content}</div>
             </div>
         </div>
         )

@@ -1,40 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> renders components 1`] = `
-<div
-  class="footer_Container"
+<Footer
+  menu={
+    Object {
+      "admin": Object {
+        "contact": Object {
+          "className": "link",
+          "link": "/contact",
+          "text": "Contact",
+        },
+        "create_login": Object {
+          "className": "create",
+          "link": "/create_login",
+          "text": "Create Login",
+        },
+        "form_submit": Object {
+          "className": "form_submit",
+          "link": "/form",
+          "text": "Form",
+        },
+        "home_page": Object {
+          "className": "link",
+          "link": "/home_page",
+          "text": "Home Page",
+        },
+        "logout": Object {
+          "className": "link",
+          "link": "/logout",
+          "text": "Logout",
+        },
+        "projects": Object {
+          "className": "link",
+          "link": "/home_page",
+          "text": "Projects",
+        },
+        "resume": Object {
+          "className": "link",
+          "link": "/resume",
+          "text": "Resume",
+        },
+      },
+      "logedin": Object {
+        "contact": Object {
+          "className": "link",
+          "link": "/contact",
+          "text": "Contact",
+        },
+        "home_page": Object {
+          "className": "link",
+          "link": "/home_page",
+          "text": "Home Page",
+        },
+        "logout": Object {
+          "className": "link",
+          "link": "/logout",
+          "text": "Logout",
+        },
+        "projects": Object {
+          "className": "link",
+          "link": "/home_page",
+          "text": "Projects",
+        },
+        "resume": Object {
+          "className": "link",
+          "link": "/resume",
+          "text": "Resume",
+        },
+      },
+    }
+  }
 >
-  <ul>
-    <li
-      class="link_footer"
-      href="/logout"
+  <div
+    className="footer_Container font"
+  >
+    <div
+      className="nav"
     >
-      Logout
-    </li>
-    <li
-      class="link_footer"
-      href="/home_page"
+      <ul>
+        <li
+          className="undefined link_footer"
+        >
+          <a />
+        </li>
+        <li
+          className="undefined link_footer"
+        >
+          <a />
+        </li>
+      </ul>
+    </div>
+    <div
+      className="nav nav_two"
     >
-      Home Page
-    </li>
-    <li
-      class="link_footer"
-      href="/resume"
-    >
-      Resume
-    </li>
-    <li
-      class="link_footer"
-      href="/home_page"
-    >
-      Projects
-    </li>
-    <li
-      class="link_footer"
-      href="/contact"
-    >
-      Contact
-    </li>
-  </ul>
-</div>
+      <ul />
+    </div>
+  </div>
+</Footer>
 `;
+
+exports[`column two should render nav_two class 1`] = `null`;

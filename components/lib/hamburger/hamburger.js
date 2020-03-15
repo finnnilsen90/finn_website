@@ -2,20 +2,20 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./hamburger.css')
 
-var ____Classc=React.Component;for(var ____Classc____Key in ____Classc){if(____Classc.hasOwnProperty(____Classc____Key)){Hamburger[____Classc____Key]=____Classc[____Classc____Key];}}var ____SuperProtoOf____Classc=____Classc===null?null:____Classc.prototype;Hamburger.prototype=Object.create(____SuperProtoOf____Classc);Hamburger.prototype.constructor=Hamburger;Hamburger.__superConstructor__=____Classc;
+var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Hamburger[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Hamburger.prototype=Object.create(____SuperProtoOf____Class0);Hamburger.prototype.constructor=Hamburger;Hamburger.__superConstructor__=____Class0;
     
     function Hamburger(props) {"use strict";
-    ____Classc.call(this,props);
+    ____Class0.call(this,props);
     this.state = {
             hover: 0,
             toggle: true,
             default:  { login: {
-                            link: '/logout',
+                            link: '/login',
                             className: 'link',
-                            text: 'Logout'
+                            text: 'Login'
                             },
                             home_page: {
-                                link: '/home_page',
+                                link: '/home',
                                 className: 'link',
                                 text: 'Home Page'
                             },
@@ -25,7 +25,7 @@ var ____Classc=React.Component;for(var ____Classc____Key in ____Classc){if(____C
                                 text: 'Resume'
                             },
                             projects: {
-                                link: '/home_page',
+                                link: '/project',
                                 className: 'link',
                                 text: 'Projects'
                             },
@@ -43,12 +43,13 @@ var ____Classc=React.Component;for(var ____Classc____Key in ____Classc){if(____C
     }
 
     Object.defineProperty(Hamburger.prototype,"links_compile",{writable:true,configurable:true,value:function(input) {"use strict";
+
         let new_input = input || this.state.default;
         if (typeof(new_input)==='object') {
             let value = Object.entries(new_input);
             let menu = []
             for (let i=0;i<value.length;i++) {
-                menu.push(React.createElement("li", {className: value[i][1].className, href: value[i][1].link}, value[i][1].text));
+                menu.push(React.createElement("li", {className: value[i][1].className}, React.createElement("a", {href: value[i][1].link}, value[i][1].text)));
             }
 
             return menu
@@ -119,7 +120,7 @@ var ____Classc=React.Component;for(var ____Classc____Key in ____Classc){if(____C
     Object.defineProperty(Hamburger.prototype,"render",{writable:true,configurable:true,value:function() {"use strict";
 
         return (
-        React.createElement("div", {className: "libcomp-hamburger_Container"}, 
+        React.createElement("div", {className: 'libcomp-hamburger_Container '+'font'}, 
             React.createElement("div", {className: "ham_container"}, 
                 React.createElement("div", {className: "hamburger", onMouseLeave: this.ham_click, onMouseEnter: this.ham_click}, 
                     React.createElement("hr", null), 

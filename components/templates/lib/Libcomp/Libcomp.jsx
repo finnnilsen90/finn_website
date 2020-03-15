@@ -1,6 +1,6 @@
 const React = require('react');
 const reactclass = require('create-react-class');
-const css = require('./child.css')
+const css = require('./Libcomp.css')
 
 class ChildConst extends React.Component {
     
@@ -10,40 +10,22 @@ class ChildConst extends React.Component {
             test: ''
         };
 
-         this.screenSize = this.screenSize.bind(this);
+
        
     }
-     screenSize() {
-        let screenWidth = window.innerWidth
-        function respond() {
-            if (screenWidth > 800) {
-                return 'desktop';
-            }
-            if (screenWidth <= 800 && 500 < screenWidth) {
-                return 'desktop small';
-            }
-            if (screenWidth <= 500){
-                return 'mobile';
-            }
-            else {
-                return 'screen size error';
-            }
-        }
-
-        this.setState(chng => ({
-            test: respond()
-        }));
-    }; 
+     
 
     componentDidMount() {
-        this.screenSize(),
-        window.addEventListener('resize', () => this.screenSize())
+       
     }
     render() {
 
         return (
-        <div className='child_Container'>
-            <div className='test'>{this.state.test}</div>
+        <div className={'Libcomp_Container'+' font'}>
+            <h1 className='header'>Template</h1>
+            <div className='test_content'>
+                Test
+            </div>
         </div>
         )
     }

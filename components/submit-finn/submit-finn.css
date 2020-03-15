@@ -1,3 +1,7 @@
+.container {
+  position: relative;
+  height: 950px;
+}
 @media screen and (min-width: 800px) {
   .test {
     background-color: #b3b3b3;

@@ -4,6 +4,24 @@
     color:@primarycolor;
 }
 
+.title_click {
+    color:@secondarycolor;
+    display:none;
+}
+
+.content-dropdown_Container:hover {
+    cursor:pointer;
+    .title {
+        color:@offset;
+    }
+    .arrow {
+        margin:-40px 5px 0 0;
+        border-left:3px solid @offset;
+        border-bottom:3px solid @offset;
+        transform: rotate(-45deg);
+    }
+}
+
 .content_hr {
     margin:-15px 0 0 0;
     width:100%;
@@ -11,6 +29,7 @@
 }
 
 .arrow {
+    cursor:pointer;
     margin:-30px 5px 0 0;
     border-left:3px solid @primarycolor;
     border-bottom:3px solid @primarycolor;
@@ -31,15 +50,9 @@
     float:right;
 }
 
-.arrow:hover {
-    margin:-40px 5px 0 0;
+.arrow_click:hover {
     border-left:3px solid @offset;
     border-bottom:3px solid @offset;
-    cursor:pointer;
-    transform: rotate(-45deg);
-}
-
-.arrow_click:hover {
     cursor:pointer;
 }
 
@@ -49,7 +62,7 @@
     display:none;
     width:100%;
     background-color:@secondarycolor;
-    p {
+    .input {
         padding:20px 10px 20px 30px;
     }
 }

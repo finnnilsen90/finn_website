@@ -1,0 +1,11 @@
+{
+  "environment_dev": false,
+  "general": {
+    "home_finn": "home-finn",
+    "resume_finn": "resume-finn",
+    "projects_finn": "projects-finn",
+    "contact_finn": "contact-finn"
+  },
+  "app": {},
+  "admin": {}
+}

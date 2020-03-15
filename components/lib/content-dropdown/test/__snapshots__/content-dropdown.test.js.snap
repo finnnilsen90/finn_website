@@ -3,19 +3,23 @@
 exports[`<Content /> mount should match props 1`] = `
 <div
   className="content-dropdown_Container"
+  onClick={[Function]}
 >
   <h3
-    className="title"
+    className="title title_test"
+  >
+    test
+  </h3>
+  <h3
+    className="title_click title_click_test"
   >
     test
   </h3>
   <div
     className="arrow arw_test"
-    onClick={[Function]}
   />
   <div
     className="arrow_click arw_click_test"
-    onClick={[Function]}
   />
   <hr
     className="content_hr cont_hr_test"
@@ -23,9 +27,11 @@ exports[`<Content /> mount should match props 1`] = `
   <div
     className="content_parent cont_par_test"
   >
-    <p>
+    <div
+      className="input"
+    >
       test content
-    </p>
+    </div>
   </div>
 </div>
 `;
@@ -35,7 +41,10 @@ exports[`<Content /> render renders components 1`] = `
   class="content-dropdown_Container"
 >
   <h3
-    class="title"
+    class="title title_undefined"
+  />
+  <h3
+    class="title_click title_click_undefined"
   />
   <div
     class="arrow arw_undefined"
@@ -49,7 +58,9 @@ exports[`<Content /> render renders components 1`] = `
   <div
     class="content_parent cont_par_undefined"
   >
-    <p />
+    <div
+      class="input"
+    />
   </div>
 </div>
 `;
@@ -57,19 +68,23 @@ exports[`<Content /> render renders components 1`] = `
 exports[`<Content /> shallow should match props 1`] = `
 <div
   className="content-dropdown_Container"
+  onClick={[Function]}
 >
   <h3
-    className="title"
+    className="title title_test"
+  >
+    test
+  </h3>
+  <h3
+    className="title_click title_click_test"
   >
     test
   </h3>
   <div
     className="arrow arw_test"
-    onClick={[Function]}
   />
   <div
     className="arrow_click arw_click_test"
-    onClick={[Function]}
   />
   <hr
     className="content_hr cont_hr_test"
@@ -77,9 +92,11 @@ exports[`<Content /> shallow should match props 1`] = `
   <div
     className="content_parent cont_par_test"
   >
-    <p>
+    <div
+      className="input"
+    >
       test content
-    </p>
+    </div>
   </div>
 </div>
 `;

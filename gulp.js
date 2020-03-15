@@ -1,11 +1,3 @@
-//Gulp file for automated tooling project.
-//Version 1.0
-//Based on Node_Tooling branch.
-//Version 1.4 
-
-//Possibly need to change file structure.
-
-
 let gulp = require('gulp'),
     optimist = require('optimist'),
     DefinePlugin = require('webpack').DefinePlugin,
@@ -17,21 +9,22 @@ let gulp = require('gulp'),
     $ = require('gulp-load-plugins')();
 
 const webpack = require('webpack-stream');
+const editJsonFile = require('edit-json-file');
+
+let site_map = require('./site_map.json');
 
 //Command line variable naming
-let compName = optimist.argv.comp || 'compName'; //Component name 
+let compName = optimist.argv.comp || 'templates'; //Component name 
 let child = optimist.argv.child || 'Libcomp'; //child component name to put into lib folder of component 
 let folder = optimist.argv.test || compName; //folder name used to test and develop template files
 let env = optimist.argv.env || 'development' //Defines the environment.
-let folder_type = optimist.argv.type || 'app'
+let folder_type = optimist.argv.loc || 'general'
 let plugin_bool = optimist.argv.build || false; //Tells whether or not the webpack build is production of develpment
 let username_var = optimist.argv.user //State user to put in the database
 let email_var = optimist.argv.email //State email to put in the database
 let password_var = optimist.argv.password //State password to put in the database
 let platform = optimist.argv.plat //State platform bulk build is meant for
 let bulk = optimist.argv.bulk //State bulk build yes for true
-
-// let folder_login = env === 'production' ? 'login' : folder; 
 
 let varArr = compName.split('-').slice(0) //arrar for class name of component
 let childArr = child.split('-').slice(0) //array for class name for child component
@@ -110,6 +103,14 @@ gulp.task('task-list', function() {
     console.log('');
     console.log('production => Takes all files in the example file and minifies them.');
     console.log('');
+    console.log('server => Starts the production server.');
+    console.log('');
+    console.log('dev_server => Starts the dev server.');
+    console.log('');
+    console.log('bulk builds => goes through all of the components and builds them.');
+    console.log('set --bulk variable to yes');
+    console.log('set --plat variable to whatever platform you are building so it doesnt build other files.');
+    console.log('');
     console.log('\x1b[41m%s\x1b[0m','YOU NEED TO USE THE FOLLOWING NAMEING CONVETNION FOR CREATING COMPONENTS!!!');
     console.log('');
     console.log('component => component-website');
@@ -144,40 +145,49 @@ gulp.task('test', function() {
 })
 
 //create component.
-gulp.task('makeComponent', makeComponent);
+gulp.task('makeComponent', gulp.series(makeComponent));
 
-gulp.task('makeChild', makeChild)
+gulp.task('makeChild', gulp.series(makeChild));
 
-gulp.task('makeLib', libComp)
+gulp.task('makeLib', gulp.series(libComp));
 //Send development files to production folder as a watch task.
-gulp.task('watchJSX', watchJSX)
+gulp.task('watchJSX', gulp.series(watchJSX));
 
-gulp.task('watchLess', watchLess)
+gulp.task('watchLess', gulp.series(watchLess));
 
-gulp.task('libJSX', libJSX)
+gulp.task('libJSX', gulp.series(libJSX));
 
-gulp.task('libLess', libLess)
+gulp.task('libLess', gulp.series(libLess));
 
 gulp.task('webpack', webpack_build)
 
-gulp.task('webpack_production', webpack_production)
+gulp.task('webpack_production', gulp.series(webpack_production));
 
 //production
-gulp.task('production', production)
+gulp.task('production', gulp.series(production));
 
 //Server
-gulp.task('dev_server', node_dev)
+gulp.task('dev_server', gulp.series(node_dev));
 
-gulp.task('server', node)
+gulp.task('server', gulp.series(node));
 
 //Database
-gulp.task('create_user', create_user)
-gulp.task('create_password', create_password)
+gulp.task('create_user', gulp.series(create_user));
+gulp.task('create_password', gulp.series(create_password));
+
+gulp.task('test_function', gulp.series(add_to_map));
 
 
-gulp.task('finish', ['webpack', 'production']);
+gulp.task('finish', gulp.series(['webpack', 'production']));
 
 //////////////////////// Gulp Functions ////////////////////////
+
+function add_to_map() {
+    let file = editJsonFile(`${__dirname}/site_map.json`);
+    let comp_id = compName.replace('-','_')
+    file.set(folder_type + '.' + comp_id, compName);
+    file.save();
+}
 
 //replace() holds all of the child and lib component protocol for creating a component. 
 function replace(source, destin, base, test) {
@@ -185,9 +195,10 @@ function replace(source, destin, base, test) {
     if (base === true) {
         gulp.src(source)
             .pipe($.replace('compName', compName))
+            .pipe($.replace('templates', compName))
             .pipe($.replace('varName', varName)) 
             .pipe($.replace('VarName', varName)) 
-            .pipe($.replace('child', child))
+            .pipe($.replace('Libcomp', child))
             .pipe($.replace('ChildConst', newChild))
             .pipe($.replace('newChildConst', 'new' + newChild))
             .pipe($.replace('libcomp', newChild_low))
@@ -200,9 +211,10 @@ function replace(source, destin, base, test) {
     } else {
         gulp.src(source)
             .pipe($.replace('compName', compName))
+            .pipe($.replace('templates', compName))
             .pipe($.replace('varName', varName)) 
             .pipe($.replace('VarName', varName)) 
-            .pipe($.replace('child', child))
+            .pipe($.replace('Libcomp', child))
             .pipe($.replace('ChildConst', newChild))
             .pipe($.replace('newChildConst', 'new' + newChild))
             .pipe($.replace('libcomp', newChild_low))
@@ -215,7 +227,7 @@ function replace(source, destin, base, test) {
 function makeChild() {
 
     replace('./components/templates/lib/Libcomp/Libcomp.*', config.dest.components, true)
-    replace('./components/templates/lib/Libcomp/test/libcomp.test.js', config.dest.testChild_file, true, true)
+    replace('./components/templates/lib/Libcomp/test/libcomp-child.test.js', config.dest.testChild_file, true, true)
     replace('./components/templates/lib/Libcomp/test/configure.json', config.dest.testChild)
     console.log('---------------------------------------');
     console.log('New child component ' + newChild)
@@ -227,7 +239,7 @@ function makeChild() {
 function libComp() {
 
     replace('./components/templates/lib/Libcomp/Libcomp.*', config.dest.Makelib, true)
-    replace('./components/templates/lib/Libcomp/test/libcomp.test.js', config.dest.MakelibTest_file, true, true)
+    replace('./components/templates/lib/Libcomp/test/libcomp-child.test.js', config.dest.MakelibTest_file, true, true)
     replace('./components/templates/lib/Libcomp/test/configure.json', config.dest.MakelibTest)
     console.log('---------------------------------------');
     console.log('New global lib component ' + newChild)
@@ -249,6 +261,7 @@ function makeComponent() {
     console.log('---------------------------------------');
     console.log('---------------------------------------');
     console.log('component => ' + compName)
+    console.log('folder type => ' + folder_type)
     console.log('component class/variable => ' + varName)
     console.log('Add link to main component(s).');
     console.log('---------------------------------------'); 
@@ -257,21 +270,23 @@ function makeComponent() {
         if (base === true) {
             gulp.src(source)
                 .pipe($.replace('compName', compName))
+                .pipe($.replace('templates', compName))
                 .pipe($.replace('varName', varName)) 
                 .pipe($.replace('VarName', varName))
                 .pipe($.replace('varNameConst', 'new' + varName))
-                .pipe($.replace('child', child))
+                .pipe($.replace('Libcomp', child))
                 .pipe($.replace('ChildConst', newChild))
                 .pipe($.replace('libcomp', newChild_low))
-                .pipe($.rename({basename: test===true?test_var+'.test':compName,}))
+                .pipe($.rename({basename: test===true?compName+'.test':compName,}))
                 .pipe(gulp.dest(dest));
         } else {
             gulp.src(source)
                 .pipe($.replace('compName', compName))
+                .pipe($.replace('templates', compName))
                 .pipe($.replace('varName', varName))
                 .pipe($.replace('VarName', varName)) 
                 .pipe($.replace('varNameConst', 'new' + varName))
-                .pipe($.replace('child', child))
+                .pipe($.replace('Libcomp', child))
                 .pipe($.replace('ChildConst', newChild))
                 .pipe($.replace('libcomp', newChild_low))
                 .pipe(gulp.dest(dest));
@@ -279,11 +294,11 @@ function makeComponent() {
             
     }
 
-    replace_comp('./components/templates/test/comp.test.js', config.dest.test_file, true, true)
+    replace_comp('./components/templates/test/templates-comp.test.js', config.dest.test_file, true, true)
     replace_comp('./components/templates/test/configure.json', config.dest.test)
     replace_comp('./components/templates/example/*', config.dest.html)
-    replace_comp('./components/templates/compName.*', config.dest.dev, true)
-
+    replace_comp('./components/templates/templates.*', config.dest.dev, true)
+    add_to_map()
     makeChild();
 };
 
@@ -361,7 +376,6 @@ function libLess() {
     console.log('---------------------')
 }
 
-//NEED TO npm install uglifyjs-webpack-plugin --save-dev IN ORDER TO STOP ES6 SYNTAX ERROR... POSSIBLY?
 function production(comp) {
 
     let fileName = comp || compName;
@@ -384,7 +398,8 @@ function webpack_build() {
 
     function webpack_config(comp) { 
 
-        let fileName = comp || compName;
+        let fileName = comp || 'templates';
+        let destination = bulk === 'yes' ? './components/' + comp + '/example/' : config.dest.prodjs;
 
         console.log('---------------------')
         console.log('comp => ',fileName)
@@ -410,7 +425,7 @@ function webpack_build() {
                 ],
             },
         }))
-        .pipe(gulp.dest(config.dest.bundle));
+        .pipe(gulp.dest(destination));
     }
 
     if (bulk==='yes') {
@@ -420,9 +435,10 @@ function webpack_build() {
         for (let x = 0;x < folderName.length; x++) {
 
             let run_comp = folderName[x];
-            let re = new RegExp(platform);
+            let lib = new RegExp('lib');
+            let mixin = new RegExp('mixins');
 
-            if (re.test(run_comp)) {
+            if (lib.test(run_comp) !== true && mixin.test(run_comp) !== true) {
                 webpack_config(run_comp)
             }
         }
@@ -430,7 +446,7 @@ function webpack_build() {
     else
     {
         console.log('invoking development build')
-        webpack_config()
+        webpack_config(compName)
     }
     
 }
@@ -440,6 +456,7 @@ function webpack_production() {
     function webpack_config(comp) {
 
         let fileName = comp || compName;
+        let destination = bulk === 'yes' ? './public/' + folder_type + '/' : config.dest.prodjs;
 
         return gulp.src('./components/' + fileName + '/' + fileName + '.js')
             .pipe(webpack({
@@ -466,28 +483,28 @@ function webpack_production() {
                     ],
                 },
             }))
-            .pipe(gulp.dest(config.dest.prodjs));
+            .pipe(gulp.dest(destination));
     }
 
 
-    if (bulk==='yes' && folder_type==='app') {
-        let folderName = fs.readdirSync(__dirname + '/components/');
+    if (bulk==='yes') {
+        let folderName = Object.entries(site_map.general);
+        if (folder_type==='admin') {
+            folderName = Object.entries(site_map.admin);
+        } else if (folder_type==='app') {
+            folderName = Object.entries(site_map.app);
+        } 
+            
         console.log('\x1b[41m%s\x1b[0m', 'invoking bulk production build')
 
         for (let x = 0;x < folderName.length; x++) {
 
-            let run_comp = folderName[x];
-            let re = new RegExp(platform);
-
-            if (re.test(run_comp)) {
-                console.log('completed comp => ' + run_comp)
-                webpack_config(run_comp)
-                production(run_comp)
-            }
+            let run_comp = folderName[x][1];
+ 
+            console.log('completed comp => ' + run_comp)
+            webpack_config(run_comp)
+            production(run_comp)
         }
-    }
-    else if (bulk==='yes' && folder_type==='login') {
-        console.log('Cannot do bulk builds on login files.')
     }
     else
     {
@@ -502,22 +519,38 @@ function webpack_production() {
     
 }
 
-function node() {
+function environment_dev(state) {
+    let file = editJsonFile(`${__dirname}/site_map.json`);
+    if (state) {
+        file.set('environment_dev', true);
+        file.save();
+    } else {
+        file.set('environment_dev', false);
+        file.save();
+    } 
+}
+
+function node(done) {
     
-        $.nodemon ({
-            script: 'server.js'
-            , ext: 'js html'
-            , env: { 'NODE_ENV': env }
-        })
-    }
-
-function node_dev() {
-
+    environment_dev(false);
     $.nodemon ({
-        script: 'dev-server.js'
+        script: 'server.js'
         , ext: 'js html'
-        , env: { 'NODE_ENV': env }
+        , env: { 'NODE_ENV': 'production' }
     })
+    done();
+}
+
+function node_dev(done) {
+
+    environment_dev(true);
+    $.nodemon ({
+        script: 'server.js'
+        , ext: 'js html'
+        , env: { 'NODE_ENV': 'development' }
+    })
+    setTimeout(() => {environment_dev(false)}, 3000);
+    done();
 };
 
 function create_user() {
