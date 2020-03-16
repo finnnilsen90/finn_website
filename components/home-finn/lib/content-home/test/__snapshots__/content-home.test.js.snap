@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Content /> renders components 1`] = `
+<div
+  class="content-home_Container"
+>
+  <img
+    class="profile"
+    src="test-file-stub"
+  />
+  <p
+    class="overview-finn"
+  >
+    My name is Finn Nilsen. I have been working in the tech industry for 5+ years in a variety of roles. I’ve been a software developer, digital marketer, and product manager. I have a passion for building great software products and leading technical teams. This website is an overview of my career so far and how I can help any company I work with grow.
+  </p>
+</div>
+`;

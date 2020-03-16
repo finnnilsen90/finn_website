@@ -3,13 +3,14 @@ var reactClass = require('create-react-class');
 var ReactDom = require('react-dom');
 var css = require('./home-finn.css')
 
-const Hamburger = require('../lib/hamburger/hamburger.js')
-const Content = require('./lib/content-home/content-home.js')
+const Hamburger = require('../lib/hamburger/hamburger.js');
+const Content = require('./lib/content-home/content-home.js');
+const Twocontent = require('./lib/twocontent-home/twocontent-home.js')
 
-var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____Class8.hasOwnProperty(____Class8____Key)){Home[____Class8____Key]=____Class8[____Class8____Key];}}var ____SuperProtoOf____Class8=____Class8===null?null:____Class8.prototype;Home.prototype=Object.create(____SuperProtoOf____Class8);Home.prototype.constructor=Home;Home.__superConstructor__=____Class8;
+var ____Class5=React.Component;for(var ____Class5____Key in ____Class5){if(____Class5.hasOwnProperty(____Class5____Key)){Home[____Class5____Key]=____Class5[____Class5____Key];}}var ____SuperProtoOf____Class5=____Class5===null?null:____Class5.prototype;Home.prototype=Object.create(____SuperProtoOf____Class5);Home.prototype.constructor=Home;Home.__superConstructor__=____Class5;
     
     function Home(props) {"use strict";
-    ____Class8.call(this,props);
+    ____Class5.call(this,props);
     this.state = {
             fetch: null
         };
@@ -45,7 +46,8 @@ var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____C
         return (
             React.createElement("div", {className: "containter"}, 
                 React.createElement(Hamburger, {menu: this.state.fetch}), 
-                React.createElement(Content, null)
+                React.createElement(Content, null), 
+                React.createElement(Twocontent, null)
             )
         )
     }});

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Twocontent /> renders components 1`] = `
+<div
+  class="twocontent-home_Container font"
+>
+  <img
+    class="resume_icon"
+    src="test-file-stub"
+  />
+</div>
+`;
