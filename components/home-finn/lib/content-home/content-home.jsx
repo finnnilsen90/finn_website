@@ -3,8 +3,6 @@ const reactclass = require('create-react-class');
 const css = require('./content-home.css')
 let Profile = require("../../../../images/profile_pic.jpg");
 
-let Slider = require('../slider-home/slider-home.js')
-
 class Content extends React.Component {
     
     constructor(props) {

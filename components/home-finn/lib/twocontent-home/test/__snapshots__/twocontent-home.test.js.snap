@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Twocontent /> button should say Resume 1`] = `
+<button
+  class="button_style_one resume_btn"
+>
+  Resume
+</button>
+`;
+
 exports[`<Twocontent /> renders components 1`] = `
 <div
   class="twocontent-home_Container font"
@@ -8,5 +16,70 @@ exports[`<Twocontent /> renders components 1`] = `
     class="resume_icon"
     src="test-file-stub"
   />
+  <div
+    class="slider-home_Container font"
+  >
+    <div
+      class="outer"
+    >
+      <div
+        class="slide1 slide"
+      >
+        <a
+          href="/resume"
+        >
+          <h2>
+            Associate Director, Media and Technology
+          </h2>
+          <div
+            class="slider_class"
+          >
+            Mogo Interactive
+          </div>
+        </a>
+      </div>
+      <div
+        class="slide2 slide"
+      >
+        <a
+          href="/resume"
+        >
+          <h2>
+            Product Manager
+          </h2>
+          <div
+            class="slider_class"
+          >
+            Mogo Interactive
+          </div>
+        </a>
+      </div>
+      <div
+        class="slide3 slide"
+      >
+        <a
+          href="/resume"
+        >
+          <h2>
+            ChatScript Developer
+          </h2>
+          <div
+            class="slider_class"
+          >
+            JustAnswer.com
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    class="button-one_Container"
+  >
+    <button
+      class="button_style_one resume_btn"
+    >
+      Resume
+    </button>
+  </div>
 </div>
 `;

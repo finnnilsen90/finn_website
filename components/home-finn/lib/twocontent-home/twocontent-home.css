@@ -4,14 +4,48 @@
 .twocontent-home_Container {
   position: relative;
   top: 100px;
-  height: 500px;
   width: 100%;
   overflow: auto;
 }
+.resume {
+  padding: 50px 0 0 10px;
+}
+.p_resume {
+  margin: 20px 0 0 10px;
+}
+.block {
+  border: 1px solid grey;
+  color: grey;
+  margin: 100px 0 0 300px;
+  height: 300px;
+  width: 300px;
+}
 @media screen and (min-width: 801px) {
+  .twocontent-home_Container {
+    height: 500px;
+  }
+  .slider-home_Container {
+    float: right;
+    margin: 20px 200px 0 0;
+  }
   .resume_icon {
     width: 450px;
     float: right;
-    margin: 50px 200px 0 0;
+    margin: 20px 100px 0 0;
+  }
+  .resume_btn {
+    margin: -20px 0 0 470px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .twocontent-home_Container {
+    height: 600px;
+  }
+  .slider-home_Container {
+    margin: -40px 0 0 0;
+  }
+  .resume_btn {
+    margin: -30px auto 0 auto;
+    display: block;
   }
 }

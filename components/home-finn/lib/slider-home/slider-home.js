@@ -2,26 +2,26 @@ const React = require('react');
 const reactclass = require('create-react-class');
 const css = require('./slider-home.css')
 
-var ____Classo=React.Component;for(var ____Classo____Key in ____Classo){if(____Classo.hasOwnProperty(____Classo____Key)){Slider[____Classo____Key]=____Classo[____Classo____Key];}}var ____SuperProtoOf____Classo=____Classo===null?null:____Classo.prototype;Slider.prototype=Object.create(____SuperProtoOf____Classo);Slider.prototype.constructor=Slider;Slider.__superConstructor__=____Classo;
+var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Slider[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Slider.prototype=Object.create(____SuperProtoOf____Class0);Slider.prototype.constructor=Slider;Slider.__superConstructor__=____Class0;
     
     function Slider(props) {"use strict";
-    ____Classo.call(this,props);
+    ____Class0.call(this,props);
     this.state = {
             content: {
                 content1: {
-                    title: 'Resume',
+                    title: 'Associate Director, Media and Technology',
                     link: '/resume',
-                    content: 'Click to see my resmue!'
+                    content: 'Mogo Interactive'
                 },
                 content2: {
-                    title: 'Projects',
-                    link: '/project',
-                    content: 'Checkout some of the projects I have been apart of.'
+                    title: 'Product Manager',
+                    link: '/resume',
+                    content: 'Mogo Interactive'
                 },
                 content3: {
-                    title: 'Contact',
-                    link: '/contact',
-                    content: 'If you would like to contact me click now.'
+                    title: 'ChatScript Developer',
+                    link: '/resume',
+                    content: 'JustAnswer.com'
                 }
             }
         };

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Threecontent /> renders components 1`] = `
+<div
+  class="threecontent-home_Container font"
+>
+  <h1
+    class="header"
+  >
+    Template
+  </h1>
+  <div
+    class="test_content"
+  >
+    Test
+  </div>
+</div>
+`;

@@ -5,7 +5,8 @@ var css = require('./home-finn.css')
 
 const Hamburger = require('../lib/hamburger/hamburger.js');
 const Content = require('./lib/content-home/content-home.js');
-const Twocontent = require('./lib/twocontent-home/twocontent-home.js')
+const Twocontent = require('./lib/twocontent-home/twocontent-home.js');
+const Threecontent = require('./lib/threecontent-home/threecontent-home.js');
 
 class Home extends React.Component {
     
@@ -48,6 +49,7 @@ class Home extends React.Component {
                 <Hamburger menu={this.state.fetch}/>
                 <Content />
                 <Twocontent />
+                <Threecontent />
             </div>
         )
     }

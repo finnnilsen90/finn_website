@@ -3,7 +3,7 @@
 }
 .slider-home_Container {
   overflow: hidden;
-  height: 100px;
+  height: 200px;
 }
 a {
   color: grey;
@@ -18,7 +18,7 @@ a:hover {
 .slide {
   cursor: pointer;
   float: left;
-  height: 100px;
+  height: 200px;
 }
 @media screen and (min-width: 900px) {
   .outer {
