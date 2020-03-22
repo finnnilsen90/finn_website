@@ -1,17 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Twocontent /> button should say Resume 1`] = `
-<button
-  class="button_style_one resume_btn"
->
-  Resume
-</button>
-`;
+exports[`<Twocontent /> button should say Resume 1`] = `null`;
 
 exports[`<Twocontent /> renders components 1`] = `
 <div
   class="twocontent-home_Container font"
 >
+  <h1
+    class="resume_header"
+  >
+    <a
+      href="/resume"
+    >
+      Resume
+    </a>
+  </h1>
   <img
     class="resume_icon"
     src="test-file-stub"
@@ -71,15 +74,6 @@ exports[`<Twocontent /> renders components 1`] = `
         </a>
       </div>
     </div>
-  </div>
-  <div
-    class="button-one_Container"
-  >
-    <button
-      class="button_style_one resume_btn"
-    >
-      Resume
-    </button>
   </div>
 </div>
 `;

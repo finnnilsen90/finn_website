@@ -8,7 +8,9 @@
     overflow:auto;
 }
 
-
+.resume_header {
+    color:@background_color;
+}
 
 .resume {
     padding:50px 0 0 10px;
@@ -26,6 +28,17 @@
     width:300px;
 }
 
+// .resume_header {
+//     a {
+
+//     }
+// }
+
+.resume_header:hover {
+    color:@offset;
+    cursor:pointer;
+}
+
 @media screen and (min-width: 801px) {
 
     .twocontent-home_Container {
@@ -34,17 +47,17 @@
 
     .slider-home_Container {
         float:right;
-        margin:20px 200px 0 0;
+        margin:10px 200px 0 0;
     }
 
     .resume_icon {
-        width:450px;
+        width:400px;
         float:right;
-        margin:20px 100px 0 0;
+        margin:10px 100px 0 0;
     }
 
-    .resume_btn {
-        margin:-20px 0 0 470px;
+    .resume_header {
+        margin:20px 0 0 300px;
     }
 
 }
@@ -58,10 +71,6 @@
         margin:-40px 0 0 0;
     }
 
-    .resume_btn {
-        margin:-30px auto 0 auto;
-        display:block;
-    }
 }
 
 @media screen and (max-width: 500px){

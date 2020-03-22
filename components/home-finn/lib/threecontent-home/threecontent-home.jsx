@@ -22,6 +22,7 @@ class Threecontent extends React.Component {
 
         return (
         <div className={'threecontent-home_Container'+' font'}>
+            <h1 className='resume_header'>Projects</h1>
       
         </div>
         )

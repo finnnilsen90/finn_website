@@ -6,10 +6,10 @@ let Resume_icon = require("../../../../images/resume_icon.jpg");
 let Slider = require('../slider-home/slider-home.js');
 let Button = require('../../../lib/button-one/button-one.js');
 
-var ____Classj=React.Component;for(var ____Classj____Key in ____Classj){if(____Classj.hasOwnProperty(____Classj____Key)){Twocontent[____Classj____Key]=____Classj[____Classj____Key];}}var ____SuperProtoOf____Classj=____Classj===null?null:____Classj.prototype;Twocontent.prototype=Object.create(____SuperProtoOf____Classj);Twocontent.prototype.constructor=Twocontent;Twocontent.__superConstructor__=____Classj;
+var ____Classe=React.Component;for(var ____Classe____Key in ____Classe){if(____Classe.hasOwnProperty(____Classe____Key)){Twocontent[____Classe____Key]=____Classe[____Classe____Key];}}var ____SuperProtoOf____Classe=____Classe===null?null:____Classe.prototype;Twocontent.prototype=Object.create(____SuperProtoOf____Classe);Twocontent.prototype.constructor=Twocontent;Twocontent.__superConstructor__=____Classe;
     
     function Twocontent(props) {"use strict";
-    ____Classj.call(this,props);
+    ____Classe.call(this,props);
     this.state = {
             test: ''
         };
@@ -19,11 +19,6 @@ var ____Classj=React.Component;for(var ____Classj____Key in ____Classj){if(____C
 
     Object.defineProperty(Twocontent.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {"use strict";
 
-        let button = document.querySelector('.resume_btn');
-
-        button.addEventListener('click', function()  {
-            window.location.href = '/resume';
-        });
         
     }});;
 
@@ -31,9 +26,9 @@ var ____Classj=React.Component;for(var ____Classj____Key in ____Classj){if(____C
 
         return (
         React.createElement("div", {className: 'twocontent-home_Container'+' font'}, 
+            React.createElement("h1", {className: "resume_header"}, React.createElement("a", {href: "/resume"}, "Resume")), 
             React.createElement("img", {className: "resume_icon", src: Resume_icon}), 
-            React.createElement(Slider, null), 
-            React.createElement(Button, {name: "Resume", button_class: "resume_btn"})
+            React.createElement(Slider, null)
         )
         )
     }});

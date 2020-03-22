@@ -1,5 +1,5 @@
 {
-  "environment_dev": false,
+  "environment_dev": true,
   "general": {
     "home_finn": "home-finn",
     "resume_finn": "resume-finn",

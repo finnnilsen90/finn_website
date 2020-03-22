@@ -9,3 +9,13 @@
   width: 100%;
   overflow: auto;
 }
+@media screen and (min-width: 801px) {
+  .resume_header {
+    margin: 20px 0 0 300px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .resume_header {
+    margin: 20px 0 0 300px;
+  }
+}

@@ -19,11 +19,6 @@ class Twocontent extends React.Component {
 
     componentDidMount() {
 
-        let button = document.querySelector('.resume_btn');
-
-        button.addEventListener('click', () => {
-            window.location.href = '/resume';
-        });
         
     };
 
@@ -31,9 +26,9 @@ class Twocontent extends React.Component {
 
         return (
         <div className={'twocontent-home_Container'+' font'}>
+            <h1 className='resume_header'><a href='/resume'>Resume</a></h1>
             <img className='resume_icon' src={Resume_icon} />
             <Slider />
-            <Button name='Resume' button_class='resume_btn'/>
         </div>
         )
     }
