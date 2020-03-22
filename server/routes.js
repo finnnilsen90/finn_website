@@ -6,31 +6,25 @@ const sendmail = require('sendmail')();
 
 let site_map = require('../site_map.json');
 
-function route_select(server_bool,page) {
-    let result = server_bool? '../components/'+page+'/example/index.html':'../../public/'+page+'.html';
-    return result
-};
-
 module.exports = function(app,) {
-    console.log('ROUTE DEV BOOL => ',site_map.environment_dev);
     app.get('/', (req, res) => {
         res.redirect('/home');
     });
 
     app.get('/home', (req, res) => {
-        res.sendFile(path.resolve(__dirname + route_select(site_map.environment_dev,site_map.general.home_finn)));
+        res.sendFile(path.resolve(__dirname + '../../public/home-finn.html'));
     });
 
     app.get('/resume', (req, res) => {
-        res.sendFile(path.resolve(__dirname + route_select(site_map.environment_dev,site_map.general.resume_finn)));
+        res.sendFile(path.resolve(__dirname + '../../public/resume-finn.html'));
     });
 
     app.get('/project', (req, res) => {
-        res.sendFile(path.resolve(__dirname + route_select(site_map.environment_dev,site_map.general.projects_finn)));
+        res.sendFile(path.resolve(__dirname + '../../public/project-finn.html'));
     });
 
     app.get('/contact', (req, res) => {
-        res.sendFile(path.resolve(__dirname + route_select(site_map.environment_dev,site_map.general.contact_finn)));
+        res.sendFile(path.resolve(__dirname + '../../public/contact-finn.html'));
     });
 
     app.route('/email')
