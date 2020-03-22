@@ -399,7 +399,7 @@ function webpack_build() {
     function webpack_config(comp) { 
 
         let fileName = comp || 'templates';
-        let destination = bulk === 'yes' ? './components/' + comp + '/example/' : config.dest.prodjs;
+        let destination = bulk === 'yes' ? './components/' + comp + '/example/' : config.dest.bundle;
 
         console.log('---------------------')
         console.log('comp => ',fileName)
