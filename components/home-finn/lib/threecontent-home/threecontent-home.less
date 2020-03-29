@@ -10,13 +10,44 @@
     overflow:auto;
 }
 
+ul {
+    list-style-type:none;
+}
+
+.project_link:hover {
+    cursor:pointer;
+    color:@secondary_background_color;
+}
+
+.font_color {
+    color:@background_color;
+}
+
+.project_header:hover {
+    cursor:pointer;
+    color:@secondary_background_color;
+}
+
+
 @media screen and (min-width: 801px) {
     .threecontent-home_Container {
     
     }
 
-    .resume_header {
+    .project_header {
         margin:20px 0 0 300px;
+    }
+
+    .project_list {
+        width:650px;
+        float:left;
+        margin:20px 0 0 50px;
+    }
+
+    .project_icon {
+        width:300px;
+        float:left;
+        margin:60px 0 0 350px;
     }
 
 }
@@ -26,7 +57,7 @@
 
     }
 
-    .resume_header {
+    .project_header {
         margin:20px 0 0 300px;
     }
     

@@ -11,7 +11,8 @@ describe('component connection', () => {
 
     it('should be defined', () => {
         expect(Threecontent).toBeDefined();
-    })
+    });
+
 
 })  
     

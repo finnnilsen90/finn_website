@@ -5,7 +5,7 @@ let { shallow, mount, render } = require('enzyme');
 
 const Twocontent = require('../twocontent-home.js');
 const Slider = require('../../slider-home/slider-home.js');
-const Button = require('../../../../lib/button-one/button-one.js')
+const Button = require('../../../../lib/button-one/button-one.js');
 
 let newTwocontent = new Twocontent();
 

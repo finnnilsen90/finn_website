@@ -31,11 +31,11 @@
   cursor: pointer;
   border: 1px solid grey;
 }
-.dropdown_container .dropdown li a {
+.dropdown_container .dropdown li .a_link {
   text-decoration: none;
   color: grey;
 }
-.dropdown_container .dropdown li:hover {
+.dropdown_container .dropdown .ham_link:hover {
   background-color: #2bff72;
 }
 .hamburger {

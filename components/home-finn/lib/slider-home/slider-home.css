@@ -20,61 +20,30 @@ a:hover {
   float: left;
   height: 200px;
 }
-@media screen and (min-width: 900px) {
-  .outer {
-    width: 1260px;
-  }
-  .slider-home_Container {
-    padding: 140px 0 0 50px;
-    width: 420px;
-  }
-  .slide {
-    width: 420px;
-  }
-  @-webkit-keyframes slide {
-    20% {
-      margin-left: 0px;
-    }
-    40% {
-      margin-left: -420px;
-    }
-    60% {
-      margin-left: -420px;
-    }
-    80% {
-      margin-left: -840px;
-    }
-    90% {
-      margin-left: -840px;
-    }
-  }
+.outer {
+  width: 1260px;
 }
-@media screen and (max-width: 899px) {
-  .outer {
-    width: 1050px;
+.slider-home_Container {
+  padding: 140px 0 0 50px;
+  width: 420px;
+}
+.slide {
+  width: 420px;
+}
+@-webkit-keyframes slide {
+  20% {
+    margin-left: 0px;
   }
-  .slider-home_Container {
-    padding: 10px 0 0 0;
-    width: 350px;
+  40% {
+    margin-left: -420px;
   }
-  .slide {
-    width: 350px;
+  60% {
+    margin-left: -420px;
   }
-  @-webkit-keyframes slide {
-    20% {
-      margin-left: 0px;
-    }
-    40% {
-      margin-left: -350px;
-    }
-    60% {
-      margin-left: -350px;
-    }
-    80% {
-      margin-left: -700px;
-    }
-    90% {
-      margin-left: -700px;
-    }
+  80% {
+    margin-left: -840px;
+  }
+  90% {
+    margin-left: -840px;
   }
 }
