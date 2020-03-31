@@ -3,6 +3,8 @@ const reactclass = require('create-react-class');
 const css = require('./threecontent-home.css');
 let Project_icon = require("../../../../images/project_icon.jpg");
 
+let Button = require('../../../lib/button-one/button-one.js');
+
 class Threecontent extends React.Component {
     
     constructor(props) {
@@ -51,6 +53,7 @@ class Threecontent extends React.Component {
                     </a>
                 </li>
             </ul>
+            <Button button_class='proj_btn_mobile' href='/project' name='View Projects' />
         </div>
         )
     }

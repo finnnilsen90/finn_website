@@ -3,10 +3,12 @@ const reactclass = require('create-react-class');
 const css = require('./threecontent-home.css');
 let Project_icon = require("../../../../images/project_icon.jpg");
 
-var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Threecontent[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Threecontent.prototype=Object.create(____SuperProtoOf____Class0);Threecontent.prototype.constructor=Threecontent;Threecontent.__superConstructor__=____Class0;
+let Button = require('../../../lib/button-one/button-one.js');
+
+var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____Class1.hasOwnProperty(____Class1____Key)){Threecontent[____Class1____Key]=____Class1[____Class1____Key];}}var ____SuperProtoOf____Class1=____Class1===null?null:____Class1.prototype;Threecontent.prototype=Object.create(____SuperProtoOf____Class1);Threecontent.prototype.constructor=Threecontent;Threecontent.__superConstructor__=____Class1;
     
     function Threecontent(props) {"use strict";
-    ____Class0.call(this,props);
+    ____Class1.call(this,props);
     this.state = {
             test: ''
         };
@@ -50,7 +52,8 @@ var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____C
                         React.createElement("p", null, "I managed a team of sailors aiming to compete in the Red Bull Youth America's Cup.")
                     )
                 )
-            )
+            ), 
+            React.createElement(Button, {button_class: "proj_btn_mobile", href: "/project", name: "View Projects"})
         )
         )
     }});

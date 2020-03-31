@@ -30,6 +30,9 @@
   .twocontent-home_Container {
     height: 500px;
   }
+  .btn_mobile {
+    display: none;
+  }
 }
 @media screen and (min-width: 1061px) and (max-width: 1500px) {
   .slider-home_Container {
@@ -46,6 +49,9 @@
   }
   .twocontent-home_Container {
     height: 500px;
+  }
+  .btn_mobile {
+    display: none;
   }
 }
 @media screen and (min-width: 451px) and (max-width: 1060px) {
@@ -64,6 +70,9 @@
   .twocontent-home_Container {
     height: 600px;
   }
+  .btn_mobile {
+    display: none;
+  }
 }
 @media screen and (max-width: 450px) {
   .slider-home_Container {
@@ -77,5 +86,10 @@
   }
   .twocontent-home_Container {
     height: 600px;
+  }
+  .btn_mobile {
+    display: block;
+    float: right;
+    margin: -30px 20px 0 0;
   }
 }

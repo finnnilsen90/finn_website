@@ -29,6 +29,7 @@ class Twocontent extends React.Component {
             <h1 className='resume_header'><a href='/resume'>Resume</a></h1>
             <img className='resume_icon' src={Resume_icon} />
             <Slider />
+            <Button button_class='btn_mobile' href='/resume' name='View Resume' />
         </div>
         )
     }

@@ -75,5 +75,15 @@ exports[`<Twocontent /> renders components 1`] = `
       </div>
     </div>
   </div>
+  <div
+    class="button-one_Container"
+  >
+    <button
+      class="button_style_one btn_mobile"
+      href="/resume"
+    >
+      View Resume
+    </button>
+  </div>
 </div>
 `;
