@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> renders components 1`] = `
+<div
+  class="footer-home_Container font"
+>
+  <div
+    class="logo_cont"
+  >
+    <a
+      href="https://github.com/finnnilsen90"
+    >
+      <img
+        class="github_logo"
+        src="test-file-stub"
+      />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/finn-nilsen-50815182/"
+    >
+      <img
+        class="linkedin_logo"
+        src="test-file-stub"
+      />
+    </a>
+    <a
+      href="mailto:fnilsen1051@gmail.com"
+    >
+      <img
+        class="gmail_logo"
+        src="test-file-stub"
+      />
+    </a>
+  </div>
+  <div
+    class="link_cont"
+  >
+    <p
+      class="git_link"
+    >
+      https://github.com/finnnilsen90
+    </p>
+    <p
+      class="linkedin_link"
+    >
+      https://www.linkedin.com/in/finn-nilsen
+    </p>
+    <p
+      class="gmail_link"
+    >
+      fnilsen1051@gmail.com
+    </p>
+  </div>
+</div>
+`;
+
+exports[`link should apear on mouse over 1`] = `
+<p
+  class="git_link"
+>
+  https://github.com/finnnilsen90
+</p>
+`;

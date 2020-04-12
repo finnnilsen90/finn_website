@@ -1,0 +1,111 @@
+.font {
+  font-family: "Arial", Sans-serif;
+}
+.footer-home_Container {
+  background-color: #b3b3b3;
+  position: relative;
+  top: 100px;
+  width: 100%;
+  overflow: auto;
+}
+.github_logo {
+  cursor: pointer;
+  float: left;
+}
+.linkedin_logo {
+  cursor: pointer;
+  float: left;
+}
+.gmail_logo {
+  cursor: pointer;
+  float: right;
+}
+.git_link {
+  cursor: pointer;
+  float: left;
+  display: none;
+}
+.linkedin_link {
+  cursor: pointer;
+  float: left;
+  display: none;
+}
+.gmail_link {
+  cursor: pointer;
+  float: right;
+  display: none;
+}
+@media screen and (min-width: 1501px) {
+  .footer-home_Container {
+    height: 500px;
+  }
+  .logo_cont {
+    margin: 160px auto 0 auto;
+    display: block;
+    width: 50%;
+  }
+  .link_cont {
+    margin: 400px auto 0 auto;
+    display: block;
+    width: 50%;
+  }
+  .github_logo {
+    width: 180px;
+    display: block;
+  }
+  .linkedin_logo {
+    width: 180px;
+    display: block;
+    margin: 0 0 0 17%;
+  }
+  .gmail_logo {
+    width: 200px;
+    margin: 20px 0 0 0;
+  }
+  .git_link {
+    margin: 0;
+  }
+  .linkedin_link {
+    margin: 0 0 0 280px;
+  }
+  .gmail_link {
+    margin: 0 20px 0 0;
+  }
+}
+@media screen and (min-width: 1061px) and (max-width: 1500px) {
+  .footer-home_Container {
+    height: 500px;
+  }
+  .logo_cont {
+    margin: 160px auto 0 auto;
+    display: block;
+    width: 50%;
+  }
+  .link_cont {
+    margin: 400px auto 0 auto;
+    display: block;
+    width: 50%;
+  }
+  .github_logo {
+    width: 100px;
+    display: block;
+  }
+  .linkedin_logo {
+    width: 100px;
+    display: block;
+    margin: 0 0 0 110px;
+  }
+  .gmail_logo {
+    width: 100px;
+    margin: 20px 0 0 0;
+  }
+  .git_link {
+    margin: 0;
+  }
+  .linkedin_link {
+    margin: 0 0 0 280px;
+  }
+  .gmail_link {
+    margin: 0 20px 0 0;
+  }
+}
