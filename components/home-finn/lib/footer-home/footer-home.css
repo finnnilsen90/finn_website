@@ -63,16 +63,16 @@
     margin: 20px 0 0 0;
   }
   .git_link {
-    margin: 0;
+    margin: 0 0 0 -20px;
   }
   .linkedin_link {
-    margin: 0 0 0 280px;
+    margin: 0 0 0 300px;
   }
   .gmail_link {
     margin: 0 20px 0 0;
   }
 }
-@media screen and (min-width: 1061px) and (max-width: 1500px) {
+@media screen and (min-width: 1351px) and (max-width: 1500px) {
   .footer-home_Container {
     height: 500px;
   }
@@ -82,30 +82,95 @@
     width: 50%;
   }
   .link_cont {
-    margin: 400px auto 0 auto;
+    margin: 350px auto 0 auto;
     display: block;
     width: 50%;
   }
   .github_logo {
-    width: 100px;
+    width: 150px;
     display: block;
   }
   .linkedin_logo {
-    width: 100px;
+    width: 150px;
     display: block;
-    margin: 0 0 0 110px;
+    margin: 0 0 0 15%;
   }
   .gmail_logo {
-    width: 100px;
+    width: 150px;
     margin: 20px 0 0 0;
   }
   .git_link {
-    margin: 0;
+    margin: 0 0 0 -30px;
   }
   .linkedin_link {
-    margin: 0 0 0 280px;
+    margin: 0 0 0 200px;
   }
   .gmail_link {
-    margin: 0 20px 0 0;
+    margin: 0 -20px 0 0;
+  }
+}
+@media screen and (min-width: 851px) and (max-width: 1350px) {
+  .footer-home_Container {
+    height: 500px;
+  }
+  .logo_cont {
+    margin: 160px auto 0 auto;
+    display: block;
+    width: 70%;
+  }
+  .link_cont {
+    margin: 350px auto 0 auto;
+    display: block;
+    width: 70%;
+  }
+  .github_logo {
+    width: 120px;
+    display: block;
+  }
+  .linkedin_logo {
+    width: 120px;
+    display: block;
+    margin: 0 0 0 20%;
+  }
+  .gmail_logo {
+    width: 120px;
+    margin: 20px 0 0 0;
+  }
+  .git_link {
+    margin: 0 0 0 -30px;
+  }
+  .linkedin_link {
+    margin: 0 0 0 200px;
+  }
+  .gmail_link {
+    margin: 0 -20px 0 0;
+  }
+}
+@media screen and (max-width: 850px) {
+  .footer-home_Container {
+    height: 300px;
+  }
+  .logo_cont {
+    margin: 120px auto 0 auto;
+    display: block;
+    width: 60%;
+  }
+  .link_cont {
+    margin: 350px auto 0 auto;
+    display: none;
+    width: 60%;
+  }
+  .github_logo {
+    width: 50px;
+    display: block;
+  }
+  .linkedin_logo {
+    width: 50px;
+    display: block;
+    margin: 0 0 0 15%;
+  }
+  .gmail_logo {
+    width: 50px;
+    margin: 8px 0 0 0;
   }
 }
