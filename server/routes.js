@@ -20,7 +20,7 @@ module.exports = function(app,) {
     });
 
     app.get('/project', (req, res) => {
-        res.sendFile(path.resolve(__dirname + '../../public/project-finn.html'));
+        res.sendFile(path.resolve(__dirname + '../../public/projects-finn.html'));
     });
 
     app.get('/contact', (req, res) => {
