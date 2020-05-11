@@ -1,7 +1,5 @@
 const express = require('express');
 const path = require('path');
-let site_map = require('../site_map.json');
-let dev = site_map.environment_dev;
 
 module.exports = function(app) {
 
