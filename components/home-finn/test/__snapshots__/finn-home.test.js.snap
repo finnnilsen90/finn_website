@@ -256,11 +256,6 @@ exports[`<Home /> renders components 1`] = `
           src="test-file-stub"
         />
       </a>
-      <p
-        class="link_base"
-      >
-        https://github.com/finnnilsen90
-      </p>
       <a
         href="https://www.linkedin.com/in/finn-nilsen-50815182/"
       >
@@ -277,6 +272,25 @@ exports[`<Home /> renders components 1`] = `
           src="test-file-stub"
         />
       </a>
+    </div>
+    <div
+      class="link_cont"
+    >
+      <p
+        class="git_link"
+      >
+        https://github.com/finnnilsen90
+      </p>
+      <p
+        class="linkedin_link"
+      >
+        https://www.linkedin.com/in/finn-nilsen
+      </p>
+      <p
+        class="gmail_link"
+      >
+        fnilsen1051@gmail.com
+      </p>
     </div>
   </div>
 </div>
@@ -349,11 +363,6 @@ Object {
     },
   },
   "not_login": Object {
-    "contact": Object {
-      "className": "link",
-      "link": "/contact",
-      "text": "Contact",
-    },
     "home_page": Object {
       "className": "link",
       "link": "/home",
