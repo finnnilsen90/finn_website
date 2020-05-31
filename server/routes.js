@@ -15,7 +15,7 @@ module.exports = function(app,) {
         res.sendFile(path.resolve(__dirname + '../../public/resume-finn.html'));
     });
 
-    app.get('/project', (req, res) => {
+    app.get('/projects', (req, res) => {
         res.sendFile(path.resolve(__dirname + '../../public/projects-finn.html'));
     });
 
