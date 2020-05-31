@@ -3,7 +3,8 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const morgan = require('morgan');
-const User = require('../models/user');
+// const User = require('./models/user'); // Intended for gated flow. No longer part of launch sprint.
+// const Project = require('./models/project'); // Intended for gated flow. No longer part of launch sprint.
 
 const fs = require('fs');
 const path = require('path');
@@ -11,6 +12,8 @@ const { exec } = require('child_process');
 const stringify = require('stringify');
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, '/components')));
 
 let port = process.env.PORT || 3000;
 
@@ -26,27 +29,6 @@ app.use(bodyParser.json());
 // initialize cookie-parser to allow us access the cookies stored in the browser. 
 app.use(cookieParser());
 
-const directories = require('./dev-directories.js')(app);
-const sessionChecker = require('./session_checker.js');
-
-app.use(session({
-    key: 'auto_sid',
-    secret: 'finnssecret',
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        expires: 600000
-    }
-}));
-
-app.use((req, res, next) => {
-    if (req.cookies.auto_sid && !req.session.user) {
-        res.clearCookie('auto_sid');        
-    }
-    next();
-})
-
-const routes = require('./dev-routes.js')(app,sessionChecker,User);
 
 // route for handling 404 requests(unavailable routes
 app.use(function (req, res, next) {

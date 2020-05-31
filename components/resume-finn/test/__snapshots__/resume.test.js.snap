@@ -25,45 +25,40 @@ exports[`<Resume /> renders components 1`] = `
         class="dropdown"
       >
         <li
-          class="link"
+          class="link ham_link"
         >
           <a
-            href="/login"
-          >
-            Login
-          </a>
-        </li>
-        <li
-          class="link"
-        >
-          <a
-            href="/home_page"
+            class="a_link"
+            href="/home"
           >
             Home Page
           </a>
         </li>
         <li
-          class="link"
+          class="link ham_link"
         >
           <a
+            class="a_link"
             href="/resume"
           >
             Resume
           </a>
         </li>
         <li
-          class="link"
+          class="link ham_link"
         >
           <a
-            href="/home_page"
+            class="a_link"
+            href="/project"
           >
             Projects
           </a>
         </li>
         <li
-          class="link"
+          class="link ham_link"
         >
           <a
+            class="a_link"
             href="/contact"
           >
             Contact
@@ -73,65 +68,5 @@ exports[`<Resume /> renders components 1`] = `
     </div>
   </div>
   <outline />
-  <div
-    class="footer_Container font"
-  >
-    <div
-      class="nav"
-    >
-      <ul>
-        <li
-          class="link_footer link_footer"
-        >
-          <a
-            href="/login"
-          >
-            Login
-          </a>
-        </li>
-        <li
-          class="link_footer link_footer"
-        >
-          <a
-            href="/home_page"
-          >
-            Home Page
-          </a>
-        </li>
-        <li
-          class="link_footer link_footer"
-        >
-          <a
-            href="/resume"
-          >
-            Resume
-          </a>
-        </li>
-        <li
-          class="link_footer link_footer"
-        >
-          <a
-            href="/home_page"
-          >
-            Projects
-          </a>
-        </li>
-        <li
-          class="link_footer link_footer"
-        >
-          <a
-            href="/contact"
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div
-      class="nav nav_two"
-    >
-      <ul />
-    </div>
-  </div>
 </div>
 `;

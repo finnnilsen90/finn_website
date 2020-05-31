@@ -48,7 +48,6 @@ class Resume extends React.Component {
             <div className='container'>
                 <Hamburger menu={this.state.fetch}/>
                 <Outline />
-                <Footer menu={this.state.fetch}/>
             </div>
         )
     }

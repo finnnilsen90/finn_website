@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Threecontent /> renders components 1`] = `
+<div
+  class="threecontent-home_Container font font_color"
+>
+  <h1
+    class="project_header"
+  >
+    Projects
+  </h1>
+  <img
+    class="project_icon"
+    src="test-file-stub"
+  />
+  <ul
+    class="project_list"
+  >
+    <li>
+      <a
+        class="project_link"
+        href="/projects"
+      >
+        <h3>
+          Hub by Mogo
+        </h3>
+        <p>
+          Learn about how I managed the inital build and further development of Mogo's automation platform Hub.
+        </p>
+      </a>
+    </li>
+    <li>
+      <h3>
+        Mogo's DMP
+      </h3>
+      <p>
+        When Mogo onboarded a Data Managment Platform (DMP) I was part of the team that set up the connections and segment taxonomy.
+      </p>
+    </li>
+    <li>
+      <h3>
+        JustAnswer's ChatBot
+      </h3>
+      <p>
+        When JustAnswer was building out a ChatBot I was the main developer implementing the conversation logic.
+      </p>
+    </li>
+    <li>
+      <h3>
+        Red Bull Youth America's Cup
+      </h3>
+      <p>
+        I managed a team of sailors aiming to compete in the Red Bull Youth America's Cup.
+      </p>
+    </li>
+  </ul>
+</div>
+`;

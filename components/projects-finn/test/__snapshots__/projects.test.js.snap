@@ -1,0 +1,497 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Projects /> renders components 1`] = `
+<div
+  class="container"
+>
+  <div
+    class="libcomp-hamburger_Container font"
+  >
+    <div
+      class="ham_container"
+    >
+      <div
+        class="hamburger"
+      >
+        <hr />
+        <hr />
+        <hr />
+      </div>
+    </div>
+    <div
+      class="dropdown_container"
+    >
+      <ul
+        class="dropdown"
+      >
+        <li
+          class="link ham_link"
+        >
+          <a
+            class="a_link"
+            href="/home"
+          >
+            Home Page
+          </a>
+        </li>
+        <li
+          class="link ham_link"
+        >
+          <a
+            class="a_link"
+            href="/resume"
+          >
+            Resume
+          </a>
+        </li>
+        <li
+          class="link ham_link"
+        >
+          <a
+            class="a_link"
+            href="/project"
+          >
+            Projects
+          </a>
+        </li>
+        <li
+          class="link ham_link"
+        >
+          <a
+            class="a_link"
+            href="/contact"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="outline-projects_Container font"
+  >
+    <h1
+      class="header"
+    >
+      Projects
+    </h1>
+    <p
+      class="summary"
+    >
+      Throughout my proffesional career I have been involved with a number of projects. Below summarizes some of the key projects I have been apart of.
+    </p>
+    <div
+      class="projects"
+    >
+      <h2
+        class="sub_header"
+      >
+        Hub by Mogo
+      </h2>
+      <p
+        class="proj_summary"
+      >
+        Hub is Mogo’s in-house automated ad trafficking platform. It allows clients to upload assets to an easy to use interface and Hub automatically trafficks those assets to be activated in a digital marketing campaign across multiple channels.
+      </p>
+      <div
+        class="dropdown"
+      >
+        <div
+          class="content-dropdown_Container"
+        >
+          <h3
+            class="title title_Role_hub"
+          >
+            Role: Project Manager
+          </h3>
+          <h3
+            class="title_click title_click_Role_hub"
+          >
+            Role: Project Manager
+          </h3>
+          <div
+            class="arrow arw_Role_hub"
+          />
+          <div
+            class="arrow_click arw_click_Role_hub"
+          />
+          <hr
+            class="content_hr cont_hr_Role_hub"
+          />
+          <div
+            class="content_parent cont_par_Role_hub"
+          >
+            <div
+              class="input"
+            >
+              <div>
+                <h4
+                  class="drop_text"
+                />
+                <p
+                  class="drop_text"
+                >
+                  I was a project manager and was responsible for communicating business requirements to the engineering team. Ensuring the project stayed within scope, timeline, and budget. I was also heavily involved with various product discussions and decisions to ensure the platform met the needs of our clients.
+                </p>
+                <ul
+                  class="drop_text"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="content-dropdown_Container"
+        >
+          <h3
+            class="title title_proj_overview_hub"
+          >
+            Project Overview
+          </h3>
+          <h3
+            class="title_click title_click_proj_overview_hub"
+          >
+            Project Overview
+          </h3>
+          <div
+            class="arrow arw_proj_overview_hub"
+          />
+          <div
+            class="arrow_click arw_click_proj_overview_hub"
+          />
+          <hr
+            class="content_hr cont_hr_proj_overview_hub"
+          />
+          <div
+            class="content_parent cont_par_proj_overview_hub"
+          >
+            <div
+              class="input"
+            >
+              <div>
+                <h4
+                  class="drop_text"
+                />
+                <p
+                  class="drop_text"
+                >
+                  The initial build lasted over a year from its conception and required a strategic approach in order to meet the business goals of the project. The main business goal of the project was to establish a fully automated workflow for our lower budget clients, reducing the need for human touch points. At the same time we were also automating parts of the workflow for our higher budget clients through Hub. The platform was officially launched on February 2019 and resulted in over a million dollars going through the fully automated portion of the platform via credit card payment in its first year. 
+                </p>
+                <ul
+                  class="drop_text"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2
+        class="sub_header"
+      >
+        Mogo's Salesforce DMP
+      </h2>
+      <p
+        class="proj_summary"
+      >
+        Mogo established a Salesforce Krux DMP to better scale and utilize its first party data from a reporting and activation standpoint.
+      </p>
+      <div
+        class="dropdown"
+      >
+        <div
+          class="content-dropdown_Container"
+        >
+          <h3
+            class="title title_tech_sup"
+          >
+            Role: Technical Supervisor
+          </h3>
+          <h3
+            class="title_click title_click_tech_sup"
+          >
+            Role: Technical Supervisor
+          </h3>
+          <div
+            class="arrow arw_tech_sup"
+          />
+          <div
+            class="arrow_click arw_click_tech_sup"
+          />
+          <hr
+            class="content_hr cont_hr_tech_sup"
+          />
+          <div
+            class="content_parent cont_par_tech_sup"
+          >
+            <div
+              class="input"
+            >
+              <div>
+                <h4
+                  class="drop_text"
+                />
+                <p
+                  class="drop_text"
+                >
+                  I was a Technical Supervisor on the project which meant I was involved with building the taxonomy and organization of data within the DMP. I was also heavily involved with various product decisions around monetizing the DMP. One of the ways we monetized the use of the DMP was by providing advanced reporting for our clients.
+                </p>
+                <ul
+                  class="drop_text"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="content-dropdown_Container"
+        >
+          <h3
+            class="title title_proj_overview_dmp"
+          >
+            Project Overview
+          </h3>
+          <h3
+            class="title_click title_click_proj_overview_dmp"
+          >
+            Project Overview
+          </h3>
+          <div
+            class="arrow arw_proj_overview_dmp"
+          />
+          <div
+            class="arrow_click arw_click_proj_overview_dmp"
+          />
+          <hr
+            class="content_hr cont_hr_proj_overview_dmp"
+          />
+          <div
+            class="content_parent cont_par_proj_overview_dmp"
+          >
+            <div
+              class="input"
+            >
+              <div>
+                <h4
+                  class="drop_text"
+                />
+                <p
+                  class="drop_text"
+                >
+                  The project started with understanding the DMP through various workshops and short project sprints. The first goal out the gate was to organize the foundational elements of the DMP to better set ourselves up to work through vast quantities of data.
+                </p>
+                <ul
+                  class="drop_text"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2
+        class="sub_header"
+      >
+        JustAnswer's Chatbot Pearl
+      </h2>
+      <p
+        class="proj_summary"
+      >
+        JustAnswer's chatbot Pearl has been developed to increase sales through the SEO funnel and in doing so; diversify JustAnswer's revenue.
+      </p>
+      <div
+        class="dropdown"
+      >
+        <div
+          class="content-dropdown_Container"
+        >
+          <h3
+            class="title title_Role_dev"
+          >
+            Role: Developer
+          </h3>
+          <h3
+            class="title_click title_click_Role_dev"
+          >
+            Role: Developer
+          </h3>
+          <div
+            class="arrow arw_Role_dev"
+          />
+          <div
+            class="arrow_click arw_click_Role_dev"
+          />
+          <hr
+            class="content_hr cont_hr_Role_dev"
+          />
+          <div
+            class="content_parent cont_par_Role_dev"
+          >
+            <div
+              class="input"
+            >
+              <div>
+                <h4
+                  class="drop_text"
+                />
+                <p
+                  class="drop_text"
+                >
+                  My role on the Pearl team has been to develop code for the Pearl chatbot, and help outline the overall customer interaction with Pearl by working with copywriters. I have both a marketing and technical background which made me the perfect fit for a role that involves understanding user behavior from a data driven perspective, and understanding how a computer program works; so I could best match that user behavior to a chatbot.
+                </p>
+                <ul
+                  class="drop_text"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="content-dropdown_Container"
+        >
+          <h3
+            class="title title_proj_overview_pearl"
+          >
+            Project Overview
+          </h3>
+          <h3
+            class="title_click title_click_proj_overview_pearl"
+          >
+            Project Overview
+          </h3>
+          <div
+            class="arrow arw_proj_overview_pearl"
+          />
+          <div
+            class="arrow_click arw_click_proj_overview_pearl"
+          />
+          <hr
+            class="content_hr cont_hr_proj_overview_pearl"
+          />
+          <div
+            class="content_parent cont_par_proj_overview_pearl"
+          >
+            <div
+              class="input"
+            >
+              <div>
+                <h4
+                  class="drop_text"
+                />
+                <p
+                  class="drop_text"
+                >
+                  The initial goal of the ChatBot was to act as an assistant on the JustAnswer platform. The ChatBot was programmed to interact with the customer and gather high level information to then pass onto an online expert who would eventually answer the question the customer had. To add further clarity to JustAnswer’s business model. JustAnswer is a platform that allows people to converse with certified online experts.
+                </p>
+                <ul
+                  class="drop_text"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2
+        class="sub_header"
+      >
+        Red Bull Youth America's Cup
+      </h2>
+      <p
+        class="proj_summary"
+      >
+        The Red Bull Youth America’s Cup (RBYAC) is a sailing event put on by Red Bull and the America’s Cup Event Authority (ACEA) for young sailors to compete in wing sailed 45-foot America’s Cup catamarans (AC 45).
+      </p>
+      <div
+        class="dropdown"
+      >
+        <div
+          class="content-dropdown_Container"
+        >
+          <h3
+            class="title title_Role_team_manager"
+          >
+            Role: Team Manager
+          </h3>
+          <h3
+            class="title_click title_click_Role_team_manager"
+          >
+            Role: Team Manager
+          </h3>
+          <div
+            class="arrow arw_Role_team_manager"
+          />
+          <div
+            class="arrow_click arw_click_Role_team_manager"
+          />
+          <hr
+            class="content_hr cont_hr_Role_team_manager"
+          />
+          <div
+            class="content_parent cont_par_Role_team_manager"
+          >
+            <div
+              class="input"
+            >
+              <div>
+                <h4
+                  class="drop_text"
+                />
+                <p
+                  class="drop_text"
+                >
+                  I was the team lead on land on the water I was racing tactician. My responsibilities on land involved PR, project financing, and sponsorship communication.
+                </p>
+                <ul
+                  class="drop_text"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="content-dropdown_Container"
+        >
+          <h3
+            class="title title_proj_overview_redbull"
+          >
+            Project Overview
+          </h3>
+          <h3
+            class="title_click title_click_proj_overview_redbull"
+          >
+            Project Overview
+          </h3>
+          <div
+            class="arrow arw_proj_overview_redbull"
+          />
+          <div
+            class="arrow_click arw_click_proj_overview_redbull"
+          />
+          <hr
+            class="content_hr cont_hr_proj_overview_redbull"
+          />
+          <div
+            class="content_parent cont_par_proj_overview_redbull"
+          >
+            <div
+              class="input"
+            >
+              <div>
+                <h4
+                  class="drop_text"
+                />
+                <p
+                  class="drop_text"
+                >
+                  The Red Bull Youth America’s Cup is a major sailing event hosted by the organizing authority of the America’s Cup. It involves sailing teams of youth sailors racing highly advanced racing yachts against one another. Each team needs to organize themselves financially by acquiring sponsorship deals in order to compete. Along with proving themselves to be capable sailors in order to be accepted into the event.
+                </p>
+                <ul
+                  class="drop_text"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

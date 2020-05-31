@@ -11,14 +11,9 @@
             "text": "Resume"
         },
         "projects": {
-            "link": "/project",
+            "link": "/projects",
             "className": "link",
             "text": "Projects"
-        },
-        "contact": {
-            "link": "/contact",
-            "className": "link",
-            "text": "Contact"
         }
     },
     "logedin": {

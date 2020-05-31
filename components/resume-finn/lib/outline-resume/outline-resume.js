@@ -4,10 +4,10 @@ const css = require('./outline-resume.css')
 
 const Dropdown = require('../../../lib/content-dropdown/content-dropdown.js');
 
-var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____Class8.hasOwnProperty(____Class8____Key)){Outline[____Class8____Key]=____Class8[____Class8____Key];}}var ____SuperProtoOf____Class8=____Class8===null?null:____Class8.prototype;Outline.prototype=Object.create(____SuperProtoOf____Class8);Outline.prototype.constructor=Outline;Outline.__superConstructor__=____Class8;
+var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Outline[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Outline.prototype=Object.create(____SuperProtoOf____Class0);Outline.prototype.constructor=Outline;Outline.__superConstructor__=____Class0;
     
     function Outline(props) {"use strict";
-    ____Class8.call(this,props);
+    ____Class0.call(this,props);
     this.state = {
             dropdown: {
                 assoc_dir: {
@@ -37,7 +37,7 @@ var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____C
                     ]
                 },
                 chatscript_dev: {
-                    title: "ChatScript Developer",
+                    title: "Job Description",
                     desc: "My role on the chatbot team has been to develop code for the Pearl chatbot, and help outline the overall customer interaction with Pearl by working with copywriters.",
                     list: ["Develop ChatScript for Pearl (ChatScript is the coding language used to dictate how Pearl linguistically interacts with customers).",
                             "Manually train machine learning algorithms that dictate how Pearl interacts with customers.",
@@ -47,7 +47,7 @@ var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____C
                     ]
                 },
                 marketing_coordinator: {
-                    title: "Marketing Coordinator",
+                    title: "Job Description",
                     desc: "JustAnswer has been A/B testing various parts of the site to perfect the product and drive GSS, after years of doing so with lean methodology JustAnswer is looking to start marketing. My role has been to facilitate that effort by talking to various teams, organizing initiatives, and doing other various activities such as data analysis.",
                     list: ["Develop ChatScript for Pearl (ChatScript is the coding language used to dictate how Pearl linguistically interacts with customers).",
                             "Assist in data analysis.",
@@ -59,7 +59,7 @@ var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____C
                     ]
                 },
                 socialmedia_assoc: {
-                    title: "Social Media Associate",
+                    title: "Job Description",
                     desc: "With this position I was mainly involved in running various campaigns, organizing content creation, and performing data analysis. ",
                     list: ["Ran Facebook ads to achieve an optimal ROAS.",
                             "Managed social channels.",

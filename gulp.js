@@ -399,7 +399,7 @@ function webpack_build() {
     function webpack_config(comp) { 
 
         let fileName = comp || 'templates';
-        let destination = bulk === 'yes' ? './components/' + comp + '/example/' : config.dest.prodjs;
+        let destination = bulk === 'yes' ? './components/' + comp + '/example/' : config.dest.bundle;
 
         console.log('---------------------')
         console.log('comp => ',fileName)
@@ -519,20 +519,19 @@ function webpack_production() {
     
 }
 
-function environment_dev(state) {
-    let file = editJsonFile(`${__dirname}/site_map.json`);
-    if (state) {
-        file.set('environment_dev', true);
-        file.save();
-    } else {
-        file.set('environment_dev', false);
-        file.save();
-    } 
-}
+// function environment_dev(state) {
+//     let file = editJsonFile(`${__dirname}/site_map.json`);
+//     if (state) {
+//         file.set('environment_dev', true);
+//         file.save();
+//     } else {
+//         file.set('environment_dev', false);
+//         file.save();
+//     } 
+// }
 
 function node(done) {
     
-    environment_dev(false);
     $.nodemon ({
         script: 'server.js'
         , ext: 'js html'
@@ -543,13 +542,11 @@ function node(done) {
 
 function node_dev(done) {
 
-    environment_dev(true);
     $.nodemon ({
-        script: 'server.js'
+        script: 'server_dev.js'
         , ext: 'js html'
         , env: { 'NODE_ENV': 'development' }
-    })
-    setTimeout(() => {environment_dev(false)}, 3000);
+    });
     done();
 };
 

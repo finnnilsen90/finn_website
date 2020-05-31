@@ -8,11 +8,6 @@ const Hamburger = require('../hamburger.js');
 let newHamburger = new Hamburger();
 
 let links_expected = {
-    login: {
-        link: '/login',
-        className: 'link',
-        text: 'Login'
-    },
     home_page: {
         link: '/home_page',
         className: 'link',
@@ -86,7 +81,8 @@ describe('<Hamburger /> dropdown state', () => {
 
     let toggle = wrapper.state().toggle;
 
-    let html =  [<li className="link"><a href="/login">Login</a></li>, <li className="link"><a href="/home_page">Home Page</a></li>, <li className="link"><a href="/resume">Resume</a></li>, <li className="link"><a href="/home_page">Projects</a></li>, <li className="link"><a href="/contact">Contact</a></li>]
+    let html =  [<li className="link ham_link"><a className="a_link" href="/home_page">Home Page</a></li>, <li className="link ham_link"><a className="a_link" href="/resume">Resume</a></li>, <li className="link ham_link"><a className="a_link" href="/home_page">Projects</a></li>, <li
+    className="link ham_link"><a className="a_link" href="/contact">Contact</a></li>];
 
     it('dropdown should snapshot at each state', () => {
 

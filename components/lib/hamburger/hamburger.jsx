@@ -9,30 +9,26 @@ class Hamburger extends React.Component {
     this.state = {
             hover: 0,
             toggle: true,
-            default:  { login: {
-                            link: '/login',
+            default:  { 
+                        home_page: {
+                            link: '/home',
                             className: 'link',
-                            text: 'Login'
-                            },
-                            home_page: {
-                                link: '/home',
-                                className: 'link',
-                                text: 'Home Page'
-                            },
-                            resume: {
-                                link: '/resume',
-                                className: 'link',
-                                text: 'Resume'
-                            },
-                            projects: {
-                                link: '/project',
-                                className: 'link',
-                                text: 'Projects'
-                            },
-                            contact: {
-                                link: '/contact',
-                                className: 'link',
-                                text: 'Contact'
+                            text: 'Home Page'
+                        },
+                        resume: {
+                            link: '/resume',
+                            className: 'link',
+                            text: 'Resume'
+                        },
+                        projects: {
+                            link: '/project',
+                            className: 'link',
+                            text: 'Projects'
+                        },
+                        contact: {
+                            link: '/contact',
+                            className: 'link',
+                            text: 'Contact'
                         }
                 }
         };
@@ -49,7 +45,7 @@ class Hamburger extends React.Component {
             let value = Object.entries(new_input);
             let menu = []
             for (let i=0;i<value.length;i++) {
-                menu.push(<li className={value[i][1].className} ><a href={value[i][1].link}>{value[i][1].text}</a></li>);
+                menu.push(<li className={value[i][1].className+' ham_link'} ><a className='a_link' href={value[i][1].link}>{value[i][1].text}</a></li>);
             }
 
             return menu

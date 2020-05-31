@@ -7,10 +7,10 @@ const Hamburger = require('../lib/hamburger/hamburger.js');
 const Outline = require('./lib/outline-resume/outline-resume.js');
 const Footer = require('../lib/footer/footer.js');
 
-var ____Classj=React.Component;for(var ____Classj____Key in ____Classj){if(____Classj.hasOwnProperty(____Classj____Key)){Resume[____Classj____Key]=____Classj[____Classj____Key];}}var ____SuperProtoOf____Classj=____Classj===null?null:____Classj.prototype;Resume.prototype=Object.create(____SuperProtoOf____Classj);Resume.prototype.constructor=Resume;Resume.__superConstructor__=____Classj;
+var ____Class1=React.Component;for(var ____Class1____Key in ____Class1){if(____Class1.hasOwnProperty(____Class1____Key)){Resume[____Class1____Key]=____Class1[____Class1____Key];}}var ____SuperProtoOf____Class1=____Class1===null?null:____Class1.prototype;Resume.prototype=Object.create(____SuperProtoOf____Class1);Resume.prototype.constructor=Resume;Resume.__superConstructor__=____Class1;
     
     function Resume(props) {"use strict";
-    ____Classj.call(this,props);
+    ____Class1.call(this,props);
     this.state = {
             fetch: null,
             window_height: window.innerHeight
@@ -47,8 +47,7 @@ var ____Classj=React.Component;for(var ____Classj____Key in ____Classj){if(____C
         return (
             React.createElement("div", {className: "container"}, 
                 React.createElement(Hamburger, {menu: this.state.fetch}), 
-                React.createElement(Outline, null), 
-                React.createElement(Footer, {menu: this.state.fetch})
+                React.createElement(Outline, null)
             )
         )
     }});

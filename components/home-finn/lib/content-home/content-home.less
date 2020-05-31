@@ -1,37 +1,89 @@
 @import '../../../mixins/color.less';
 
-.profile {
-    float:left;
-    border:2px solid @background_color;
-}
-
 .content-home_Container {
     position: relative;
-    top:200px;
-    margin:0 auto 0 auto;
+    background-color:@secondarycolor;
+    top:100px;
+    width:100%;  
+    overflow:auto;
 }
 
-@media screen and (min-width: 900px) {
+.overview-finn {
+    font-weight:bold;
+    color:@background_color;
+    font-size:18px;
+}
+
+@media screen and (min-width: 1501px) {
     .profile {
+        float:left;
+        width:400px;
+        margin:50px 0 0 300px;
+    }
+
+    .overview-finn {
+        float:left;
+        margin:200px 0 0 50px;
+        width:700px;
+    }
+
+    .content-home_Container {
+        height:500px;
+    }
+
+}
+
+@media screen and (min-width: 1061px) and (max-width: 1500px){
+    .profile {
+        float:left;
+        width:400px;
+        margin:50px 0 0 100px;
+    }
+
+    .overview-finn {
+        float:left;
+        margin:200px 0 0 20px;
         width:400px;
     }
-    .content-home_Container {
-        width:900px;
-    }
 
+    .content-home_Container {
+        height:500px;
+    }
 }
 
-@media screen and (max-width: 899px){
+@media screen and (min-width: 451px) and (max-width: 1060px){
     .profile {
-        width:90%;
-        margin:0 auto 0 auto;
+        position: relative;
+        width:50%;
+        margin:20px auto 0 auto;
+        display:block;
     }
-    .content-home_Container {
+
+    .overview-finn {
+        margin:10px auto 0 auto;
         width:90%;
     }
 
+    .content-home_Container {
+        height:600px;
+    }
 }
 
-@media screen and (min-width: 500px) and (max-width: 800px){
+@media screen and (max-width: 450px){
+    .profile {
+        position: relative;
+        width:90%;
+        margin:20px auto 0 auto;
+        display:block;
+    }
+
+    .overview-finn {
+        margin:10px auto 0 auto;
+        width:90%;
+    }
+
+    .content-home_Container {
+        height:580px;
+    }
 
 }

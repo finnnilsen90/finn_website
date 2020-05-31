@@ -3,13 +3,16 @@ var reactClass = require('create-react-class');
 var ReactDom = require('react-dom');
 var css = require('./home-finn.css')
 
-const Hamburger = require('../lib/hamburger/hamburger.js')
-const Content = require('./lib/content-home/content-home.js')
+const Hamburger = require('../lib/hamburger/hamburger.js');
+const Content = require('./lib/content-home/content-home.js');
+const Twocontent = require('./lib/twocontent-home/twocontent-home.js');
+const Threecontent = require('./lib/threecontent-home/threecontent-home.js');
+const Footer = require('./lib/footer-home/footer-home.js');
 
-var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____Class8.hasOwnProperty(____Class8____Key)){Home[____Class8____Key]=____Class8[____Class8____Key];}}var ____SuperProtoOf____Class8=____Class8===null?null:____Class8.prototype;Home.prototype=Object.create(____SuperProtoOf____Class8);Home.prototype.constructor=Home;Home.__superConstructor__=____Class8;
+var ____Class18=React.Component;for(var ____Class18____Key in ____Class18){if(____Class18.hasOwnProperty(____Class18____Key)){Home[____Class18____Key]=____Class18[____Class18____Key];}}var ____SuperProtoOf____Class18=____Class18===null?null:____Class18.prototype;Home.prototype=Object.create(____SuperProtoOf____Class18);Home.prototype.constructor=Home;Home.__superConstructor__=____Class18;
     
     function Home(props) {"use strict";
-    ____Class8.call(this,props);
+    ____Class18.call(this,props);
     this.state = {
             fetch: null
         };
@@ -45,7 +48,10 @@ var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____C
         return (
             React.createElement("div", {className: "containter"}, 
                 React.createElement(Hamburger, {menu: this.state.fetch}), 
-                React.createElement(Content, null)
+                React.createElement(Content, null), 
+                React.createElement(Twocontent, null), 
+                React.createElement(Threecontent, null), 
+                React.createElement(Footer, null)
             )
         )
     }});

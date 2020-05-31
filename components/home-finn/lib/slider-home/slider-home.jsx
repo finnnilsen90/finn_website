@@ -9,19 +9,19 @@ class Slider extends React.Component {
     this.state = {
             content: {
                 content1: {
-                    title: 'Resume',
+                    title: 'Associate Director, Media and Technology',
                     link: '/resume',
-                    content: 'Click to see my resmue!'
+                    content: 'Mogo Interactive'
                 },
                 content2: {
-                    title: 'Projects',
-                    link: '/project',
-                    content: 'Checkout some of the projects I have been apart of.'
+                    title: 'Product Manager',
+                    link: '/resume',
+                    content: 'Mogo Interactive'
                 },
                 content3: {
-                    title: 'Contact',
-                    link: '/contact',
-                    content: 'If you would like to contact me click now.'
+                    title: 'ChatScript Developer',
+                    link: '/resume',
+                    content: 'JustAnswer.com'
                 }
             }
         };

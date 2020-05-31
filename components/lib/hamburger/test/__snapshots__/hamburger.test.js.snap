@@ -6,45 +6,40 @@ exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 1`]
   onMouseLeave={[Function]}
 >
   <li
-    className="link"
+    className="link ham_link"
   >
     <a
-      href="/login"
-    >
-      Login
-    </a>
-  </li>
-  <li
-    className="link"
-  >
-    <a
+      className="a_link"
       href="/home_page"
     >
       Home Page
     </a>
   </li>
   <li
-    className="link"
+    className="link ham_link"
   >
     <a
+      className="a_link"
       href="/resume"
     >
       Resume
     </a>
   </li>
   <li
-    className="link"
+    className="link ham_link"
   >
     <a
+      className="a_link"
       href="/home_page"
     >
       Projects
     </a>
   </li>
   <li
-    className="link"
+    className="link ham_link"
   >
     <a
+      className="a_link"
       href="/contact"
     >
       Contact
@@ -59,45 +54,40 @@ exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 2`]
   onMouseLeave={[Function]}
 >
   <li
-    className="link"
+    className="link ham_link"
   >
     <a
-      href="/login"
-    >
-      Login
-    </a>
-  </li>
-  <li
-    className="link"
-  >
-    <a
+      className="a_link"
       href="/home_page"
     >
       Home Page
     </a>
   </li>
   <li
-    className="link"
+    className="link ham_link"
   >
     <a
+      className="a_link"
       href="/resume"
     >
       Resume
     </a>
   </li>
   <li
-    className="link"
+    className="link ham_link"
   >
     <a
+      className="a_link"
       href="/home_page"
     >
       Projects
     </a>
   </li>
   <li
-    className="link"
+    className="link ham_link"
   >
     <a
+      className="a_link"
       href="/contact"
     >
       Contact
@@ -112,45 +102,40 @@ exports[`<Hamburger /> dropdown state dropdown should snapshot at each state 3`]
   onMouseLeave={[Function]}
 >
   <li
-    className="link"
+    className="link ham_link"
   >
     <a
-      href="/login"
-    >
-      Login
-    </a>
-  </li>
-  <li
-    className="link"
-  >
-    <a
+      className="a_link"
       href="/home_page"
     >
       Home Page
     </a>
   </li>
   <li
-    className="link"
+    className="link ham_link"
   >
     <a
+      className="a_link"
       href="/resume"
     >
       Resume
     </a>
   </li>
   <li
-    className="link"
+    className="link ham_link"
   >
     <a
+      className="a_link"
       href="/home_page"
     >
       Projects
     </a>
   </li>
   <li
-    className="link"
+    className="link ham_link"
   >
     <a
+      className="a_link"
       href="/contact"
     >
       Contact
@@ -184,45 +169,40 @@ exports[`<Hamburger /> state should match state of each action 1`] = `
       onMouseLeave={[Function]}
     >
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
-          href="/login"
-        >
-          Login
-        </a>
-      </li>
-      <li
-        className="link"
-      >
-        <a
+          className="a_link"
           href="/home_page"
         >
           Home Page
         </a>
       </li>
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
+          className="a_link"
           href="/resume"
         >
           Resume
         </a>
       </li>
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
+          className="a_link"
           href="/home_page"
         >
           Projects
         </a>
       </li>
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
+          className="a_link"
           href="/contact"
         >
           Contact
@@ -258,45 +238,40 @@ exports[`<Hamburger /> state should match state of each action 2`] = `
       onMouseLeave={[Function]}
     >
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
-          href="/login"
-        >
-          Login
-        </a>
-      </li>
-      <li
-        className="link"
-      >
-        <a
+          className="a_link"
           href="/home_page"
         >
           Home Page
         </a>
       </li>
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
+          className="a_link"
           href="/resume"
         >
           Resume
         </a>
       </li>
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
+          className="a_link"
           href="/home_page"
         >
           Projects
         </a>
       </li>
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
+          className="a_link"
           href="/contact"
         >
           Contact
@@ -332,45 +307,40 @@ exports[`<Hamburger /> state should match state of each action 3`] = `
       onMouseLeave={[Function]}
     >
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
-          href="/login"
-        >
-          Login
-        </a>
-      </li>
-      <li
-        className="link"
-      >
-        <a
+          className="a_link"
           href="/home_page"
         >
           Home Page
         </a>
       </li>
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
+          className="a_link"
           href="/resume"
         >
           Resume
         </a>
       </li>
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
+          className="a_link"
           href="/home_page"
         >
           Projects
         </a>
       </li>
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
+          className="a_link"
           href="/contact"
         >
           Contact
@@ -406,45 +376,40 @@ exports[`setting default menu should render default 1`] = `
       onMouseLeave={[Function]}
     >
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
-          href="/login"
-        >
-          Login
-        </a>
-      </li>
-      <li
-        className="link"
-      >
-        <a
-          href="/home_page"
+          className="a_link"
+          href="/home"
         >
           Home Page
         </a>
       </li>
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
+          className="a_link"
           href="/resume"
         >
           Resume
         </a>
       </li>
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
-          href="/home_page"
+          className="a_link"
+          href="/project"
         >
           Projects
         </a>
       </li>
       <li
-        className="link"
+        className="link ham_link"
       >
         <a
+          className="a_link"
           href="/contact"
         >
           Contact

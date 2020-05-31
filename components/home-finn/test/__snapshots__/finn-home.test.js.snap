@@ -25,45 +25,40 @@ exports[`<Home /> renders components 1`] = `
         class="dropdown"
       >
         <li
-          class="link"
+          class="link ham_link"
         >
           <a
-            href="/login"
-          >
-            Login
-          </a>
-        </li>
-        <li
-          class="link"
-        >
-          <a
+            class="a_link"
             href="/home"
           >
             Home Page
           </a>
         </li>
         <li
-          class="link"
+          class="link ham_link"
         >
           <a
+            class="a_link"
             href="/resume"
           >
             Resume
           </a>
         </li>
         <li
-          class="link"
+          class="link ham_link"
         >
           <a
+            class="a_link"
             href="/project"
           >
             Projects
           </a>
         </li>
         <li
-          class="link"
+          class="link ham_link"
         >
           <a
+            class="a_link"
             href="/contact"
           >
             Contact
@@ -73,10 +68,32 @@ exports[`<Home /> renders components 1`] = `
     </div>
   </div>
   <div
-    class="content-home_Container"
+    class="content-home_Container font"
   >
     <img
       class="profile"
+      src="test-file-stub"
+    />
+    <p
+      class="overview-finn"
+    >
+      My name is Finn Nilsen. I have been working in the tech industry for 5+ years in a variety of roles. I’ve been a software developer, digital marketer, and product manager. I have a passion for building great software products and leading technical teams. This website is an overview of my career so far and how I can help any company I work with grow.
+    </p>
+  </div>
+  <div
+    class="twocontent-home_Container font"
+  >
+    <h1
+      class="resume_header"
+    >
+      <a
+        href="/resume"
+      >
+        Resume
+      </a>
+    </h1>
+    <img
+      class="resume_icon"
       src="test-file-stub"
     />
     <div
@@ -92,12 +109,12 @@ exports[`<Home /> renders components 1`] = `
             href="/resume"
           >
             <h2>
-              Resume
+              Associate Director, Media and Technology
             </h2>
             <div
               class="slider_class"
             >
-              Click to see my resmue!
+              Mogo Interactive
             </div>
           </a>
         </div>
@@ -105,15 +122,15 @@ exports[`<Home /> renders components 1`] = `
           class="slide2 slide"
         >
           <a
-            href="/project"
+            href="/resume"
           >
             <h2>
-              Projects
+              Product Manager
             </h2>
             <div
               class="slider_class"
             >
-              Checkout some of the projects I have been apart of.
+              Mogo Interactive
             </div>
           </a>
         </div>
@@ -121,19 +138,159 @@ exports[`<Home /> renders components 1`] = `
           class="slide3 slide"
         >
           <a
-            href="/contact"
+            href="/resume"
           >
             <h2>
-              Contact
+              ChatScript Developer
             </h2>
             <div
               class="slider_class"
             >
-              If you would like to contact me click now.
+              JustAnswer.com
             </div>
           </a>
         </div>
       </div>
+    </div>
+    <div
+      class="button-one_Container"
+    >
+      <button
+        class="button_style_one btn_mobile"
+        href="/resume"
+      >
+        View Resume
+      </button>
+    </div>
+  </div>
+  <div
+    class="threecontent-home_Container font font_color"
+  >
+    <h1
+      class="project_header"
+    >
+      Projects
+    </h1>
+    <img
+      class="project_icon"
+      src="test-file-stub"
+    />
+    <ul
+      class="project_list"
+    >
+      <li>
+        <a
+          class="project_link"
+          href="/projects"
+        >
+          <h3>
+            Hub by Mogo
+          </h3>
+          <p>
+            Learn about how I managed the inital build and further development of Mogo's automation platform Hub.
+          </p>
+        </a>
+      </li>
+      <li>
+        <a
+          class="project_link"
+          href="/projects"
+        >
+          <h3>
+            Mogo's DMP
+          </h3>
+          <p>
+            When Mogo onboarded a Data Managment Platform (DMP) I was part of the team that set up the connections and segment taxonomy.
+          </p>
+        </a>
+      </li>
+      <li>
+        <a
+          class="project_link"
+          href="/projects"
+        >
+          <h3>
+            JustAnswer's ChatBot
+          </h3>
+          <p>
+            When JustAnswer was building out a ChatBot I was the main developer implementing the conversation logic.
+          </p>
+        </a>
+      </li>
+      <li>
+        <a
+          class="project_link"
+          href="/projects"
+        >
+          <h3>
+            Red Bull Youth America's Cup
+          </h3>
+          <p>
+            I managed a team of sailors aiming to compete in the Red Bull Youth America's Cup.
+          </p>
+        </a>
+      </li>
+    </ul>
+    <div
+      class="button-one_Container"
+    >
+      <button
+        class="button_style_one proj_btn_mobile"
+        href="/project"
+      >
+        View Projects
+      </button>
+    </div>
+  </div>
+  <div
+    class="footer-home_Container font"
+  >
+    <div
+      class="logo_cont"
+    >
+      <a
+        href="https://github.com/finnnilsen90"
+      >
+        <img
+          class="github_logo"
+          src="test-file-stub"
+        />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/finn-nilsen-50815182/"
+      >
+        <img
+          class="linkedin_logo"
+          src="test-file-stub"
+        />
+      </a>
+      <a
+        href="mailto:fnilsen1051@gmail.com"
+      >
+        <img
+          class="gmail_logo"
+          src="test-file-stub"
+        />
+      </a>
+    </div>
+    <div
+      class="link_cont"
+    >
+      <p
+        class="git_link"
+      >
+        https://github.com/finnnilsen90
+      </p>
+      <p
+        class="linkedin_link"
+      >
+        https://www.linkedin.com/in/finn-nilsen
+      </p>
+      <p
+        class="gmail_link"
+      >
+        fnilsen1051@gmail.com
+      </p>
     </div>
   </div>
 </div>
@@ -206,11 +363,6 @@ Object {
     },
   },
   "not_login": Object {
-    "contact": Object {
-      "className": "link",
-      "link": "/contact",
-      "text": "Contact",
-    },
     "home_page": Object {
       "className": "link",
       "link": "/home",
