@@ -119,6 +119,7 @@
     "body-parser": "^1.19.0",
     "child_process": "^1.0.2",
     "cookie-parser": "^1.4.5",
+    "cryptiles": "^4.1.2",
     "edit-json-file": "^1.4.0",
     "express": "4.16.2",
     "express-session": "^1.17.1",
