@@ -115,7 +115,7 @@
   "dependencies": {
     "@hapi/cryptiles": "^5.0.0",
     "acorn": "^5.7.4",
-    "bcrypt": "^3.0.8",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "child_process": "^1.0.2",
     "cookie-parser": "^1.4.5",
