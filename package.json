@@ -124,7 +124,7 @@
     "express": "4.16.2",
     "express-session": "^1.17.1",
     "glob": "^7.1.6",
-    "googleapis": "^26.0.1",
+    "googleapis": "^39.1.0",
     "js-datepicker": "^4.6.6",
     "lodash": "^4.17.15",
     "mixin-deep": "^2.0.1",
